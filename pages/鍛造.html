@@ -25,6 +25,8 @@
 .forge-effect,.forge-materials{color:#cbd4df;font-size:16px;line-height:1.65;white-space:pre-line}
 .forge-materials{color:#aeb9c7}
 .forge-label{display:none;color:#778394;font-size:11px;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.unreleased-badge{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;background:#4a2a2a;border:1px solid #8d4b4b;color:#ffb6b6;font-size:12px;font-weight:900;vertical-align:middle}
+.forge-section.is-unreleased{border-color:#5e3434}.forge-section.is-unreleased .forge-title{background:linear-gradient(90deg,#d99a92,#eab7ae)}
 .empty-forge{padding:24px;text-align:center;color:#8e99a8}
 @media(max-width:900px){
   .forge-head{display:none}
@@ -73,37 +75,53 @@
 <script src="../app-data.js"></script>
 <script>
 loadDB().then(d=>{
-  const groups=[
-    ['鍛造裝備','Weapon Master｜武器大師',11],
-    ['鍛造裝備','Bob the Builder｜鮑伯老師傅',4],
-    ['鍛造裝備','Magic Wizard｜魔幻巫師',3],
-    ['鍛造裝備','Ancient Soul｜遠古靈魂',7],
-    ['鍛造裝備','雲の天使｜雲天使',11],
-    ['鍛造裝備','太陽の天使｜太陽天使',11],
-    ['鍛造裝備','自然の天使｜自然天使',11],
-    ['鍛造裝備','復讐の天使｜復仇的天使',6],
-    ['鍛造裝備','炎の悪魔｜火之惡魔',11],
-    ['鍛造裝備','焔の悪魔｜焰之惡魔',8],
-    ['鍛造裝備','オルター・エゴ｜異我化身(Alter Ego)',9],
-    ['鍛造裝備','アガニム｜亞古尼姆(Agahnim)',1],
-    ['神祇鍛造','雲の天使｜雲天使',12],
-    ['神祇鍛造','太陽の天使｜太陽天使',12],
-    ['神祇鍛造','自然の天使｜自然天使',12],
-    ['神祇鍛造','炎の悪魔｜火之惡魔',12]
-  ];
-  const general=d.items.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表' && x.row<=136);
-  const godly=d.items.filter(x=>x.type==='神祇鍛造');
-  // 洗禮裝備視為專屬武器，使用第一組資料避免 Excel 重複區段造成重複顯示。
-  const exclusive=d.items.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表' && x.row>=178 && x.row<=191);
-  const grouped=[]; let generalIndex=0, godlyIndex=0;
-  groups.forEach(([type,name,count])=>{
-    const pool=type==='鍛造裝備'?general:godly;
-    const index=type==='鍛造裝備'?generalIndex:godlyIndex;
-    const list=pool.slice(index,index+count);
-    if(type==='鍛造裝備') generalIndex+=count; else godlyIndex+=count;
-    if(list.length) grouped.push({type,name,list,filterKey:(name.split('｜')[1]||name).replace(/\(.*?\)/g,'')});
-  });
-  // 神祇鍛造目前網站資料只有前三組，沒有資料的第四組不顯示空區塊。
+  const allItems=d.items||[];
+  const general=allItems.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表');
+  const godly=allItems.filter(x=>x.type==='神祇鍛造');
+  const byName=(name,prefer='鍛造裝備')=>{
+    const pool=prefer==='神祇鍛造'?godly:general;
+    return pool.find(x=>String(x.name||'').trim()===name) || allItems.find(x=>String(x.name||'').trim()===name);
+  };
+  const byRows=(min,max)=>general.filter(x=>x.row>=min&&x.row<=max);
+  const names=(arr)=>arr.map(n=>byName(n)).filter(Boolean);
+
+  const grouped=[];
+  // 前四組維持 Excel 原順序。
+  grouped.push({type:'鍛造裝備',name:'Weapon Master｜武器大師',list:byRows(4,14),filterKey:'武器大師'});
+  grouped.push({type:'鍛造裝備',name:'Bob the Builder｜鮑伯老師傅',list:byRows(17,20),filterKey:'鮑伯老師傅'});
+  grouped.push({type:'鍛造裝備',name:'Magic Wizard｜魔幻巫師',list:byRows(23,25),filterKey:'魔幻巫師'});
+  grouped.push({type:'鍛造裝備',name:'Ancient Soul｜遠古靈魂',list:byRows(28,34),filterKey:'遠古靈魂'});
+
+  // 天使區塊改為使用使用者確認過的固定清單，避免跨區與重複。
+  grouped.push({type:'鍛造裝備',name:'雲の天使｜雲天使',filterKey:'雲天使',list:names([
+    '腐化水晶','暗鑄甲','異能者之戒','發光球','海柏利昂','神秘法杖','流浪者','風語者','冷凍細胞','毀滅','惡毒'
+  ])});
+  grouped.push({type:'鍛造裝備',name:'太陽の天使｜太陽天使',filterKey:'太陽天使',list:names([
+    '絕望之刃','命運的致盲之光','海利亞之書','濃縮能量','殘酷之刃','詛咒之刃','龍磷盔甲','傳說中的龍珠','芙蕾雅傳說','靈魂射擊','星光水晶'
+  ])});
+
+  // 兄弟之血目前版本尚未推出，獨立標示，不混進自然天使清單。
+  const brothers=byName('兄弟之血');
+  if(brothers) grouped.push({type:'現本尚未出',name:'兄弟之血',filterKey:'兄弟之血',list:[{...brothers,_unreleased:true}],unreleased:true});
+
+  grouped.push({type:'鍛造裝備',name:'自然の天使｜自然天使',filterKey:'自然天使',list:names([
+    '爆破棒','龍圖騰','午夜之爪','凜冬之魂','龍弓','漢娜的咒術精華','夜影','大地的力量','最終翡翠之刃','瓶中綠洲'
+  ])});
+
+  grouped.push({type:'鍛造裝備',name:'復讐の天使｜復仇的天使',list:byRows(76,79),filterKey:'復仇的天使'});
+  grouped.push({type:'鍛造裝備',name:'炎の悪魔｜火之惡魔',list:byRows(82,92),filterKey:'火之惡魔'});
+  grouped.push({type:'鍛造裝備',name:'焔の悪魔｜焰之惡魔',list:byRows(95,103),filterKey:'焰之惡魔'});
+
+  // 異我化身：月魂珠已推出，其餘目前版本尚未推出。
+  const alter=byRows(104,115).map(x=>({...x,_unreleased:x.name!=='月魂珠'}));
+  grouped.push({type:'鍛造裝備',name:'オルター・エゴ｜異我化身(Alter Ego)',list:alter,filterKey:'異我化身',mixedAvailability:true});
+
+  // 亞古尼姆：目前整組尚未推出。
+  const agahnim=byRows(116,116).map(x=>({...x,_unreleased:true}));
+  grouped.push({type:'現本尚未出',name:'アガニム｜亞古尼姆(Agahnim)',list:agahnim,filterKey:'亞古尼姆',unreleased:true});
+
+  // 洗禮專屬武器維持原本區段。
+  const exclusive=general.filter(x=>x.row>=178&&x.row<=191);
   if(exclusive.length) grouped.push({type:'專屬武器',name:'洗禮專屬武器',list:exclusive,filterKey:'洗禮專屬武器'});
   const q=document.getElementById('q'),type=document.getElementById('type'),root=document.getElementById('forge');
   function render(){
@@ -111,12 +129,13 @@ loadDB().then(d=>{
     root.innerHTML=grouped.filter(g=>!tt||g.filterKey.includes(tt)).map(g=>{
       const list=g.list.filter(x=>!qq||(g.name+x.name+x.name_en+x.job+x.effect+x.materials).toLowerCase().includes(qq));
       if(!list.length)return '';
-      return `<section class="forge-section">
-        <header class="forge-title"><h2>${esc(g.name)}</h2><div class="forge-count">${esc(g.type)} ・ ${list.length} 件裝備</div></header>
+      const sectionNote=g.unreleased?' <span class="unreleased-badge">現本尚未出</span>':(g.mixedAvailability?' <span class="unreleased-badge">除月魂珠外，現本尚未出</span>':'');
+      return `<section class="forge-section ${g.unreleased?'is-unreleased':''}">
+        <header class="forge-title"><h2>${esc(g.name)}${sectionNote}</h2><div class="forge-count">${esc(g.type)} ・ ${list.length} 件裝備</div></header>
         <div class="forge-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div><div>需求素材</div></div>
         ${list.map(x=>`<article class="forge-item">
           ${x.image?`<img class="forge-img" src="${esc(resolveImage(x))}" alt="${esc(x.name)}" loading="lazy">`:'<div></div>'}
-          <div class="forge-name"><strong>${esc(x.name)}</strong><span>${esc(x.name_en)}</span></div>
+          <div class="forge-name"><strong>${esc(x.name)}${x._unreleased?' <span class="unreleased-badge">現本尚未出</span>':''}</strong><span>${esc(x.name_en)}</span></div>
           <div class="forge-job"><span class="forge-label">適用職業</span>${esc(x.job)}</div>
           <div class="forge-effect"><span class="forge-label">效果</span>${esc(x.effect)}</div>
           <div class="forge-materials"><span class="forge-label">需求素材</span>${formatRarityText(x.materials)}</div>
