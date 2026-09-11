@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>鍛造｜新暮光之晨</title>
+<link rel="icon" href="../images/site-icon.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+.forge-toolbar{display:flex;gap:12px;align-items:center;margin:18px 0 28px;flex-wrap:wrap}
+.forge-toolbar .search{flex:1;min-width:240px;margin:0}
+.forge-toolbar select{width:220px;padding:14px 15px;font-size:17px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff}
+.forge-section{margin:0 0 34px;border:1px solid #29323e;border-radius:18px;overflow:hidden;background:#0f151d;box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.forge-title{padding:18px 22px;background:linear-gradient(90deg,#e6b6ac,#f1d0c8);color:#171717;text-align:center}
+.forge-title h2{margin:0;font-size:27px;line-height:1.25}
+.forge-title .forge-count{margin-top:5px;font-size:13px;opacity:.7}
+.forge-head,.forge-item{display:grid;grid-template-columns:78px minmax(190px,1.25fr) minmax(130px,.85fr) minmax(280px,2fr) minmax(280px,1.8fr);gap:16px;align-items:center}
+.forge-head{padding:13px 18px;background:#f5e4ad;color:#252525;font-weight:800;font-size:16px}
+.forge-item{padding:17px 18px;border-top:1px solid #252e3a;min-height:110px}
+.forge-item:hover{background:#141c26}
+.forge-img{width:68px;height:68px;object-fit:contain;background:#080b0f;border:1px solid #2b3542;border-radius:10px;padding:4px}
+.forge-name strong{display:block;font-size:20px;color:#f3f6fa}
+.forge-name span{display:block;margin-top:5px;color:#9eb1c8;font-size:15px;word-break:break-word}
+.forge-job{color:#d6dee8;font-size:16px;line-height:1.5;white-space:pre-line}
+.forge-effect,.forge-materials{color:#cbd4df;font-size:16px;line-height:1.65;white-space:pre-line}
+.forge-materials{color:#aeb9c7}
+.forge-label{display:none;color:#778394;font-size:11px;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.empty-forge{padding:24px;text-align:center;color:#8e99a8}
+@media(max-width:900px){
+  .forge-head{display:none}
+  .forge-item{grid-template-columns:72px 1fr;gap:12px;padding:16px}
+  .forge-img{grid-row:span 1}
+  .forge-name{align-self:center}
+  .forge-job,.forge-effect,.forge-materials{grid-column:1 / -1}
+  .forge-label{display:block}
+}
+@media(max-width:600px){
+  .forge-title h2{font-size:22px}
+  .forge-item{grid-template-columns:60px 1fr}
+  .forge-img{width:60px;height:60px}
+  .forge-name strong{font-size:16px}
+}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a></nav></header>
+<main class="wrap">
+<h1>🔨 鍛造</h1>
+<p class="muted">依照 Excel 的鍛造表重新整理：先看「哪位 NPC」，再看他能製作哪些裝備；每件裝備保留圖片、適用職業、效果與需求素材。</p>
+<div class="forge-toolbar">
+<input id="q" class="search" placeholder="搜尋 NPC、裝備、職業或材料…">
+<select id="type">
+  <option value="">全部</option>
+  <option value="武器大師">武器大師</option>
+  <option value="鮑伯老師傅">鮑伯老師傅</option>
+  <option value="魔幻巫師">魔幻巫師</option>
+  <option value="遠古靈魂">遠古靈魂</option>
+  <option value="雲天使">雲天使</option>
+  <option value="太陽天使">太陽天使</option>
+  <option value="自然天使">自然天使</option>
+  <option value="復仇的天使">復仇的天使</option>
+  <option value="火之惡魔">火之惡魔</option>
+  <option value="焰之惡魔">焰之惡魔</option>
+  <option value="異我化身">異我化身</option>
+  <option value="亞古尼姆">亞古尼姆</option>
+  <option value="洗禮專屬武器">洗禮專屬武器</option>
+</select>
+</div>
+<div id="forge"></div>
+</main>
+<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
+
+<script src="../app-data.js"></script>
+<script>
+loadDB().then(d=>{
+  const groups=[
+    ['鍛造裝備','Weapon Master｜武器大師',11],
+    ['鍛造裝備','Bob the Builder｜鮑伯老師傅',4],
+    ['鍛造裝備','Magic Wizard｜魔幻巫師',3],
+    ['鍛造裝備','Ancient Soul｜遠古靈魂',7],
+    ['鍛造裝備','雲の天使｜雲天使',11],
+    ['鍛造裝備','太陽の天使｜太陽天使',11],
+    ['鍛造裝備','自然の天使｜自然天使',11],
+    ['鍛造裝備','復讐の天使｜復仇的天使',6],
+    ['鍛造裝備','炎の悪魔｜火之惡魔',11],
+    ['鍛造裝備','焔の悪魔｜焰之惡魔',8],
+    ['鍛造裝備','オルター・エゴ｜異我化身(Alter Ego)',9],
+    ['鍛造裝備','アガニム｜亞古尼姆(Agahnim)',1],
+    ['神祇鍛造','雲の天使｜雲天使',12],
+    ['神祇鍛造','太陽の天使｜太陽天使',12],
+    ['神祇鍛造','自然の天使｜自然天使',12],
+    ['神祇鍛造','炎の悪魔｜火之惡魔',12]
+  ];
+  const general=d.items.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表' && x.row<=136);
+  const godly=d.items.filter(x=>x.type==='神祇鍛造');
+  // 洗禮裝備視為專屬武器，使用第一組資料避免 Excel 重複區段造成重複顯示。
+  const exclusive=d.items.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表' && x.row>=178 && x.row<=191);
+  const grouped=[]; let generalIndex=0, godlyIndex=0;
+  groups.forEach(([type,name,count])=>{
+    const pool=type==='鍛造裝備'?general:godly;
+    const index=type==='鍛造裝備'?generalIndex:godlyIndex;
+    const list=pool.slice(index,index+count);
+    if(type==='鍛造裝備') generalIndex+=count; else godlyIndex+=count;
+    if(list.length) grouped.push({type,name,list,filterKey:(name.split('｜')[1]||name).replace(/\(.*?\)/g,'')});
+  });
+  // 神祇鍛造目前網站資料只有前三組，沒有資料的第四組不顯示空區塊。
+  if(exclusive.length) grouped.push({type:'專屬武器',name:'洗禮專屬武器',list:exclusive,filterKey:'洗禮專屬武器'});
+  const q=document.getElementById('q'),type=document.getElementById('type'),root=document.getElementById('forge');
+  function render(){
+    const qq=q.value.trim().toLowerCase(), tt=type.value;
+    root.innerHTML=grouped.filter(g=>!tt||g.filterKey.includes(tt)).map(g=>{
+      const list=g.list.filter(x=>!qq||(g.name+x.name+x.name_en+x.job+x.effect+x.materials).toLowerCase().includes(qq));
+      if(!list.length)return '';
+      return `<section class="forge-section">
+        <header class="forge-title"><h2>${esc(g.name)}</h2><div class="forge-count">${esc(g.type)} ・ ${list.length} 件裝備</div></header>
+        <div class="forge-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div><div>需求素材</div></div>
+        ${list.map(x=>`<article class="forge-item">
+          ${x.image?`<img class="forge-img" src="${esc(resolveImage(x))}" alt="${esc(x.name)}" loading="lazy">`:'<div></div>'}
+          <div class="forge-name"><strong>${esc(x.name)}</strong><span>${esc(x.name_en)}</span></div>
+          <div class="forge-job"><span class="forge-label">適用職業</span>${esc(x.job)}</div>
+          <div class="forge-effect"><span class="forge-label">效果</span>${esc(x.effect)}</div>
+          <div class="forge-materials"><span class="forge-label">需求素材</span>${formatRarityText(x.materials)}</div>
+        </article>`).join('')}
+      </section>`;
+    }).join('') || '<div class="empty-forge">找不到符合的鍛造資料。</div>';
+  }
+  q.oninput=render; type.onchange=render; render();
+}).catch(e=>document.getElementById('forge').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
+</script>
+</body>
+</html>

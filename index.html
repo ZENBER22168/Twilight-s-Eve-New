@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>新暮光之晨 v2.74｜攻略資料庫</title>
+  <meta name="description" content="新暮光之晨 v2.74 攻略資料庫首頁，整合鍛造、副本、材料、NPC、職業技能與配裝功能。">
+  <link rel="icon" href="./images/site-icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .home-wrap{max-width:100%;padding:0}
+    .showcase{position:relative;overflow:hidden;min-height:calc(100vh - 76px);background:#06111c}
+    .showcase::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,22,.16),rgba(7,13,22,.38) 40%,rgba(7,13,22,.64) 100%), url('./images/site-home-bg.png') center/cover no-repeat}
+    .showcase::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,20,.90) 0%, rgba(7,12,20,.78) 24%, rgba(7,12,20,.28) 56%, rgba(7,12,20,.45) 100%)}
+    .showcase-inner{position:relative;z-index:1;max-width:1672px;margin:0 auto;padding:44px 54px 18px;min-height:calc(100vh - 76px);display:flex;flex-direction:column}
+    .hero{display:grid;grid-template-columns:minmax(500px,1fr) 320px;gap:28px;align-items:start}
+    .eyebrow{font-size:18px;color:#c5d3e2;margin-bottom:18px}
+    .title-row{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+    .title-row h1{margin:0;font-size:clamp(58px,7.4vw,94px);line-height:1.02;font-weight:900;color:#f2e2ba;text-shadow:0 8px 28px rgba(0,0,0,.42);letter-spacing:.04em}
+    .title-row .ver{font-size:28px;color:#f0d690;font-weight:900;padding-bottom:10px}
+    .subline{display:flex;align-items:center;gap:18px;margin:12px 0 20px;color:#f0f3f7}
+    .subline .line{height:2px;width:106px;background:linear-gradient(90deg,rgba(240,214,144,.9),rgba(240,214,144,.12));border-radius:999px}
+    .subline .text{font-size:clamp(20px,2.3vw,34px);font-weight:800;letter-spacing:.14em;white-space:nowrap}
+    .hero-desc{max-width:760px;font-size:18px;line-height:1.85;color:#ced8e5;margin:0}
+    .hero-side{justify-self:end;max-width:275px;padding-top:166px;color:#dde7f2;text-align:right}
+    .hero-side .en{font-size:18px;line-height:1.9;letter-spacing:.24em;text-transform:uppercase;color:#dac38e}
+    .hero-side .zh{margin-top:12px;font-size:16px;line-height:1.85;color:#d9e3ee;letter-spacing:.14em}
+
+    .home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;gap:22px;margin-top:42px;align-items:start}
+    .visual-card{display:block;position:relative;overflow:hidden;border-radius:24px;background:#08111c;box-shadow:0 18px 38px rgba(0,0,0,.30);transition:transform .18s ease, box-shadow .18s ease}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px rgba(0,0,0,.30)}
+    .visual-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:24px;background:#07101b}
+    .visual-card.top{height:auto}
+    .visual-card.bottom{height:auto}
+    
+    
+    
+    
+    
+    
+    
+    .card1{grid-column:1}.card2{grid-column:2}.card3{grid-column:3}.card4{grid-column:4}.card5{grid-column:1;grid-row:2}
+    .card6{grid-column:2;grid-row:2}.card7{grid-column:3;grid-row:2}
+    .quote-block{grid-column:4;grid-row:2;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px}
+    .quote-inner{text-align:center;max-width:560px;color:#e4ecf6;font-size:19px;line-height:2.0;letter-spacing:.14em;text-shadow:0 4px 18px rgba(0,0,0,.40)}
+    .quote-inner .en{display:block;margin-top:8px;font-size:20px;color:#dbc48e;letter-spacing:.22em}
+    .footline{position:relative;z-index:1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0 0;margin-top:24px;border-top:1px solid rgba(255,255,255,.10);color:#9caec2;font-size:15px}
+    @media(max-width:1500px){.showcase-inner{padding-left:20px;padding-right:20px}}
+    @media(max-width:1180px){.hero{grid-template-columns:1fr}.hero-side{justify-self:start;text-align:left;padding-top:10px;max-width:none}.home-grid{grid-template-columns:repeat(2,1fr)}.card1,.card2,.card3,.card4,.card5,.card6,.card7,.quote-block{grid-column:auto;grid-row:auto}.quote-block{padding:10px 0 0;justify-content:flex-start}.quote-inner{text-align:left}}
+    @media(max-width:720px){.showcase-inner{padding:26px 14px 16px}.title-row h1{font-size:48px}.title-row .ver{font-size:22px;padding-bottom:5px}.eyebrow{font-size:16px}.subline{gap:10px}.subline .line{width:50px}.subline .text{font-size:22px;white-space:normal}.hero-desc{font-size:16px}.home-grid{grid-template-columns:1fr}.quote-inner{font-size:16px}.quote-inner .en{font-size:17px}.footline{font-size:14px}}
+
+    .home-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .home-meta-item,.discord-link{display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border-radius:12px;background:rgba(8,17,28,.72);border:1px solid rgba(240,214,144,.16);color:#dce6f2;text-decoration:none;font-size:15px;backdrop-filter:blur(6px)}
+    .home-meta-item strong{color:#f0d690}
+    .discord-link{transition:.18s ease}
+    .discord-link:hover{transform:translateY(-2px);border-color:rgba(114,137,218,.55);background:rgba(88,101,242,.14);color:#fff}
+    .discord-icon{width:22px;height:22px;display:block;flex:0 0 22px}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="新暮光之晨 首頁">
+        <img class="brand-logo" src="./images/site-icon.png" alt="新暮光之晨 icon">
+        <span class="brand-title">
+          <span class="brand-name">新暮光之晨</span>
+          <span class="brand-version">v2.74</span>
+        </span>
+      </a>
+      <a href="index.html" class="active">🏠 首頁</a>
+      <a href="pages/鍛造.html">🔨 鍛造</a>
+      <a href="pages/副本材料.html">🏰 副本材料&裝備</a>
+      <a href="pages/材料.html">🧱 鍛造材料&合成商人</a>
+      <a href="pages/裝備.html">📘 裝備資料庫</a>
+      <a href="pages/NPC.html">📍 NPC位置</a>
+      <a href="pages/職業.html">✨ 職業技能</a>
+      <a href="pages/搜尋.html">🛡️ 配裝</a>
+      <div class="nav-spacer"></div>
+      <form class="nav-search" id="quickSearchForm">
+        <button type="submit" aria-label="搜尋">🔎</button>
+        <input id="quickSearchInput" type="search" placeholder="搜尋攻略、NPC、裝備...">
+      </form>
+    </nav>
+  </header>
+
+  <main class="wrap home-wrap">
+    <section class="showcase">
+      <div class="showcase-inner">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">攻略資料庫・資料整合版</div>
+            <div class="title-row"><h1>新暮光之晨</h1><div class="ver">v2.74</div></div>
+            <div class="subline"><span class="line"></span><span class="text">攻略資料庫・資料整合版</span><span class="line"></span></div>
+            <p class="hero-desc">把攻略表中的副本、裝備、材料、NPC、職業技能集中整理成可搜尋、可分類的網頁。</p>
+            <div class="home-meta">
+              <a class="discord-link" href="https://discord.com/invite/2BJ4BGNyhB" target="_blank" rel="noopener noreferrer" aria-label="加入 Discord">
+                <svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#5865F2" d="M19.54 5.34A16.3 16.3 0 0 0 15.44 4a11.2 11.2 0 0 0-.52 1.06 15.2 15.2 0 0 0-4.85 0A11.6 11.6 0 0 0 9.54 4a16.6 16.6 0 0 0-4.1 1.35C2.84 9.2 2.14 12.96 2.5 16.67a16.8 16.8 0 0 0 5.03 2.55c.4-.55.76-1.13 1.07-1.74-.59-.22-1.15-.5-1.7-.84l.42-.33c3.28 1.53 6.83 1.53 10.07 0l.42.33c-.55.33-1.12.61-1.7.84.3.61.66 1.19 1.07 1.74a16.8 16.8 0 0 0 5.03-2.55c.43-4.3-.74-8.03-2.67-11.33ZM8.68 14.39c-.98 0-1.79-.9-1.79-2.01 0-1.1.79-2.01 1.79-2.01 1.01 0 1.81.91 1.79 2.01 0 1.11-.79 2.01-1.79 2.01Zm6.63 0c-.98 0-1.79-.9-1.79-2.01 0-1.1.79-2.01 1.79-2.01 1 0 1.8.91 1.79 2.01 0 1.11-.79 2.01-1.79 2.01Z"/></svg>
+                <span>加入 Discord</span>
+              </a>
+              <div class="home-meta-item">🗺️ <span>地圖作者：<strong>a8156175</strong></span></div>
+            </div>
+          </div>
+          <div class="hero-side">
+            <div class="en">INTO A<br>BRIGHTER DAWN</div>
+            <div class="zh">越過長夜・迎向新生</div>
+          </div>
+        </div>
+
+        <div class="home-grid">
+          <a class="visual-card top card1" href="pages/鍛造.html" aria-label="鍛造"><img src="./images/homecards/home-card-forge.png" alt="鍛造"></a>
+          <a class="visual-card top card2" href="pages/副本材料.html" aria-label="副本材料&裝備"><img src="./images/homecards/home-card-dungeon.png" alt="副本材料&裝備"></a>
+          <a class="visual-card top card3" href="pages/材料.html" aria-label="鍛造材料&合成商人"><img src="./images/homecards/home-card-materials.png" alt="鍛造材料&合成商人"></a>
+          <a class="visual-card top card4" href="pages/裝備.html" aria-label="裝備資料庫"><img src="./images/homecards/home-card-database.png" alt="裝備資料庫"></a>
+          <a class="visual-card top card5" href="pages/NPC.html" aria-label="NPC位置"><img src="./images/homecards/home-card-npc.png" alt="NPC位置"></a>
+          <a class="visual-card bottom card6" href="pages/職業.html" aria-label="職業技能"><img src="./images/homecards/home-card-skill.png" alt="職業技能"></a>
+          <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
+          <div class="quote-block"><div class="quote-inner">知識，照亮下一個黎明<span class="en">KNOWLEDGE LIGHTS ANOTHER DAWN</span></div></div>
+        </div>
+
+        <div class="footline"><div>新暮光之晨　v2.74　｜　地圖作者：a8156175</div><div><a href="https://discord.com/invite/2BJ4BGNyhB" target="_blank" rel="noopener noreferrer" style="color:#9fb5ff;text-decoration:none">Discord</a>　｜　願每一位旅人，都能在這片星海中找到屬於自己的光。</div></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const quickMap = [
+      {keys:['鍛造','forge','npc','武器','裝備製作'], url:'pages/鍛造.html'},
+      {keys:['副本','材料','掉落','dungeon'], url:'pages/副本材料.html'},
+      {keys:['商人','合成','素材','材料商'], url:'pages/材料.html'},
+      {keys:['裝備','屬性','database'], url:'pages/裝備.html'},
+      {keys:['npc','位置','轉職'], url:'pages/NPC.html'},
+      {keys:['技能','職業'], url:'pages/職業.html'},
+      {keys:['配裝','build'], url:'pages/搜尋.html'}
+    ];
+    document.getElementById('quickSearchForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const q=(document.getElementById('quickSearchInput').value||'').trim().toLowerCase();
+      if(!q){ window.location.href='pages/裝備.html'; return; }
+      const found = quickMap.find(item => item.keys.some(k => q.includes(String(k).toLowerCase())));
+      window.location.href = found ? found.url : 'pages/裝備.html';
+    });
+  </script>
+</body>
+</html>
