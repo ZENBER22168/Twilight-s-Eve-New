@@ -21,4 +21,5 @@ Promise.resolve(loadDB()).then(d=>{ const L=EMBEDDED_LAYOUT;
   }); root.innerHTML=html||'<div class="empty">找不到符合的副本或裝備。</div>'; }
  q.oninput=render;sel.onchange=render;render();
 }).catch(e=>document.getElementById('root').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
-</script></body></html>
+</script><script src="../mobile-nav.js"></script>
+</body></html>

@@ -92,4 +92,5 @@ loadDB().then(d=>{
  professionEl.onchange=()=>{profession=professionEl.value;filter.value='';if(profession){load(profession);safeSet(LAST_KEY,profession)}else picked=Array(6).fill('');renderAll();}; filter.oninput=renderSlots;document.getElementById('clearAll').onclick=()=>{if(!profession)return;picked=Array(6).fill('');save();renderAll();};
  const last=safeGet(LAST_KEY);if(last&&professions.includes(last)){profession=last;professionEl.value=last;load(last)}renderAll();
 }).catch(e=>document.getElementById('slots').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
-</script></body></html>
+</script><script src="../mobile-nav.js"></script>
+</body></html>
