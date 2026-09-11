@@ -100,13 +100,13 @@ loadDB().then(d=>{
     '絕望之刃','命運的致盲之光','海利亞之書','濃縮能量','殘酷之刃','詛咒之刃','龍磷盔甲','傳說中的龍珠','芙蕾雅傳說','靈魂射擊','星光水晶'
   ])});
 
-  // 兄弟之血目前版本尚未推出，獨立標示，不混進自然天使清單。
-  const brothers=byName('兄弟之血');
-  if(brothers) grouped.push({type:'現本尚未出',name:'兄弟之血',filterKey:'兄弟之血',list:[{...brothers,_unreleased:true}],unreleased:true});
-
-  grouped.push({type:'鍛造裝備',name:'自然の天使｜自然天使',filterKey:'自然天使',list:names([
+  // 兄弟之血歸回原本的自然天使區，只在裝備名稱旁標示目前版本尚未推出。
+  const naturalList=names([
     '爆破棒','龍圖騰','午夜之爪','凜冬之魂','龍弓','漢娜的咒術精華','夜影','大地的力量','最終翡翠之刃','瓶中綠洲'
-  ])});
+  ]);
+  const brothers=byName('兄弟之血');
+  if(brothers) naturalList.unshift({...brothers,_unreleased:true});
+  grouped.push({type:'鍛造裝備',name:'自然の天使｜自然天使',filterKey:'自然天使',list:naturalList});
 
   grouped.push({type:'鍛造裝備',name:'復讐の天使｜復仇的天使',list:byRows(76,79),filterKey:'復仇的天使'});
   grouped.push({type:'鍛造裝備',name:'炎の悪魔｜火之惡魔',list:byRows(82,92),filterKey:'火之惡魔'});
