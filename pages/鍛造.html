@@ -14,6 +14,10 @@
 .forge-title{padding:18px 22px;background:linear-gradient(90deg,#e6b6ac,#f1d0c8);color:#171717;text-align:center}
 .forge-title h2{margin:0;font-size:27px;line-height:1.25}
 .forge-title .forge-count{margin-top:5px;font-size:13px;opacity:.7}
+.forge-route-note{margin-top:9px;font-size:14px;line-height:1.55;color:#442c21;font-weight:800}
+.forge-location{padding:14px 18px 16px;background:#0b1016;border-top:1px solid #252e3a;text-align:center}
+.forge-location-label{font-size:13px;font-weight:900;color:#d5bd77;margin-bottom:9px}
+.forge-location img{display:block;width:100%;max-width:1280px;max-height:620px;object-fit:contain;margin:0 auto;border-radius:12px;border:1px solid #2b3542;background:#070a0e}
 .forge-head,.forge-item{display:grid;grid-template-columns:78px minmax(190px,1.25fr) minmax(130px,.85fr) minmax(280px,2fr) minmax(280px,1.8fr);gap:16px;align-items:center}
 .forge-head{padding:13px 18px;background:#f5e4ad;color:#252525;font-weight:800;font-size:16px}
 .forge-item{padding:17px 18px;border-top:1px solid #252e3a;min-height:110px}
@@ -42,13 +46,15 @@
   .forge-img{width:60px;height:60px}
   .forge-name strong{font-size:16px}
 }
+
+.mat-ref{position:relative;display:inline-block;color:#8fd0ff;font-weight:800;cursor:help;border-bottom:1px dotted #6aa8d6}.mat-ref .mat-tip{display:none;position:absolute;z-index:50;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);min-width:310px;max-width:480px;padding:15px 17px;border-radius:10px;background:#071019;border:1px solid #3a5267;color:#dce7f1;box-shadow:0 12px 28px rgba(0,0,0,.45);font-size:16px;line-height:1.7;white-space:normal}.mat-tip b{display:block;font-size:17px;line-height:1.35;margin-bottom:5px;color:#f2f5f8}.mat-ref:hover .mat-tip,.mat-ref:focus .mat-tip{display:block}.gold-mat-box{margin:0;border-top:1px solid #2c3744;background:linear-gradient(180deg,#141b24,#0d131b);padding:18px}.gold-mat-box h3{margin:0 0 12px;color:#f2d77f}.gold-mat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.gold-mat-group{background:#0d141d;border:1px solid #2e3947;border-radius:12px;padding:12px}.gold-mat-group strong{display:block;color:#d6a73a;margin-bottom:7px}.gold-mat-group span{display:block;color:#c9d3de;line-height:1.65}.gold-mat-chain{margin-top:10px;color:#9fb0c2;font-size:13px;line-height:1.7}@media(max-width:900px){.gold-mat-grid{grid-template-columns:1fr 1fr}.mat-ref .mat-tip{left:0;transform:none}}@media(max-width:560px){.gold-mat-grid{grid-template-columns:1fr}.mat-ref .mat-tip{min-width:260px;max-width:min(330px,86vw);font-size:15px;padding:13px 14px}.mat-tip b{font-size:16px}}
 </style>
 </head>
 <body>
-<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a></nav></header>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a></nav></header>
 <main class="wrap">
 <h1>🔨 鍛造</h1>
-<p class="muted">依照 Excel 的鍛造表重新整理：先看「哪位 NPC」，再看他能製作哪些裝備；每件裝備保留圖片、適用職業、效果與需求素材。</p>
+
 <div class="forge-toolbar">
 <input id="q" class="search" placeholder="搜尋 NPC、裝備、職業或材料…">
 <select id="type">
@@ -63,9 +69,9 @@
   <option value="復仇的天使">復仇的天使</option>
   <option value="火之惡魔">火之惡魔</option>
   <option value="焰之惡魔">焰之惡魔</option>
+  <option value="洗禮專屬武器">洗禮專屬武器</option>
   <option value="異我化身">異我化身</option>
   <option value="亞古尼姆">亞古尼姆</option>
-  <option value="洗禮專屬武器">洗禮專屬武器</option>
 </select>
 </div>
 <div id="forge"></div>
@@ -76,6 +82,17 @@
 <script>
 loadDB().then(d=>{
   const allItems=d.items||[];
+  const recipeLookup=new Map();
+  allItems.forEach(it=>{const n=String(it.name||'').trim();if(n&&it.materials&&!recipeLookup.has(n))recipeLookup.set(n,String(it.materials));});
+  const noTip=/^(?:稀有|史詩|傳說).*(?:碎片|武器碎片|盔甲碎片|配件碎片)$/;
+  function materialWithTip(name){
+    const n=String(name||'').trim();const recipe=recipeLookup.get(n);
+    if(!recipe||noTip.test(n))return formatRarityText(n);
+    return `<span class="mat-ref" tabindex="0">${formatRarityText(n)}<span class="mat-tip"><b>${esc(n)}</b><br>需要：${formatRarityText(recipe)}</span></span>`;
+  }
+  function formatMaterialList(text){
+    return String(text||'').split(/([,，、])/).map(part=>/^[,，、]$/.test(part)?esc(part):materialWithTip(part.trim())).join(' ');
+  }
   const general=allItems.filter(x=>x.type==='鍛造裝備' && x.source_sheet===' ② 鍛造裝備總表');
   const godly=allItems.filter(x=>x.type==='神祇鍛造');
   const byName=(name,prefer='鍛造裝備')=>{
@@ -87,18 +104,18 @@ loadDB().then(d=>{
 
   const grouped=[];
   // 前四組維持 Excel 原順序。
-  grouped.push({type:'鍛造裝備',name:'Weapon Master｜武器大師',list:byRows(4,14),filterKey:'武器大師'});
-  grouped.push({type:'鍛造裝備',name:'Bob the Builder｜鮑伯老師傅',list:byRows(17,20),filterKey:'鮑伯老師傅'});
-  grouped.push({type:'鍛造裝備',name:'Magic Wizard｜魔幻巫師',list:byRows(23,25),filterKey:'魔幻巫師'});
-  grouped.push({type:'鍛造裝備',name:'Ancient Soul｜遠古靈魂',list:byRows(28,34),filterKey:'遠古靈魂'});
+  grouped.push({type:'鍛造裝備',name:'Weapon Master｜武器大師',list:byRows(4,14),filterKey:'武器大師',locationImage:'../images/forge-locations/weapon-master.png'});
+  grouped.push({type:'鍛造裝備',name:'Bob the Builder｜鮑伯老師傅',list:byRows(17,20),filterKey:'鮑伯老師傅',locationImage:'../images/forge-locations/bob-the-builder.png'});
+  grouped.push({type:'鍛造裝備',name:'Magic Wizard｜魔幻巫師',list:byRows(23,25),filterKey:'魔幻巫師',locationImage:'../images/forge-locations/magic-wizard.png'});
+  grouped.push({type:'鍛造裝備',name:'Ancient Soul｜遠古靈魂',list:byRows(28,34),filterKey:'遠古靈魂',locationImage:'../images/forge-locations/ancient-soul.png'});
 
   // 天使區塊改為使用使用者確認過的固定清單，避免跨區與重複。
   grouped.push({type:'鍛造裝備',name:'雲の天使｜雲天使',filterKey:'雲天使',list:names([
     '腐化水晶','暗鑄甲','異能者之戒','發光球','海柏利昂','神秘法杖','流浪者','風語者','冷凍細胞','毀滅','惡毒'
-  ])});
+  ]),locationImage:'../images/forge-locations/cloud-angel.png'});
   grouped.push({type:'鍛造裝備',name:'太陽の天使｜太陽天使',filterKey:'太陽天使',list:names([
     '絕望之刃','命運的致盲之光','海利亞之書','濃縮能量','殘酷之刃','詛咒之刃','龍磷盔甲','傳說中的龍珠','芙蕾雅傳說','靈魂射擊','星光水晶'
-  ])});
+  ]),locationImage:'../images/forge-locations/sun-angel.png'});
 
   // 兄弟之血歸回原本的自然天使區，只在裝備名稱旁標示目前版本尚未推出。
   const naturalList=names([
@@ -106,39 +123,70 @@ loadDB().then(d=>{
   ]);
   const brothers=byName('兄弟之血');
   if(brothers) naturalList.unshift({...brothers,_unreleased:true});
-  grouped.push({type:'鍛造裝備',name:'自然の天使｜自然天使',filterKey:'自然天使',list:naturalList});
+  grouped.push({type:'鍛造裝備',name:'自然の天使｜自然天使',filterKey:'自然天使',list:naturalList,locationImage:'../images/forge-locations/nature-angel.png'});
 
-  grouped.push({type:'鍛造裝備',name:'復讐の天使｜復仇的天使',list:byRows(76,79),filterKey:'復仇的天使'});
-  grouped.push({type:'鍛造裝備',name:'炎の悪魔｜火之惡魔',list:byRows(82,92),filterKey:'火之惡魔'});
-  grouped.push({type:'鍛造裝備',name:'焔の悪魔｜焰之惡魔',list:byRows(95,103),filterKey:'焰之惡魔'});
+  grouped.push({type:'鍛造裝備',name:'復讐の天使｜復仇的天使',list:byRows(76,79),filterKey:'復仇的天使',locationImage:'../images/forge-locations/revenge-angel.png'});
+  grouped.push({type:'鍛造裝備',name:'炎の悪魔｜火之惡魔',list:byRows(82,92),filterKey:'火之惡魔',locationImage:'../images/forge-locations/fire-demon.png'});
+  const flameList=byRows(95,103);
+  ['國王的皇冠','皇后的皇冠','帝國皇冠'].forEach(n=>{const x=byName(n);if(x)flameList.push({...x,_unreleased:true});});
+  grouped.push({type:'鍛造裝備',name:'焔の悪魔｜焰之惡魔',list:flameList,filterKey:'焰之惡魔',mixedAvailability:true,locationImage:'../images/forge-locations/flame-demon.png'});
 
-  // 異我化身：月魂珠已推出，其餘目前版本尚未推出。
-  const alter=byRows(104,115).map(x=>({...x,_unreleased:x.name!=='月魂珠'}));
-  grouped.push({type:'鍛造裝備',name:'オルター・エゴ｜異我化身(Alter Ego)',list:alter,filterKey:'異我化身',mixedAvailability:true});
-
-  // 亞古尼姆：目前整組尚未推出。
-  const agahnim=byRows(116,116).map(x=>({...x,_unreleased:true}));
-  grouped.push({type:'現本尚未出',name:'アガニム｜亞古尼姆(Agahnim)',list:agahnim,filterKey:'亞古尼姆',unreleased:true});
-
-  // 洗禮專屬武器維持原本區段。
+  // 洗禮專屬武器排在異我化身上方。
   const exclusive=general.filter(x=>x.row>=178&&x.row<=191);
   if(exclusive.length) grouped.push({type:'專屬武器',name:'洗禮專屬武器',list:exclusive,filterKey:'洗禮專屬武器'});
+
+  // 異我化身：保留目前版本已有裝備名稱；其餘 Wiki 項目僅顯示於鍛造頁，不加入配裝。
+  const keepAlter=(name)=>{const x=byName(name);return x?{...x,_unreleased:name!=='月魂珠'}:null};
+  const alter=[
+    keepAlter('命運的昇華之光'),
+    keepAlter('拜爾納之杖'),
+    keepAlter('危機核心'),
+    keepAlter('奉獻'),
+    keepAlter('德拉卡斯的盔甲'),
+    {name:'Eliot',name_en:'Eliot',job:'Melee Agility',effect:'+1425 Agility\n+10% Cooldown Speed\n+5% Movement Speed\nHunter II (Passive)',materials:'Hunter Strike, Golden Fragment, Dragon Tooth, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/alter-ego/eliot.png',_unreleased:true},
+    keepAlter('月魂珠'),
+    keepAlter('末日死靈之劍'),
+    keepAlter('邪惡法杖'),
+    {name:'Sword of Akasha',name_en:'Sword of Akasha',job:'Melee Agility',effect:'+1475 Agility\n+35% Attack Speed\nGhast (Passive)',materials:'Malevolent, Sphere of Doom, Mystical, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/alter-ego/sword-of-akasha.png',_unreleased:true},
+    {name:"Titan's Mitt",name_en:"Titan's Mitt",job:'Melee',effect:'+150 Armor\n+875 Strength\n+25% Attack Speed\nTitan Strike (Passive)',materials:'Strength of the Earth, Diamond, Mantle of Darkness, Fire Stone, Angelic Hope',image:'../images/alter-ego/titans-mitt.png',_unreleased:true},
+    {name:'Ungodly Reaper',name_en:'Ungodly Reaper',job:'Melee',effect:'+10000 Attack Damage\nSoul Harvest (Passive)',materials:'Cruel Blade, Sphere of Doom, Mystery, Mystical, Fire Stone, Angelic Hope',image:'../images/alter-ego/ungodly-reaper.png',_unreleased:true}
+  ].filter(Boolean);
+  grouped.push({type:'鍛造裝備',name:'オルター・エゴ｜異我化身 (Alter Ego)',list:alter,filterKey:'異我化身',mixedAvailability:true,routeNote:'迷宮路徑｜M1 第一商店：第一個圓圈 → 下 → 右 → 上 → 接著沿單一路線前進'});
+
+  // 亞古尼姆：依 Wiki M1 第二商店資料新增；目前版本全數尚未推出。
+  // 注意：這些項目只存在於鍛造展示頁，不寫入 database，因此不會出現在「配裝」選單。
+  const agahnim=[
+    {name:'遠古預兆',name_en:'Ancient Omen',job:'Inquisitor',effect:'+400 全屬性\n+7500 Mana\n+20% Cooldown Speed\nBulwark Aura (Passive)',materials:'Rising Ash, Nature Fragment, Ruby, Dragon Egg, Dragon Stone, Angelic Hope',image:'../images/agahnim/ancient-omen.png',_unreleased:true},
+    {name:'天使元素',name_en:'Angel Elements',job:'Intelligence',effect:'+1625 Intelligence\n+15% Cooldown Speed\n-15% Mana Efficiency\nConcentration II (Passive)',materials:"Concentrated Energy, Sapphire, Harbinger's Essence, Dragon Stone, Fire Stone, Angelic Hope",image:'../images/agahnim/angel-elements.png',_unreleased:true},
+    {name:'災厄',name_en:'Calamity',job:'Archer',effect:'+1500 Agility\n+25% Attack Speed\nNature\'s Disciple (Passive)',materials:'Windspeaker, Nature Fragment, Dragon Tooth, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/agahnim/calamity.png',_unreleased:true},
+    {name:'天界法杖',name_en:'Celestial Wand',job:'Intelligence',effect:'+1300 Intelligence\n+5000 Mana\n+15% Cooldown Speed\n+15% Mana Efficiency',materials:'Eclair La Demes, Ocean Fragment, Sapphire, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/agahnim/celestial-wand.png',_unreleased:true},
+    {name:'神諭',name_en:'Oracle',job:'Acolyte / Caster / Fairy',effect:'+1200 Intelligence\n+160 Mana Regen\n+15% Cooldown Speed\nBless (Active)',materials:'Flask of Oasis, Nature Fragment, Mythical Armor Piece, Blessing of Dragon, Fire Stone, Angelic Hope',image:'../images/agahnim/oracle.png',_unreleased:true},
+    {name:'神聖魔導書',name_en:'Sacred Grimoire',job:'Acolyte / Caster',effect:'+1050 Intelligence\n+5000 Mana\n+15% Cooldown Speed\nLament (Active)',materials:'Book of Hylia, Golden Fragment, Blessing of Dragon, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/agahnim/sacred-grimoire.png',_unreleased:true},
+    {name:'熾天使之擁',name_en:"Seraph's Embrace",job:'Intelligence',effect:'+1200 Intelligence\n+100 Mana Regen\n+0.5% Mana Regen\n+15% Cooldown Speed',materials:"Winter's Soul, Golden Fragment, Sphere of Doom, Dragon Stone, Fire Stone, Angelic Hope",image:'../images/agahnim/seraphs-embrace.png',_unreleased:true},
+    {name:'王者之劍',name_en:'Sovereign Sword',job:'Melee',effect:'+7500 Attack Damage\n+11000 Health\nSovereignty (Active)\nFrost Attack (Passive)',materials:'Cryocell, Diamond, Sphere of Doom, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/agahnim/sovereign-sword.png',_unreleased:true},
+    {name:'英靈殿之劍',name_en:'Sword of Valhalla',job:'Melee',effect:'+10000 Attack Damage\nTriumph (Passive)',materials:'Blade of Despair, Mythical Weapon Piece, Mythical Handle Piece, Dragon Stone, Fire Stone, Angelic Hope',image:'../images/agahnim/sword-of-valhalla.png',_unreleased:true},
+    {name:'征服者',name_en:'The Vanquisher',job:'Melee Agility',effect:'+1425 Agility\n+15% Cooldown Speed\nMortal Will (Passive)',materials:'Sword of the Occult, Mythical Weapon Piece, Dragon Stone, Fire Rising, Fire Stone, Angelic Hope',image:'../images/agahnim/the-vanquisher.png',_unreleased:true}
+  ];
+  grouped.push({type:'版本尚未出',name:'アガニム｜亞古尼姆｜Agahnim',list:agahnim,filterKey:'亞古尼姆',unreleased:true,routeNote:'迷宮路徑｜M1 第二商店：第一個圓圈 → 右 → 下 → 上 → 右 → 右 → 左'});
+
   const q=document.getElementById('q'),type=document.getElementById('type'),root=document.getElementById('forge');
   function render(){
     const qq=q.value.trim().toLowerCase(), tt=type.value;
     root.innerHTML=grouped.filter(g=>!tt||g.filterKey.includes(tt)).map(g=>{
       const list=g.list.filter(x=>!qq||(g.name+x.name+x.name_en+x.job+x.effect+x.materials).toLowerCase().includes(qq));
       if(!list.length)return '';
-      const sectionNote=g.unreleased?' <span class="unreleased-badge">現本尚未出</span>':(g.mixedAvailability?' <span class="unreleased-badge">除月魂珠外，現本尚未出</span>':'');
+      const sectionNote=g.unreleased?' <span class="unreleased-badge">版本尚未出</span>':'';
       return `<section class="forge-section ${g.unreleased?'is-unreleased':''}">
-        <header class="forge-title"><h2>${esc(g.name)}${sectionNote}</h2><div class="forge-count">${esc(g.type)} ・ ${list.length} 件裝備</div></header>
+        <header class="forge-title"><h2>${esc(g.name)}${sectionNote}</h2><div class="forge-count">${esc(g.type)} ・ ${list.length} 件裝備</div>${g.routeNote?`<div class="forge-route-note">${esc(g.routeNote)}</div>`:''}</header>
+        ${g.locationImage?`<div class="forge-location"><div class="forge-location-label">📍 NPC 位置</div><img src="${esc(g.locationImage)}" alt="${esc(g.name)} NPC位置" loading="lazy"></div>`:''}
+        ${g.filterKey==='洗禮專屬武器'?`<div class="gold-mat-box"><h3>✨ 金武材料整理</h3><div class="gold-mat-grid"><div class="gold-mat-group"><strong>IMP1</strong><span>黑暗斗篷 ×4</span><span>黑暗的祝福 ×5</span></div><div class="gold-mat-group"><strong>IMP2</strong><span>龍牙 ×5</span><span>龍蛋 ×5</span><span>龍之祝福 ×6</span></div><div class="gold-mat-group"><strong>IMP3</strong><span>獄蓮芯 ×6</span><span>獄焰晶 ×6</span><span>隨意素材 ×4</span></div><div class="gold-mat-group"><strong>其他</strong><span>金材料 ×9</span><span>下界反應爐 ×23</span></div></div><div class="gold-mat-chain">合成層級：謎 ×4 ・ 三龍一體 ×4 ・ 秘 ×3 ・ 煉獄巨獸 ×1 ・ 暮光 ×1 ・ 晨曦 ×1 ・ 洗禮 ×1</div></div>`:''}
         <div class="forge-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div><div>需求素材</div></div>
         ${list.map(x=>`<article class="forge-item">
           ${x.image?`<img class="forge-img" src="${esc(resolveImage(x))}" alt="${esc(x.name)}" loading="lazy">`:'<div></div>'}
-          <div class="forge-name"><strong>${esc(x.name)}${x._unreleased?' <span class="unreleased-badge">現本尚未出</span>':''}</strong><span>${esc(x.name_en)}</span></div>
+          <div class="forge-name"><strong>${esc(x.name)}${x._unreleased?' <span class="unreleased-badge">版本尚未出</span>':''}</strong><span>${esc(x.name_en)}</span></div>
           <div class="forge-job"><span class="forge-label">適用職業</span>${esc(x.job)}</div>
           <div class="forge-effect"><span class="forge-label">效果</span>${esc(x.effect)}</div>
-          <div class="forge-materials"><span class="forge-label">需求素材</span>${formatRarityText(x.materials)}</div>
+          <div class="forge-materials"><span class="forge-label">需求素材</span>${formatMaterialList(x.materials)}</div>
         </article>`).join('')}
       </section>`;
     }).join('') || '<div class="empty-forge">找不到符合的鍛造資料。</div>';

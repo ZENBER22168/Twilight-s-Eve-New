@@ -29,7 +29,7 @@
     .home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;gap:22px;margin-top:42px;align-items:start}
     .visual-card{display:block;position:relative;overflow:hidden;border-radius:24px;background:#08111c;box-shadow:0 18px 38px rgba(0,0,0,.30);transition:transform .18s ease, box-shadow .18s ease}
     .visual-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px rgba(0,0,0,.30)}
-    .visual-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:24px;background:#07101b}
+    .visual-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:24px;background:#07101b}.visual-card.guide-card-home img{object-fit:cover}.home-card-caption{position:absolute;left:18px;right:18px;bottom:16px;padding:10px 14px;border-radius:12px;background:rgba(4,10,18,.72);border:1px solid rgba(240,214,144,.35);color:#f3e6bd;font-size:22px;font-weight:900;text-align:center;letter-spacing:.06em;backdrop-filter:blur(6px)}
     .visual-card.top{height:auto}
     .visual-card.bottom{height:auto}
     
@@ -40,13 +40,13 @@
     
     
     .card1{grid-column:1}.card2{grid-column:2}.card3{grid-column:3}.card4{grid-column:4}.card5{grid-column:1;grid-row:2}
-    .card6{grid-column:2;grid-row:2}.card7{grid-column:3;grid-row:2}
-    .quote-block{grid-column:4;grid-row:2;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px}
+    .card6{grid-column:2;grid-row:2}.card7{grid-column:3;grid-row:2}.card8{grid-column:4;grid-row:2}
+    .quote-block{grid-column:1 / -1;grid-row:3;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px}
     .quote-inner{text-align:center;max-width:560px;color:#e4ecf6;font-size:19px;line-height:2.0;letter-spacing:.14em;text-shadow:0 4px 18px rgba(0,0,0,.40)}
     .quote-inner .en{display:block;margin-top:8px;font-size:20px;color:#dbc48e;letter-spacing:.22em}
     .footline{position:relative;z-index:1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0 0;margin-top:24px;border-top:1px solid rgba(255,255,255,.10);color:#9caec2;font-size:15px}
     @media(max-width:1500px){.showcase-inner{padding-left:20px;padding-right:20px}}
-    @media(max-width:1180px){.hero{grid-template-columns:1fr}.hero-side{justify-self:start;text-align:left;padding-top:10px;max-width:none}.home-grid{grid-template-columns:repeat(2,1fr)}.card1,.card2,.card3,.card4,.card5,.card6,.card7,.quote-block{grid-column:auto;grid-row:auto}.quote-block{padding:10px 0 0;justify-content:flex-start}.quote-inner{text-align:left}}
+    @media(max-width:1180px){.hero{grid-template-columns:1fr}.hero-side{justify-self:start;text-align:left;padding-top:10px;max-width:none}.home-grid{grid-template-columns:repeat(2,1fr)}.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.quote-block{grid-column:auto;grid-row:auto}.quote-block{padding:10px 0 0;justify-content:flex-start}.quote-inner{text-align:left}}
     @media(max-width:720px){.showcase-inner{padding:26px 14px 16px}.title-row h1{font-size:48px}.title-row .ver{font-size:22px;padding-bottom:5px}.eyebrow{font-size:16px}.subline{gap:10px}.subline .line{width:50px}.subline .text{font-size:22px;white-space:normal}.hero-desc{font-size:16px}.home-grid{grid-template-columns:1fr}.quote-inner{font-size:16px}.quote-inner .en{font-size:17px}.footline{font-size:14px}}
 
     .home-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
@@ -70,6 +70,7 @@
       <a href="index.html" class="active">🏠 首頁</a>
       <a href="pages/鍛造.html">🔨 鍛造</a>
       <a href="pages/副本材料.html">🏰 副本材料&裝備</a>
+      <a href="pages/攻略首頁.html">🎬 副本攻略</a>
       <a href="pages/材料.html">🧱 鍛造材料&合成商人</a>
       <a href="pages/裝備.html">📘 裝備資料庫</a>
       <a href="pages/NPC.html">📍 NPC位置</a>
@@ -114,6 +115,7 @@
           <a class="visual-card top card5" href="pages/NPC.html" aria-label="NPC位置"><img src="./images/homecards/home-card-npc.png" alt="NPC位置"></a>
           <a class="visual-card bottom card6" href="pages/職業.html" aria-label="職業技能"><img src="./images/homecards/home-card-skill.png" alt="職業技能"></a>
           <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
+          <a class="visual-card bottom card8 guide-card-home" href="pages/攻略首頁.html" aria-label="副本攻略"><img src="./images/homecards/home-card-guide.png" alt="副本攻略"></a>
           <div class="quote-block"><div class="quote-inner">知識，照亮下一個黎明<span class="en">KNOWLEDGE LIGHTS ANOTHER DAWN</span></div></div>
         </div>
 

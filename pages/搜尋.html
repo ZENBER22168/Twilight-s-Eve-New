@@ -2,34 +2,26 @@
 <link rel="stylesheet" href="../style.css"><style>
 .builder-profile{display:grid;grid-template-columns:minmax(260px,430px) 1fr;gap:18px;align-items:end;margin:18px 0 18px;padding:18px;background:#121821;border:1px solid #29323e;border-radius:16px}.profile-field label{display:block;color:#f0d690;font-weight:900;margin-bottom:8px}.profile-field select{width:100%;padding:13px 14px;background:#0d131a;color:#fff;border:1px solid #35404d;border-radius:10px;font-size:17px}.save-state{color:#91a0b2;font-size:14px;line-height:1.6}.save-state strong{color:#b9e6c9}.builder-main.is-locked{opacity:.42;pointer-events:none;filter:saturate(.5)}.builder-top{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:18px 0 20px}.builder-search{min-width:280px;flex:1}.builder-search .search{margin:0}.clear-btn{border:1px solid #394553;background:#19222d;color:#fff;border-radius:10px;padding:13px 18px;font-size:16px;cursor:pointer}.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.slot{background:#121821;border:1px solid #29323e;border-radius:15px;padding:14px}.slot-title{font-size:15px;font-weight:900;color:#f0d690;margin-bottom:8px}.slot select{width:100%;padding:12px 13px;background:#0d131a;color:#fff;border:1px solid #35404d;border-radius:9px;font-size:16px}.slot-preview{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:center;margin-top:12px;min-height:76px}.slot-preview img{width:68px;height:68px;object-fit:contain;background:#080b0f;border:1px solid #2b3542;border-radius:10px;padding:3px}.slot-name{font-size:18px;font-weight:900}.slot-sub{font-size:13px;color:#91a0b2;line-height:1.45}.summary{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.summary-card{background:#121821;border:1px solid #29323e;border-radius:16px;padding:18px}.summary-card h2{margin:0 0 14px}.material-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px}.material-row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#0f151d;border:1px solid #252e3a;border-radius:10px;padding:10px 12px}.material-name{font-weight:800}.material-count{font-size:18px;font-weight:900;color:#f0d690}.selected-list{display:flex;flex-direction:column;gap:9px}.selected-item{display:flex;align-items:center;gap:10px;padding:9px;background:#0f151d;border-radius:10px;border:1px solid #252e3a}.selected-item img{width:46px;height:46px;object-fit:contain;background:#080b0f;border-radius:7px}.selected-item strong{display:block}.selected-item span{font-size:12px;color:#91a0b2}.hint{font-size:14px;color:#8e99a8;margin-top:10px;line-height:1.55}.empty-summary{padding:20px;color:#8e99a8;text-align:center;border:1px dashed #35404d;border-radius:10px}.job-badge{display:inline-block;margin-left:7px;padding:3px 8px;border-radius:999px;background:#253140;color:#d7e2ef;font-size:12px}.notice-line{padding:10px 12px;border:1px solid #29323e;border-radius:10px;background:#0f151d;color:#9eabb9;font-size:13px;margin-top:10px}.material-block{margin-bottom:16px}.material-block h3{margin:0 0 10px;font-size:16px;color:#f0d690}.material-notes{display:flex;flex-direction:column;gap:8px;margin-top:12px}.material-note{padding:10px 12px;border-radius:10px;background:#0f151d;border:1px solid #252e3a;color:#9eabb9;line-height:1.5;font-size:14px}.selected-item .small-note{display:block;margin-top:4px;font-size:12px;color:#bca97a}
 @media(max-width:1200px){.summary{grid-template-columns:1fr 1fr}}@media(max-width:1000px){.builder-profile{grid-template-columns:1fr}.slots{grid-template-columns:repeat(2,1fr)}.summary{grid-template-columns:1fr}}@media(max-width:650px){.slots{grid-template-columns:1fr}.slot-preview{grid-template-columns:60px 1fr}.slot-preview img{width:56px;height:56px}}
-</style></head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html" class="active">🛡️ 配裝</a></nav></header><main class="wrap"><h1>🧩 職業六格配裝</h1><p class="muted">先選職業，再從適用該職業的裝備中挑選最多 6 件。每個職業的配裝會自動記錄，下次打開會直接恢復。</p><section class="builder-profile"><div class="profile-field"><label for="profession">選擇職業</label><select id="profession"><option value="">— 請先選擇職業 —</option></select></div><div class="save-state"><strong>✓ 自動保存</strong><br>會記住最後使用的職業，以及每個職業各自的 6 格配裝。副本中標示為「鍛造材料／謎團」的掉落不會再出現在配裝選單。</div></section><div id="builderMain" class="builder-main is-locked"><div class="builder-top"><div class="builder-search"><input id="filter" class="search" placeholder="輸入裝備名稱、英文名稱或效果來縮小選單…"></div><button id="clearAll" class="clear-btn" type="button">清空此職業 6 格</button></div><div id="slots" class="slots"></div><div class="summary"><section class="summary-card"><h2>📦 直接需求素材總計</h2><div id="materials" class="material-list"></div><div class="hint">這裡先統計裝備上直接寫的需求素材。副本直接掉落裝備本身不會被當成需求素材。稀有度文字沿用 Excel 配色。</div></section><section class="summary-card"><h2>🧪 副本合成拆解總計</h2><div id="recipeSummary"></div><div class="hint">會把像「三龍一體、獄咒印、煉獄核」這類合成素材往下拆解，方便你直接看總共要刷多少。計算會優先使用固定、剛好的配方，不再一次列出太多替代方案。焚魂爐固定以「獄焰晶 ×1 + 獄蓮芯 ×1」計算。</div></section><section class="summary-card"><h2>🗡️ 已選裝備 <span id="jobBadge" class="job-badge"></span></h2><div id="selected" class="selected-list"></div></section></div></div></main>
+
+.mat-ref{position:relative;display:inline-block;color:#8fd0ff;font-weight:800;cursor:help;border-bottom:1px dotted #6aa8d6}.mat-ref .mat-tip{display:none;position:absolute;z-index:60;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);min-width:310px;max-width:480px;padding:15px 17px;border-radius:10px;background:#071019;border:1px solid #3a5267;color:#dce7f1;box-shadow:0 12px 28px rgba(0,0,0,.45);font-size:16px;line-height:1.7;white-space:normal}.mat-tip b{display:block;font-size:17px;line-height:1.35;margin-bottom:5px;color:#f2f5f8}.mat-ref:hover .mat-tip,.mat-ref:focus .mat-tip{display:block}.gold-summary{margin-top:18px;background:linear-gradient(180deg,#171d25,#0f151d);border:1px solid #55451d;border-radius:16px;padding:18px}.gold-summary[hidden]{display:none}.gold-summary h2{margin:0 0 12px;color:#f0d690}.gold-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.gold-summary-group{padding:12px;border-radius:12px;background:#0c131a;border:1px solid #313c48}.gold-summary-group strong{display:block;color:#d6a73a;margin-bottom:6px}.gold-summary-group span{display:block;color:#cbd5df;line-height:1.65}.gold-chain{margin-top:10px;color:#9fb0c2;font-size:13px;line-height:1.65}@media(max-width:900px){.gold-summary-grid{grid-template-columns:1fr 1fr}.mat-ref .mat-tip{left:0;transform:none}}@media(max-width:560px){.gold-summary-grid{grid-template-columns:1fr}.mat-ref .mat-tip{min-width:260px;max-width:min(330px,86vw);font-size:15px;padding:13px 14px}.mat-tip b{font-size:16px}}
+</style></head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html" class="active">🛡️ 配裝</a></nav></header><main class="wrap"><h1>🧩 職業六格配裝</h1><p class="muted">先選職業，再依你在 Excel 設定的角色定位、裝備定位與專屬職業規則挑選最多 6 件。未實裝裝備不會出現在配裝。</p><section class="builder-profile"><div class="profile-field"><label for="profession">選擇職業</label><select id="profession"><option value="">— 請先選擇職業 —</option></select></div><div class="save-state"><strong>✓ 自動保存</strong><br>會記住最後使用的職業，以及每個職業各自的 6 格配裝。選單只顯示 Excel 內「已實裝」且符合定位的裝備；有填專屬職業的裝備只能由指定角色使用，專屬武器亦同。</div></section><div id="builderMain" class="builder-main is-locked"><div class="builder-top"><div class="builder-search"><input id="filter" class="search" placeholder="輸入裝備名稱、英文名稱或效果來縮小選單…"></div><button id="clearAll" class="clear-btn" type="button">清空此職業 6 格</button></div><div id="slots" class="slots"></div><div class="summary"><section class="summary-card"><h2>📦 直接需求素材總計</h2><div id="materials" class="material-list"></div><div class="hint">這裡先統計裝備上直接寫的需求素材。副本直接掉落裝備本身不會被當成需求素材。稀有度文字沿用 Excel 配色。</div></section><section class="summary-card"><h2>🧪 副本合成拆解總計</h2><div id="recipeSummary"></div><div class="hint">會把像「三龍一體、獄咒印、煉獄核」這類合成素材往下拆解，方便你直接看總共要刷多少。計算會優先使用固定、剛好的配方，不再一次列出太多替代方案。焚魂爐固定以「獄焰晶 ×1 + 獄蓮芯 ×1」計算。</div></section><section class="summary-card"><h2>🗡️ 已選裝備 <span id="jobBadge" class="job-badge"></span></h2><div id="selected" class="selected-list"></div></section></div><section id="goldSummary" class="gold-summary" hidden><h2>✨ 金武材料整理</h2><div id="goldSummaryBody"></div></section></div></main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
-<script src="../app-data.js"></script><script src="../skill-data.js"></script><script src="../npc-data.js"></script><script>
+<script src="../app-data.js"></script><script src="../skill-data.js"></script><script src="../npc-data.js"></script><script src="../loadout-rules.js"></script><script>
 loadDB().then(d=>{
- const professionEl=document.getElementById('profession'),builderMain=document.getElementById('builderMain'),slotsEl=document.getElementById('slots'),filter=document.getElementById('filter'),materialsEl=document.getElementById('materials'),recipeSummaryEl=document.getElementById('recipeSummary'),selectedEl=document.getElementById('selected'),jobBadge=document.getElementById('jobBadge');
+ const professionEl=document.getElementById('profession'),builderMain=document.getElementById('builderMain'),slotsEl=document.getElementById('slots'),filter=document.getElementById('filter'),materialsEl=document.getElementById('materials'),recipeSummaryEl=document.getElementById('recipeSummary'),selectedEl=document.getElementById('selected'),jobBadge=document.getElementById('jobBadge'),goldSummaryEl=document.getElementById('goldSummary'),goldSummaryBody=document.getElementById('goldSummaryBody');
  const forge=(d.items||[]).map((x,i)=>({...x,_id:'i:'+String(x.row??i)+':'+String(x.name||i),_source:'鍛造'}));
  // 只排除純素材提示項，保留可穿戴裝備與專屬武器，讓配裝選單更完整。
  const loot=(d.loot||[]).filter(x=>!/(鍛造材料|充滿謎團|更多謎團)/.test(String(x.effect||''))).map((x,i)=>({...x,_id:'l:'+String(x.row??i)+':'+String(x.name||i),_source:'副本'}));
  const all=[...forge,...loot];
- const professions=(typeof SKILL_DATA!=='undefined'?SKILL_DATA:[]).map(x=>x.name);
- professions.forEach(name=>{const o=document.createElement('option');o.value=name;o.textContent=name;professionEl.appendChild(o)});
+ const recipeLookup=new Map();
+ all.forEach(it=>{const n=String(it.name||'').trim();if(n&&it.materials&&!recipeLookup.has(n))recipeLookup.set(n,String(it.materials));});
+ const noTip=/^(?:稀有|史詩|傳說).*(?:碎片|武器碎片|盔甲碎片|配件碎片)$/;
+ function materialWithTip(name){const n=String(name||'').trim(),recipe=recipeLookup.get(n);if(!recipe||noTip.test(n))return formatRarityText(n);return `<span class="mat-ref" tabindex="0">${formatRarityText(n)}<span class="mat-tip"><b>${esc(n)}</b><br>需要：${formatRarityText(recipe)}</span></span>`;}
+ function formatMaterialList(text){return String(text||'').split(/([,，、])/).map(part=>/^[,，、]$/.test(part)?esc(part):materialWithTip(part.trim())).join(' ');}
+ const professions=(typeof LOADOUT_ROLE_ORDER!=='undefined'?LOADOUT_ROLE_ORDER:[]).filter(name=>LOADOUT_ROLE_RULES?.[name]?.status==='已實裝');
+ professions.forEach(name=>{const o=document.createElement('option');o.value=name;const rr=LOADOUT_ROLE_RULES[name]||{};o.textContent=rr.en?`${name}｜${rr.en}`:name;professionEl.appendChild(o)});
  let profession='',picked=Array(6).fill('');
- const STORAGE_PREFIX='twilight_loadout_v7_'; const LAST_KEY='twilight_loadout_last_job_v7';
- const EXTRA_JOB_ALIASES={
-   '聖殿武士':['Paladin','Valkyrie','High Templar'],
-   '暗殿武士':['Paladin','Valkyrie','High Templar'],
-   '白袍法師':['Caster'],
-   '聖人':['Caster'],
-   '符文大師':['Caster'],
-   '召喚師':['Caster'],
-   '光縛者':['Fairy','仙女'],
-   '聖術師':['Fairy','仙女'],
-   '教皇':['Fairy','仙女'],
-   '大審判者':['Guardian'],
-   '巫妖':['Guardian'],
-   '冠軍':['Tank','坦克'],
-   '復仇者':['Tank','坦克']
- };
+ const STORAGE_PREFIX='twilight_loadout_v8_'; const LAST_KEY='twilight_loadout_last_job_v8';
  const COMPOSITE_RECIPES={
    '謎':{parts:[{name:'黑暗斗篷',qty:1},{name:'黑暗的祝福',qty:1},{name:'下界反應爐',qty:1}]},
    '秘':{parts:[{name:'神話武器碎片',qty:1},{name:'神話盔甲碎片',qty:1},{name:'神話配件碎片',qty:1},{name:'下界反應爐',qty:1}]},
@@ -40,32 +32,40 @@ loadDB().then(d=>{
    '煉獄核':{parts:[{name:'焚魂爐',qty:1},{name:'獄咒印',qty:1},{name:'下界反應爐',qty:1}]},
    '煉獄晶':{parts:[{name:'焚獄之華',qty:1},{name:'煉獄核',qty:1},{name:'下界反應爐',qty:1}]}
  };
- function safeGet(k){try{return localStorage.getItem(k)}catch(e){return null}} function safeSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
- function routeFor(job){return (typeof NPC_ROUTES!=='undefined'?NPC_ROUTES:[]).find(r=>(r.stages||[]).some(s=>s.name===job));}
- function profileFor(job){const r=routeFor(job),base=r?.stages?.[0]?.name||job,tags=new Set([job,base,...(r?.stages||[]).map(s=>s.name)]);let melee=false,agi=false,caster=false,archer=false,tank=false,fairy=false;
-   if(['劍士','盜賊','狩魔獵人','武士','忍者','惡魔'].includes(base)) melee=true;
-   if(['盜賊','狩魔獵人','武士','忍者'].includes(base)) agi=true;
-   if(['牧師','德魯伊','法師','聖術師'].includes(base)||job.includes('秘術大師')) caster=true;
-   if(base==='弓箭手') archer=true;
-   if(base==='劍士') tank=true;
-   if(base==='聖術師') fairy=true;
-   const aliasTags=(EXTRA_JOB_ALIASES[job]||[]).concat(EXTRA_JOB_ALIASES[base]||[]);
-   aliasTags.forEach(t=>tags.add(t));
-   return {base,tags,melee,agi,caster,archer,tank,fairy}; }
- function eligible(x){if(!profession)return false;const raw=String(x.job||'');const compact=raw.replaceAll(' ','');const p=profileFor(profession); if(!compact||compact.includes('全職業'))return true;
-   if([...p.tags].some(t=>t&&raw.toLowerCase().includes(String(t).toLowerCase())))return true;
-   if([...p.tags].some(t=>t&&compact.includes(String(t).replaceAll(' ',''))))return true;
-   if(p.melee&&compact.includes('所有近戰職業'))return true;
-   if(p.agi&&compact.includes('近戰敏捷職業'))return true;
-   if(p.caster&&(compact.includes('所有智者')||/Caster/i.test(raw)))return true;
-   if(p.archer&&compact.includes('弓箭手'))return true;
-   if(p.base==='德魯伊'&&compact.includes('變形者'))return true;
-   if(p.tank&&/坦克|Tank/i.test(raw))return true;
-   if(p.fairy&&/Fairy|仙女/i.test(raw))return true;
-   return false; }
+ function safeGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+ function safeSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+ const EQUIP_RULE_BY_PAIR=new Map();
+ const EQUIP_RULE_BY_EN=new Map();
+ const EQUIP_RULE_BY_NAME=new Map();
+ (typeof LOADOUT_EQUIPMENT_RULES!=='undefined'?LOADOUT_EQUIPMENT_RULES:[]).forEach(r=>{
+   const n=String(r.name||'').trim(),en=String(r.name_en||'').trim();
+   EQUIP_RULE_BY_PAIR.set(`${n}\u0000${en}`,r);
+   if(en){if(!EQUIP_RULE_BY_EN.has(en))EQUIP_RULE_BY_EN.set(en,[]);EQUIP_RULE_BY_EN.get(en).push(r);}
+   if(n){if(!EQUIP_RULE_BY_NAME.has(n))EQUIP_RULE_BY_NAME.set(n,[]);EQUIP_RULE_BY_NAME.get(n).push(r);}
+ });
+ function ruleForItem(x){
+   const n=String(x?.name||'').trim(),en=String(x?.name_en||'').trim();
+   const exact=EQUIP_RULE_BY_PAIR.get(`${n}\u0000${en}`);if(exact)return exact;
+   const byEn=en?(EQUIP_RULE_BY_EN.get(en)||[]):[];if(byEn.length===1)return byEn[0];
+   const byName=n?(EQUIP_RULE_BY_NAME.get(n)||[]):[];if(byName.length===1)return byName[0];
+   return null;
+ }
+ function splitExclusiveJobs(v){return String(v||'').split(/[、，,]/).map(s=>s.trim()).filter(Boolean);}
+ function eligible(x){
+   if(!profession)return false;
+   const er=ruleForItem(x); if(!er)return false;
+   if(er.status!=='已實裝')return false;
+   const rr=LOADOUT_ROLE_RULES?.[profession]; if(!rr||rr.status!=='已實裝')return false;
+   const exclusive=splitExclusiveJobs(er.exclusiveJobs);
+   if(exclusive.length)return exclusive.includes(profession);
+   if(er.all)return true;
+   const roleSet=new Set(rr.roles||[]);
+   return (er.roles||[]).some(role=>roleSet.has(role));
+ }
  function label(x){return `${x.name}${x.name_en?'｜'+x.name_en:''}${x.job?'｜'+x.job:''} [${x._source}]`}
- function pool(){const q=filter.value.trim().toLowerCase();return all.filter(x=>eligible(x)&&(!q||(x.name+x.name_en+x.job+x.effect).toLowerCase().includes(q)));}
- function optionsFor(si){const used=new Set(picked.filter((v,i)=>v&&i!==si));return pool().filter(x=>!used.has(x._id));}
+ function itemRuleKey(x){const r=ruleForItem(x);return r?`${r.name}\u0000${r.name_en||''}`:`${x?.name||''}\u0000${x?.name_en||''}`;}
+ function pool(){const q=filter.value.trim().toLowerCase(),seen=new Set();return all.filter(x=>eligible(x)&&(!q||(x.name+x.name_en+x.job+x.effect).toLowerCase().includes(q))).filter(x=>{const k=itemRuleKey(x);if(seen.has(k))return false;seen.add(k);return true;});}
+ function optionsFor(si){const used=new Set(picked.filter((v,i)=>v&&i!==si).map(findItem).filter(Boolean).map(itemRuleKey));return pool().filter(x=>!used.has(itemRuleKey(x)));}
  function findItem(id){return all.find(x=>x._id===id)}
  function save(){if(!profession)return;safeSet(STORAGE_PREFIX+profession,JSON.stringify(picked));safeSet(LAST_KEY,profession)}
  function load(job){let arr;try{arr=JSON.parse(safeGet(STORAGE_PREFIX+job)||'[]')}catch(e){arr=[]}picked=Array(6).fill('').map((_,i)=>arr[i]||'');picked=picked.map(id=>{const x=findItem(id);return x&&eligible(x)?id:''});}
@@ -86,8 +86,15 @@ loadDB().then(d=>{
    allEntries.forEach(([name,count])=>{const expanded=expandRecipe(name,count);mergeCounts(totalBase,expanded.counts);expanded.notes.forEach(n=>noteSet.add(n));});
    compositeEntries.forEach(([name,count])=>steps.push(`<div class="material-row"><span class="material-name">${formatRarityText(name)}</span><span class="material-count">× ${count}</span></div>`));
    const baseList=[...totalBase.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'zh-Hant'));
-   recipeSummaryEl.innerHTML=`${steps.length?`<div class="material-block"><h3>需拆解的合成素材</h3><div class="material-list">${steps.join('')}</div></div>`:''}<div class="material-block"><h3>全部裝備拆解後素材總和</h3><div class="material-list">${baseList.map(([n,c])=>`<div class="material-row"><span class="material-name">${formatRarityText(n)}</span><span class="material-count">× ${c}</span></div>`).join('')}</div></div>${noteSet.size?`<div class="material-notes">${[...noteSet].map(n=>`<div class="material-note">${esc(n)}</div>`).join('')}</div>`:''}`;}
- function renderSummary(){const chosen=picked.map(findItem).filter(Boolean);const counts=new Map();chosen.forEach(x=>parseMaterials(x.materials).forEach(m=>addCount(counts,m.name,m.qty)));const mats=[...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'zh-Hant'));materialsEl.innerHTML=mats.length?mats.map(([n,c])=>`<div class="material-row"><span class="material-name">${formatRarityText(n)}</span><span class="material-count">× ${c}</span></div>`).join(''):'<div class="empty-summary">選擇鍛造裝備後會在這裡統計素材。</div>';renderRecipeBreakdown(counts);selectedEl.innerHTML=chosen.length?chosen.map(x=>`<div class="selected-item">${x.image?`<img src="${esc(resolveImage(x))}" alt="${esc(x.name)}">`:''}<div><strong>${esc(x.name)}</strong><span>${esc(x.name_en||'')} · ${esc(x._source)} · ${esc(x.job||'')}</span>${x.materials?`<span class="small-note">需求：${formatText(x.materials)}</span>`:''}</div></div>`).join(''):'<div class="empty-summary">目前尚未選擇裝備。</div>';jobBadge.textContent=profession||'';}
+   recipeSummaryEl.innerHTML=`${steps.length?`<div class="material-block"><h3>需拆解的合成素材</h3><div class="material-list">${steps.join('')}</div></div>`:''}<div class="material-block"><h3>全部裝備拆解後素材總和</h3><div class="material-list">${baseList.map(([n,c])=>`<div class="material-row"><span class="material-name">${materialWithTip(n)}</span><span class="material-count">× ${c}</span></div>`).join('')}</div></div>${noteSet.size?`<div class="material-notes">${[...noteSet].map(n=>`<div class="material-note">${esc(n)}</div>`).join('')}</div>`:''}`;}
+ function renderGoldSummary(chosen){
+   const goldCount=chosen.filter(x=>x._source==='鍛造' && Number(x.row)>=178 && Number(x.row)<=191).length;
+   if(!goldCount){goldSummaryEl.hidden=true;goldSummaryBody.innerHTML='';return;}
+   const m=goldCount;goldSummaryEl.hidden=false;
+   const q=(n)=>n*m;
+   goldSummaryBody.innerHTML=`<div class="gold-summary-grid"><div class="gold-summary-group"><strong>IMP1</strong><span>黑暗斗篷 ×${q(4)}</span><span>黑暗的祝福 ×${q(5)}</span></div><div class="gold-summary-group"><strong>IMP2</strong><span>龍牙 ×${q(5)}</span><span>龍蛋 ×${q(5)}</span><span>龍之祝福 ×${q(6)}</span></div><div class="gold-summary-group"><strong>IMP3</strong><span>獄蓮芯 ×${q(6)}</span><span>獄焰晶 ×${q(6)}</span><span>隨意素材 ×${q(4)}</span></div><div class="gold-summary-group"><strong>其他</strong><span>金材料 ×${q(9)}</span><span>下界反應爐 ×${q(23)}</span></div></div><div class="gold-chain">合成層級：謎 ×${q(4)} ・ 三龍一體 ×${q(4)} ・ 秘 ×${q(3)} ・ 煉獄巨獸 ×${q(1)} ・ 暮光 ×${q(1)} ・ 晨曦 ×${q(1)} ・ 洗禮 ×${q(1)}</div>`;
+ }
+ function renderSummary(){const chosen=picked.map(findItem).filter(Boolean);const counts=new Map();chosen.forEach(x=>parseMaterials(x.materials).forEach(m=>addCount(counts,m.name,m.qty)));const mats=[...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'zh-Hant'));materialsEl.innerHTML=mats.length?mats.map(([n,c])=>`<div class="material-row"><span class="material-name">${materialWithTip(n)}</span><span class="material-count">× ${c}</span></div>`).join(''):'<div class="empty-summary">選擇鍛造裝備後會在這裡統計素材。</div>';renderRecipeBreakdown(counts);selectedEl.innerHTML=chosen.length?chosen.map(x=>`<div class="selected-item">${x.image?`<img src="${esc(resolveImage(x))}" alt="${esc(x.name)}">`:''}<div><strong>${esc(x.name)}</strong><span>${esc(x.name_en||'')} · ${esc(x._source)} · ${esc(x.job||'')}</span>${x.materials?`<span class="small-note">需求：${formatMaterialList(x.materials)}</span>`:''}</div></div>`).join(''):'<div class="empty-summary">目前尚未選擇裝備。</div>';jobBadge.textContent=profession||'';renderGoldSummary(chosen);}
  function renderAll(){builderMain.classList.toggle('is-locked',!profession);renderSlots();renderSummary();}
  professionEl.onchange=()=>{profession=professionEl.value;filter.value='';if(profession){load(profession);safeSet(LAST_KEY,profession)}else picked=Array(6).fill('');renderAll();}; filter.oninput=renderSlots;document.getElementById('clearAll').onclick=()=>{if(!profession)return;picked=Array(6).fill('');save();renderAll();};
  const last=safeGet(LAST_KEY);if(last&&professions.includes(last)){profession=last;professionEl.value=last;load(last)}renderAll();

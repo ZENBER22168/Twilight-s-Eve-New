@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>副本攻略｜新暮光之晨</title>
+<link rel="icon" href="../images/site-icon.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+body{background:#050b13 url('../images/site-home-bg.png') center top/cover fixed no-repeat;color:#e5edf6}
+.guide-home{max-width:1460px;margin:0 auto;padding:28px 24px 56px}
+.guide-banner{position:relative;overflow:hidden;border:1px solid rgba(217,182,90,.44);border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.42);background:#07111d;margin-bottom:28px}
+.guide-banner img{display:block;width:100%;height:clamp(360px,38vw,520px);object-fit:cover;object-position:center 58%}
+.guide-banner::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035);pointer-events:none}
+.guide-banner::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(3,8,15,.88) 0%,rgba(3,8,15,.64) 35%,rgba(3,8,15,.18) 68%,rgba(3,8,15,.08) 100%);pointer-events:none}
+.guide-hero-copy{position:absolute;z-index:2;left:clamp(28px,5vw,78px);bottom:clamp(30px,6vw,78px);max-width:720px;text-shadow:0 3px 18px rgba(0,0,0,.75)}
+.guide-hero-copy .guide-kicker{color:#7eb8ff;font-size:13px;font-weight:900;letter-spacing:.24em;margin-bottom:8px}
+.guide-hero-copy h1{margin:0;color:#f3e3bd;font-size:clamp(42px,5.2vw,76px);line-height:1.05;letter-spacing:.05em}
+.guide-hero-copy p{margin:14px 0 0;color:#d5e1ef;font-size:clamp(18px,2vw,28px);font-weight:800;letter-spacing:.05em}
+.guide-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:6px 2px 22px}
+.guide-intro h1{margin:0;color:#f1ddb0;font-size:38px;letter-spacing:.04em}.guide-intro p{margin:6px 0 0;color:#9eb1c6;line-height:1.7}.guide-intro .tag{white-space:nowrap;color:#d8b867;border:1px solid rgba(216,184,103,.36);background:rgba(5,13,24,.74);padding:9px 13px;border-radius:999px;font-weight:800}
+.guide-levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.level-card{position:relative;min-height:300px;overflow:hidden;border-radius:22px;border:1px solid rgba(219,183,83,.42);background:#09121e;box-shadow:0 18px 38px rgba(0,0,0,.32);text-decoration:none;color:inherit;transition:.2s ease}
+.level-card:hover{transform:translateY(-4px);border-color:#e4bd5c;box-shadow:0 24px 46px rgba(0,0,0,.42)}
+.level-card .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92) brightness(.72);transition:.25s}.level-card:hover .bg{transform:scale(1.03);filter:saturate(1) brightness(.78)}
+.level-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,17,.08),rgba(4,10,17,.18) 35%,rgba(4,10,17,.94) 100%)}
+.level-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}.level-code{color:#7db7ff;font-size:13px;font-weight:900;letter-spacing:.16em}.level-copy h2{margin:7px 0 5px;color:#f6e5b9;font-size:26px}.level-copy p{margin:0;color:#b9c7d6;line-height:1.55}.level-btn{display:inline-flex;margin-top:13px;padding:9px 13px;border-radius:10px;border:1px solid #4f739c;background:rgba(16,46,78,.76);color:#edf6ff;font-weight:900}
+.level-card.m1 .bg{filter:brightness(.44) saturate(.7)}.level-card.m1 .level-code{color:#a2b0c0}
+@media(max-width:1100px){.guide-levels{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.guide-home{padding:16px 12px 34px}.guide-banner{border-radius:18px}.guide-banner img{height:320px;object-position:62% center}.guide-banner::before{background:linear-gradient(180deg,rgba(3,8,15,.12) 25%,rgba(3,8,15,.86) 100%)}.guide-hero-copy{left:20px;right:20px;bottom:22px}.guide-hero-copy .guide-kicker{font-size:11px}.guide-hero-copy h1{font-size:36px}.guide-hero-copy p{font-size:17px}.guide-levels{grid-template-columns:1fr}.level-card{min-height:260px}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html" class="active">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a></nav></header>
+<main class="guide-home">
+  <section class="guide-banner" aria-label="副本攻略主視覺">
+    <img src="../images/guides/guide-home-dungeon.png" alt="冒險者持火把走向地下城入口的副本攻略主視覺">
+    <div class="guide-hero-copy">
+      <div class="guide-kicker">DUNGEON GUIDE</div>
+      <h1>副本攻略</h1>
+      <p>副本機制・BOSS攻略・隊伍配置</p>
+    </div>
+  </section>
+  <section class="guide-levels">
+    <a class="level-card" href="攻略.html#imp1"><img class="bg" src="../images/guides/cards/imp1-card.png" alt="IMP1 幻像之城"><div class="level-copy"><div class="level-code">IMPOSSIBLE 1</div><h2>幻像之城</h2><p>Lv235・7 BOSS・定位分工與各關機制。</p></div></a>
+    <a class="level-card" href="攻略.html#imp2"><img class="bg" src="../images/guides/cards/imp2-card.png" alt="IMP2 龍之要塞"><div class="level-copy"><div class="level-code">IMPOSSIBLE 2</div><h2>龍之要塞</h2><p>Lv250・迷宮路線、四龍技能與站位。</p></div></a>
+    <a class="level-card" href="攻略.html#imp3"><img class="bg" src="../images/guides/cards/imp3-card.png" alt="IMP3 懲戒煉獄"><div class="level-copy"><div class="level-code">IMPOSSIBLE 3</div><h2>懲戒煉獄</h2><p>Lv280・10 人團、骷髏堆卡位與多階段處理。</p></div></a>
+    <a class="level-card m1" href="攻略.html#m1"><img class="bg" src="../images/guides/cards/m1-card.png" alt="M1 攻略待補"><div class="level-copy"><div class="level-code">MYTHIC 1</div><h2>M1</h2><p>攻略資料與影片位置已預留，之後可直接補入。</p></div></a>
+  </section>
+</main>
+<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　副本攻略</div><div>IMP1・IMP2・IMP3・M1</div></footer>
+<script src="../mobile-nav.js"></script>
+</body>
+</html>
