@@ -421,7 +421,7 @@ body{
   .home-grid{grid-template-columns:1fr!important;gap:14px!important;margin-top:24px!important}
   .card1,.card2,.card3,.card4,.card5,.card6,.card7,.quote-block{grid-column:auto!important;grid-row:auto!important}
   .visual-card{border-radius:18px!important}
-  .visual-card img{border-radius:18px!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
+  .visual-card{aspect-ratio:3/2!important}.visual-card img{border-radius:18px!important;width:100%!important;height:100%!important;aspect-ratio:3/2!important;object-fit:cover!important}
   .quote-block{padding:6px 0 0!important;justify-content:flex-start!important}
   .quote-inner{text-align:left!important;font-size:15px!important}
   .quote-inner .en{font-size:14px!important;letter-spacing:.12em!important}
