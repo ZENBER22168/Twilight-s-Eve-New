@@ -58,7 +58,11 @@
 .mine-special-status.pending{color:#d8b982}
 .mine-special-rate{min-width:72px;text-align:right;color:#ffd86b;font-weight:900;white-space:nowrap}
 .mine-special-note{margin-top:8px;color:#8f9dad;font-size:11px;line-height:1.6}
-.mine-inline-pending{display:block;margin-top:3px;color:#d8b982;font-size:11px;font-weight:700}
+.mine-item-row.pending-emphasis{background:linear-gradient(90deg,rgba(112,66,18,.14),rgba(112,66,18,0));border:1px solid rgba(183,133,53,.55);border-radius:12px;padding:12px 10px;margin:10px 0}
+.mine-item-row.pending-emphasis + .mine-item-row.pending-emphasis{margin-top:8px}
+.mine-item-main{display:flex;align-items:center;flex-wrap:wrap;gap:0}
+.mine-item-rate{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-width:150px}
+.mine-item-rate .pending-rate-note{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:rgba(140,42,42,.34);border:1px solid rgba(255,120,120,.36);color:#ffd1c5;font-size:12px;font-weight:900;white-space:nowrap}
 </style></head><body>
 <header class="top"><nav class="nav">
 <a class="brand" href="../index.html"><img class="brand-logo" src="../images/site-icon.png" alt=""><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a>
@@ -86,7 +90,7 @@
 </section>
 </main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　掉落率依地圖 ItemPool 權重計算</div></footer>
-<script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data.js"></script>
+<script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data-v89.js"></script>
 <script>
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function specialMini(gi){
@@ -104,9 +108,10 @@ document.getElementById('dungeonGrid').innerHTML=DROP_RATE_DUNGEONS.map((p,i)=>c
 document.getElementById('mineGrid').innerHTML=MINING_DROP_DATA.pickaxes.map(p=>{
  const pool=p.poolData;
  const materialRows=pool.items.map(it=>{
-   const pending=(p.name==='鑽石礦鏟'&&(it.name==='先驅者的精華'||it.name==='黃金鍋鏟'))
-     ? `<small class="mine-inline-pending">現階段沒挖到過</small>` : '';
-   return `<div class="mine-item-row"><span>${esc(it.name)}${pending}</span><strong>${it.poolRate.toFixed(2)}%</strong></div>`;
+   const isPending=(p.name==='鑽石礦鏟'&&(it.name==='先驅者的精華'||it.name==='黃金鍋鏟'));
+   const pendingRateTag=isPending ? `<span class="pending-rate-note">現階段沒挖到過</span>` : '';
+   const rowClass=isPending ? 'mine-item-row pending-emphasis' : 'mine-item-row';
+   return `<div class="${rowClass}"><span class="mine-item-main">${esc(it.name)}</span><strong class="mine-item-rate">${pendingRateTag}<span>${it.poolRate.toFixed(2)}%</span></strong></div>`;
  }).join('');
  const gold=p.goldAmount==='無'?'無':`${p.goldRate.toFixed(2)}%｜${esc(p.goldAmount)}`;
  const lumber=p.lumberAmount==='無'?'無':`${p.lumberRate.toFixed(2)}%｜${esc(p.lumberAmount)}`;
