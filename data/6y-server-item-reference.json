@@ -1,0 +1,2214 @@
+[
+  {
+    "type": "Equipment",
+    "rawcode": "I00B",
+    "saveCode": 1,
+    "name": "銳利的爪子",
+    "icon": ""
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I007",
+    "saveCode": 2,
+    "name": "基礎步槍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHumanMissileUpOne.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00C",
+    "saveCode": 3,
+    "name": "水晶魔杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNPriestAdept.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I006",
+    "saveCode": 4,
+    "name": "小弓",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNImprovedBows.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I004",
+    "saveCode": 5,
+    "name": "月亮之甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNImprovedMoonArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00D",
+    "saveCode": 6,
+    "name": "高級魔杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWitchDoctorAdept.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I005",
+    "saveCode": 7,
+    "name": "冰劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNThoriumMelee.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00E",
+    "saveCode": 8,
+    "name": "冰盾",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNThoriumArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02B",
+    "saveCode": 9,
+    "name": "小盾牌",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSteelArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02E",
+    "saveCode": 10,
+    "name": "破損的手套",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNImprovedUnholyStrength.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02C",
+    "saveCode": 11,
+    "name": "精靈盔甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNMoonArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02H",
+    "saveCode": 12,
+    "name": "高級手套",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNGlove.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02G",
+    "saveCode": 13,
+    "name": "小環",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNCirclet.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02F",
+    "saveCode": 14,
+    "name": "魔法護身符",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpellShieldAmulet.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00I",
+    "saveCode": 15,
+    "name": "幸運護身符",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAmulet.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00J",
+    "saveCode": 16,
+    "name": "皮甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNLeatherUpgradeOne.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02D",
+    "saveCode": 17,
+    "name": "鋒利刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNUpgradeMoonGlaive.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02A",
+    "saveCode": 18,
+    "name": "切片機",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSteelRanged.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I029",
+    "saveCode": 19,
+    "name": "攻擊之爪",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNShamanAdept.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00G",
+    "saveCode": 20,
+    "name": "老杆",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNStaffOfSilence.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00H",
+    "saveCode": 21,
+    "name": "無光經刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNStrengthOfTheMoon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I003",
+    "saveCode": 22,
+    "name": "細劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSteelMelee.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I002",
+    "saveCode": 23,
+    "name": "法杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAlleriaFlute.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00R",
+    "saveCode": 24,
+    "name": "帕蒲賽刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNImprovedStrengthOfTheMoon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00P",
+    "saveCode": 25,
+    "name": "強化裝甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNLeatherUpgradeTwo.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00O",
+    "saveCode": 26,
+    "name": "針'匕首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNDaggerOfEscape.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00M",
+    "saveCode": 27,
+    "name": "針'圖騰",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAbomination.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00L",
+    "saveCode": 28,
+    "name": "蟲族的遺產",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedStrengthOfTheMoon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00Q",
+    "saveCode": 29,
+    "name": "黑魔杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWandSkull.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00N",
+    "saveCode": 30,
+    "name": "骷髏法杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWitchDoctorMaster.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I00S",
+    "saveCode": 31,
+    "name": "針'的遺產",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSkeletalLongevity.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01X",
+    "saveCode": 43,
+    "name": "熊之護腕",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRunedBracers.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I023",
+    "saveCode": 44,
+    "name": "鷹之靴",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBoots.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I020",
+    "saveCode": 46,
+    "name": "火焰手套",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedUnholyStrength.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01Z",
+    "saveCode": 47,
+    "name": "靈魂魔杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWandOfCyclone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I021",
+    "saveCode": 48,
+    "name": "勇氣頭盔",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHelmutPurple.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I022",
+    "saveCode": 49,
+    "name": "Van克利夫的盔甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNArmorGolem.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01Y",
+    "saveCode": 50,
+    "name": "血腥鑽石",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNPhilosophersStone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01H",
+    "saveCode": 51,
+    "name": "奇怪的球",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNUsedSoulGem.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I024",
+    "saveCode": 52,
+    "name": "魔法斧",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrcMeleeUpTwo.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01K",
+    "saveCode": 53,
+    "name": "鋒利的碎片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNThoriumRanged.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01I",
+    "saveCode": 54,
+    "name": "長步槍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHumanMissileUpTwo.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01J",
+    "saveCode": 55,
+    "name": "復仇者之盾",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHumanArmorUpTwo.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01M",
+    "saveCode": 56,
+    "name": "酋長的驕傲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpiritWalkerAdeptTraining.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01V",
+    "saveCode": 57,
+    "name": "小米加步槍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHumanMissileUpThree.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01W",
+    "saveCode": 58,
+    "name": "火焰之劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpell_Holy_RetributionAura.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01U",
+    "saveCode": 59,
+    "name": "速度之靴",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBootsOfSpeed.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05R",
+    "saveCode": 60,
+    "name": "自然魔杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHornOfCenarius.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05Q",
+    "saveCode": 61,
+    "name": "月亮胸甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedMoonArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01R",
+    "saveCode": 62,
+    "name": "巫妖王的遺物",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBansheeMaster.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01P",
+    "saveCode": 63,
+    "name": "阻擊步槍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNDwarvenLongRifle.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01O",
+    "saveCode": 64,
+    "name": "冰霜巨劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpell_Holy_RighteousnessAura.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01N",
+    "saveCode": 65,
+    "name": "黃昏",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNStaffOfNegation.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I01T",
+    "saveCode": 66,
+    "name": "生命之戒",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRingJadeFalcon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02N",
+    "saveCode": 67,
+    "name": "死亡掠奪者",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrcMeleeUpThree.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02V",
+    "saveCode": 68,
+    "name": "幽靈甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNCloakOfFlames.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02U",
+    "saveCode": 69,
+    "name": "侏儒權杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBrilliance.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05S",
+    "saveCode": 70,
+    "name": "銀製箭簇",
+    "icon": "war3mapImported\\\\BTN_SilverArrow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02T",
+    "saveCode": 71,
+    "name": "娜迦守護者",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Wand_09.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I030",
+    "saveCode": 72,
+    "name": "超級刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNMoonStone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02L",
+    "saveCode": 73,
+    "name": "冰封",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNFrostSword.BLP"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02P",
+    "saveCode": 74,
+    "name": "裹屍布",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWindsCloak.BLP"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03L",
+    "saveCode": 76,
+    "name": "黃金箭",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAbility_Hunter_AimedShot.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03N",
+    "saveCode": 77,
+    "name": "七個靈魂的項鏈",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNNecklace.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03Q",
+    "saveCode": 78,
+    "name": "虛偽之刃",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAbility_BackStab.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03M",
+    "saveCode": 79,
+    "name": "寒冰王冠",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRevenant.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03O",
+    "saveCode": 80,
+    "name": "鳳凰石",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHealthStone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03P",
+    "saveCode": 81,
+    "name": "火焰之盾",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpell_Holy_BlessingOfProtection.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03K",
+    "saveCode": 82,
+    "name": "超級法杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWandOfManaSteal.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03R",
+    "saveCode": 83,
+    "name": "維斯馬之石",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNPeriapt.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I038",
+    "saveCode": 85,
+    "name": "阿特瑪的防具",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Jewelry_Ring_10.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I035",
+    "saveCode": 86,
+    "name": "戰士手套",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNGauntletsOfOgrePower.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03B",
+    "saveCode": 87,
+    "name": "運動靴",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNWirtsLeg.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03A",
+    "saveCode": 88,
+    "name": "未分類的墜飾",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNPendantOfMana.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I037",
+    "saveCode": 89,
+    "name": "雙管槍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Rifle_08.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I036",
+    "saveCode": 90,
+    "name": "埃沃之心",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHeartOfAszune.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I039",
+    "saveCode": 91,
+    "name": "剃刀",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNNagaWeaponUp3.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03V",
+    "saveCode": 93,
+    "name": "都瑞爾的殼",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedReinforcedHides.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03T",
+    "saveCode": 94,
+    "name": "百萬噸級刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNNagaWeaponUp2.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03U",
+    "saveCode": 95,
+    "name": "活死人的書",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBookOfTheDead.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03X",
+    "saveCode": 96,
+    "name": "天使的保護區",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNArcaneShield.BLP"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I060",
+    "saveCode": 98,
+    "name": "亮星",
+    "icon": "war3mapImported\\\\BTN_brightstar.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I03Y",
+    "saveCode": 99,
+    "name": "飛翔之靴",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAbility_Rogue_Sprint.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I062",
+    "saveCode": 112,
+    "name": "翡翠之刃",
+    "icon": "war3mapImported\\\\BTN_BladeG.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06I",
+    "saveCode": 113,
+    "name": "赫拉迪克法杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedMageStaff.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06K",
+    "saveCode": 114,
+    "name": "野性圖騰",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNStrengthOfTheWild.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06Q",
+    "saveCode": 119,
+    "name": "月牙",
+    "icon": "war3mapImported\\\\BTN_moonfang.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06T",
+    "saveCode": 120,
+    "name": "冰之歌",
+    "icon": "war3mapImported\\\\BTNBladeoftheFrostWarrior.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06W",
+    "saveCode": 121,
+    "name": "貝斯裏森的火焰",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Wand_06.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I06M",
+    "saveCode": 122,
+    "name": "劊子手",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Halberd_11.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I074",
+    "saveCode": 123,
+    "name": "閻王盾",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNArcaniteArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07J",
+    "saveCode": 127,
+    "name": "闇黑之弓",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNTheBlackArrow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07K",
+    "saveCode": 128,
+    "name": "黃昏寶珠",
+    "icon": "war3mapImported\\\\BTNMetalEnergy.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02R",
+    "saveCode": 129,
+    "name": "祝福之手",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Wand_05.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07L",
+    "saveCode": 130,
+    "name": "遺忘權杖",
+    "icon": "war3mapImported\\\\BTNINV_Sword_09.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07M",
+    "saveCode": 131,
+    "name": "斬魂者",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNDryadDispelMagic.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07N",
+    "saveCode": 132,
+    "name": "靈魂水晶",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNEnchantedGemstone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07O",
+    "saveCode": 133,
+    "name": "時光之刃",
+    "icon": "war3mapImported\\\\BTNTimeSabres.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02Y",
+    "saveCode": 135,
+    "name": "黑色哈迪斯",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNLeatherUpgradeThree.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08Q",
+    "saveCode": 136,
+    "name": "厄運使者",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNArcaniteRanged.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I045",
+    "saveCode": 137,
+    "name": "鷹之眼",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Bow_09.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08R",
+    "saveCode": 138,
+    "name": "能量魔杖",
+    "icon": "war3mapImported\\\\BTNINV_Wand_08.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08S",
+    "saveCode": 139,
+    "name": "地獄之嘴",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNGhoulFrenzy.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08T",
+    "saveCode": 140,
+    "name": "幻影之舞",
+    "icon": "war3mapImported\\\\BTNAAA_PhantomDancer.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02W",
+    "saveCode": 141,
+    "name": "皇家刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSoulSword.BLP"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07U",
+    "saveCode": 149,
+    "name": "殞落王者之劍",
+    "icon": "war3mapImported\\\\BTNAAA_BotRK.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07Q",
+    "saveCode": 150,
+    "name": "邪惡手套",
+    "icon": "war3mapImported\\\\BTNGlovesOfTheDeathLord.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07R",
+    "saveCode": 151,
+    "name": "結晶翡翠之刃",
+    "icon": "war3mapImported\\\\BTNEmbarBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07S",
+    "saveCode": 152,
+    "name": "上帝之手",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpell_Holy_Devotion.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07T",
+    "saveCode": 153,
+    "name": "符文之弓",
+    "icon": "war3mapImported\\\\BTNRunestoneLongbow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07V",
+    "saveCode": 154,
+    "name": "風之力",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Bow_06.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I07W",
+    "saveCode": 155,
+    "name": "戰斧",
+    "icon": "war3mapImported\\\\BTN_TomAxe.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I089",
+    "saveCode": 156,
+    "name": "深海胸甲",
+    "icon": "war3mapImported\\\\BTNSea_Heavy_Armor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08A",
+    "saveCode": 157,
+    "name": "震顫",
+    "icon": "war3mapImported\\\\BTNStoneShield.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08D",
+    "saveCode": 158,
+    "name": "精通權杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNScepterOfMastery.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08F",
+    "saveCode": 159,
+    "name": "潘朵拉",
+    "icon": "war3mapImported\\\\BTNInjusticeRing.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08G",
+    "saveCode": 160,
+    "name": "地獄鑽石",
+    "icon": "war3mapImported\\\\BTNBlood_Stone.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08K",
+    "saveCode": 161,
+    "name": "召喚法典",
+    "icon": "war3mapImported\\\\BTNBookOfAncientKnowledge.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08M",
+    "saveCode": 162,
+    "name": "魔術鏡",
+    "icon": "war3mapImported\\\\BTNMagicMirror.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I044",
+    "saveCode": 163,
+    "name": "亞特蘭蒂斯之書",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpellBookBLS.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05J",
+    "saveCode": 164,
+    "name": "烏鴉的觀察",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNDemonicBoots2.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I02Z",
+    "saveCode": 165,
+    "name": "信仰",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Bow_08.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I041",
+    "saveCode": 166,
+    "name": "海王星",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTN_CR_wGem.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I042",
+    "saveCode": 167,
+    "name": "開山斧",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Halberd_10.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I040",
+    "saveCode": 168,
+    "name": "強大的劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Sword_25.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I043",
+    "saveCode": 169,
+    "name": "寒冬之心",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNheartofwinterGS.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09M",
+    "saveCode": 172,
+    "name": "腐化水晶",
+    "icon": "war3mapImported\\\\BTNBlackPlague.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09O",
+    "saveCode": 173,
+    "name": "異能者之戒",
+    "icon": "war3mapImported\\\\BTNINV_Jewelry_Ring_05.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09T",
+    "saveCode": 177,
+    "name": "暗鑄甲",
+    "icon": "war3mapImported\\\\BTNBlackArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09X",
+    "saveCode": 178,
+    "name": "污染的海王星",
+    "icon": "war3mapImported\\\\BTNEyeOfDalaran.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09W",
+    "saveCode": 179,
+    "name": "發光球",
+    "icon": "war3mapImported\\\\BTNOrb.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0A2",
+    "saveCode": 180,
+    "name": "海柏利昂",
+    "icon": "war3mapImported\\\\BTNEldarArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I09D",
+    "saveCode": 181,
+    "name": "雷電之爪",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedStrengthOfTheWild.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AF",
+    "saveCode": 183,
+    "name": "流浪者",
+    "icon": "war3mapImported\\\\BTNAmethystRing.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AE",
+    "saveCode": 184,
+    "name": "神秘法杖",
+    "icon": "war3mapImported\\\\BTNArcaneStaff.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04K",
+    "saveCode": 185,
+    "name": "亞特蘭蒂斯之速",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Weapon_Crossbow_10.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04M",
+    "saveCode": 186,
+    "name": "火焰刀片",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNCleavingAttack.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AL",
+    "saveCode": 187,
+    "name": "龍之麟甲",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedCreatureCarapace.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04L",
+    "saveCode": 188,
+    "name": "漢娜的傳奇",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Wand_04.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04J",
+    "saveCode": 189,
+    "name": "巫妖王之怒",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNKingArthas.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04H",
+    "saveCode": 190,
+    "name": "復仇之劍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNSpell_Holy_SealOfFury.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AM",
+    "saveCode": 191,
+    "name": "穿刺者",
+    "icon": "war3mapImported\\\\BTNDark Repulser.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AV",
+    "saveCode": 195,
+    "name": "詛咒之刃",
+    "icon": "war3mapImported\\\\CursedBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0B2",
+    "saveCode": 198,
+    "name": "巫毒玩偶",
+    "icon": ""
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0B5",
+    "saveCode": 205,
+    "name": "命運的致盲之光",
+    "icon": "war3mapImported\\\\BliningLightOfDestiny.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0B6",
+    "saveCode": 206,
+    "name": "午夜之爪",
+    "icon": "war3mapImported\\\\ClawOfMidninght.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BB",
+    "saveCode": 207,
+    "name": "龍磷盔甲",
+    "icon": "war3mapImported\\\\DragonforgePlate.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0B9",
+    "saveCode": 208,
+    "name": "傳說龍珠",
+    "icon": "war3mapImported\\\\LegendaryDragonOrb.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BJ",
+    "saveCode": 211,
+    "name": "風暴聖所",
+    "icon": "war3mapImported\\\\BTNStormShield.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08P",
+    "saveCode": 212,
+    "name": "維澤特帽",
+    "icon": "war3mapImported\\\\BTNgm.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BU",
+    "saveCode": 213,
+    "name": "凜冬之魂",
+    "icon": "war3mapImported\\\\WintersSoul.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BN",
+    "saveCode": 214,
+    "name": "爆破棒",
+    "icon": "war3mapImported\\\\BlastingRod.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BR",
+    "saveCode": 215,
+    "name": "龍之圖騰",
+    "icon": "war3mapImported\\\\DragonTotem.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BV",
+    "saveCode": 216,
+    "name": "龍弓",
+    "icon": "war3mapImported\\\\DragonBow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0C2",
+    "saveCode": 217,
+    "name": "星光水晶",
+    "icon": "war3mapImported\\\\StarlightCrystal.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0C0",
+    "saveCode": 218,
+    "name": "絕望之刃",
+    "icon": "war3mapImported\\\\BladeOfDespair.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BX",
+    "saveCode": 219,
+    "name": "海莉亞之書",
+    "icon": "war3mapImported\\\\BookOfHylia.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BL",
+    "saveCode": 220,
+    "name": "芙蕾雅傳說",
+    "icon": "war3mapImported\\\\LegendOfFreya.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0C4",
+    "saveCode": 221,
+    "name": "漢娜的咒術精華",
+    "icon": "war3mapImported\\\\EclairLaDemes.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0C6",
+    "saveCode": 222,
+    "name": "濃縮能量",
+    "icon": "war3mapImported\\\\ConcentratedEnergy.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CH",
+    "saveCode": 223,
+    "name": "鍍金手套",
+    "icon": "war3mapImported\\\\Gauntlet.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CC",
+    "saveCode": 224,
+    "name": "靈魂射擊",
+    "icon": "war3mapImported\\\\Soulshot.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CF",
+    "saveCode": 225,
+    "name": "瓶中綠洲",
+    "icon": "war3mapImported\\\\green.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0AH",
+    "saveCode": 226,
+    "name": "惡毒",
+    "icon": "war3mapImported\\\\BTNMongooseBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CB",
+    "saveCode": 227,
+    "name": "神秘之劍",
+    "icon": "war3mapImported\\\\SwordOfTheOccult.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CM",
+    "saveCode": 230,
+    "name": "毀滅",
+    "icon": "war3mapImported\\\\BTNGrimSeal.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CO",
+    "saveCode": 231,
+    "name": "守護護符",
+    "icon": ""
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CQ",
+    "saveCode": 232,
+    "name": "精準之箭",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNMarksmanship.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CP",
+    "saveCode": 233,
+    "name": "戰斧",
+    "icon": ""
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CR",
+    "saveCode": 234,
+    "name": "腐敗權杖",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRodOfNecromancy.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0D4",
+    "saveCode": 237,
+    "name": "幽蛇靈紋",
+    "icon": "war3mapImported\\\\BTNCrimsonViper.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0D5",
+    "saveCode": 238,
+    "name": "蛇骨劍",
+    "icon": "war3mapImported\\\\BTNInfinity Edge2.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DA",
+    "saveCode": 239,
+    "name": "大地之力",
+    "icon": "war3mapImported\\\\Earth.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0D8",
+    "saveCode": 240,
+    "name": "最終翡翠之刃",
+    "icon": "war3mapImported\\\\FinalEmeraldBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0BP",
+    "saveCode": 241,
+    "name": "風語者",
+    "icon": "war3mapImported\\\\BTNWindGlove.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DD",
+    "saveCode": 242,
+    "name": "求敗者的凝望",
+    "icon": "war3mapImported\\\\BTNFirstOnes.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DF",
+    "saveCode": 243,
+    "name": "夜影",
+    "icon": "war3mapImported\\\\Nightshadow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DG",
+    "saveCode": 244,
+    "name": "惡魔吟唱者",
+    "icon": "war3mapImported\\\\DemonChanter.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DI",
+    "saveCode": 245,
+    "name": "冥界之弦",
+    "icon": "war3mapImported\\\\DevilBow.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DJ",
+    "saveCode": 246,
+    "name": "月冥魔珠",
+    "icon": "war3mapImported\\\\MoonOrb.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DL",
+    "saveCode": 247,
+    "name": "日輪聖珠",
+    "icon": "war3mapImported\\\\SunOrb.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DK",
+    "saveCode": 248,
+    "name": "獄霸鎮甲",
+    "icon": "war3mapImported\\\\ReaperArmor.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DN",
+    "saveCode": 249,
+    "name": "懲戒",
+    "icon": "war3mapImported\\\\Smite.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DO",
+    "saveCode": 250,
+    "name": "冥刃疾影",
+    "icon": "war3mapImported\\\\Swiftblade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DP",
+    "saveCode": 251,
+    "name": "煉獄之翼",
+    "icon": "war3mapImported\\\\WingsOfHell.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0DS",
+    "saveCode": 254,
+    "name": "風的代言人",
+    "icon": "war3mapImported\\\\Windspeaker.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0E6",
+    "saveCode": 259,
+    "name": "王者冠冕",
+    "icon": "war3mapImported\\\\BTN_CR_soulcrown.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0E4",
+    "saveCode": 260,
+    "name": "煉獄鎧甲",
+    "icon": "war3mapImported\\\\DemonforgePlate.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0CZ",
+    "saveCode": 261,
+    "name": "殘酷之刃",
+    "icon": "war3mapImported\\\\CruelBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0E8",
+    "saveCode": 262,
+    "name": "緋影修羅",
+    "icon": "war3mapImported\\\\BTNGhoulFrenzyRed.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I08L",
+    "saveCode": 263,
+    "name": "旭日之心",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRaising Heart.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I04O",
+    "saveCode": 280,
+    "name": "自然之力",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNReinforce.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0F7",
+    "saveCode": 281,
+    "name": "艾瑞莉絲",
+    "icon": "war3mapImported\\\\Aerielis.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05F",
+    "saveCode": 282,
+    "name": "希望",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRuneOfLife.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05G",
+    "saveCode": 283,
+    "name": "神衛聖契",
+    "icon": "war3mapImported\\\\GuardianForce.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I046",
+    "saveCode": 284,
+    "name": "命運",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNFate Zanber Form.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0F8",
+    "saveCode": 285,
+    "name": "命運",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNFate Zanber Form.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I047",
+    "saveCode": 286,
+    "name": "貝利亞之牙",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNINV_Sword_11.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0F9",
+    "saveCode": 287,
+    "name": "上古龍書",
+    "icon": "war3mapImported\\\\AncientDragonBook.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FB",
+    "saveCode": 288,
+    "name": "烏拉諾斯",
+    "icon": "war3mapImported\\\\Uranus.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FD",
+    "saveCode": 289,
+    "name": "幻影斗篷",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNRobeOfTheMagi.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FE",
+    "saveCode": 290,
+    "name": "月牙刀",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNAdvancedStrengthOfTheMoon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FF",
+    "saveCode": 291,
+    "name": "赫菲斯托斯",
+    "icon": "war3mapImported\\\\Hephaestus.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FH",
+    "saveCode": 292,
+    "name": "異能者之血",
+    "icon": "war3mapImported\\\\BTNGold Ring Active.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FK",
+    "saveCode": 293,
+    "name": "裂空符刃",
+    "icon": "war3mapImported\\\\RuneSihill.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FJ",
+    "saveCode": 294,
+    "name": "裂空符刃",
+    "icon": "war3mapImported\\\\RuneSihill.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FL",
+    "saveCode": 295,
+    "name": "黯焰墮羽",
+    "icon": "war3mapImported\\\\EternalPhoenix.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FN",
+    "saveCode": 296,
+    "name": "滅世龍刃",
+    "icon": "war3mapImported\\\\UltimateDragonBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FQ",
+    "saveCode": 298,
+    "name": "指揮官之首",
+    "icon": "war3mapImported\\\\BTNHelmet Horseman.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FR",
+    "saveCode": 299,
+    "name": "血影遺鋒",
+    "icon": "war3mapImported\\\\KieasTale.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FS",
+    "saveCode": 300,
+    "name": "血影遺鋒",
+    "icon": "war3mapImported\\\\KieasTale.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FT",
+    "saveCode": 301,
+    "name": "地獄領主之戒",
+    "icon": "war3mapImported\\\\RingoftheHellLord.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FV",
+    "saveCode": 302,
+    "name": "貝希摩斯之心",
+    "icon": "war3mapImported\\\\HeartoftheBehemoth.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0FX",
+    "saveCode": 303,
+    "name": "君臨之盔",
+    "icon": "war3mapImported\\\\BTNHarbingerHelm.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0G0",
+    "saveCode": 304,
+    "name": "降臨的收割者",
+    "icon": "war3mapImported\\\\BTNBlazeStaff.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0G1",
+    "saveCode": 305,
+    "name": "悔恨",
+    "icon": "war3mapImported\\\\Remorse.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0G4",
+    "saveCode": 306,
+    "name": "恐懼圖騰",
+    "icon": "war3mapImported\\\\BTNSpell_Nature_AgitatingTotem.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0G6",
+    "saveCode": 307,
+    "name": "女王的折磨",
+    "icon": "war3mapImported\\\\QueensAgony.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0G8",
+    "saveCode": 308,
+    "name": "烈焰虎爪",
+    "icon": "war3mapImported\\\\TigerClaw.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GB",
+    "saveCode": 309,
+    "name": "惡魔之刃",
+    "icon": "war3mapImported\\\\DemonBlade.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GG",
+    "saveCode": 311,
+    "name": "焰怨",
+    "icon": "war3mapImported\\\\Hatred.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GI",
+    "saveCode": 312,
+    "name": "天殞之刃",
+    "icon": "war3mapImported\\\\BTNDragon_Fang_Blade_Sword_Dagger.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GJ",
+    "saveCode": 313,
+    "name": "穆德拉禁書",
+    "icon": "war3mapImported\\\\BTNAncientBook.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GK",
+    "saveCode": 314,
+    "name": "索瑪利亞權杖",
+    "icon": "war3mapImported\\\\BTNSomaria.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GL",
+    "saveCode": 315,
+    "name": "墮日之弦",
+    "icon": "war3mapImported\\\\BTNSunRay.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GM",
+    "saveCode": 316,
+    "name": "聖裁之劍",
+    "icon": "war3mapImported\\\\BTNArcaneSword.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I05H",
+    "saveCode": 317,
+    "name": "魂脈",
+    "icon": "war3mapImported\\\\BTN_Inspirit.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GN",
+    "saveCode": 318,
+    "name": "映界聖盾",
+    "icon": "war3mapImported\\\\BTN_MirrorShield.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GR",
+    "saveCode": 322,
+    "name": "天命",
+    "icon": "war3mapImported\\\\Virtue.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GT",
+    "saveCode": 323,
+    "name": "焚墟餘燼",
+    "icon": "war3mapImported\\\\RisingAsh.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0GV",
+    "saveCode": 324,
+    "name": "緋紅殘影",
+    "icon": "war3mapImported\\\\BTNNobleSword.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0H1",
+    "saveCode": 329,
+    "name": "終焉",
+    "icon": "war3mapImported\\\\Ender.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0HH",
+    "saveCode": 340,
+    "name": "月魂珠",
+    "icon": "war3mapImported\\\\MoonPearl.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I05U",
+    "saveCode": 75,
+    "name": "娜迦之禍",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHydraWarStomp.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I05V",
+    "saveCode": 84,
+    "name": "暗黑靈魂",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrbOfDarkness.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I05W",
+    "saveCode": 92,
+    "name": "惡魔之球",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrbofSlowness.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I05Z",
+    "saveCode": 100,
+    "name": "詛咒神器",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNBoneChimes.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06F",
+    "saveCode": 101,
+    "name": "自然碎片",
+    "icon": "war3mapImported\\\\BTN_NatureFragment.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06D",
+    "saveCode": 102,
+    "name": "翡翠寶石",
+    "icon": "war3mapImported\\\\BTN_emerald.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06C",
+    "saveCode": 103,
+    "name": "稀有武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06E",
+    "saveCode": 104,
+    "name": "稀有配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I067",
+    "saveCode": 105,
+    "name": "稀有盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06A",
+    "saveCode": 106,
+    "name": "史詩武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06B",
+    "saveCode": 107,
+    "name": "史詩配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I066",
+    "saveCode": 108,
+    "name": "史詩盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I068",
+    "saveCode": 109,
+    "name": "傳說武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I069",
+    "saveCode": 110,
+    "name": "傳說配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I065",
+    "saveCode": 111,
+    "name": "傳說盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I071",
+    "saveCode": 115,
+    "name": "普通武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I072",
+    "saveCode": 116,
+    "name": "普通配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I073",
+    "saveCode": 117,
+    "name": "普通盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06V",
+    "saveCode": 118,
+    "name": "藍寶石",
+    "icon": "war3mapImported\\\\BTN_Sapphire.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06S",
+    "saveCode": 124,
+    "name": "海洋碎片",
+    "icon": "war3mapImported\\\\BTN_oceanfragment.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06Z",
+    "saveCode": 125,
+    "name": "紅寶石",
+    "icon": "war3mapImported\\\\BTN_Ruby.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06X",
+    "saveCode": 126,
+    "name": "血腥碎片",
+    "icon": "war3mapImported\\\\BTN_BloodFragment.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I07P",
+    "saveCode": 134,
+    "name": "冰封的消亡",
+    "icon": "ReplaceableTextures\\\\CommandButtonsDisabled\\\\BTNFrozenDeath.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I087",
+    "saveCode": 142,
+    "name": "先驅者的精華",
+    "icon": "war3mapImported\\\\BTNEssenceDrain4.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I086",
+    "saveCode": 143,
+    "name": "鑽石",
+    "icon": "war3mapImported\\\\BTNDiamond.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I085",
+    "saveCode": 144,
+    "name": "黃金碎片",
+    "icon": "war3mapImported\\\\BTNGoldenFragment.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I084",
+    "saveCode": 145,
+    "name": "薰衣草碎片",
+    "icon": "war3mapImported\\\\BTNLavenderFragment.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I088",
+    "saveCode": 146,
+    "name": "紫水晶",
+    "icon": "war3mapImported\\\\BTNAmetyst.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06P",
+    "saveCode": 147,
+    "name": "水銀碎片",
+    "icon": "war3mapImported\\\\BTN_quick.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I06O",
+    "saveCode": 148,
+    "name": "白銀",
+    "icon": "war3mapImported\\\\BTN_Silver.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I09F",
+    "saveCode": 170,
+    "name": "黑暗的祝福",
+    "icon": "war3mapImported\\\\BTNAstral_Blessing.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I09G",
+    "saveCode": 171,
+    "name": "黑暗斗篷",
+    "icon": "war3mapImported\\\\BTNNazgulRider.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I09Z",
+    "saveCode": 174,
+    "name": "神話武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0A0",
+    "saveCode": 175,
+    "name": "神話配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0A1",
+    "saveCode": 176,
+    "name": "神話盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0A8",
+    "saveCode": 182,
+    "name": "末日之球",
+    "icon": "war3mapImported\\\\SphereOfDoom.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0AN",
+    "saveCode": 192,
+    "name": "龍的祝福",
+    "icon": "war3mapImported\\\\BTNdeathwing.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0AO",
+    "saveCode": 193,
+    "name": "龍蛋",
+    "icon": "war3mapImported\\\\BTNSorceressRuby.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0AP",
+    "saveCode": 194,
+    "name": "龍牙",
+    "icon": "war3mapImported\\\\BTNSpiderFangDH.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0AQ",
+    "saveCode": 196,
+    "name": "下界反應爐",
+    "icon": "war3mapImported\\\\BTNUntitled-1.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0AU",
+    "saveCode": 197,
+    "name": "三龍一體",
+    "icon": "war3mapImported\\\\Trinity.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0B8",
+    "saveCode": 204,
+    "name": "秘",
+    "icon": "war3mapImported\\\\MysticalIcon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0BD",
+    "saveCode": 209,
+    "name": "謎",
+    "icon": "war3mapImported\\\\BTNDarkNote.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0BE",
+    "saveCode": 210,
+    "name": "龍石",
+    "icon": "war3mapImported\\\\Dragonstone.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0CT",
+    "saveCode": 236,
+    "name": "蛇年徽章",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHornOfCenarius.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0DQ",
+    "saveCode": 252,
+    "name": "獄焰晶",
+    "icon": "war3mapImported\\\\FireDemon.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0DR",
+    "saveCode": 253,
+    "name": "獄蓮芯",
+    "icon": "war3mapImported\\\\FireLotus.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0DV",
+    "saveCode": 255,
+    "name": "焚獄之華",
+    "icon": "war3mapImported\\\\FireRising.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0DX",
+    "saveCode": 256,
+    "name": "焚魂爐",
+    "icon": "war3mapImported\\\\Incinerator.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0E1",
+    "saveCode": 257,
+    "name": "煉獄核",
+    "icon": "war3mapImported\\\\FireStone.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0DZ",
+    "saveCode": 258,
+    "name": "獄咒印",
+    "icon": "war3mapImported\\\\CurseOfHell.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EA",
+    "saveCode": 264,
+    "name": "煉獄晶",
+    "icon": "war3mapImported\\\\CrystalOfEternalFlame.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EC",
+    "saveCode": 265,
+    "name": "惡魔炎魂",
+    "icon": "war3mapImported\\\\DemonicFlame.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EF",
+    "saveCode": 266,
+    "name": "邪靈尾棘",
+    "icon": "war3mapImported\\\\ImpsTail.png.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EG",
+    "saveCode": 267,
+    "name": "火之祝福",
+    "icon": "war3mapImported\\\\BlessingOfFire.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EJ",
+    "saveCode": 268,
+    "name": "煉獄巨獸",
+    "icon": "war3mapImported\\\\HellishBehemoth.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EK",
+    "saveCode": 269,
+    "name": "暮光",
+    "icon": "war3mapImported\\\\twilight.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EM",
+    "saveCode": 270,
+    "name": "晨曦",
+    "icon": "war3mapImported\\\\Eve.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EP",
+    "saveCode": 271,
+    "name": "苦難",
+    "icon": "war3mapImported\\\\Agony.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EQ",
+    "saveCode": 272,
+    "name": "苦難祝福",
+    "icon": "war3mapImported\\\\BlessofAgony.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0ET",
+    "saveCode": 273,
+    "name": "九頭蛇之首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNGreenHydra.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EU",
+    "saveCode": 274,
+    "name": "遺忘者之首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNForgottenOne.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EV",
+    "saveCode": 275,
+    "name": "破壞神之首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNEredarWarlockPurple.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EW",
+    "saveCode": 276,
+    "name": "阿薩斯之首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0EX",
+    "saveCode": 277,
+    "name": "死亡領主之首",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNMetamorphosis.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0F3",
+    "saveCode": 278,
+    "name": "惡夢精粹",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrbOfDarkness.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0F4",
+    "saveCode": 279,
+    "name": "地獄精粹",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNOrbOfFire.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0FP",
+    "saveCode": 297,
+    "name": "海洋之心",
+    "icon": "ReplaceableTextures\\\\CommandButtons\\\\BTNStaffOfTeleportation.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0GF",
+    "saveCode": 310,
+    "name": "秘典碎錄",
+    "icon": "war3mapImported\\\\BTNRune5.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0GP",
+    "saveCode": 319,
+    "name": "墮魂羽",
+    "icon": "war3mapImported\\\\BTNPiercingFeathernew.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0GO",
+    "saveCode": 320,
+    "name": "墮魂核",
+    "icon": "war3mapImported\\\\BTNMoonStone.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0GQ",
+    "saveCode": 321,
+    "name": "墮魂晶",
+    "icon": "war3mapImported\\\\BTNGlyph.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0GZ",
+    "saveCode": 327,
+    "name": "黃金鍋鏟",
+    "icon": "war3mapImported\\\\ch.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HC",
+    "saveCode": 330,
+    "name": "光之結晶",
+    "icon": "war3mapImported\\\\lightsyn.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0H2",
+    "saveCode": 331,
+    "name": "聖光結晶",
+    "icon": "war3mapImported\\\\BTNLightStrike.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0H4",
+    "saveCode": 332,
+    "name": "先驅者之心",
+    "icon": "war3mapImported\\\\HarbingersHeart.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0H7",
+    "saveCode": 333,
+    "name": "獄焚爐",
+    "icon": "war3mapImported\\\\IgnitedIncinerator.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0H8",
+    "saveCode": 334,
+    "name": "聖焚爐",
+    "icon": "war3mapImported\\\\PureIgnitedIncinerator.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HA",
+    "saveCode": 335,
+    "name": "墮魂心",
+    "icon": "war3mapImported\\\\AngelicHeart.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HD",
+    "saveCode": 336,
+    "name": "墮魂之望",
+    "icon": "war3mapImported\\\\AngelicHope.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HG",
+    "saveCode": 337,
+    "name": "神鑄盔甲碎片",
+    "icon": "war3mapImported\\\\BTN_armor.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HF",
+    "saveCode": 338,
+    "name": "神鑄配件碎片",
+    "icon": "war3mapImported\\\\BTN_handle.blp"
+  },
+  {
+    "type": "Material",
+    "rawcode": "I0HE",
+    "saveCode": 339,
+    "name": "神鑄武器碎片",
+    "icon": "war3mapImported\\\\BTN_weapon.blp"
+  }
+]
