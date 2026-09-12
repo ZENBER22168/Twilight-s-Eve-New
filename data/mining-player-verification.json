@@ -1,0 +1,36 @@
+{
+  "version": "Twilight's Eve New v2.74",
+  "diamond_pickaxe_special_pool": [
+    {
+      "name": "冰封的消亡",
+      "pool_rate": 2.127659574468085,
+      "status": "player_confirmed_mined"
+    },
+    {
+      "name": "先驅者的精華",
+      "pool_rate": 1.4184397163120568,
+      "status": "not_observed_yet"
+    },
+    {
+      "name": "黃金鍋鏟",
+      "pool_rate": 1.4184397163120568,
+      "status": "not_observed_yet"
+    }
+  ],
+  "note": "公開頁只額外標註尚未實測挖到的兩項；冰封的消亡不做特殊標註。",
+  "public_display": {
+    "show_pending_only": true,
+    "items": [
+      {
+        "name": "先驅者的精華",
+        "pool_rate": 1.4184397163120568,
+        "status": "現階段沒挖到過"
+      },
+      {
+        "name": "黃金鍋鏟",
+        "pool_rate": 1.4184397163120568,
+        "status": "現階段沒挖到過"
+      }
+    ]
+  }
+}
