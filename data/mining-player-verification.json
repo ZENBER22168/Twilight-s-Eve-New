@@ -1,36 +1,41 @@
 {
   "version": "Twilight's Eve New v2.74",
-  "diamond_pickaxe_special_pool": [
+  "publicDiamondDisplayPool": "udg_Mineitem4",
+  "reason": "玩家實測鑽石礦鏟可挖到「冰封的消亡」，而該物品只存在第 4 素材池，因此公開頁暫依第 4 素材池完整權重顯示。",
+  "items": [
+    {
+      "name": "惡魔之球",
+      "pool_rate": 2.8368794326241136,
+      "display": "2.84%"
+    },
+    {
+      "name": "詛咒神器",
+      "pool_rate": 2.127659574468085,
+      "display": "2.13%"
+    },
+    {
+      "name": "下界反應爐",
+      "pool_rate": 2.127659574468085,
+      "display": "2.13%"
+    },
     {
       "name": "冰封的消亡",
       "pool_rate": 2.127659574468085,
-      "status": "player_confirmed_mined"
+      "display": "2.13%",
+      "status": "已有玩家實際挖到"
     },
     {
       "name": "先驅者的精華",
       "pool_rate": 1.4184397163120568,
-      "status": "not_observed_yet"
+      "display": "1.42%",
+      "status": "現階段沒挖到過"
     },
     {
       "name": "黃金鍋鏟",
       "pool_rate": 1.4184397163120568,
-      "status": "not_observed_yet"
+      "display": "1.42%",
+      "status": "現階段沒挖到過"
     }
   ],
-  "note": "公開頁只額外標註尚未實測挖到的兩項；冰封的消亡不做特殊標註。",
-  "public_display": {
-    "show_pending_only": true,
-    "items": [
-      {
-        "name": "先驅者的精華",
-        "pool_rate": 1.4184397163120568,
-        "status": "現階段沒挖到過"
-      },
-      {
-        "name": "黃金鍋鏟",
-        "pool_rate": 1.4184397163120568,
-        "status": "現階段沒挖到過"
-      }
-    ]
-  }
+  "caution": "百分比為素材池內相對機率，不是每次挖礦直接機率。抽出的 JASS 表面上仍可看到鑽石觸發指向 Mineitem3，因此此處以玩家實測與第 4 池內容作為公開顯示依據並保留註記。"
 }
