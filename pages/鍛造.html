@@ -88,11 +88,43 @@ loadDB().then(d=>{
   const allItems=d.items||[];
   const recipeLookup=new Map();
   allItems.forEach(it=>{const n=String(it.name||'').trim();if(n&&it.materials&&!recipeLookup.has(n))recipeLookup.set(n,String(it.materials));});
+
+  // 鍛造材料中文化：先吃目前 Excel / 網站已有的中英文對照。
+  const materialZh=new Map();
+  [...(d.items||[]),...(d.loot||[])].forEach(it=>{
+    const en=String(it.name_en||'').trim(), zh=String(it.display_name||it.name||'').trim();
+    if(en&&zh&&!materialZh.has(en.toLowerCase()))materialZh.set(en.toLowerCase(),zh);
+  });
+  const MATERIAL_ZH_EXTRA={
+    'Golden Fragment':'黃金碎片','Lavender Fragment':'薰衣草碎片','Blood Fragment':'血腥碎片',
+    'Nature Fragment':'自然碎片','Ocean Fragment':'海洋碎片','Quicksilver Fragment':'水銀碎片',
+    'Ruby':'紅寶石','Sapphire':'藍寶石','Emerald':'翡翠寶石','Amethyst':'紫水晶','Diamond':'鑽石','Silver':'白銀',
+    'Mythical Armor Piece':'神話盔甲碎片','Mythical Weapon Piece':'神話武器碎片','Mythical Handle Piece':'神話配件碎片',
+    'Fabled Weapon Piece':'傳說武器碎片','Fire Stone':'火焰石','Tainted Gem':'污染寶石',
+    'Dark Crystal Shard':'暗黑水晶碎片','Diamond of Nulgath':'努爾加斯鑽石',
+    'Totem of Nulgath':'努爾加斯圖騰','Prismatic Sigil of Elements':'稜彩元素印記',
+    'Unidentified 22':'未鑑定物品 22','Unidentified 23':'未鑑定物品 23',
+    'Mystery':'謎','Mystical':'秘'
+  };
+  Object.entries(MATERIAL_ZH_EXTRA).forEach(([en,zh])=>{if(!materialZh.has(en.toLowerCase()))materialZh.set(en.toLowerCase(),zh)});
+
+  function zhMaterialToken(token){
+    const raw=String(token||'').trim();
+    if(!raw)return raw;
+    const m=raw.match(/^(.*?)(\s*[xX×*]\s*\d+)$/);
+    const base=(m?m[1]:raw).trim(), suffix=m?m[2]:'';
+    return (materialZh.get(base.toLowerCase())||base)+suffix;
+  }
+  function translateMaterialText(text){
+    return String(text||'').split(/([,，、])/).map(part=>/^[,，、]$/.test(part)?part:zhMaterialToken(part)).join('');
+  }
+
   const noTip=/^(?:稀有|史詩|傳說).*(?:碎片|武器碎片|盔甲碎片|配件碎片)$/;
   function materialWithTip(name){
-    const n=String(name||'').trim();const recipe=recipeLookup.get(n);
+    const original=String(name||'').trim(),n=zhMaterialToken(original);
+    const recipe=recipeLookup.get(n)||recipeLookup.get(original);
     if(!recipe||noTip.test(n))return formatRarityText(n);
-    return `<span class="mat-ref" tabindex="0">${formatRarityText(n)}<span class="mat-tip"><b>${esc(n)}</b><br>需要：${formatRarityText(recipe)}</span></span>`;
+    return `<span class="mat-ref" tabindex="0">${formatRarityText(n)}<span class="mat-tip"><b>${esc(n)}</b><br>需要：${formatRarityText(translateMaterialText(recipe))}</span></span>`;
   }
   function formatMaterialList(text){
     return String(text||'').split(/([,，、])/).map(part=>/^[,，、]$/.test(part)?esc(part):materialWithTip(part.trim())).join(' ');
