@@ -10,6 +10,19 @@
 .guide-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}.guide-tab{border:1px solid #34404d;background:#111923;color:#cbd6e2;padding:11px 16px;border-radius:999px;font-size:15px;font-weight:900;cursor:pointer}.guide-tab.active{background:linear-gradient(135deg,#d6a73a,#f2d783);color:#141414;border-color:#f2d783}.guide-panel{display:none}.guide-panel.active{display:block}.guide-hero{border:1px solid #2b3643;background:linear-gradient(180deg,#121a25,#0d141c);border-radius:20px;padding:22px;margin-bottom:22px}.guide-kicker{font-size:13px;color:#d9b65a;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.guide-title{margin:7px 0 6px;font-size:34px;line-height:1.2}.guide-meta{color:#9fb1c6;line-height:1.7}.video-slot{margin-top:18px;border:1px dashed #4b5868;border-radius:16px;padding:28px;text-align:center;background:#0a1017;color:#91a0b2}.video-slot strong{display:block;color:#e3edf7;font-size:18px;margin-bottom:6px}.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}.guide-card{border:1px solid #293540;background:#101720;border-radius:18px;padding:18px}.guide-card h2,.guide-card h3{margin:0 0 12px}.guide-card h2{font-size:22px;color:#f0d690}.guide-card h3{font-size:18px;color:#c9d8e8}.guide-card p,.guide-card li{color:#c4d0dc;line-height:1.75}.guide-card ul{margin:8px 0 0;padding-left:21px}.guide-card .warn{color:#ffcb6b;font-weight:800}.guide-card .danger{color:#ff8b8b;font-weight:800}.guide-card .good{color:#9fe2b1;font-weight:800}.guide-image{border:1px solid #2b3643;background:#080d13;border-radius:18px;padding:12px;margin:18px 0}.guide-image img{display:block;width:100%;max-height:760px;object-fit:contain;border-radius:12px;background:#000}.guide-image figcaption{padding:10px 4px 0;color:#9fb1c6;line-height:1.6}.boss-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.boss-card{border:1px solid #2b3643;background:#0f161f;border-radius:16px;padding:16px}.boss-card h3{margin:0 0 9px;color:#f3d778;font-size:19px}.boss-card p{margin:6px 0;color:#c6d1dc;line-height:1.7}.source-box{margin-top:22px;padding:14px 16px;border-radius:14px;border:1px solid #3a4654;background:#0c131b;color:#aebdcd}.source-box strong{color:#f0d690}.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flow span{padding:8px 10px;background:#17212d;border:1px solid #344353;border-radius:10px;color:#d4dee8;font-weight:800}.flow b{color:#d6a73a}.m1-empty{padding:48px 20px;text-align:center;border:1px dashed #455365;border-radius:18px;background:#0b1118;color:#8fa1b5}.m1-empty h2{color:#e3ecf7}.guide-section-title{font-size:24px;color:#f0d690;margin:28px 0 14px}.guide-highlight{border-left:4px solid #d6a73a;padding:12px 14px;background:#141b24;border-radius:0 12px 12px 0;color:#c8d4df;line-height:1.7}
 @media(max-width:900px){.guide-grid,.boss-list{grid-template-columns:1fr}.guide-title{font-size:28px}}
 @media(max-width:600px){.guide-hero{padding:16px}.guide-tab{flex:1;text-align:center;min-width:86px}.guide-image{padding:7px}.guide-card{padding:15px}}
+
+.guide-video-box{margin-top:14px;padding:14px;border:1px solid #334354;border-radius:14px;background:#0b1118}
+.guide-video-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;font-weight:900;color:#eef4fb}
+.guide-video-title small{color:#8293a6;font-size:11px;font-weight:600}
+.guide-video{display:block;width:100%;max-height:70vh;border-radius:10px;background:#05080c;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.video-help{margin-top:8px;color:#7f90a4;font-size:11px;line-height:1.55}
+.video-path{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#a8b8cb}
+
+.youtube-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#05080c;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.youtube-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-credit{margin-top:9px;color:#9eb0c4;font-size:12px;line-height:1.6}
+.video-credit strong{color:#ffd56d}.video-credit a{color:#8fc5ff;text-decoration:none}.video-credit a:hover{text-decoration:underline}
+.video-pending{padding:24px 16px;text-align:center;border:1px dashed #3b4b5e;border-radius:10px;color:#8ea0b3;background:#0a1017}
 </style>
 </head>
 <body>
@@ -34,7 +47,7 @@
 </section>
 
 <section class="guide-panel" data-panel="imp1">
-  <div class="guide-hero"><div class="guide-kicker">Impossible 1</div><h2 class="guide-title">City of Illusions｜幻像之城</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP1）　｜　限制：Lv235　｜　7 BOSS</div><div class="video-slot"><strong>🎬 攻略影片</strong>影片尚未提供，這裡已保留播放器位置。</div></div>
+  <div class="guide-hero"><div class="guide-kicker">Impossible 1</div><h2 class="guide-title">City of Illusions｜幻像之城</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP1）　｜　限制：Lv235　｜　7 BOSS</div><div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>IMP1｜幻像之城</small></div><div class="video-pending">影片待補。之後提供 YouTube 連結即可直接嵌入此處。</div></div></div>
   <div class="guide-grid">
     <article class="guide-card"><h2>建議隊伍</h2><ul><li>最低配置：1 坦克 + 1 補師 + 2 輸出</li><li>補師建議：先知</li><li>建議人數：4～8 人</li><li>H本裝備建議：8 人</li><li>I1裝備建議：6 人</li><li>智力英雄建議配戴羊杖 2 把以上</li></ul></article>
     <article class="guide-card"><h2>進場分工</h2><p><b>坦：</b>進關先往上走兩步，立刻嘲諷拉住王，把王與大部隊分開。</p><p><b>補：</b>進關先往左走兩步，躲在後方。第 2、4、6 關開場按 F；第 7 關 F 留作救場。</p><p><b>輸出：</b>先往下清完小怪再回頭打 BOSS。第 4 關後遠程小怪很多。</p></article>
@@ -56,7 +69,7 @@
 </section>
 
 <section class="guide-panel" data-panel="imp2">
-  <div class="guide-hero"><div class="guide-kicker">Impossible 2</div><h2 class="guide-title">Dragon Fortress｜龍之要塞</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP2）　｜　限制：Lv250</div><div class="video-slot"><strong>🎬 攻略影片</strong>影片尚未提供，這裡已保留播放器位置。</div></div>
+  <div class="guide-hero"><div class="guide-kicker">Impossible 2</div><h2 class="guide-title">Dragon Fortress｜龍之要塞</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP2）　｜　限制：Lv250</div><div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>IMP2｜龍之要塞</small></div><div class="video-pending">影片待補。之後提供 YouTube 連結即可直接嵌入此處。</div></div></div>
   <div class="guide-grid">
     <article class="guide-card"><h2>建議配置</h2><ul><li>建議人數：4～8 人</li><li>I1 裝備建議：8 人</li><li>I2 裝備建議：6 人</li><li>建議所有人帶污染的海王</li><li>需用 CC 鏈控制四龍</li></ul></article>
     <article class="guide-card"><h2>迷宮</h2><p class="good">迷宮多練習；第一條路線火球可以用海王穿過。</p><p>成功跑完迷宮可獲得額外獎勵。</p></article>
@@ -68,7 +81,7 @@
 </section>
 
 <section class="guide-panel" data-panel="imp3">
-  <div class="guide-hero"><div class="guide-kicker">Impossible 3</div><h2 class="guide-title">Punishment Chamber｜懲戒煉獄</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP3）　｜　限制：Lv280</div><div class="video-slot"><strong>🎬 攻略影片</strong>影片尚未提供，這裡已保留播放器位置。</div></div>
+  <div class="guide-hero"><div class="guide-kicker">Impossible 3</div><h2 class="guide-title">Punishment Chamber｜懲戒煉獄</h2><div class="guide-meta">Difficulty：Impossible｜不可能（IMP3）　｜　限制：Lv280</div><div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>IMP3｜懲戒煉獄</small></div><div class="video-pending">影片待補。之後提供 YouTube 連結即可直接嵌入此處。</div></div></div>
   <div class="guide-grid">
     <article class="guide-card"><h2>10 人團建議配置</h2><ul><li>坦克：2</li><li>補師：2</li><li>群體輸出：2～3</li><li>爆發輸出：2～3</li></ul></article>
     <article class="guide-card"><h2>坦克裝備</h2><p><b>星光水晶：</b><span class="warn">必帶</span>，增加魔抗。</p><p><b>命運的致盲之光：</b>實用但非必帶，可救坦、救隊友或範圍致盲小怪。</p></article>
@@ -95,7 +108,7 @@
 </section>
 
 <section class="guide-panel" data-panel="m1">
-  <div class="guide-hero"><div class="guide-kicker">Mythic 1</div><h2 class="guide-title">M1 攻略</h2><div class="guide-meta">目前尚未提供詳細攻略資料。</div><div class="video-slot"><strong>🎬 攻略影片</strong>影片尚未提供，這裡已保留播放器位置。</div></div>
+  <div class="guide-hero"><div class="guide-kicker">Mythic 1</div><h2 class="guide-title">M1 攻略</h2><div class="guide-meta">目前尚未提供詳細攻略資料。</div><div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>M1｜受詛咒的天堂</small></div><div class="youtube-wrap"><iframe src="https://www.youtube.com/embed/u1ywnttmbWM?rel=0" title="M1｜受詛咒的天堂 攻略影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-credit">影片提供：<strong>il108allen</strong>　·　<a href="https://youtu.be/u1ywnttmbWM" target="_blank" rel="noopener noreferrer">無法播放時前往 YouTube 觀看</a></div><div class="video-help">若直接雙擊 HTML 以 <span class="video-path">file://</span> 開啟，本機測試可能出現 YouTube 錯誤 153；上傳到 GitHub Pages 後會以 HTTPS 正常提供來源網域。</div></div></div>
   <div class="m1-empty"><h2>資料待補</h2><p>隊伍配置、BOSS 機制、圖片與攻略來源之後再加入。</p></div>
 </section>
 </main>
