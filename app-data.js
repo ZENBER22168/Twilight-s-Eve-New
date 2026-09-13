@@ -8,6 +8,13 @@ async function loadDB(){
     const r=await fetch(base);
     if(!r.ok) throw new Error('database.json 載入失敗：'+r.status);
     DB=await r.json();
+    // GitHub Pages 會優先使用 data/database.json；若正式資料庫缺少顯示顏色，
+    // 從內建資料補回，避免本機與線上版的鍛造裝備名稱顏色不一致。
+    const embeddedByKey=new Map((EMBEDDED_DB.items||[]).map(x=>[[x.type||'',x.source_sheet||'',x.row??'',x.name||''].join('\u001f'),x]));
+    (DB.items||[]).forEach(x=>{
+      const src=embeddedByKey.get([x.type||'',x.source_sheet||'',x.row??'',x.name||''].join('\u001f'));
+      if(src && src.name_color && !x.name_color) x.name_color=src.name_color;
+    });
   }catch(e){ DB=EMBEDDED_DB; }
   return DB;
 }
