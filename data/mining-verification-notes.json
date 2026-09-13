@@ -1,8 +1,8 @@
 {
   "sourceVersion": "Twilight's Eve New v2.74",
   "diamondPickaxe": {
-    "publicDisplayPool": "udg_Mineitem4",
-    "jassConflict": true,
-    "note": "抽出的 JASS 表面上顯示鑽石礦鏟呼叫 Mineitem3，但玩家已實測鑽石礦鏟能挖到只存在 Mineitem4 的「冰封的消亡」。因此公開頁目前採 Mineitem4 完整池內機率顯示；先驅者的精華與黃金鍋鏟標示為現階段沒挖到過。"
+    "activePoolContainsGoldenSpatula": false,
+    "note": "黃金鍋鏟存在於第四素材池，但目前 v2.74 六把礦鏟的實際觸發沒有呼叫第四素材池；鑽石礦鏟使用的第三素材池內沒有黃金鍋鏟。",
+    "goldenSpatulaRawcode": "I0GZ"
   }
 }

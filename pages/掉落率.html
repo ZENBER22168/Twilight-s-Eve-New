@@ -46,27 +46,10 @@
 .special-mini-row strong{color:#e7bdff}.special-mini-note{margin-top:8px;color:#a99bb3;font-size:12px;line-height:1.65}
 
 .mine-item-row strong{margin-left:auto;text-align:right;min-width:72px;color:#ffd66f;font-size:15px;white-space:nowrap}
-
-.mine-special{margin-top:14px;padding:12px 13px;border:1px solid #5b4c28;border-radius:11px;background:rgba(107,80,24,.10)}
-.mine-special-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:8px;font-weight:900;color:#ffd86b}
-.mine-special-title span:last-child{font-size:12px;color:#bcae83;font-weight:700}
-.mine-special-row{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:7px 0;border-top:1px solid rgba(255,255,255,.055)}
-.mine-special-row:first-of-type{border-top:0}
-.mine-special-name{font-weight:800;color:#f0f4f8}
-.mine-special-status{display:block;margin-top:3px;font-size:12px;color:#95a5b6;font-weight:600}
-.mine-special-status.confirmed{color:#8fd8a5}
-.mine-special-status.pending{color:#d8b982}
-.mine-special-rate{min-width:72px;text-align:right;color:#ffd86b;font-weight:900;white-space:nowrap}
-.mine-special-note{margin-top:8px;color:#8f9dad;font-size:11px;line-height:1.6}
-.mine-item-row.pending-emphasis{background:linear-gradient(90deg,rgba(112,66,18,.14),rgba(112,66,18,0));border:1px solid rgba(183,133,53,.55);border-radius:12px;padding:12px 10px;margin:10px 0}
-.mine-item-row.pending-emphasis + .mine-item-row.pending-emphasis{margin-top:8px}
-.mine-item-main{display:flex;align-items:center;flex-wrap:wrap;gap:0}
-.mine-item-rate{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-width:150px}
-.mine-item-rate .pending-rate-note{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:rgba(140,42,42,.34);border:1px solid rgba(255,120,120,.36);color:#ffd1c5;font-size:12px;font-weight:900;white-space:nowrap}
 </style></head><body>
 <header class="top"><nav class="nav">
 <a class="brand" href="../index.html"><img class="brand-logo" src="../images/site-icon.png" alt=""><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a>
-<a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a class="active" href="掉落率.html">🎲 掉落率</a>
+<a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a class="active" href="掉落率.html">🎲 掉落率</a><a href="存檔讀取.html">📂 存檔讀取</a>
 </nav></header>
 <main class="wrap drop-wrap">
 <h1>🎲 掉落率 <span class="pending-tag">待確認</span></h1>
@@ -85,12 +68,12 @@
 
 <section id="mining" class="panel">
 <h2>挖礦／鍛造素材 <span class="pending-tag">獎池內機率</span></h2>
-<p class="meta">已整理 6 階礦鏟的升級次數、進入素材獎池機率、金幣／力量碎片機率與數量範圍，以及素材獎池。素材列表只顯示「獎池內機率」，不顯示權重，也不顯示換算後的「每次挖礦實際機率」。鑽石礦鏟目前依第 4 素材池顯示獎池內機率；「冰封的消亡」已有玩家實際挖到。先驅者的精華與黃金鍋鏟目前仍標示為現階段沒挖到過。</p>
+<p class="meta">已整理 6 階礦鏟的升級次數、進入素材獎池機率、金幣／力量碎片機率與數量範圍，以及完整素材獎池。素材列表只顯示「獎池內機率」，不顯示權重，也不顯示換算後的「每次挖礦實際機率」。</p>
 <div id="mineGrid" class="pool-grid"></div>
 </section>
 </main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　掉落率依地圖 ItemPool 權重計算</div></footer>
-<script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data-v89.js"></script>
+<script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data.js"></script>
 <script>
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function specialMini(gi){
@@ -107,15 +90,9 @@ function card(pool,gi){
 document.getElementById('dungeonGrid').innerHTML=DROP_RATE_DUNGEONS.map((p,i)=>card(p,i)).join('');
 document.getElementById('mineGrid').innerHTML=MINING_DROP_DATA.pickaxes.map(p=>{
  const pool=p.poolData;
- const materialRows=pool.items.map(it=>{
-   const isPending=(p.name==='鑽石礦鏟'&&(it.name==='先驅者的精華'||it.name==='黃金鍋鏟'));
-   const pendingRateTag=isPending ? `<span class="pending-rate-note">現階段沒挖到過</span>` : '';
-   const rowClass=isPending ? 'mine-item-row pending-emphasis' : 'mine-item-row';
-   return `<div class="${rowClass}"><span class="mine-item-main">${esc(it.name)}</span><strong class="mine-item-rate">${pendingRateTag}<span>${it.poolRate.toFixed(2)}%</span></strong></div>`;
- }).join('');
+ const materialRows=pool.items.map(it=>`<div class="mine-item-row"><span>${esc(it.name)}</span><strong>${it.poolRate.toFixed(2)}%</strong></div>`).join('');
  const gold=p.goldAmount==='無'?'無':`${p.goldRate.toFixed(2)}%｜${esc(p.goldAmount)}`;
  const lumber=p.lumberAmount==='無'?'無':`${p.lumberRate.toFixed(2)}%｜${esc(p.lumberAmount)}`;
- const special='';
  return `<article class="pool mine-card">
    <h2>⛏️ ${esc(p.name)}</h2>
    <div class="meta">${esc(p.upgrade)}</div>
@@ -126,7 +103,6 @@ document.getElementById('mineGrid').innerHTML=MINING_DROP_DATA.pickaxes.map(p=>{
    </div>
    <div class="mine-pool-title">素材獎池內容 <span>獎池內機率</span></div>
    <div class="mine-items">${materialRows}</div>
-   ${special}
  </article>`;
 }).join('');
 document.querySelectorAll('.tab-btn').forEach(btn=>btn.onclick=()=>{

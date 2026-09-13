@@ -1,0 +1,1262 @@
+[
+  {
+    "index": 1,
+    "assigned": true,
+    "rawcode": "H002",
+    "name": "新手 (男)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp"
+  },
+  {
+    "index": 2,
+    "assigned": true,
+    "rawcode": "H001",
+    "name": "初心者(女)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.blp"
+  },
+  {
+    "index": 3,
+    "assigned": true,
+    "rawcode": "H003",
+    "name": "劍士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFootman.blp"
+  },
+  {
+    "index": 4,
+    "assigned": true,
+    "rawcode": "H005",
+    "name": "法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBanditMage.blp"
+  },
+  {
+    "index": 5,
+    "assigned": true,
+    "rawcode": "H008",
+    "name": "盜賊",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBanditSpearThrower.blp"
+  },
+  {
+    "index": 6,
+    "assigned": true,
+    "rawcode": "H04P",
+    "name": "失意天使",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 7,
+    "assigned": true,
+    "rawcode": "H013",
+    "name": "十字軍",
+    "map_icon": ""
+  },
+  {
+    "index": 8,
+    "assigned": true,
+    "rawcode": "E00F",
+    "name": "大審判者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 9,
+    "assigned": true,
+    "rawcode": "H01A",
+    "name": "女祭司",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 10,
+    "assigned": true,
+    "rawcode": "H00B",
+    "name": "弓箭手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArcher.blp"
+  },
+  {
+    "index": 11,
+    "assigned": true,
+    "rawcode": "H02N",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 12,
+    "assigned": true,
+    "rawcode": "H02S",
+    "name": "召喚師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp"
+  },
+  {
+    "index": 13,
+    "assigned": true,
+    "rawcode": "H02O",
+    "name": "生命主宰",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNNazgulRider.blp"
+  },
+  {
+    "index": 14,
+    "assigned": true,
+    "rawcode": "H024",
+    "name": "白袍法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp"
+  },
+  {
+    "index": 15,
+    "assigned": true,
+    "rawcode": "H02B",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 16,
+    "assigned": true,
+    "rawcode": "H01D",
+    "name": "光武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNAvengingWatcher.blp"
+  },
+  {
+    "index": 17,
+    "assigned": true,
+    "rawcode": "H02P",
+    "name": "巫妖",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 18,
+    "assigned": true,
+    "rawcode": "H01F",
+    "name": "巫師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 19,
+    "assigned": true,
+    "rawcode": "H02F",
+    "name": "怪物獵人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNWarden2.blp"
+  },
+  {
+    "index": 20,
+    "assigned": true,
+    "rawcode": "H00A",
+    "name": "武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNNightElfRunner.blp"
+  },
+  {
+    "index": 21,
+    "assigned": true,
+    "rawcode": "H007",
+    "name": "牧師(男)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNPriest.blp"
+  },
+  {
+    "index": 22,
+    "assigned": true,
+    "rawcode": "H004",
+    "name": "牧師(女)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp"
+  },
+  {
+    "index": 23,
+    "assigned": true,
+    "rawcode": "H00F",
+    "name": "僧侶(女)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp"
+  },
+  {
+    "index": 24,
+    "assigned": true,
+    "rawcode": "H00E",
+    "name": "僧侶(男)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNAcolyte.blp"
+  },
+  {
+    "index": 25,
+    "assigned": true,
+    "rawcode": "E00G",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 26,
+    "assigned": true,
+    "rawcode": "E00D",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 27,
+    "assigned": true,
+    "rawcode": "H012",
+    "name": "帝國騎士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp"
+  },
+  {
+    "index": 28,
+    "assigned": true,
+    "rawcode": "H009",
+    "name": "狩魔獵人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp"
+  },
+  {
+    "index": 29,
+    "assigned": true,
+    "rawcode": "H015",
+    "name": "神射手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNShandris.blp"
+  },
+  {
+    "index": 30,
+    "assigned": true,
+    "rawcode": "H014",
+    "name": "追蹤者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp"
+  },
+  {
+    "index": 31,
+    "assigned": true,
+    "rawcode": "H00K",
+    "name": "高級武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp"
+  },
+  {
+    "index": 32,
+    "assigned": true,
+    "rawcode": "H00I",
+    "name": "高階法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNNecromancer.blp"
+  },
+  {
+    "index": 33,
+    "assigned": true,
+    "rawcode": "H01B",
+    "name": "教士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 34,
+    "assigned": true,
+    "rawcode": "E00E",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 35,
+    "assigned": true,
+    "rawcode": "H00M",
+    "name": "殺手",
+    "map_icon": ""
+  },
+  {
+    "index": 36,
+    "assigned": true,
+    "rawcode": "H02R",
+    "name": "符文大師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp"
+  },
+  {
+    "index": 37,
+    "assigned": true,
+    "rawcode": "H02K",
+    "name": "復仇者",
+    "map_icon": ""
+  },
+  {
+    "index": 38,
+    "assigned": true,
+    "rawcode": "H008",
+    "name": "盜賊",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBanditSpearThrower.blp"
+  },
+  {
+    "index": 39,
+    "assigned": true,
+    "rawcode": "H00L",
+    "name": "刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBanditSpearThrower.blp"
+  },
+  {
+    "index": 40,
+    "assigned": true,
+    "rawcode": "H01C",
+    "name": "黑武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp"
+  },
+  {
+    "index": 41,
+    "assigned": true,
+    "rawcode": "H011",
+    "name": "暗殺者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp"
+  },
+  {
+    "index": 42,
+    "assigned": true,
+    "rawcode": "H02M",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 43,
+    "assigned": true,
+    "rawcode": "H023",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 44,
+    "assigned": true,
+    "rawcode": "E00L",
+    "name": "聖殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNAssassin.blp"
+  },
+  {
+    "index": 45,
+    "assigned": true,
+    "rawcode": "H01E",
+    "name": "審判者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 46,
+    "assigned": true,
+    "rawcode": "H006",
+    "name": "德魯伊",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheTalon.blp"
+  },
+  {
+    "index": 47,
+    "assigned": true,
+    "rawcode": "H010",
+    "name": "潛行者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDranai.blp"
+  },
+  {
+    "index": 48,
+    "assigned": true,
+    "rawcode": "H016",
+    "name": "賢者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNMedivh.blp"
+  },
+  {
+    "index": 49,
+    "assigned": true,
+    "rawcode": "H00G",
+    "name": "獵人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp"
+  },
+  {
+    "index": 50,
+    "assigned": true,
+    "rawcode": "H019",
+    "name": "薩滿",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp"
+  },
+  {
+    "index": 51,
+    "assigned": true,
+    "rawcode": "H00J",
+    "name": "騎士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp"
+  },
+  {
+    "index": 52,
+    "assigned": true,
+    "rawcode": "H017",
+    "name": "魔導師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBanditMage.blp"
+  },
+  {
+    "index": 53,
+    "assigned": true,
+    "rawcode": "H00H",
+    "name": "變形德魯伊",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 54,
+    "assigned": true,
+    "rawcode": "H018",
+    "name": "變形德魯伊大師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheClaw.blp"
+  },
+  {
+    "index": 55,
+    "assigned": true,
+    "rawcode": "E00D",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 56,
+    "assigned": true,
+    "rawcode": "H058",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 57,
+    "assigned": true,
+    "rawcode": "H05E",
+    "name": "怪物獵人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNWarden2.blp"
+  },
+  {
+    "index": 58,
+    "assigned": true,
+    "rawcode": "H05F",
+    "name": "復仇者",
+    "map_icon": ""
+  },
+  {
+    "index": 59,
+    "assigned": true,
+    "rawcode": "H05H",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 60,
+    "assigned": true,
+    "rawcode": "H05G",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 61,
+    "assigned": true,
+    "rawcode": "H05J",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 62,
+    "assigned": true,
+    "rawcode": "E00M",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 63,
+    "assigned": true,
+    "rawcode": "H05L",
+    "name": "白袍法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp"
+  },
+  {
+    "index": 64,
+    "assigned": true,
+    "rawcode": "E00O",
+    "name": "忍者",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 65,
+    "assigned": true,
+    "rawcode": "E00P",
+    "name": "下忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 66,
+    "assigned": true,
+    "rawcode": "E00Q",
+    "name": "中忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 67,
+    "assigned": true,
+    "rawcode": "H05N",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 68,
+    "assigned": true,
+    "rawcode": "E00R",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 69,
+    "assigned": true,
+    "rawcode": "E00S",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 70,
+    "assigned": true,
+    "rawcode": "E00T",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 71,
+    "assigned": true,
+    "rawcode": "E00U",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 72,
+    "assigned": true,
+    "rawcode": "H05O",
+    "name": "復仇者",
+    "map_icon": ""
+  },
+  {
+    "index": 73,
+    "assigned": true,
+    "rawcode": "H05P",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 74,
+    "assigned": true,
+    "rawcode": "E00W",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 75,
+    "assigned": true,
+    "rawcode": "E00V",
+    "name": "大審判者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 76,
+    "assigned": true,
+    "rawcode": "E00X",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 77,
+    "assigned": true,
+    "rawcode": "E00Y",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 78,
+    "assigned": true,
+    "rawcode": "E00Z",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 79,
+    "assigned": true,
+    "rawcode": "E010",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 80,
+    "assigned": true,
+    "rawcode": "E011",
+    "name": "處刑者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 81,
+    "assigned": true,
+    "rawcode": "E012",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 82,
+    "assigned": true,
+    "rawcode": "E014",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 83,
+    "assigned": true,
+    "rawcode": "H060",
+    "name": "新手 (男)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp"
+  },
+  {
+    "index": 84,
+    "assigned": true,
+    "rawcode": "H061",
+    "name": "新手(女)",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.blp"
+  },
+  {
+    "index": 85,
+    "assigned": true,
+    "rawcode": "H05Z",
+    "name": "惡魔",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNKiljaedin.blp"
+  },
+  {
+    "index": 86,
+    "assigned": true,
+    "rawcode": "E016",
+    "name": "召喚師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp"
+  },
+  {
+    "index": 87,
+    "assigned": true,
+    "rawcode": "H065",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 88,
+    "assigned": true,
+    "rawcode": "H066",
+    "name": "符文大師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp"
+  },
+  {
+    "index": 89,
+    "assigned": true,
+    "rawcode": "E018",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 90,
+    "assigned": true,
+    "rawcode": "H068",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 91,
+    "assigned": true,
+    "rawcode": "E019",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 92,
+    "assigned": true,
+    "rawcode": "H06C",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 93,
+    "assigned": true,
+    "rawcode": "H06D",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 94,
+    "assigned": true,
+    "rawcode": "E01B",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 95,
+    "assigned": true,
+    "rawcode": "H06E",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 96,
+    "assigned": true,
+    "rawcode": "E01C",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 97,
+    "assigned": true,
+    "rawcode": "E01D",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 98,
+    "assigned": true,
+    "rawcode": "E01E",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 99,
+    "assigned": true,
+    "rawcode": "H06L",
+    "name": "聖術師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFemaleElfVillager.blp"
+  },
+  {
+    "index": 100,
+    "assigned": true,
+    "rawcode": "H06N",
+    "name": "啟明者",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFemaleElfVillager.blp"
+  },
+  {
+    "index": 101,
+    "assigned": true,
+    "rawcode": "H06M",
+    "name": "洞察師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDryad.blp"
+  },
+  {
+    "index": 102,
+    "assigned": true,
+    "rawcode": "H06Y",
+    "name": "符文大師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp"
+  },
+  {
+    "index": 103,
+    "assigned": true,
+    "rawcode": "E01I",
+    "name": "召喚師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp"
+  },
+  {
+    "index": 104,
+    "assigned": true,
+    "rawcode": "E01H",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 105,
+    "assigned": true,
+    "rawcode": "E01K",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 106,
+    "assigned": true,
+    "rawcode": "E01J",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 107,
+    "assigned": true,
+    "rawcode": "E01L",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 108,
+    "assigned": true,
+    "rawcode": "E01M",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 109,
+    "assigned": true,
+    "rawcode": "H07F",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 110,
+    "assigned": true,
+    "rawcode": "E01R",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 111,
+    "assigned": true,
+    "rawcode": "E01S",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 112,
+    "assigned": true,
+    "rawcode": "E01T",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 113,
+    "assigned": true,
+    "rawcode": "H07G",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 114,
+    "assigned": true,
+    "rawcode": "H07I",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 115,
+    "assigned": true,
+    "rawcode": "H07H",
+    "name": "復仇者",
+    "map_icon": ""
+  },
+  {
+    "index": 116,
+    "assigned": true,
+    "rawcode": "H07J",
+    "name": "巫妖",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 117,
+    "assigned": true,
+    "rawcode": "E01U",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 118,
+    "assigned": true,
+    "rawcode": "E01V",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 119,
+    "assigned": true,
+    "rawcode": "E01W",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 120,
+    "assigned": true,
+    "rawcode": "E01X",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 121,
+    "assigned": true,
+    "rawcode": "H07K",
+    "name": "符文大師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp"
+  },
+  {
+    "index": 122,
+    "assigned": true,
+    "rawcode": "H07N",
+    "name": "巫妖",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 123,
+    "assigned": true,
+    "rawcode": "E020",
+    "name": "聖殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNAssassin.blp"
+  },
+  {
+    "index": 124,
+    "assigned": true,
+    "rawcode": "E021",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 125,
+    "assigned": true,
+    "rawcode": "E022",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 126,
+    "assigned": true,
+    "rawcode": "E023",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 127,
+    "assigned": true,
+    "rawcode": "E024",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 128,
+    "assigned": true,
+    "rawcode": "E025",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 129,
+    "assigned": true,
+    "rawcode": "H07P",
+    "name": "生命主宰",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNNazgulRider.blp"
+  },
+  {
+    "index": 130,
+    "assigned": true,
+    "rawcode": "E026",
+    "name": "召喚師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp"
+  },
+  {
+    "index": 131,
+    "assigned": true,
+    "rawcode": "E027",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 132,
+    "assigned": true,
+    "rawcode": "E028",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 133,
+    "assigned": true,
+    "rawcode": "H07Y",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 134,
+    "assigned": true,
+    "rawcode": "H07Z",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 135,
+    "assigned": true,
+    "rawcode": "E029",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 136,
+    "assigned": true,
+    "rawcode": "E02A",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 137,
+    "assigned": true,
+    "rawcode": "H080",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 138,
+    "assigned": true,
+    "rawcode": "E02B",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 139,
+    "assigned": true,
+    "rawcode": "E02F",
+    "name": "殲滅者",
+    "map_icon": "war3mapImported\\BTNpbv1.blp"
+  },
+  {
+    "index": 140,
+    "assigned": true,
+    "rawcode": "E02E",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 141,
+    "assigned": true,
+    "rawcode": "E029",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 142,
+    "assigned": true,
+    "rawcode": "H085",
+    "name": "暗殿武士",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritOfVengeance.blp"
+  },
+  {
+    "index": 143,
+    "assigned": true,
+    "rawcode": "H084",
+    "name": "巫妖",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 144,
+    "assigned": true,
+    "rawcode": "H086",
+    "name": "惡魔",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNKiljaedin.blp"
+  },
+  {
+    "index": 145,
+    "assigned": true,
+    "rawcode": "H082",
+    "name": "白袍法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp"
+  },
+  {
+    "index": 146,
+    "assigned": true,
+    "rawcode": "H087",
+    "name": "巫妖",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
+  },
+  {
+    "index": 147,
+    "assigned": true,
+    "rawcode": "E02G",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 148,
+    "assigned": true,
+    "rawcode": "E02I",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 149,
+    "assigned": true,
+    "rawcode": "E02O",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 150,
+    "assigned": true,
+    "rawcode": "E02K",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 151,
+    "assigned": true,
+    "rawcode": "E02L",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 152,
+    "assigned": true,
+    "rawcode": "H088",
+    "name": "白袍法師",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp"
+  },
+  {
+    "index": 153,
+    "assigned": true,
+    "rawcode": "E02S",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 154,
+    "assigned": true,
+    "rawcode": "E02R",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 155,
+    "assigned": true,
+    "rawcode": "E02Q",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 156,
+    "assigned": true,
+    "rawcode": "E02T",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 157,
+    "assigned": true,
+    "rawcode": "E02M",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 158,
+    "assigned": true,
+    "rawcode": "H08A",
+    "name": "生命主宰",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNNazgulRider.blp"
+  },
+  {
+    "index": 159,
+    "assigned": true,
+    "rawcode": "E02J",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 160,
+    "assigned": true,
+    "rawcode": "E02U",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 161,
+    "assigned": true,
+    "rawcode": "H089",
+    "name": "聖人",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNBloodMage2.blp"
+  },
+  {
+    "index": 162,
+    "assigned": true,
+    "rawcode": "E02I",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 163,
+    "assigned": true,
+    "rawcode": "E02L",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 164,
+    "assigned": true,
+    "rawcode": "E02O",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 165,
+    "assigned": true,
+    "rawcode": "E02V",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 166,
+    "assigned": true,
+    "rawcode": "H08B",
+    "name": "幻影刺客",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNDark.blp"
+  },
+  {
+    "index": 167,
+    "assigned": true,
+    "rawcode": "E02W",
+    "name": "教皇",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp"
+  },
+  {
+    "index": 168,
+    "assigned": true,
+    "rawcode": "E02X",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 169,
+    "assigned": true,
+    "rawcode": "E031",
+    "name": "光縛者",
+    "map_icon": "war3mapImported\\lb.blp"
+  },
+  {
+    "index": 170,
+    "assigned": true,
+    "rawcode": "E030",
+    "name": "冠軍",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp"
+  },
+  {
+    "index": 171,
+    "assigned": true,
+    "rawcode": "E02Y",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 172,
+    "assigned": true,
+    "rawcode": "H08H",
+    "name": "惡魔",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNKiljaedin.blp"
+  },
+  {
+    "index": 173,
+    "assigned": true,
+    "rawcode": "H08E",
+    "name": "復仇者",
+    "map_icon": ""
+  },
+  {
+    "index": 174,
+    "assigned": true,
+    "rawcode": "E02Z",
+    "name": "上忍",
+    "map_icon": "war3mapImported\\BTNNINJA.blp"
+  },
+  {
+    "index": 175,
+    "assigned": true,
+    "rawcode": "E032",
+    "name": "秘術大師",
+    "map_icon": "war3mapImported\\tf.blp"
+  },
+  {
+    "index": 176,
+    "assigned": true,
+    "rawcode": "E033",
+    "name": "先知",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp"
+  },
+  {
+    "index": 177,
+    "assigned": true,
+    "rawcode": "E034",
+    "name": "狙擊手",
+    "map_icon": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp"
+  },
+  {
+    "index": 178,
+    "assigned": false,
+    "rawcode": "",
+    "name": "保留空位",
+    "map_icon": ""
+  },
+  {
+    "index": 179,
+    "assigned": false,
+    "rawcode": "",
+    "name": "保留空位",
+    "map_icon": ""
+  },
+  {
+    "index": 180,
+    "assigned": false,
+    "rawcode": "",
+    "name": "保留空位",
+    "map_icon": ""
+  }
+]

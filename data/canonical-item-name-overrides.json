@@ -1,0 +1,83 @@
+{
+  "I04H": {
+    "index": 190,
+    "cn": "復仇之刃",
+    "en": "Megaera's Edge",
+    "image": "../images/equipment/Megaera's Edge__復仇之刃__副本裝備.png",
+    "reason": "網站副本裝備資料庫正式名稱"
+  },
+  "I0DA": {
+    "index": 239,
+    "cn": "大地的力量",
+    "en": "strength of the earth",
+    "image": "../images/map-items/I0DA__大地的力量.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0FL": {
+    "index": 295,
+    "cn": "永恆鳳凰",
+    "en": "Eternal Phoenix",
+    "image": "../images/map-items/I0FL__永恆鳳凰.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I05N": {
+    "index": null,
+    "cn": "黃昏寶珠",
+    "image": "../images/map-items/I05N__黃昏寶珠.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0BR": {
+    "index": 215,
+    "cn": "龍圖騰",
+    "image": "../images/map-items/I0BR__龍圖騰.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0BS": {
+    "index": null,
+    "cn": "龍圖騰",
+    "image": "../images/map-items/I0BS__龍圖騰.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0FM": {
+    "index": null,
+    "cn": "永恆鳳凰",
+    "image": "../images/map-items/I0FM__永恆鳳凰.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0G8": {
+    "index": 308,
+    "cn": "虎爪",
+    "image": "../images/map-items/I0G8__虎爪.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0G9": {
+    "index": null,
+    "cn": "虎爪",
+    "image": "../images/map-items/I0G9__虎爪.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0FX": {
+    "index": 303,
+    "cn": "霸主頭盔",
+    "image": "../images/map-items/I0FX__霸主頭盔.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0FY": {
+    "index": null,
+    "cn": "霸主頭盔",
+    "image": "../images/map-items/I0FY__霸主頭盔.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0DB": {
+    "index": null,
+    "cn": "大地的力量",
+    "image": "../images/map-items/I0DB__大地的力量.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I05M": {
+    "index": null,
+    "cn": "日輪聖珠",
+    "image": "../images/map-items/I05M__日輪聖珠.png",
+    "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  }
+}
