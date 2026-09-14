@@ -58,31 +58,7 @@
   </style>
 </head>
 <body>
-  <header class="top">
-    <nav class="nav">
-      <a class="brand" href="index.html" aria-label="新暮光之晨 首頁">
-        <img class="brand-logo" src="./images/site-icon.png" alt="新暮光之晨 icon">
-        <span class="brand-title">
-          <span class="brand-name">新暮光之晨</span>
-          <span class="brand-version">v2.74</span>
-        </span>
-      </a>
-      <a href="index.html" class="active">🏠 首頁</a>
-      <a href="pages/鍛造.html">🔨 鍛造</a>
-      <a href="pages/副本材料.html">🏰 副本材料&裝備</a>
-      <a href="pages/攻略首頁.html">🎬 副本攻略</a>
-      <a href="pages/材料.html">🧱 鍛造材料&合成商人</a>
-      <a href="pages/裝備.html">📘 裝備資料庫</a>
-      <a href="pages/NPC.html">📍 NPC位置</a>
-      <a href="pages/職業.html">✨ 職業技能</a>
-      <a href="pages/搜尋.html">🛡️ 配裝</a><a href="pages/掉落率.html">🎲 掉落率</a><a href="pages/存檔讀取.html">📂 存檔讀取</a>
-      <div class="nav-spacer"></div>
-      <form class="nav-search" id="quickSearchForm">
-        <button type="submit" aria-label="搜尋">🔎</button>
-        <input id="quickSearchInput" type="search" placeholder="搜尋攻略、NPC、裝備...">
-      </form>
-    </nav>
-  </header>
+  <header class="top"><nav class="nav"><a class="brand" href="index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="./images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="index.html" class="active">🏠 首頁</a><a href="pages/鍛造.html">🔨 鍛造</a><a href="pages/副本材料.html">🏰 副本材料&裝備</a><a href="pages/攻略首頁.html">🎬 副本攻略</a><a href="pages/材料.html">🧱 鍛造材料&合成商人</a><a href="pages/裝備.html">📚 資料庫</a><a href="pages/NPC.html">📍 NPC位置</a><a href="pages/職業.html">✨ 職業技能</a><a href="pages/搜尋.html">👤 角色讀取&配裝</a><div class="nav-spacer"></div><form class="nav-search" id="quickSearchForm"><button type="submit" aria-label="搜尋">🔎</button><input id="quickSearchInput" type="search" placeholder="搜尋攻略、NPC、裝備..."></form></nav></header>
 
   <main class="wrap home-wrap">
     <section class="showcase">
@@ -111,10 +87,10 @@
           <a class="visual-card top card1" href="pages/鍛造.html" aria-label="鍛造"><img src="./images/homecards/home-card-forge.png" alt="鍛造"></a>
           <a class="visual-card top card2" href="pages/副本材料.html" aria-label="副本材料&裝備"><img src="./images/homecards/home-card-dungeon.png" alt="副本材料&裝備"></a>
           <a class="visual-card top card3" href="pages/材料.html" aria-label="鍛造材料&合成商人"><img src="./images/homecards/home-card-materials.png" alt="鍛造材料&合成商人"></a>
-          <a class="visual-card top card4" href="pages/裝備.html" aria-label="裝備資料庫"><img src="./images/homecards/home-card-database.png" alt="裝備資料庫"></a>
+          <a class="visual-card top card4" href="pages/裝備.html" aria-label="資料庫"><img src="./images/homecards/home-card-database.png" alt="裝備資料庫"></a>
           <a class="visual-card top card5" href="pages/NPC.html" aria-label="NPC位置"><img src="./images/homecards/home-card-npc.png" alt="NPC位置"></a>
           <a class="visual-card bottom card6" href="pages/職業.html" aria-label="職業技能"><img src="./images/homecards/home-card-skill.png" alt="職業技能"></a>
-          <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
+          <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="角色讀取&配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
           <a class="visual-card bottom card8" href="pages/攻略首頁.html" aria-label="副本攻略"><img src="./images/homecards/home-card-guide.png" alt="副本攻略"></a>
           <div class="quote-block"><div class="quote-inner">知識，照亮下一個黎明<span class="en">KNOWLEDGE LIGHTS ANOTHER DAWN</span></div></div>
         </div>
@@ -129,10 +105,10 @@
       {keys:['鍛造','forge','npc','武器','裝備製作'], url:'pages/鍛造.html'},
       {keys:['副本','材料','掉落','dungeon'], url:'pages/副本材料.html'},
       {keys:['商人','合成','素材','材料商'], url:'pages/材料.html'},
-      {keys:['裝備','屬性','database'], url:'pages/裝備.html'},
+      {keys:['裝備','屬性','database','資料庫','掉落率','掉落'], url:'pages/裝備.html'},
       {keys:['npc','位置','轉職'], url:'pages/NPC.html'},
       {keys:['技能','職業'], url:'pages/職業.html'},
-      {keys:['配裝','build'], url:'pages/搜尋.html'}
+      {keys:['配裝','build','存檔','角色讀取','角色'], url:'pages/搜尋.html'}
     ];
     document.getElementById('quickSearchForm').addEventListener('submit', function(e){
       e.preventDefault();

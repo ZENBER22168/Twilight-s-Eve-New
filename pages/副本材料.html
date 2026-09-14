@@ -1,54 +1,248 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>副本材料&裝備｜新暮光之晨</title><link rel="icon" href="../images/site-icon.png">
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>副本材料&裝備｜新暮光之晨</title>
+<link rel="icon" href="../images/site-icon.png">
 <link rel="stylesheet" href="../style.css">
 <style>
-.group-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0 24px}.group-toolbar .search{flex:1;min-width:260px;margin:0}.group-toolbar select{width:210px;padding:13px 14px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff}
-.data-section{margin:0 0 34px;border:1px solid #29323e;border-radius:18px;overflow:hidden;background:#0f151d;box-shadow:0 10px 28px rgba(0,0,0,.14)}
-.data-section-title{padding:18px 22px;background:linear-gradient(90deg,#e6b6ac,#f1d0c8);color:#171717}.data-section-title h2{margin:0;font-size:25px;line-height:1.3}.data-section-title p{margin:5px 0 0;font-size:12px;opacity:.72}
-.section-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:0;align-items:stretch}.section-table{overflow:auto}.excel-head,.excel-row{display:grid;grid-template-columns:78px minmax(180px,1.25fr) minmax(140px,.9fr) minmax(300px,2fr);gap:14px;align-items:center}.excel-head{padding:11px 16px;background:#f5e4ad;color:#252525;font-weight:800;font-size:13px}.excel-row{padding:14px 16px;border-top:1px solid #252e3a;min-height:92px}.excel-row:hover{background:#141c26}.item-img{width:62px;height:62px;object-fit:contain;background:#080b0f;border:1px solid #2b3542;border-radius:9px;padding:3px}.item-name strong{display:block;font-size:16px;color:#f3f6fa}.item-name span{display:block;margin-top:4px;color:#8995a4;font-size:12px}.item-job,.item-effect{font-size:13px;line-height:1.55;white-space:normal;color:#d3dbe5}.side-panel{border-left:1px solid #29323e;background:#0b1016;padding:14px;display:flex;flex-direction:column;gap:10px}.side-panel-title{font-size:12px;font-weight:800;color:#aeb9c7;margin:2px 4px}.side-main{width:100%;max-height:460px;object-fit:contain;background:#080b0f;border-radius:10px;border:1px solid #29313c}.side-small{width:230px;height:230px;object-fit:contain;background:#080b0f;border-radius:10px;border:1px solid #29313c}.side-gallery{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.side-gallery img{max-width:100%;cursor:zoom-in}.side-note{font-size:11px;color:#778394;line-height:1.5}.dropbox{margin:14px 0 0;border-top:1px solid #2c3745;padding-top:12px}.dropbox h3{margin:0 0 9px;font-size:14px;color:#e6edf6}.drop-row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed #24303d;font-size:14px}.drop-row:last-child{border-bottom:0}.drop-rate{color:#ffd66f;font-weight:900;white-space:nowrap}
+.group-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0 18px}
+.group-toolbar .search{flex:1;min-width:260px;margin:0}
+main.wrap{width:min(96vw,2200px);max-width:2200px}
+.dungeon-page-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:20px;align-items:start}
+.dungeon-sidebar{position:sticky;top:86px;max-height:calc(100vh - 108px);overflow:auto;padding:10px;background:#0d131b;border:1px solid #293544;border-radius:14px}
+.dungeon-nav-all,.dungeon-nav-item{display:block;width:100%;border:0;text-align:left;cursor:pointer;color:#e7edf5;background:transparent;border-radius:8px;transition:background .15s ease,color .15s ease}
+.dungeon-nav-all{padding:11px 12px;font-size:16px;font-weight:900;border:1px solid #2b3949;background:#101823;margin-bottom:8px}
+.dungeon-nav-group{border-top:1px solid #24303d;padding-top:7px;margin-top:7px}
+.dungeon-nav-title{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:9px 9px;color:#86c9ff;font-size:16px;font-weight:900;line-height:1.4;border:0;background:transparent;text-align:left;cursor:pointer;border-radius:8px;transition:background .15s ease,color .15s ease}
+.dungeon-nav-title:hover{background:#151f2b}
+.dungeon-nav-title.is-hell{color:#ff5d67}
+.dungeon-nav-title.is-imp{color:#ffd66f}
+.dungeon-nav-title.is-mythic{color:#ff79c6}
+.dungeon-nav-title.is-event{color:#b36cff}
+.dungeon-nav-chevron{flex:0 0 auto;font-size:14px;line-height:1;transition:transform .18s ease;opacity:.82}
+.dungeon-nav-group.open .dungeon-nav-chevron{transform:rotate(180deg)}
+.dungeon-nav-items{display:none;padding:2px 0 5px}
+.dungeon-nav-group.open .dungeon-nav-items{display:block}
+.dungeon-nav-item{padding:10px 9px;margin:2px 0;font-size:15px;line-height:1.5}
+.dungeon-nav-item:hover,.dungeon-nav-all:hover{background:#182434;color:#fff}
+.dungeon-nav-item.active,.dungeon-nav-all.active{background:linear-gradient(90deg,#d3979b,#c78391);color:#fff;font-weight:900}
+.dungeon-nav-main{display:block;color:inherit}
+.dungeon-nav-meta{display:block;margin-top:4px;font-size:12px;color:#93a0b0;font-weight:600;line-height:1.45}
+.dungeon-nav-item.active .dungeon-nav-meta{color:#fff0f2}
+.dungeon-content{min-width:0}
 
-.rate-square{width:8px;height:8px;border-radius:2px;display:inline-block;flex:0 0 8px}
-.rate-square.normal{background:#4ea5ff}.rate-square.special{background:#b36cff}.rate-square.pity{background:#5fd08a}.rate-square.lucky{background:#ffd34f}.rate-square.unreleased{background:#8a95a5}.unreleased-rate{padding:10px 0;color:#aeb8c5}.unreleased-rate strong{color:#d0d6df}
+.data-section{margin:0 0 34px;border:1px solid #29323e;border-radius:18px;overflow:hidden;background:#0f151d;box-shadow:0 10px 28px rgba(0,0,0,.14)}
+.data-section-title{padding:18px 22px;background:linear-gradient(90deg,#e6b6ac,#f1d0c8);color:#171717}
+.data-section-title h2{margin:0;font-size:25px;line-height:1.3}
+.data-section-title p{margin:5px 0 0;font-size:12px;opacity:.72}
+.dungeon-route-note{margin-top:9px;padding:8px 11px;border-radius:9px;background:rgba(35,20,15,.10);border:1px solid rgba(35,20,15,.18);font-size:13px;font-weight:800;line-height:1.55;color:#2b211c}
+.section-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:0;align-items:stretch}
+.section-table{overflow:auto}
+.excel-head,.excel-row{display:grid;grid-template-columns:78px minmax(180px,1.25fr) minmax(140px,.9fr) minmax(300px,2fr);gap:14px;align-items:center}
+.excel-head{padding:11px 16px;background:#f5e4ad;color:#252525;font-weight:800;font-size:13px}
+.excel-row{padding:14px 16px;border-top:1px solid #252e3a;min-height:92px}
+.excel-row:hover{background:#141c26}
+.item-img{width:62px;height:62px;object-fit:contain;background:#080b0f;border:1px solid #2b3542;border-radius:9px;padding:3px}
+.item-name strong{display:block;font-size:16px;color:#f3f6fa}
+.item-name span{display:block;margin-top:4px;color:#8995a4;font-size:12px}
+.item-job,.item-effect{font-size:13px;line-height:1.55;white-space:normal;color:#d3dbe5}
+.side-panel{border-left:1px solid #29323e;background:#0b1016;padding:14px;display:flex;flex-direction:column;gap:10px}
+.side-panel-title{font-size:12px;font-weight:800;color:#aeb9c7;margin:2px 4px}
+.side-main{width:100%;max-height:460px;object-fit:contain;background:#080b0f;border-radius:10px;border:1px solid #29313c}
+.side-small{width:230px;height:230px;object-fit:contain;background:#080b0f;border-radius:10px;border:1px solid #29313c}
+.side-gallery{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.side-gallery img{max-width:100%;cursor:zoom-in}
+.side-note{font-size:11px;color:#778394;line-height:1.5}
+.dropbox{margin:14px 0 0;border-top:1px solid #2c3745;padding-top:12px}.dropbox h3{margin:0 0 9px;font-size:14px;color:#e6edf6}
+.drop-row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed #24303d;font-size:14px}.drop-row:last-child{border-bottom:0}.drop-rate{color:#ffd66f;font-weight:900;white-space:nowrap}
+.rate-square{width:8px;height:8px;border-radius:2px;display:inline-block;flex:0 0 8px}.rate-square.normal{background:#4ea5ff}.rate-square.special{background:#b36cff}.rate-square.pity{background:#5fd08a}.rate-square.lucky{background:#ffd34f}.rate-square.unreleased{background:#8a95a5}
+.unreleased-rate{padding:10px 0;color:#aeb8c5}.unreleased-rate strong{color:#d0d6df}
 .special-dropbox{margin-top:12px;padding:11px;border:1px solid #5a3b79;border-radius:10px;background:linear-gradient(180deg,rgba(88,43,120,.22),rgba(34,20,47,.18))}
 .special-dropbox h3{margin:0 0 8px;color:#e4c3ff;font-size:14px}.special-row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #453054;font-size:14px}.special-row:last-of-type{border-bottom:0}.special-rate{color:#e3b6ff;font-weight:900;white-space:nowrap}
 .special-sub{display:block;color:#9e8caf;font-size:10px;margin-top:2px}.special-note{font-size:13px;color:#a99bb3;line-height:1.65;margin-top:9px}.legend-row{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 2px;font-size:11px;color:#9aa7b7}.legend-item{display:inline-flex;align-items:center;gap:5px}
-.drop-note{font-size:11px;color:#8796a8;line-height:1.55;margin-top:8px}.material-table .excel-head,.material-table .excel-row{grid-template-columns:72px minmax(180px,1fr) minmax(180px,1.3fr)}.material-table .excel-row{min-height:74px}.cost{color:#d7dee7;font-size:13px;line-height:1.6;white-space:normal}.empty{padding:28px;text-align:center;color:#8e99a8}
-@media(max-width:980px){.section-layout{grid-template-columns:1fr}.side-panel{border-left:0;border-top:1px solid #29323e}.side-main{max-height:520px}.excel-head{display:none}.excel-row{grid-template-columns:68px 1fr;gap:10px}.excel-row .item-job,.excel-row .item-effect,.excel-row .cost{grid-column:1/-1}.material-table .excel-row{grid-template-columns:68px 1fr}.item-img{width:58px;height:58px}}
-
+.drop-note{font-size:11px;color:#8796a8;line-height:1.55;margin-top:8px}.empty{padding:28px;text-align:center;color:#8e99a8}
 .pending-tag{display:inline-block;margin-left:6px;padding:2px 7px;border:1px solid #7b6a3b;border-radius:999px;background:#2a2517;color:#e9cf78;font-size:11px;vertical-align:middle}
-.pending-inline{display:inline-block;margin-left:6px;padding:1px 5px;border:1px solid #5c5960;border-radius:5px;color:#aeb3bd;font-size:10px}
-
 .dungeon-unreleased-badge{display:inline-block;margin-left:10px;padding:3px 9px;border:1px solid rgba(20,20,20,.45);border-radius:999px;background:rgba(25,25,25,.18);color:#272727;font-size:11px;vertical-align:middle}
 .data-section.is-unreleased .data-section-title{background:linear-gradient(90deg,#c7cbd1,#d9dde2)}
+
+/* 活動副本沿用一般副本的表格與右側面板版型。 */
+.event-prereq{margin-top:9px;padding:8px 11px;border-radius:9px;background:rgba(35,20,15,.10);border:1px solid rgba(35,20,15,.18);font-size:13px;font-weight:800;line-height:1.55;color:#2b211c}
+.event-provisional{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;background:#3a2a40;border:1px solid #74567d;color:#e6c4ed;font-size:9px;font-weight:800;vertical-align:2px}
+.event-rate-row .rate-square{background:#ffd34f}
+.event-rate-row .drop-rate{color:#ffd66f}
+.event-fixed{color:#7ee09b;font-weight:900;white-space:nowrap}
+.event-side-caption{font-size:11px;color:#8a98a9;margin-top:4px;text-align:center}
+/* 寬度不足時優先保住中間裝備/素材表格，不再硬擠三欄。
+   1920x1080 搭配 Windows 125% 縮放時，CSS 視窗常只有約 1536px，
+   因此在 1750px 以下先把右側位置/掉落率面板移到表格下方。 */
+@media(max-width:1750px){
+  .dungeon-page-layout{grid-template-columns:300px minmax(0,1fr);gap:16px}
+  .section-layout{grid-template-columns:1fr}
+  .side-panel{border-left:0;border-top:1px solid #29323e}
+  .side-panel{display:grid;grid-template-columns:minmax(260px,420px) minmax(260px,1fr);align-items:start}
+  .side-panel-title{grid-column:1/-1}
+  .side-main{max-height:520px}
+}
+@media(max-width:1320px){
+  main.wrap{width:100%;max-width:100%}
+  .dungeon-page-layout{grid-template-columns:280px minmax(0,1fr);gap:14px}
+  .excel-head,.excel-row{grid-template-columns:70px minmax(165px,1.15fr) minmax(120px,.8fr) minmax(260px,1.8fr);gap:10px}
+}
+@media(max-width:1080px){
+  .dungeon-page-layout{grid-template-columns:1fr}
+  .dungeon-sidebar{position:static;max-height:360px}
+  .side-panel{grid-template-columns:1fr}
+  .side-panel-title{grid-column:1}
+}
+@media(max-width:980px){.excel-head{display:none}.excel-row{grid-template-columns:68px 1fr;gap:10px}.excel-row .item-job,.excel-row .item-effect{grid-column:1/-1}.item-img{width:58px;height:58px}}
+@media(max-width:620px){.dungeon-sidebar{max-height:300px}.dungeon-nav-title{font-size:15px}.dungeon-nav-item{font-size:14px}.dungeon-nav-meta{font-size:11px}.event-location{padding:10px}}
 </style>
-</head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a href="掉落率.html">🎲 掉落率</a><a href="存檔讀取.html">📂 存檔讀取</a></nav></header><main class="wrap"><h1>🏰 副本材料&裝備</h1><div class="group-toolbar"><input id="q" class="search" placeholder="搜尋副本、裝備、職業…"><select id="difficulty"><option value="">全部副本</option></select></div><div id="root"></div></main>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html" class="active">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header>
+<main class="wrap">
+<h1>🏰 副本材料&裝備</h1>
+<div class="group-toolbar"><input id="q" class="search" placeholder="搜尋副本、裝備、職業…"></div>
+<div class="dungeon-page-layout"><aside id="dungeonNav" class="dungeon-sidebar" aria-label="副本選單"></aside><div id="root" class="dungeon-content"></div></div>
+</main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
-<script src="../app-data.js"></script><script src="../dungeon-drop-rates.js"></script><script src="../dungeon-special-rates.js"></script><script>
-Promise.resolve(loadDB()).then(d=>{ const L=EMBEDDED_LAYOUT;
- const root=document.getElementById('root'),q=document.getElementById('q'),sel=document.getElementById('difficulty');
- const groups=L.dungeon_groups; groups.forEach((g,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=g.title;sel.appendChild(o)});
- function findNormalRate(gi,name){
-   const dr=DUNGEON_DROP_RATES[gi]; if(!dr)return null;
-   const clean=s=>String(s||'').replace(/\s+/g,'').replace(/[・·]/g,'');
-   const key=clean(name);
-   return dr.items.find(it=>clean(it.name)===key)||null;
+<script src="../app-data.js"></script><script src="../dungeon-drop-rates.js"></script><script src="../event-dungeon-data.js"></script><script src="../dungeon-special-rates.js"></script>
+<script>
+Promise.resolve(loadDB()).then(d=>{
+ const L=EMBEDDED_LAYOUT;
+ const root=document.getElementById('root'),q=document.getElementById('q'),nav=document.getElementById('dungeonNav');
+ const groups=L.dungeon_groups;
+ let selectedPick='all';
+
+ const categoryDefs=[
+   {key:'early',label:'前期副本｜Easy / Hard / Nightmare',indexes:[0,1,2,3,4,5,6],tone:''},
+   {key:'hell',label:'Difficulty：Hell｜地獄',indexes:[7,8,9,10],tone:'is-hell'},
+   {key:'imp',label:'Difficulty：Impossible｜不可能',indexes:[11,12,13],tone:'is-imp'},
+   {key:'mythic',label:'Difficulty：Mythic｜神話',indexes:[14,15],tone:'is-mythic'}
+ ];
+ let openCategory=null;
+ function navLabel(title){
+   const parts=String(title||'').split(/Difficulty[：:]/);
+   return {main:(parts[0]||title).trim(),meta:parts.length>1?('Difficulty：'+parts.slice(1).join('Difficulty：').trim()):''};
+ }
+ function categoryKeyForPick(pick){
+   if(String(pick||'').startsWith('event:'))return 'event';
+   const m=String(pick||'').match(/^normal:(\d+)$/);
+   if(!m)return null;
+   const gi=Number(m[1]);
+   const cat=categoryDefs.find(x=>x.indexes.includes(gi));
+   return cat?cat.key:null;
+ }
+ function updateAccordion(){
+   nav.querySelectorAll('.dungeon-nav-group').forEach(group=>{
+     const isOpen=group.dataset.cat===openCategory;
+     group.classList.toggle('open',isOpen);
+     const title=group.querySelector('[data-cat-toggle]');
+     if(title)title.setAttribute('aria-expanded',isOpen?'true':'false');
+   });
+ }
+ function buildDungeonSidebar(){
+   let html='<button class="dungeon-nav-all active" type="button" data-pick="all">全部副本</button>';
+   categoryDefs.forEach(cat=>{
+     html+=`<section class="dungeon-nav-group" data-cat="${esc(cat.key)}"><button class="dungeon-nav-title${cat.tone?' '+cat.tone:''}" type="button" data-cat-toggle="${esc(cat.key)}" aria-expanded="false"><span>${esc(cat.label)}</span><span class="dungeon-nav-chevron" aria-hidden="true">⌄</span></button><div class="dungeon-nav-items">`;
+     cat.indexes.forEach(gi=>{const g=groups[gi];if(!g)return;const n=navLabel(g.title);html+=`<button class="dungeon-nav-item" type="button" data-pick="normal:${gi}"><span class="dungeon-nav-main">${esc(n.main)}</span>${n.meta?`<span class="dungeon-nav-meta">${esc(n.meta)}</span>`:''}</button>`});
+     html+='</div></section>';
+   });
+   if(typeof EVENT_DUNGEONS_ENABLED!=='undefined'&&EVENT_DUNGEONS_ENABLED&&typeof EVENT_DUNGEONS!=='undefined'&&EVENT_DUNGEONS.length){
+     html+='<section class="dungeon-nav-group" data-cat="event"><button class="dungeon-nav-title is-event" type="button" data-cat-toggle="event" aria-expanded="false"><span>活動副本</span><span class="dungeon-nav-chevron" aria-hidden="true">⌄</span></button><div class="dungeon-nav-items">';
+     EVENT_DUNGEONS.forEach(ev=>{const n=navLabel(ev.title);html+=`<button class="dungeon-nav-item" type="button" data-pick="event:${esc(ev.key)}"><span class="dungeon-nav-main">${esc(n.main)}</span>${n.meta?`<span class="dungeon-nav-meta">${esc(n.meta)}</span>`:''}</button>`});
+     html+='</div></section>';
+   }
+   nav.innerHTML=html;
+   updateAccordion();
+ }
+ function updateDungeonSidebar(){
+   nav.querySelectorAll('[data-pick]').forEach(b=>b.classList.toggle('active',b.dataset.pick===selectedPick));
+   updateAccordion();
+ }
+ nav.addEventListener('click',e=>{
+   const toggle=e.target.closest('[data-cat-toggle]');
+   if(toggle){
+     const key=toggle.dataset.catToggle||null;
+     openCategory=openCategory===key?null:key;
+     updateAccordion();
+     return;
+   }
+   const b=e.target.closest('[data-pick]');
+   if(!b)return;
+   selectedPick=b.dataset.pick||'all';
+   openCategory=selectedPick==='all'?null:categoryKeyForPick(selectedPick);
+   updateDungeonSidebar();
+   render();
+   window.scrollTo({top:Math.max(0,document.querySelector('.group-toolbar').offsetTop-80),behavior:'smooth'});
+ });
+ buildDungeonSidebar();
+
+ function selectionMatchesNormal(gi,pick){return pick==='all'||pick==='normal:'+gi}
+ function selectionMatchesEvent(ev,pick){return pick==='all'||pick==='event:'+ev.key}
+ function eventMatchesSearch(ev,qq){
+   if(!qq)return true;
+   const text=[ev.title,ev.shortTitle,ev.prerequisite,...ev.drops.flatMap(x=>[x.name,x.name_en,x.job,x.effect])].join(' ').toLowerCase();
+   return text.includes(qq);
+ }
+ // 活動副本素材沿用原本「副本掉落素材」的名稱顏色；沒有既有副本素材色就維持一般文字。
+ const dungeonMaterialColorByName=new Map();
+ (d.loot||[]).forEach(it=>{
+   const name=String(it.display_name||it.name||'').trim();
+   if(!name||!it.name_color)return;
+   if(String(it.effect||'').includes('鍛造材料'))dungeonMaterialColorByName.set(name,it.name_color);
+ });
+ function eventNameColor(x){
+   if(x.kind==='equipment')return x.name_color||'';
+   const name=String(x.name||'').trim();
+   const gameColor=(typeof gameItemNameColor==='function')?gameItemNameColor(name):'';
+   return gameColor||dungeonMaterialColorByName.get(name)||x.name_color||'';
+ }
+ function itemNameStyle(x){const c=eventNameColor(x);return c?` style="color:${esc(c)}"`:''}
+ function eventRow(x,isEquipment){
+   const badge=x.provisional?'<span class="event-provisional">能力暫定</span>':'';
+   const img=x.image?`<img class="item-img" src="${esc(x.image)}" loading="lazy" alt="${esc(x.name)}">`:'<div></div>';
+   return `<article class="excel-row event-row">${img}<div class="item-name"><strong${itemNameStyle(x)}>${esc(x.name)}${badge}</strong><span>${esc(x.name_en||'')}</span></div><div class="item-job">${isEquipment?formatText(x.job||''):''}</div><div class="item-effect">${isEquipment?formatText(x.effect||''):''}</div></article>`;
+ }
+ function renderEventDungeon(ev,qq){
+   if(!EVENT_DUNGEONS_ENABLED||!eventMatchesSearch(ev,qq))return '';
+   const equips=ev.drops.filter(x=>x.kind==='equipment'&&(!qq||[ev.title,x.name,x.name_en,x.job,x.effect].join(' ').toLowerCase().includes(qq)));
+   const mats=ev.drops.filter(x=>x.kind!=='equipment'&&(!qq||[ev.title,x.name,x.name_en].join(' ').toLowerCase().includes(qq)));
+   const rows=[...equips,...mats];
+   if(!rows.length)return '';
+   const loc=(ev.locationImages||[]);
+   const rates=ev.drops.map(x=>{
+     const rate=x.rateLabel?`<span class="event-fixed">${esc(x.rateLabel)}</span>`:(Number.isFinite(Number(x.rate))?`<span class="drop-rate">${Number(x.rate).toFixed(2)}%</span>`:'');
+     const c=eventNameColor(x);
+     return `<div class="drop-row event-rate-row"><span><i class="rate-square"></i> <span${c?` style="color:${esc(c)};font-weight:800"`:''}>${esc(x.name)}</span></span>${rate}</div>`;
+   }).join('');
+   const side=`<aside class="side-panel"><div class="side-panel-title">📍 副本位置圖</div>${loc[0]?`<div><img class="side-main" src="${esc(loc[0].file)}" loading="lazy" alt="${esc(loc[0].alt||ev.shortTitle)}"><div class="event-side-caption">副本入口</div></div>`:''}${loc[1]?`<div class="side-gallery"><div><img class="side-small" src="${esc(loc[1].file)}" loading="lazy" alt="${esc(loc[1].alt||ev.shortTitle)}"><div class="event-side-caption">地圖位置</div></div></div>`:''}<div class="dropbox"><h3>🎲 掉落率</h3>${rates}<div class="drop-note">黃色：活動副本每次通關的實際掉落率；海洋之心的「固定 ×1」維持綠色。</div></div></aside>`;
+   return `<section class="data-section event-section"><header class="data-section-title"><h2>${esc(ev.title)}</h2><p>${rows.length} 件掉落物</p>${ev.prerequisite?`<div class="event-prereq">${esc(ev.prerequisite)}</div>`:''}</header><div class="section-layout"><div class="section-table"><div class="excel-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div></div>${rows.map(x=>eventRow(x,x.kind==='equipment')).join('')}</div>${side}</div></section>`;
  }
  function specialBox(gi){
    const sp=DUNGEON_SPECIAL_RATES[gi]; if(!sp)return '';
-   const rows=sp.items.map(it=>{
-     const normal=`${it.naturalRate.toFixed(2)}%`;
-     const lucky=it.luckyRate==null?'':`<span class="special-sub">幸運玩家：${it.luckyRate.toFixed(2)}%</span>`;
-     return `<div class="special-row"><span><span class="rate-square special"></span> ${esc(it.name)}<span class="special-sub">池內 ${it.poolRate.toFixed(2)}% · 權重 ${it.weight}</span></span><span class="special-rate">${normal}${lucky}</span></div>`;
-   }).join('');
+   const rows=sp.items.map(it=>{const normal=`${it.naturalRate.toFixed(2)}%`;const lucky=it.luckyRate==null?'':`<span class="special-sub">幸運玩家：${it.luckyRate.toFixed(2)}%</span>`;return `<div class="special-row"><span><span class="rate-square special"></span> ${esc(it.name)}<span class="special-sub">池內 ${it.poolRate.toFixed(2)}% · 權重 ${it.weight}</span></span><span class="special-rate">${normal}${lucky}</span></div>`}).join('');
    const luckyNote=sp.trigger_lucky?`<div><span class="rate-square lucky"></span> IMP2 幸運玩家：進特殊池 ${sp.trigger_lucky}%（一般玩家 ${sp.trigger_normal}%）</div>`:`<div><span class="rate-square special"></span> 進特殊素材池：${sp.trigger_normal}%</div>`;
-   return `<div class="special-dropbox"><h3>🟪 特殊素材掉落</h3>${rows}<div class="special-note">${luckyNote}<div><span class="rate-square pity"></span> 保底：未觸發特殊池時累積「${esc(sp.spirit)}」，到 ${sp.pity}/${sp.pity} 時直接掉特殊素材 1 件。</div><div>上方紫色百分比是「單次通關自然直接掉該素材」的機率；池內三件/兩件再依權重抽。地圖腳本的自然中獎分支沒有看到清空此計數，因此這裡不寫成『連續未中』。</div></div></div>`;
+   return `<div class="special-dropbox"><h3>🟪 特殊素材掉落</h3>${rows}<div class="special-note">${luckyNote}<div><span class="rate-square pity"></span> 保底：未觸發特殊池時累積「${esc(sp.spirit)}」，到 ${sp.pity}/${sp.pity} 時直接掉特殊素材 1 件。</div></div></div>`;
  }
- function render(){const qq=q.value.trim().toLowerCase(),pick=sel.value; let html='';
-  groups.forEach((g,gi)=>{if(pick!==''&&pick!==String(gi))return; const list=d.loot.filter(x=>x.dungeon===g.title && (!qq || (g.title+(x.display_name||x.name)+(x.display_name_en||x.name_en)+x.job+x.effect).toLowerCase().includes(qq))); if(!list.length)return;
-   const unreleasedDungeon=(gi===1); html+=`<section class="data-section${unreleasedDungeon?' is-unreleased':''}"><header class="data-section-title"><h2>${esc(g.title)}${unreleasedDungeon?' <span class="dungeon-unreleased-badge">版本尚未推出</span>':''}</h2><p>${unreleasedDungeon?'此副本目前尚未推出｜資料先保留供後續版本更新':`${list.length} 件掉落物`}</p></header><div class="section-layout"><div class="section-table"><div class="excel-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div></div>`;
-   html+=list.sort((a,b)=>(a.row||0)-(b.row||0)).map(x=>`<article class="excel-row">${x.image?`<img class="item-img" src="${esc(resolveImage(x))}" loading="lazy" alt="${esc(x.display_name||x.name)}">`:'<div></div>'}<div class="item-name"><strong style="color:${esc(x.name_color||'#f3f6fa')}">${esc(x.display_name||x.name)}</strong><span>${esc(x.display_name_en||x.name_en)}</span></div><div class="item-job">${formatText(x.job)}</div><div class="item-effect">${formatText(x.effect)}</div></article>`).join('');
-   html+=`</div><aside class="side-panel"><div class="side-panel-title">📍 副本位置圖</div>${g.images.length?`<img class="side-main" src="${esc(g.images[0].file)}" loading="lazy" alt="${esc(g.title)} 位置圖">`:''}${g.images.length>1?`<div class="side-gallery"><img class="side-small" src="${esc(g.images[1].file)}" loading="lazy" alt="${esc(g.title)} 位置圖補充"></div>`:''}<div class="side-note">圖片沿用 Excel 原本放在該副本區塊旁邊的位置圖，不把圖片混進裝備清單。</div>${(()=>{if(gi===1)return `<div class="dropbox"><h3>🎲 掉落率 <span class="pending-tag">待確認</span></h3><div class="unreleased-rate"><span class="rate-square unreleased"></span><strong>版本尚未推出</strong><div class="drop-note">Forgotten Crypt｜被遺忘的地穴（憎惡）目前先不顯示掉落率。</div></div></div>`;const dr=DUNGEON_DROP_RATES[gi];if(!dr)return specialBox(gi);return `<div class="dropbox"><h3>🎲 掉落率 <span class="pending-tag">待確認</span></h3><div class="legend-row"><span class="legend-item"><i class="rate-square normal"></i>一般裝備池</span>${DUNGEON_SPECIAL_RATES[gi]?'<span class="legend-item"><i class="rate-square special"></i>特殊素材</span><span class="legend-item"><i class="rate-square pity"></i>保底</span>':''}</div>${dr.items.map(it=>`<div class="drop-row"><span><i class="rate-square normal"></i> ${esc(it.name)}</span><span class="drop-rate">${it.rate.toFixed(2)}%</span></div>`).join('')}<div class="drop-note">藍色：一般 ItemPool 單次抽取率（權重 ÷ 總權重）。</div>${specialBox(gi)}</div>`})()}</aside></div></section>`;
-  }); root.innerHTML=html||'<div class="empty">找不到符合的副本或裝備。</div>'; }
- q.oninput=render;sel.onchange=render;render();
+ function render(){
+   const qq=q.value.trim().toLowerCase(),pick=selectedPick||'all'; let html='';
+   groups.forEach((g,gi)=>{
+     if(!selectionMatchesNormal(gi,pick))return;
+     const list=d.loot.filter(x=>x.dungeon===g.title&&(!qq||(g.title+(x.display_name||x.name)+(x.display_name_en||x.name_en)+x.job+x.effect).toLowerCase().includes(qq)));
+     if(!list.length)return;
+     const unreleasedDungeon=(gi===1);
+     html+=`<section class="data-section${unreleasedDungeon?' is-unreleased':''}"><header class="data-section-title"><h2>${esc(g.title)}${unreleasedDungeon?' <span class="dungeon-unreleased-badge">版本尚未推出</span>':''}</h2><p>${unreleasedDungeon?'此副本目前尚未推出｜資料先保留供後續版本更新':`${list.length} 件掉落物`}</p>${gi===14?'<div class="dungeon-route-note">🧭 M1 副本區域路線：第二個圓圈 → 右 → 上 → 左 → 右 → 左</div>':''}</header><div class="section-layout"><div class="section-table"><div class="excel-head"><div>圖示</div><div>裝備名稱</div><div>適用職業</div><div>效果</div></div>`;
+     html+=list.sort((a,b)=>(a.row||0)-(b.row||0)).map(x=>`<article class="excel-row">${x.image?`<img class="item-img" src="${esc(resolveImage(x))}" loading="lazy" alt="${esc(x.display_name||x.name)}">`:'<div></div>'}<div class="item-name"><strong style="color:${esc(x.name_color||'#f3f6fa')}">${esc(x.display_name||x.name)}</strong><span>${esc(x.display_name_en||x.name_en)}</span></div><div class="item-job">${formatText(x.job)}</div><div class="item-effect">${formatText(x.effect)}</div></article>`).join('');
+     html+=`</div><aside class="side-panel"><div class="side-panel-title">📍 副本位置圖</div>${g.images.length?`<img class="side-main" src="${esc(g.images[0].file)}" loading="lazy" alt="${esc(g.title)} 位置圖">`:''}${g.images.length>1?`<div class="side-gallery"><img class="side-small" src="${esc(g.images[1].file)}" loading="lazy" alt="${esc(g.title)} 位置圖補充"></div>`:''}<div class="side-note">圖片沿用 Excel 原本放在該副本區塊旁邊的位置圖，不把圖片混進裝備清單。</div>${(()=>{if(gi===1)return `<div class="dropbox"><h3>🎲 掉落率 <span class="pending-tag">待確認</span></h3><div class="unreleased-rate"><span class="rate-square unreleased"></span><strong>版本尚未推出</strong><div class="drop-note">Forgotten Crypt｜被遺忘的地穴（憎惡）目前先不顯示掉落率。</div></div></div>`;const dr=DUNGEON_DROP_RATES[gi];if(!dr)return specialBox(gi);return `<div class="dropbox"><h3>🎲 掉落率 <span class="pending-tag">待確認</span></h3><div class="legend-row"><span class="legend-item"><i class="rate-square normal"></i>一般裝備池</span>${DUNGEON_SPECIAL_RATES[gi]?'<span class="legend-item"><i class="rate-square special"></i>特殊素材</span><span class="legend-item"><i class="rate-square pity"></i>保底</span>':''}</div>${dr.items.map(it=>`<div class="drop-row"><span><i class="rate-square normal"></i> ${esc(it.name)}</span><span class="drop-rate">${it.rate.toFixed(2)}%</span></div>`).join('')}<div class="drop-note">藍色：一般 ItemPool 單次抽取率（權重 ÷ 總權重）。</div>${specialBox(gi)}</div>`})()}</aside></div></section>`;
+   });
+   if(typeof EVENT_DUNGEONS_ENABLED!=='undefined'&&EVENT_DUNGEONS_ENABLED&&typeof EVENT_DUNGEONS!=='undefined')EVENT_DUNGEONS.forEach(ev=>{if(selectionMatchesEvent(ev,pick))html+=renderEventDungeon(ev,qq)});
+   root.innerHTML=html||'<div class="empty">找不到符合的副本或裝備。</div>';
+ }
+ q.oninput=render;render();
 }).catch(e=>document.getElementById('root').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
-</script><script src="../mobile-nav.js"></script>
-</body></html>
+</script>
+<script src="../mobile-nav.js"></script>
+</body>
+</html>

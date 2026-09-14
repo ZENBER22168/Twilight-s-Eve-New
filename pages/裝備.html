@@ -1,11 +1,88 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>📘 裝備資料庫</title><link rel="icon" href="../images/site-icon.png">
-<link rel="stylesheet" href="../style.css"><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>資料庫｜新暮光之晨</title><link rel="icon" href="../images/site-icon.png"><link rel="stylesheet" href="../style.css"><style>
 .eq-toolbar{display:grid;grid-template-columns:minmax(300px,1fr) minmax(260px,360px) 190px;gap:12px;margin:18px 0 18px;position:sticky;top:76px;z-index:5;background:rgba(11,15,20,.95);padding:12px 0;backdrop-filter:blur(8px)}.eq-toolbar .search{margin:0}.eq-toolbar select{padding:14px 15px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff;font-size:16px}.eq-count{margin:-2px 0 18px;color:#8e99a8;font-size:15px}.equipment-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:16px}.equipment-card{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;background:#121821;border:1px solid #252e3a;border-radius:16px;padding:18px;min-height:210px}.equipment-card.is-unreleased{border-color:#633b43;background:linear-gradient(180deg,#161821,#121820)}.eq-img{width:108px;height:108px;object-fit:contain;object-position:center;background:#080b0f;border:1px solid #2c3541;border-radius:12px;padding:3px;box-sizing:border-box}.eq-main h2{font-size:23px;margin:2px 0 3px}.eq-en{font-size:15px;color:#9eb1c8;margin-bottom:8px}.eq-job{font-size:15px;color:#c1cad5}.eq-section{margin-top:12px}.eq-label{font-size:14px;font-weight:900;color:#f0d690;margin-bottom:3px}.eq-text{font-size:16px;line-height:1.65;color:#d4dce6;white-space:pre-wrap}.eq-materials{color:#b8c4d2}.eq-tag{display:inline-block;padding:4px 9px;border-radius:999px;background:#26313e;font-size:13px;color:#e3e9f0;margin:0 5px 5px 0}.eq-source-forge{color:#e6b85f;border:1px solid #6f5932;background:#211c13}.eq-source-dungeon{color:#8fd0ff;border:1px solid #35596f;background:#0f1d29}.eq-source-gold{color:#f1d06b;border:1px solid #77652e;background:#241f10}.eq-unreleased{color:#ffb8b8;border:1px solid #8b4a4a;background:#4c2929;font-weight:900}.eq-empty{grid-column:1/-1;padding:32px;text-align:center;color:#8e99a8;background:#121821;border:1px solid #252e3a;border-radius:14px}
 .eq-note{font-size:14px;line-height:1.6;color:#91a0b3;margin-bottom:6px}.eq-note b{color:#d7e0eb}
 @media(max-width:900px){.eq-toolbar{grid-template-columns:1fr 1fr}.eq-toolbar .search{grid-column:1/-1}.equipment-list{grid-template-columns:1fr}}@media(max-width:720px){.eq-toolbar{grid-template-columns:1fr;top:64px}.eq-toolbar .search{grid-column:auto}.equipment-card{grid-template-columns:84px 1fr;gap:12px;padding:14px}.eq-img{width:80px;height:80px}.eq-main h2{font-size:20px}}
-</style></head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html" class="active">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a href="掉落率.html">🎲 掉落率</a><a href="存檔讀取.html">📂 存檔讀取</a></nav></header><main class="wrap"><h1>🗡️ 裝備資料庫</h1><div class="eq-note">整合 <b>鍛造 + 副本材料&裝備 + 尚未推出的 Wiki 鍛造資料</b>；相同裝備只保留一筆，未推出項目會顯示「版本尚未推出」。</div><div class="eq-toolbar"><input id="q" class="search" placeholder="搜尋裝備、職業、效果、材料…"><select id="source"><option value="">全部出處</option></select><select id="status"><option value="">全部版本</option><option value="released">已推出</option><option value="unreleased">版本尚未推出</option></select></div><div id="count" class="eq-count"></div><div id="items" class="equipment-list"></div></main>
-<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
-<script src="../app-data.js"></script><script src="../loadout-rules.js"></script><script src="../extra-equipment-data.js"></script><script>
+
+
+.drop-wrap{max-width:1200px;margin:0 auto}
+.drop-note{padding:16px 18px;border:1px solid #344356;border-radius:14px;background:#0d141d;color:#cbd7e5;line-height:1.75;font-size:15px}
+.drop-note strong{color:#ffd46a}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tab-btn{padding:11px 16px;border:1px solid #3b4a5d;border-radius:999px;background:#111923;color:#c9d5e4;font-weight:900;cursor:pointer}
+.tab-btn.active{border-color:#b68b37;background:#2a2112;color:#ffd873}
+.panel{display:none}.panel.active{display:block}
+.pool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pool{border:1px solid #2b3745;border-radius:16px;background:#0e151e;padding:16px}
+.pool h2{margin:0 0 6px;font-size:21px;color:#f3f6fa}
+.meta{font-size:14px;color:#9aaabd;margin-bottom:13px;line-height:1.65}
+.rate-table{width:100%;border-collapse:collapse}
+.rate-table th,.rate-table td{padding:10px 7px;border-bottom:1px solid #26313e;font-size:15px}
+.rate-table th{text-align:left;color:#8fa0b4;font-size:13px}
+.rate-table td:nth-child(2),.rate-table td:nth-child(3){text-align:right;white-space:nowrap}
+.rate{color:#ffd56d;font-weight:900}
+.weight{color:#a8b7c8}
+.raw{font-size:10px;color:#64758a;margin-top:2px}
+.badge{display:inline-block;padding:2px 7px;border:1px solid #465a70;border-radius:999px;font-size:10px;color:#9fb3c9;margin-left:6px}
+@media(max-width:850px){.pool-grid{grid-template-columns:1fr}}
+
+.pending-tag{display:inline-block;margin-left:6px;padding:2px 7px;border:1px solid #7b6a3b;border-radius:999px;background:#2a2517;color:#e9cf78;font-size:11px;vertical-align:middle}
+.pending-inline{display:inline-block;margin-left:6px;padding:1px 5px;border:1px solid #5c5960;border-radius:5px;color:#aeb3bd;font-size:10px}
+
+.unreleased-badge{display:inline-block;margin-left:7px;padding:2px 8px;border:1px solid #6e7683;border-radius:999px;background:#20252d;color:#cbd2dc;font-size:11px;vertical-align:middle}
+.unreleased-pool{opacity:.88}
+.mine-card{padding:17px}
+.mine-summary{display:grid;gap:0;border:1px solid #2a3745;border-radius:10px;overflow:hidden;margin:10px 0 14px}
+.mine-summary>div{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-bottom:1px solid #263340;font-size:15px}
+.mine-summary>div:last-child{border-bottom:0}.mine-summary span{color:#b8c5d3}.mine-summary strong{color:#f0f5fb;text-align:right}
+.mine-pool-title{display:flex;justify-content:space-between;gap:10px;margin:6px 0 9px;font-size:16px;font-weight:900;color:#dce5ef}
+.mine-pool-title span{font-size:12px;color:#8fa1b4;font-weight:700}
+.mine-items{border-top:1px solid #2c3846}
+.mine-item-row{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:10px 4px;border-bottom:1px dashed #283441;font-size:15px}
+.mine-item-row>span:first-child{color:#d9e2ec}.mine-item-row>span:last-child{text-align:right;color:#ffd66f;white-space:nowrap}
+.mine-item-row small{display:block;color:#7e8da0;font-size:9px;margin-top:1px}
+
+.special-mini{margin-top:12px;padding:10px;border:1px solid #583b72;border-radius:10px;background:rgba(93,48,126,.15)}
+.special-mini-title{font-size:15px;font-weight:900;color:#e2c2ff;margin-bottom:8px}
+.special-mini-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed #443451;font-size:14px}.special-mini-row:last-child{border-bottom:0}
+.special-mini-row strong{color:#e7bdff}.special-mini-note{margin-top:8px;color:#a99bb3;font-size:12px;line-height:1.65}
+
+.mine-item-row strong{margin-left:auto;text-align:right;min-width:72px;color:#ffd66f;font-size:15px;white-space:nowrap}
+
+
+.db-hub-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 22px;padding:7px;border:1px solid #29323e;background:#0d141d;border-radius:14px;position:sticky;top:74px;z-index:7;backdrop-filter:blur(10px)}
+.db-hub-tab{border:1px solid transparent;background:transparent;color:#aebaca;border-radius:10px;padding:10px 16px;font-size:16px;font-weight:900;cursor:pointer}.db-hub-tab.active{background:#252d38;border-color:#516073;color:#fff}.db-hub-panel{display:none}.db-hub-panel.active{display:block}.db-hub-panel>h2{font-size:26px;margin:6px 0 10px}.db-hub-desc{color:#8fa0b3;margin:0 0 12px}
+@media(max-width:720px){.db-hub-tabs{top:62px}.db-hub-tab{flex:1 1 150px}}
+
+.mine-item-row .mine-verify-note{display:block;margin-top:3px;color:#f6b84a;font-size:11px;font-weight:700;line-height:1.35}
+</style></head><body>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html" class="active">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header>
+<main class="wrap"><h1>📚 資料庫</h1><p class="muted">裝備資料與掉落率集中在同一頁，使用下方分頁切換。</p>
+<div class="db-hub-tabs" role="tablist"><button class="db-hub-tab active" type="button" data-db-tab="equipment">🗡️ 裝備資料庫</button><button class="db-hub-tab" type="button" data-db-tab="drop">🎲 掉落率</button></div>
+<section class="db-hub-panel active" data-db-panel="equipment"><h2>🗡️ 裝備資料庫</h2><div class="eq-note">整合 <b>鍛造 + 副本材料&裝備 + 尚未推出的 Wiki 鍛造資料</b>；相同裝備只保留一筆，未推出項目會顯示「版本尚未推出」。</div><div class="eq-toolbar"><input id="q" class="search" placeholder="搜尋裝備、職業、效果、材料…"><select id="source"><option value="">全部出處</option></select><select id="status"><option value="">全部版本</option><option value="released">已推出</option><option value="unreleased">版本尚未推出</option></select></div><div id="count" class="eq-count"></div><div id="items" class="equipment-list"></div></section>
+<section class="db-hub-panel" data-db-panel="drop"><h2>🎲 掉落率 <span class="pending-tag">待確認</span></h2>
+<div class="drop-note"><strong>計算方式：</strong>目前依 v2.74 地圖內 ItemPool 權重整理，實際遊戲觸發次數與特殊條件仍在確認中，因此本頁所有百分比先標示為「待確認」。</div>
+
+<div class="tabs">
+<button class="tab-btn active" data-tab="dungeon">🏰 副本掉落率</button>
+<button class="tab-btn" data-tab="mining">⛏️ 挖礦</button>
+</div>
+
+<section id="dungeon" class="panel active">
+<h2>副本掉落</h2>
+<p class="meta">副本裝備與副本內可抽到的材料放在同一組，依各副本自己的掉落池計算。</p>
+<div id="dungeonGrid" class="pool-grid"></div>
+</section>
+
+<section id="mining" class="panel">
+<h2>挖礦／鍛造素材 <span class="pending-tag">獎池內機率</span></h2>
+<p class="meta">已整理 6 階礦鏟的升級次數、進入素材獎池機率、金幣／力量碎片機率與數量範圍，以及完整素材獎池。素材列表只顯示「獎池內機率」，不顯示權重，也不顯示換算後的「每次挖礦實際機率」。</p>
+<div id="mineGrid" class="pool-grid"></div>
+</section>
+</section>
+</main>
+<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　資料庫</div></footer>
+<script src="../app-data.js"></script><script src="../loadout-rules.js"></script><script src="../extra-equipment-data.js"></script><script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data.js"></script>
+<script>
 loadDB().then(d=>{
  const q=document.getElementById('q'),source=document.getElementById('source'),status=document.getElementById('status'),items=document.getElementById('items'),count=document.getElementById('count');
  const materialZh=new Map();
@@ -29,4 +106,51 @@ loadDB().then(d=>{
  function render(){const qq=q.value.trim().toLowerCase(),cat=source.value,st=status.value;const list=all.filter(x=>(!cat||x._category===cat)&&(!st||(st==='unreleased')===x._unreleasedFinal)&&(!qq||((x.display_name||x.name)+' '+(x.display_name_en||x.name_en)+' '+(x.job||'')+' '+(x.effect||'')+' '+(x.materials||'')+' '+sourceLabel(x._category)).toLowerCase().includes(qq)));count.textContent=`顯示 ${list.length} / ${all.length} 筆（已自動移除重複）`;items.innerHTML=list.map(x=>{const nm=x.display_name||x.name,en=x.display_name_en||x.name_en,src=sourceLabel(x._category),color=x.name_color||'#f3f6fa';return`<article class="equipment-card${x._unreleasedFinal?' is-unreleased':''}"><div>${x.image?`<img class="eq-img" src="${esc(resolveImage(x))}" loading="lazy" alt="${esc(nm)}">`:''}</div><div class="eq-main"><span class="eq-tag ${sourceClass(x._category)}">${esc(src)}</span>${x._unreleasedFinal?'<span class="eq-tag eq-unreleased">版本尚未推出</span>':''}<h2 style="color:${esc(color)}">${esc(nm)}</h2>${en&&norm(en)!==norm(nm)?`<div class="eq-en">${esc(en)}</div>`:''}${x.job?`<div class="eq-job">適用職業：${formatText(x.job)}</div>`:''}<div class="eq-section"><div class="eq-label">效果</div><div class="eq-text">${formatText(x.effect||'—')}</div></div><div class="eq-section"><div class="eq-label">需求素材</div><div class="eq-text eq-materials">${formatRarityText(zhMaterialText(x.materials||'—'))}</div></div></div></article>`}).join('')||'<div class="eq-empty">找不到符合條件的裝備。</div>'}
  q.oninput=render;source.onchange=render;status.onchange=render;render();
 }).catch(e=>document.getElementById('items').innerHTML='<div class="eq-empty">資料載入失敗：'+esc(e.message)+'</div>');
+</script>
+<script>(()=>{
+function specialMini(gi){
+ const sp=DUNGEON_SPECIAL_RATES?.[gi]; if(!sp)return '';
+ return `<div class="special-mini"><div class="special-mini-title">🟪 特殊素材池｜自然觸發 ${sp.trigger_normal}%</div>${sp.items.map(it=>`<div class="special-mini-row"><span>${esc(it.name)}<small style="display:block;color:#8e8099">池內 ${it.poolRate.toFixed(2)}%｜權重 ${it.weight}</small></span><strong>自然 ${it.naturalRate.toFixed(2)}%</strong></div>`).join('')}<div class="special-mini-note">未觸發特殊池會累積「${esc(sp.spirit)}」，到 ${sp.pity}/${sp.pity} 時保底特殊素材 1 件。自然中獎分支在腳本中未看到重設計數。</div></div>`;
+}
+function card(pool,gi){
+ const unreleased=String(pool.name||'').includes('被遺忘的地穴');
+ if(unreleased){
+   return `<article class="pool unreleased-pool"><h2>${esc(pool.name)} <span class="unreleased-badge">版本尚未推出</span></h2><div class="meta">此副本目前尚未推出，掉落率先不顯示。</div></article>`;
+ }
+ return `<article class="pool"><h2>${esc(pool.name)}</h2><div class="meta">總權重：${pool.total}</div><table class="rate-table"><thead><tr><th>物品</th><th>權重</th><th>單次掉落率</th></tr></thead><tbody>${pool.items.map(it=>`<tr><td><strong>${esc(it.name)}</strong></td><td class="weight">${it.weight}</td><td class="rate">${it.rate.toFixed(2)}%</td></tr>`).join('')}</tbody></table>${specialMini(gi)}</article>`;
+}
+document.getElementById('dungeonGrid').innerHTML=DROP_RATE_DUNGEONS.map((p,i)=>card(p,i)).join('');
+document.getElementById('mineGrid').innerHTML=MINING_DROP_DATA.pickaxes.map(p=>{
+ const pool=p.poolData;
+ const materialRows=pool.items.map(it=>`<div class="mine-item-row"><span>${esc(it.name)}${it.note?`<small class="mine-verify-note">${esc(it.note)}</small>`:''}</span><strong>${it.poolRate.toFixed(2)}%</strong></div>`).join('');
+ const gold=p.goldAmount==='無'?'無':`${p.goldRate.toFixed(2)}%｜${esc(p.goldAmount)}`;
+ const lumber=p.lumberAmount==='無'?'無':`${p.lumberRate.toFixed(2)}%｜${esc(p.lumberAmount)}`;
+ return `<article class="pool mine-card">
+   <h2>⛏️ ${esc(p.name)}</h2>
+   <div class="meta">${esc(p.upgrade)}</div>
+   <div class="mine-summary">
+     <div><span>進入素材獎池</span><strong>${p.treasureRate.toFixed(0)}%</strong></div>
+     <div><span>金幣</span><strong>${gold}</strong></div>
+     <div><span>力量碎片（木材）</span><strong>${lumber}</strong></div>
+   </div>
+   <div class="mine-pool-title">素材獎池內容 <span>獎池內機率</span></div>
+   <div class="mine-items">${materialRows}</div>
+ </article>`;
+}).join('');
+document.querySelectorAll('.tab-btn').forEach(btn=>btn.onclick=()=>{
+ document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+ btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active');
+});
+})();</script>
+<script>
+function activateDatabaseTab(name,updateHash=true){
+  const tab=name==='drop'?'drop':'equipment';
+  document.querySelectorAll('[data-db-tab]').forEach(b=>b.classList.toggle('active',b.dataset.dbTab===tab));
+  document.querySelectorAll('[data-db-panel]').forEach(p=>p.classList.toggle('active',p.dataset.dbPanel===tab));
+  if(updateHash) history.replaceState(null,'',tab==='drop'?'#drop':'#equipment');
+  window.scrollTo({top:0,behavior:'auto'});
+}
+document.querySelectorAll('[data-db-tab]').forEach(b=>b.onclick=()=>activateDatabaseTab(b.dataset.dbTab));
+activateDatabaseTab(location.hash==='#drop'?'drop':'equipment',false);
 </script><script src="../mobile-nav.js"></script></body></html>

@@ -1,8 +1,14 @@
 {
   "sourceVersion": "Twilight's Eve New v2.74",
   "diamondPickaxe": {
-    "activePoolContainsGoldenSpatula": false,
-    "note": "黃金鍋鏟存在於第四素材池，但目前 v2.74 六把礦鏟的實際觸發沒有呼叫第四素材池；鑽石礦鏟使用的第三素材池內沒有黃金鍋鏟。",
-    "goldenSpatulaRawcode": "I0GZ"
+    "displayedPool": "udg_Mineitem4",
+    "verificationStatus": "pending_in_game_confirmation",
+    "note": "鑽石礦鏟目前依最高階第四素材池顯示；其中「先驅者的精華」與「黃金鍋鏟」雖存在於獎池資料，但目前尚未實際挖到過，保留實測提醒。",
+    "unconfirmedObservedDrops": [
+      "先驅者的精華",
+      "黃金鍋鏟"
+    ],
+    "goldenSpatulaRawcode": "I0GZ",
+    "harbingerEssenceRawcode": "I087"
   }
 }

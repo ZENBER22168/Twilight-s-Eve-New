@@ -2210,5 +2210,26 @@
     "saveCode": 339,
     "name": "神鑄武器碎片",
     "icon": "war3mapImported\\\\BTN_weapon.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0HL",
+    "saveCode": 341,
+    "name": "指揮官之箭",
+    "icon": "war3mapImported\\BTNbowBA.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0HM",
+    "saveCode": 342,
+    "name": "指揮官之刃",
+    "icon": "war3mapImported\\Freyre.blp"
+  },
+  {
+    "type": "Equipment",
+    "rawcode": "I0HN",
+    "saveCode": 343,
+    "name": "指揮官之石",
+    "icon": "war3mapImported\\MysticStone.blp"
   }
 ]

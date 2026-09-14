@@ -48,16 +48,66 @@
 }
 
 .mat-ref{position:relative;display:inline-block;color:#8fd0ff;font-weight:800;cursor:help;border-bottom:1px dotted #6aa8d6}.mat-ref .mat-tip{display:none;position:absolute;z-index:50;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);min-width:310px;max-width:480px;padding:15px 17px;border-radius:10px;background:#071019;border:1px solid #3a5267;color:#dce7f1;box-shadow:0 12px 28px rgba(0,0,0,.45);font-size:16px;line-height:1.7;white-space:normal}.mat-tip b{display:block;font-size:17px;line-height:1.35;margin-bottom:5px;color:#f2f5f8}.mat-ref:hover .mat-tip,.mat-ref:focus .mat-tip{display:block}.gold-mat-box{margin:0;border-top:1px solid #2c3744;background:linear-gradient(180deg,#141b24,#0d131b);padding:18px}.gold-mat-box h3{margin:0 0 12px;color:#f2d77f}.gold-mat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.gold-mat-group{background:#0d141d;border:1px solid #2e3947;border-radius:12px;padding:12px}.gold-mat-group strong{display:block;color:#d6a73a;margin-bottom:7px}.gold-mat-group span{display:block;color:#c9d3de;line-height:1.65}.gold-mat-chain{margin-top:10px;color:#9fb0c2;font-size:13px;line-height:1.7}@media(max-width:900px){.gold-mat-grid{grid-template-columns:1fr 1fr}.mat-ref .mat-tip{left:0;transform:none}}@media(max-width:560px){.gold-mat-grid{grid-template-columns:1fr}.mat-ref .mat-tip{min-width:260px;max-width:min(330px,86vw);font-size:15px;padding:13px 14px}.mat-tip b{font-size:16px}}
+
+
+/* 第130次試排版：鍛造左側摺疊分類。主內容永遠優先保留寬度。 */
+.forge-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+.forge-main{min-width:0}
+.forge-sidebar{position:sticky;top:78px;align-self:start;background:#0d141d;border:1px solid #2b3542;border-radius:14px;padding:10px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.forge-sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 11px;border-bottom:1px solid #27313d;margin-bottom:8px}
+.forge-sidebar-title{font-size:17px;font-weight:900;color:#f4f7fb;white-space:nowrap}
+.forge-sidebar-collapse{width:34px;height:34px;border-radius:8px;border:1px solid #344151;background:#111a25;color:#dce7f4;font-size:18px;cursor:pointer;flex:0 0 auto}
+.forge-sidebar-collapse:hover{background:#182434}
+.forge-all-btn,.forge-nav-group-btn,.forge-nav-item{width:100%;border:0;text-align:left;cursor:pointer;color:#eaf1f8}
+.forge-all-btn{padding:13px 14px;border-radius:10px;background:#111a24;font-size:16px;font-weight:900;margin-bottom:8px;border:1px solid #293646}
+.forge-all-btn:hover,.forge-all-btn.active{background:linear-gradient(90deg,#c88796,#d99aa7);color:#fff;border-color:#d89eaa}
+.forge-nav-group{border-top:1px solid #25303b}
+.forge-nav-group-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 9px;background:transparent;font-size:16px;font-weight:900}
+.forge-nav-group-btn:hover{background:#111a24}
+.forge-nav-arrow{font-size:12px;transition:transform .16s ease;opacity:.8}
+.forge-nav-group.open .forge-nav-arrow{transform:rotate(90deg)}
+.forge-nav-items{display:none;padding:0 0 8px}
+.forge-nav-group.open .forge-nav-items{display:block}
+.forge-nav-item{padding:10px 12px 10px 18px;background:transparent;border-radius:8px;font-size:15px;line-height:1.35}
+.forge-nav-item:hover{background:#152130}
+.forge-nav-item.active{background:#1d3043;color:#fff;font-weight:900;box-shadow:inset 3px 0 #e7b5aa}
+.forge-nav-sub{display:block;margin-top:3px;color:#91a5bc;font-size:11px;font-weight:600}
+.forge-hidden-filter{display:none!important}
+.forge-layout.sidebar-collapsed{grid-template-columns:56px minmax(0,1fr)}
+.forge-layout.sidebar-collapsed .forge-sidebar{padding:9px 7px;overflow:hidden}
+.forge-layout.sidebar-collapsed .forge-sidebar-title,
+.forge-layout.sidebar-collapsed .forge-sidebar-body{display:none}
+.forge-layout.sidebar-collapsed .forge-sidebar-head{padding:0;border:0;margin:0;justify-content:center}
+.forge-layout.sidebar-collapsed .forge-sidebar-collapse{width:40px;height:40px}
+.forge-toolbar{margin-top:0}
+@media(max-width:1050px){
+  .forge-layout{grid-template-columns:1fr}
+  .forge-sidebar{position:relative;top:auto;max-height:none}
+  .forge-layout.sidebar-collapsed{grid-template-columns:1fr}
+  .forge-layout.sidebar-collapsed .forge-sidebar{display:block;width:auto;padding:9px}
+  .forge-layout.sidebar-collapsed .forge-sidebar-head{justify-content:flex-start}
+  .forge-layout.sidebar-collapsed .forge-sidebar-title{display:block}
+}
+
 </style>
 </head>
 <body>
-<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a href="掉落率.html">🎲 掉落率</a><a href="存檔讀取.html">📂 存檔讀取</a></nav></header>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html" class="active">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header>
 <main class="wrap">
 <h1>🔨 鍛造</h1>
 
+<div id="forgeLayout" class="forge-layout">
+<aside class="forge-sidebar" aria-label="鍛造分類">
+  <div class="forge-sidebar-head"><span class="forge-sidebar-title">鍛造分類</span><button id="forgeSidebarCollapse" class="forge-sidebar-collapse" type="button" title="收合分類">◀</button></div>
+  <div class="forge-sidebar-body">
+    <button id="forgeAllBtn" class="forge-all-btn active" type="button">全部鍛造</button>
+    <div id="forgeNav"></div>
+  </div>
+</aside>
+<section class="forge-main">
 <div class="forge-toolbar">
 <input id="q" class="search" placeholder="搜尋 NPC、裝備、職業或材料…">
-<select id="type">
+<select id="type" class="forge-hidden-filter" tabindex="-1" aria-hidden="true">
   <option value="">全部</option>
   <option value="武器大師">武器大師</option>
   <option value="鮑伯老師傅">鮑伯老師傅</option>
@@ -79,6 +129,8 @@
 </select>
 </div>
 <div id="forge"></div>
+</section>
+</div>
 </main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
 
@@ -269,6 +321,65 @@ loadDB().then(d=>{
 
 
   const q=document.getElementById('q'),type=document.getElementById('type'),root=document.getElementById('forge');
+  const forgeLayout=document.getElementById('forgeLayout');
+  const forgeNav=document.getElementById('forgeNav');
+  const forgeAllBtn=document.getElementById('forgeAllBtn');
+  const forgeSidebarCollapse=document.getElementById('forgeSidebarCollapse');
+  const FORGE_NAV_GROUPS=[
+    {label:'基礎鍛造',keys:['武器大師','鮑伯老師傅','魔幻巫師','遠古靈魂']},
+    {label:'天使系列',keys:['雲天使','太陽天使','自然天使','復仇的天使']},
+    {label:'惡魔系列',keys:['火之惡魔','焰之惡魔']},
+    {label:'特殊鍛造',keys:['洗禮專屬武器','異我化身']},
+    {label:'後期／未公開',keys:['亞古尼姆','Champion of Chaos','Betrayed Chaos','Oblivion','Void']}
+  ];
+  const groupByKey=new Map(grouped.map(g=>[g.filterKey,g]));
+  function sidebarLabel(g){
+    if(!g)return '';
+    const parts=String(g.name||'').split('｜');
+    return (parts.length>1?parts[parts.length-1]:parts[0]).replace(/\s*\([^)]*\)\s*$/,'').trim();
+  }
+  function buildForgeSidebar(){
+    forgeNav.innerHTML=FORGE_NAV_GROUPS.map((cat,idx)=>{
+      const items=cat.keys.map(key=>{
+        const g=groupByKey.get(key); if(!g)return '';
+        return `<button class="forge-nav-item" type="button" data-forge-key="${esc(key)}">${esc(sidebarLabel(g))}<span class="forge-nav-sub">${esc(g.type)} ・ ${g.list.length} 件</span></button>`;
+      }).join('');
+      return `<div class="forge-nav-group" data-forge-group="${idx}"><button class="forge-nav-group-btn" type="button"><span>${esc(cat.label)}</span><span class="forge-nav-arrow">▶</span></button><div class="forge-nav-items">${items}</div></div>`;
+    }).join('');
+    forgeNav.querySelectorAll('.forge-nav-group-btn').forEach(btn=>btn.addEventListener('click',()=>{
+      const group=btn.closest('.forge-nav-group');
+      const willOpen=!group.classList.contains('open');
+      forgeNav.querySelectorAll('.forge-nav-group').forEach(g=>g.classList.remove('open'));
+      if(willOpen)group.classList.add('open');
+    }));
+    forgeNav.querySelectorAll('.forge-nav-item').forEach(btn=>btn.addEventListener('click',()=>{
+      type.value=btn.dataset.forgeKey||'';
+      render();
+    }));
+  }
+  function syncForgeSidebar(){
+    const key=type.value;
+    forgeAllBtn.classList.toggle('active',!key);
+    forgeNav.querySelectorAll('.forge-nav-item').forEach(btn=>btn.classList.toggle('active',btn.dataset.forgeKey===key));
+    if(key){
+      const active=forgeNav.querySelector(`.forge-nav-item[data-forge-key="${CSS.escape(key)}"]`);
+      if(active){
+        const group=active.closest('.forge-nav-group');
+        forgeNav.querySelectorAll('.forge-nav-group').forEach(g=>g.classList.remove('open'));
+        group.classList.add('open');
+      }
+    }
+  }
+  forgeAllBtn.addEventListener('click',()=>{type.value='';render();});
+  forgeSidebarCollapse.addEventListener('click',()=>{
+    forgeLayout.classList.toggle('sidebar-collapsed');
+    const collapsed=forgeLayout.classList.contains('sidebar-collapsed');
+    forgeSidebarCollapse.textContent=collapsed?'▶':'◀';
+    forgeSidebarCollapse.title=collapsed?'展開分類':'收合分類';
+  });
+  // 寬度不足時先收合左欄，避免鍛造效果與素材欄被擠窄；仍可手動展開。
+  if(window.innerWidth<1700){forgeLayout.classList.add('sidebar-collapsed');forgeSidebarCollapse.textContent='▶';forgeSidebarCollapse.title='展開分類';}
+  buildForgeSidebar();
   function render(){
     const qq=q.value.trim().toLowerCase(), tt=type.value;
     root.innerHTML=grouped.filter(g=>!tt||g.filterKey.includes(tt)).map(g=>{
@@ -290,7 +401,7 @@ loadDB().then(d=>{
       </section>`;
     }).join('') || '<div class="empty-forge">找不到符合的鍛造資料。</div>';
   }
-  q.oninput=render; type.onchange=render; render();
+  q.oninput=render; type.onchange=render; const _render=render; render=function(){_render();syncForgeSidebar();}; render();
 }).catch(e=>document.getElementById('forge').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
 </script>
 <script src="../mobile-nav.js"></script>

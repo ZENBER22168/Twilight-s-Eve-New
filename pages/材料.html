@@ -11,9 +11,155 @@
 .item-name .name-yellow{color:#ffd500}.item-name .name-pink{color:#ff38e8}.item-name .name-white{color:#f3f6fa}
 .recipe-line{display:block}.recipe-sep{display:block;color:#90a0b5;font-size:14px;font-weight:800;letter-spacing:.08em}.future-badge{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;background:#6f2525;border:1px solid #b14a4a;color:#ffd6d6;font-size:12px;font-weight:900;vertical-align:2px;white-space:nowrap}
 .wiki-source-note{margin:7px 0 0;font-size:12px;opacity:.72}.wiki-no-side .section-layout{grid-template-columns:1fr}.wiki-no-side .side-panel{display:none}.side-note{font-size:11px;color:#778394;line-height:1.5}
+
+/* 分解材料位置／碎片取得說明 */
+ .dismantle-section{border-color:#29323e;background:#0f151d}
+.dismantle-section .dismantle-title{background:linear-gradient(90deg,#e6b6ac,#f1d0c8);color:#171717}
+.dismantle-section .dismantle-title p{color:#3a2b28;opacity:.78;font-weight:700}
+.dismantle-layout{display:grid;grid-template-columns:minmax(360px,.95fr) minmax(0,1.3fr);gap:18px;padding:18px}
+.dismantle-map-card,.dismantle-rule-card,.dismantle-tier-card,.dismantle-warning,.dismantle-rarity-box{border:1px solid #29323e;border-radius:14px;background:#10151d}
+.dismantle-map-card{padding:14px}.dismantle-map-title,.dismantle-rule-card h3,.dismantle-rarity-box h3{margin:0 0 10px;font-size:17px;color:#eef3f8}
+.dismantle-map{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;background:#080b0f;border:1px solid #29323e;border-radius:10px}
+.dismantle-map-note{margin:10px 2px 0;color:#aeb8c5;font-size:14px;line-height:1.6}
+.dismantle-info{display:flex;flex-direction:column;gap:12px}.dismantle-rule-card{padding:16px 18px}.dismantle-rule-card p{margin:0;color:#d7dee7;line-height:1.8;font-size:15px}.dismantle-rule-card strong{color:#f4d49a}
+.dismantle-tier-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dismantle-tier-card{padding:15px}.dismantle-tier-card h4{margin:0 0 8px;font-size:18px}.dismantle-tier-card p{margin:0;color:#bdc7d4;line-height:1.6;font-size:14px}.dismantle-tier-card.mythic{border-color:#705b27;background:linear-gradient(135deg,#171713,#10151d)}.dismantle-tier-card.mythic h4{color:#ffd75b}.dismantle-tier-card.fabled{border-color:#7d3f72;background:linear-gradient(135deg,#1b101b,#10151d)}.dismantle-tier-card.fabled h4{color:#ff6de7}
+.dismantle-mini-shards{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.dismantle-mini-shard{display:flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid #323b48;border-radius:9px;background:#0b1016;color:#e5eaf0;font-size:12px;font-weight:800}.dismantle-mini-shard img{width:30px;height:30px;object-fit:contain;border-radius:5px;background:#070a0e}
+.dismantle-warning{padding:14px 16px;border-color:#8d512d;background:linear-gradient(90deg,rgba(119,57,24,.28),rgba(54,32,27,.3))}.dismantle-warning strong{color:#ffbd70}.dismantle-warning p{margin:0;color:#f2d9c2;font-size:14px;line-height:1.7}
+.dismantle-rarity-box{margin:0 18px 18px;padding:16px}.dismantle-rarity-head{display:grid;grid-template-columns:90px minmax(180px,.9fr) 40px minmax(0,2fr);gap:12px;padding:0 12px 8px;color:#8795a7;font-size:12px;font-weight:800}.dismantle-rarity-row{display:grid;grid-template-columns:90px minmax(180px,.9fr) 40px minmax(0,2fr);gap:12px;align-items:center;padding:11px 12px;border-top:1px solid #26303b}.dismantle-rarity-row:first-of-type{border-top:0}.rarity-chip{display:inline-flex;justify-content:center;align-items:center;min-width:64px;padding:6px 10px;border-radius:999px;border:1px solid currentColor;font-weight:900;font-size:14px}.rarity-common{color:#eef2f6}.rarity-rare{color:#4bc3ff}.rarity-epic{color:#b977ff}.rarity-legendary{color:#ff5d67}.rarity-mythic{color:#ffd75b}.rarity-fabled{color:#ff64e6}.dismantle-source{font-size:14px;color:#d1d8e2;line-height:1.5}.dismantle-arrow{text-align:center;color:#8996a8;font-size:18px}.dismantle-shards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dismantle-shard{display:flex;align-items:center;gap:9px;min-width:0;padding:8px 9px;border:1px solid #2d3744;border-radius:9px;background:#0b1016}.dismantle-shard img{width:38px;height:38px;flex:0 0 38px;object-fit:contain;background:#070a0e;border-radius:6px}.dismantle-shard>span{min-width:0;font-size:13px;font-weight:850;line-height:1.35;white-space:normal;color:#e5eaf0}.dismantle-shard>span>span{font-size:inherit;line-height:inherit}.dismantle-material-inline{font-weight:900;white-space:nowrap}.dismantle-material-inline.epic{color:#b977ff}.dismantle-material-inline.legendary{color:#ff5d67}
+@media(max-width:1050px){.dismantle-layout{grid-template-columns:1fr}.dismantle-rarity-head{display:none}.dismantle-rarity-row{grid-template-columns:84px 1fr}.dismantle-arrow{display:none}.dismantle-shards{grid-column:1/-1}.dismantle-tier-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.dismantle-layout{padding:12px}.dismantle-tier-grid{grid-template-columns:1fr}.dismantle-rarity-box{margin:0 12px 12px;padding:12px}.dismantle-rarity-row{grid-template-columns:74px 1fr;padding:10px 4px}.dismantle-shards{grid-template-columns:1fr}.dismantle-shard span{font-size:14px}}
+
 @media(max-width:980px){.merchant-access-note{display:block;margin:6px 0 0;font-size:14px}.section-layout{grid-template-columns:1fr}.side-panel{border-left:0;border-top:1px solid #29323e}.side-main{max-height:520px}.excel-head{display:none}.excel-row{grid-template-columns:68px 1fr;gap:10px}.excel-row .item-job,.excel-row .item-effect,.excel-row .cost{grid-column:1/-1}.material-table .excel-row{grid-template-columns:68px 1fr}.item-img{width:58px;height:58px}.future-badge{display:block;width:max-content;margin:6px 0 0}}
+
+/* 第132次：鍛造材料&合成商人左側摺疊分類。 */
+.material-wrap{width:96vw;max-width:2200px}
+.material-page-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+.material-main{min-width:0}
+.material-sidebar{position:sticky;top:78px;align-self:start;background:#0d141d;border:1px solid #2b3542;border-radius:14px;padding:10px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.material-sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 11px;border-bottom:1px solid #27313d;margin-bottom:8px}
+.material-sidebar-title{font-size:17px;font-weight:900;color:#f4f7fb;white-space:nowrap}
+.material-sidebar-collapse{width:34px;height:34px;border-radius:8px;border:1px solid #344151;background:#111a25;color:#dce7f4;font-size:18px;cursor:pointer;flex:0 0 auto}
+.material-sidebar-collapse:hover{background:#182434}
+.material-all-btn,.material-nav-group-btn,.material-nav-item{width:100%;border:0;text-align:left;cursor:pointer;color:#eaf1f8}
+.material-all-btn{padding:13px 14px;border-radius:10px;background:#111a24;font-size:16px;font-weight:900;margin-bottom:8px;border:1px solid #293646}
+.material-all-btn:hover,.material-all-btn.active{background:linear-gradient(90deg,#c88796,#d99aa7);color:#fff;border-color:#d89eaa}
+.material-nav-group{border-top:1px solid #25303b}
+.material-nav-group-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 9px;background:transparent;font-size:16px;font-weight:900}
+.material-nav-group-btn:hover{background:#111a24}
+.material-nav-arrow{font-size:12px;transition:transform .16s ease;opacity:.8}
+.material-nav-group.open .material-nav-arrow{transform:rotate(90deg)}
+.material-nav-items{display:none;padding:0 0 8px}
+.material-nav-group.open .material-nav-items{display:block}
+.material-nav-item{padding:10px 12px 10px 18px;background:transparent;border-radius:8px;font-size:15px;line-height:1.38}
+.material-nav-item:hover{background:#152130}
+.material-nav-item.active{background:#1d3043;color:#fff;font-weight:900;box-shadow:inset 3px 0 #e7b5aa}
+.material-nav-sub{display:block;margin-top:3px;color:#91a5bc;font-size:11px;font-weight:600}
+.material-hidden-filter{display:none!important}
+.material-page-layout.sidebar-collapsed{grid-template-columns:56px minmax(0,1fr)}
+.material-page-layout.sidebar-collapsed .material-sidebar{padding:9px 7px;overflow:hidden}
+.material-page-layout.sidebar-collapsed .material-sidebar-title,.material-page-layout.sidebar-collapsed .material-sidebar-body{display:none}
+.material-page-layout.sidebar-collapsed .material-sidebar-head{padding:0;border:0;margin:0;justify-content:center}
+.material-page-layout.sidebar-collapsed .material-sidebar-collapse{width:40px;height:40px}
+.material-main .group-toolbar{margin-top:0}
+@media(max-width:1320px){
+  .material-page-layout{grid-template-columns:1fr}
+  .material-sidebar{position:relative;top:auto;max-height:none}
+  .material-page-layout.sidebar-collapsed{grid-template-columns:1fr}
+  .material-page-layout.sidebar-collapsed .material-sidebar{display:block;width:auto;padding:9px}
+  .material-page-layout.sidebar-collapsed .material-sidebar-head{justify-content:flex-start}
+  .material-page-layout.sidebar-collapsed .material-sidebar-title{display:block}
+}
+
+
+/* 第149次：鍛造材料&合成商人恢復原本白色文字；分解材料位置保留稀有度配色。 */
+.material-main .data-section:not(.dismantle-section) .item-name strong,
+.material-main .data-section:not(.dismantle-section) .item-name strong *,
+.material-main .data-section:not(.dismantle-section) .cost,
+.material-main .data-section:not(.dismantle-section) .cost *{color:#f3f6fa !important}
+.material-main .data-section:not(.dismantle-section) .item-name>span{color:#9eb1c8 !important}
 </style>
-</head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📘 裝備資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">🛡️ 配裝</a><a href="掉落率.html">🎲 掉落率</a><a href="存檔讀取.html">📂 存檔讀取</a></nav></header><main class="wrap"><h1>🧱 鍛造材料&合成商人</h1><div class="group-toolbar"><input id="q" class="search" placeholder="搜尋商人、材料、需求…"><select id="merchant"><option value="">全部商人</option></select></div><div id="root"></div></main>
+</head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html" class="active">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header><main class="wrap material-wrap"><h1>🧱 鍛造材料&合成商人</h1>
+<div id="materialLayout" class="material-page-layout">
+<aside class="material-sidebar" aria-label="鍛造材料與合成商人分類">
+  <div class="material-sidebar-head"><span class="material-sidebar-title">材料／商人分類</span><button id="materialSidebarCollapse" class="material-sidebar-collapse" type="button" title="收合分類">◀</button></div>
+  <div class="material-sidebar-body">
+    <button id="materialAllBtn" class="material-all-btn active" type="button">全部商人</button>
+    <div id="materialNav"></div>
+  </div>
+</aside>
+<section class="material-main">
+<div class="group-toolbar"><input id="q" class="search" placeholder="搜尋商人、材料、需求…"><select id="merchant" class="material-hidden-filter" tabindex="-1" aria-hidden="true"><option value="">全部商人</option></select></div>
+<section class="data-section dismantle-section" id="dismantle-guide">
+  <header class="data-section-title dismantle-title">
+    <h2>分解材料位置</h2>
+    <p>裝備拆解・碎片取得方式｜對應稀有度拆解說明</p>
+  </header>
+  <div class="dismantle-layout">
+    <div class="dismantle-map-card">
+      <div class="dismantle-map-title">📍 分解位置</div>
+      <img class="dismantle-map" src="../images/分解材料位置_熔爐.png" loading="lazy" alt="分解材料位置（紅圈處）">
+      <p class="dismantle-map-note">遊戲內請依紅圈位置尋找分解區域。分解前先確認要處理的裝備／素材與稀有度。</p>
+    </div>
+    <div class="dismantle-info">
+      <div class="dismantle-rule-card">
+        <h3>📘 分解規則</h3>
+        <p><strong>對應顏色拆對應顏色。</strong> 普通、稀有、史詩、傳說以同稀有度的裝備進行拆解；神話與神鑄則使用指定副本素材進行拆解。武器、盔甲、配件會取得各自對應類型的碎片。</p>
+      </div>
+      <div class="dismantle-tier-grid">
+        <div class="dismantle-tier-card mythic">
+          <h4>神話｜IMP1～3</h4>
+          <p>神話碎片主要靠 <b>IMP1～3 素材</b>進行拆解取得。</p>
+          <div class="dismantle-mini-shards">
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span>神話武器碎片</span></span>
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span>神話盔甲碎片</span></span>
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span>神話配件碎片</span></span>
+          </div>
+        </div>
+        <div class="dismantle-tier-card fabled">
+          <h4>神鑄｜M1</h4>
+          <p>神鑄碎片主要靠 <b>M1 素材</b>進行拆解取得。</p>
+          <div class="dismantle-mini-shards">
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span>神鑄武器碎片</span></span>
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span>神鑄盔甲碎片</span></span>
+            <span class="dismantle-mini-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span>神鑄配件碎片</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="dismantle-warning">
+        <p><strong>⚠ 拆解前建議先存檔。</strong> 史詩以下（包含史詩）進行拆解時有機會發生掉階，例如：<b>史詩 → 稀有</b>。為避免拆到不想要的結果，建議先存檔再拆解。</p>
+      </div>
+    </div>
+  </div>
+  <div class="dismantle-rarity-box">
+    <h3>🎨 碎片取得對應</h3>
+    <div class="dismantle-rarity-head"><div>等級</div><div>拆解來源</div><div></div><div>可取得碎片</div></div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-common">普通</span></div><div class="dismantle-source">普通裝備</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-common">普通</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-common">普通</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-common">普通</span>配件碎片</span></div></div>
+    </div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-rare">稀有</span></div><div class="dismantle-source">稀有裝備</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-rare">稀有</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-rare">稀有</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-rare">稀有</span>配件碎片</span></div></div>
+    </div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-epic">史詩</span></div><div class="dismantle-source">史詩裝備/紫色鍛造材料</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-epic">史詩</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-epic">史詩</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-epic">史詩</span>配件碎片</span></div></div>
+    </div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-legendary">傳說</span></div><div class="dismantle-source">傳說裝備/紅色鍛造材料</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-legendary">傳說</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-legendary">傳說</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-legendary">傳說</span>配件碎片</span></div></div>
+    </div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-mythic">神話</span></div><div class="dismantle-source"><b>IMP1～3 素材</b>拆解</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-mythic">神話</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-mythic">神話</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-mythic">神話</span>配件碎片</span></div></div>
+    </div>
+    <div class="dismantle-rarity-row">
+      <div><span class="rarity-chip rarity-fabled">神鑄</span></div><div class="dismantle-source"><b>M1 素材</b>拆解</div><div class="dismantle-arrow">→</div>
+      <div class="dismantle-shards"><div class="dismantle-shard"><img src="../images/map-items/I06C__稀有武器碎片.png" alt=""><span><span class="rarity-fabled">神鑄</span>武器碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I067__稀有盔甲碎片.png" alt=""><span><span class="rarity-fabled">神鑄</span>盔甲碎片</span></div><div class="dismantle-shard"><img src="../images/map-items/I06E__稀有配件碎片.png" alt=""><span><span class="rarity-fabled">神鑄</span>配件碎片</span></div></div>
+    </div>
+  </div>
+</section>
+<div id="root"></div></section></div></main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
 <script src="../app-data.js"></script><script>
 const MATERIAL_MANUAL_ZH = {"Hyrule Prophet": "海拉爾先知", "Hyrule Servant": "海拉爾僕從", "Chaos Servant": "混沌僕從", "Skew": "Skew", "Swindle Bilk": "Swindle Bilk", "Mysterious Note": "秘典碎錄", "Mysterious Notes": "秘典碎錄", "Mysterious Sigil": "神秘印記", "Mysterious Sigils": "神秘印記", "Mysterious Orb": "神秘寶珠", "Mysterious Orbs": "神秘寶珠", "Light Synthesis": "光之結晶", "Pure Light Synthesis": "聖光結晶", "Harbinger's Essence": "先驅者的精華", "Harbinger's Heart": "先驅者的心", "Ignited Incinerator": "獄焚爐", "Pure Ignited Incinerator": "聖焚爐", "Pure Light Incinerator": "聖焚爐", "Incinerator": "焚魂爐", "Nether Reactor": "下界反應爐", "Angelic Heart": "墮魂心", "Angelic Hope": "墮魂之望", "Container Sigil": "容器印記", "Crystallized Sigil of Elements": "元素結晶印記", "Prismatic Sigil of Elements": "元素棱柱印記", "Essence of Nulgath": "Nulgath精華", "Gem of Nulgath": "Nulgath寶石", "Totem of Nulgath": "Nulgath圖騰", "Angel Gem": "天使寶石", "Angel Creation": "墮魂核", "Angel Feather": "墮魂羽", "Angel Fire": "墮魂晶", "Chaos Gem": "混沌寶石", "Pure Sigil": "純粹印記", "Impure Sigil": "不純印記", "Mirror Sigil": "鏡面印記", "Hadean Onyx of Nulgath": "Nulgath冥黑瑪瑙", "Blood Abyss": "血淵", "Hex Abyss": "咒淵", "Shadow Abyss": "影淵", "Voucher of Nulgath": "Nulgath憑證", "Unidentified 13": "未鑑定13", "Tainted Gem": "污穢寶石", "Diamond of Nulgath": "Nulgath鑽石", "Dark Crystal Shard": "闇水晶碎片", "The Secret 1": "秘密1", "Unmoulded Fiend Essence": "未塑形魔精華", "Unidentified 22": "未鑑定22", "Unidentified 23": "未鑑定23", "Unidentified 25": "未鑑定25", "Mythical Armor Piece": "神蠻盔甲碎片", "Mythical Weapon Piece": "神蠻武器碎片", "Fabled Armor Piece": "神鑄盔甲碎片", "Fabled Weapon Piece": "神蠻武器碎片", "Fabled Accessories Piece": "神蠻飾品碎片", "Any M3 Material (Scrap)": "任意 M3 材料（碎片）", "Gold": "金幣", "Power Shards": "能量碎片"};
@@ -22,6 +168,10 @@ const MATERIAL_WIKI_GROUPS = [{"title": "海拉爾先知｜Hyrule Prophet", "row
 Promise.resolve(loadDB()).then(d=>{
  const L=EMBEDDED_LAYOUT;
  const root=document.getElementById('root'),q=document.getElementById('q'),sel=document.getElementById('merchant');
+ const materialLayout=document.getElementById('materialLayout');
+ const materialNav=document.getElementById('materialNav');
+ const materialAllBtn=document.getElementById('materialAllBtn');
+ const materialSidebarCollapse=document.getElementById('materialSidebarCollapse');
  const icons=(d.images||[]).filter(im=>im.sheet==='③ 材料&合成商人');
  const nameMap=new Map();
  ['items','equipment','materials'].forEach(k=>((d[k]||[])).forEach(x=>{if(x&&x.name_en&&x.name&&!nameMap.has(x.name_en))nameMap.set(x.name_en,x.name)}));
@@ -40,6 +190,60 @@ Promise.resolve(loadDB()).then(d=>{
  const normalGroups=L.material_groups.filter(g=>!g.title.includes('ハイラルの占い師')&&!g.title.includes('ハイラルの僕'));
  const allMerchantLabels=[...normalGroups.map((g,i)=>({kind:'normal',i,title:g.title})),...wikiGroups.map((g,i)=>({kind:'wiki',i,title:g.title}))];
  allMerchantLabels.forEach((m,idx)=>{const o=document.createElement('option');o.value=String(idx);o.textContent=m.title;sel.appendChild(o)});
+ const dismantleOption=document.createElement('option');
+ dismantleOption.value='dismantle';
+ dismantleOption.textContent='分解材料位置';
+ sel.appendChild(dismantleOption);
+ const MATERIAL_NAV_GROUPS=[
+   {label:'基礎材料／商人',values:['0','1']},
+   {label:'天使／惡魔商人',values:['2','3','4','5','6']},
+   {label:'後期材料／合成',values:['7','8','9','10','11']},
+   {label:'分解材料',values:['dismantle']}
+ ];
+ function materialLabel(value){
+   if(value==='dismantle')return '分解材料位置';
+   const m=allMerchantLabels[Number(value)];
+   return m?m.title:'';
+ }
+ function buildMaterialSidebar(){
+   materialNav.innerHTML=MATERIAL_NAV_GROUPS.map((cat,idx)=>{
+     const items=cat.values.map(value=>{const label=materialLabel(value);if(!label)return '';return `<button class=\"material-nav-item\" type=\"button\" data-material-value=\"${esc(value)}\">${esc(label)}</button>`}).join('');
+     return `<div class=\"material-nav-group\" data-material-group=\"${idx}\"><button class=\"material-nav-group-btn\" type=\"button\"><span>${esc(cat.label)}</span><span class=\"material-nav-arrow\">▶</span></button><div class=\"material-nav-items\">${items}</div></div>`;
+   }).join('');
+   materialNav.querySelectorAll('.material-nav-group-btn').forEach(btn=>btn.addEventListener('click',()=>{
+     const group=btn.closest('.material-nav-group');
+     const willOpen=!group.classList.contains('open');
+     materialNav.querySelectorAll('.material-nav-group').forEach(g=>g.classList.remove('open'));
+     if(willOpen)group.classList.add('open');
+   }));
+   materialNav.querySelectorAll('.material-nav-item').forEach(btn=>btn.addEventListener('click',()=>{
+     sel.value=btn.dataset.materialValue||'';
+     render();
+     const toolbar=document.querySelector('.material-main .group-toolbar');
+     if(toolbar)window.scrollTo({top:Math.max(0,toolbar.offsetTop-86),behavior:'smooth'});
+   }));
+ }
+ function syncMaterialSidebar(){
+   const value=sel.value;
+   materialAllBtn.classList.toggle('active',!value);
+   materialNav.querySelectorAll('.material-nav-item').forEach(btn=>btn.classList.toggle('active',btn.dataset.materialValue===value));
+   if(value){
+     const active=materialNav.querySelector(`.material-nav-item[data-material-value=\"${CSS.escape(value)}\"]`);
+     if(active){
+       const group=active.closest('.material-nav-group');
+       materialNav.querySelectorAll('.material-nav-group').forEach(g=>g.classList.remove('open'));
+       group.classList.add('open');
+     }
+   }
+ }
+ materialAllBtn.addEventListener('click',()=>{sel.value='';materialNav.querySelectorAll('.material-nav-group').forEach(g=>g.classList.remove('open'));render();});
+ materialSidebarCollapse.addEventListener('click',()=>{
+   materialLayout.classList.toggle('sidebar-collapsed');
+   const collapsed=materialLayout.classList.contains('sidebar-collapsed');
+   materialSidebarCollapse.textContent=collapsed?'▶':'◀';
+   materialSidebarCollapse.title=collapsed?'展開分類':'收合分類';
+ });
+ buildMaterialSidebar();
  function translateLine(line){
    const raw=String(line||'').trim();
    if(!raw||raw==='-'||raw==='—') return '';
@@ -58,14 +262,14 @@ Promise.resolve(loadDB()).then(d=>{
    collect(req); collect(cost);
    if(!lines.length) return '—';
    const complex=lines.some(x=>x==='或'||x==='＋');
-   if(!complex) return formatRarityText(lines.join('，'));
-   return lines.map(x=>x==='或'||x==='＋'?`<span class="recipe-sep">${esc(x)}</span>`:`<span class="recipe-line">${formatRarityText(x)}</span>`).join('');
+   if(!complex) return typeof formatGameItemText==='function'?formatGameItemText(lines.join('，')):formatRarityText(lines.join('，'));
+   return lines.map(x=>x==='或'||x==='＋'?`<span class="recipe-sep">${esc(x)}</span>`:`<span class="recipe-line">${typeof formatGameItemText==='function'?formatGameItemText(x):formatRarityText(x)}</span>`).join('');
  }
  function normalHtml(g,qq){
    const list=d.materials.filter(x=>x.row>=g.start-1&&x.row<=g.end-1&&(!qq||(g.title+x.name+x.name_en+x.cost+x.extra).toLowerCase().includes(qq)));
    if(!list.length)return '';
    let html=`<section class="data-section material-table"><header class="data-section-title"><h2>${merchantTitle(g)}</h2><p>${list.length} 項材料／合成</p></header><div class="section-layout"><div class="section-table"><div class="excel-head"><div>圖示</div><div>材料名稱（中／英）</div><div>價格／合成需求</div></div>`;
-   html+=list.sort((a,b)=>(a.row||0)-(b.row||0)).map(x=>`<article class="excel-row"><div>${iconFor(x)?`<img class="item-img" src="${esc(iconFor(x))}" loading="lazy" alt="${esc(x.name)}">`:'<div></div>'}</div><div class="item-name"><strong class="name-white">${formatRarityText(x.name)}</strong>${x.name_en?`<span>${esc(x.name_en)}</span>`:''}</div><div class="cost">${formatRarityText(x.cost)}${x.extra?`<br>${formatRarityText(x.extra)}`:''}</div></article>`).join('');
+   html+=list.sort((a,b)=>(a.row||0)-(b.row||0)).map(x=>`<article class="excel-row"><div>${iconFor(x)?`<img class="item-img" src="${esc(iconFor(x))}" loading="lazy" alt="${esc(x.name)}">`:'<div></div>'}</div><div class="item-name"><strong>${typeof formatGameItemName==='function'?formatGameItemName(x.name):formatRarityText(x.name)}</strong>${x.name_en?`<span>${esc(x.name_en)}</span>`:''}</div><div class="cost">${typeof formatGameItemText==='function'?formatGameItemText(x.cost):formatRarityText(x.cost)}${x.extra?`<br>${typeof formatGameItemText==='function'?formatGameItemText(x.extra):formatRarityText(x.extra)}`:''}</div></article>`).join('');
    html+=`</div><aside class="side-panel"><div class="side-panel-title">📍 商人／合成位置圖</div>${g.images.length?g.images.map(im=>`<img class="side-main" src="${esc(im.file)}" loading="lazy" alt="${esc(g.title)} 對應圖片">`).join(''):''}<div class="side-note">圖片沿用 Excel 原本放在該商人區塊旁邊的圖片，方便對照遊戲內位置。</div></aside></div></section>`;
    return html;
  }
@@ -79,10 +283,17 @@ Promise.resolve(loadDB()).then(d=>{
  }
  function render(){
    const qq=q.value.trim().toLowerCase(),pick=sel.value;let html='';
-   allMerchantLabels.forEach((m,idx)=>{if(pick!==''&&pick!==String(idx))return; html+=m.kind==='normal'?normalHtml(normalGroups[m.i],qq):wikiHtml(wikiGroups[m.i],qq)});
-   root.innerHTML=html||'<div class="empty">找不到符合的商人或材料。</div>';
+   const dismantle=document.getElementById('dismantle-guide');
+   const dismantleText=(dismantle?.textContent||'').toLowerCase();
+   const dismantleMatches=!qq||dismantleText.includes(qq);
+   const showDismantle=(pick===''||pick==='dismantle')&&dismantleMatches;
+   if(dismantle) dismantle.style.display=showDismantle?'':'none';
+   if(pick!=='dismantle'){
+     allMerchantLabels.forEach((m,idx)=>{if(pick!==''&&pick!==String(idx))return; html+=m.kind==='normal'?normalHtml(normalGroups[m.i],qq):wikiHtml(wikiGroups[m.i],qq)});
+   }
+   root.innerHTML=html||((pick==='dismantle'&&showDismantle)?'':'<div class="empty">找不到符合的商人或材料。</div>');
  }
- q.oninput=render;sel.onchange=render;render();
+ q.oninput=render;sel.onchange=render;const _materialRender=render;render=function(){_materialRender();syncMaterialSidebar();};render();
 }).catch(e=>document.getElementById('root').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
 </script><script src="../mobile-nav.js"></script>
 </body></html>
