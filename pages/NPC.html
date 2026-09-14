@@ -12,4 +12,6 @@ select.innerHTML=NPC_ROUTES.map((r,i)=>`<option value="${i}">${esc(r.name||r.tit
 function renderRoute(i){const r=NPC_ROUTES[Number(i)]||NPC_ROUTES[0];if(!r){view.innerHTML='<div class="npc-empty">沒有 NPC 路線資料。</div>';return;}const s=r.stages||[];const map=new Map([['一轉',[]],['二轉',[]],['三轉',[]],['四轉',[]]]);let lastStage='';s.forEach(x=>{if(map.has(x.stage)){lastStage=x.stage;map.get(x.stage).push(x);}else if(x.stage==='None'&&lastStage&&map.has(lastStage)){map.get(lastStage).push(x);}});const groups=[...map.entries()].filter(([,items])=>items.length).map(([label,items])=>({label,items}));view.innerHTML=`<section class="selected-route">${groups.map(g=>`<div class="route-stage-group"><div class="route-stage-title">${g.label}</div><div class="route-stage-grid">${g.items.map(x=>`<article class="npc-big-card"><div class="npc-big-name">${esc(x.name)}</div><div class="npc-big-images">${(x.images||[]).map((im,j)=>`<img src="${im}" loading="lazy" alt="${esc(x.name)} NPC位置圖 ${j+1}">`).join('')}</div></article>`).join('')}</div></div>`).join('')}</section>`;}
 select.addEventListener('change',e=>renderRoute(e.target.value));renderRoute(0);
 </script><script src="../mobile-nav.js"></script>
+<script data-goatcounter="https://twilighteve.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
 </body></html>

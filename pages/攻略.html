@@ -119,4 +119,6 @@ function showTab(name){tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab
 tabs.forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.jump)));const initial=(location.hash||'#all').slice(1);if(['all','imp1','imp2','imp3','m1'].includes(initial))showTab(initial);window.addEventListener('hashchange',()=>{const n=(location.hash||'#all').slice(1);if(['all','imp1','imp2','imp3','m1'].includes(n))showTab(n);});
 </script>
 <script src="../mobile-nav.js"></script>
+<script data-goatcounter="https://twilighteve.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
 </body></html>
