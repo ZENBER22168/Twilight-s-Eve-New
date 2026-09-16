@@ -23,6 +23,12 @@
 .video-credit{margin-top:9px;color:#9eb0c4;font-size:12px;line-height:1.6}
 .video-credit strong{color:#ffd56d}
 .video-pending{padding:24px 16px;text-align:center;border:1px dashed #3b4b5e;border-radius:10px;color:#8ea0b3;background:#0a1017}
+
+.m1-boss-hero{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.1fr);gap:20px;align-items:stretch;margin:22px 0}
+.m1-boss-shot{margin:0;border:1px solid #374453;background:#080d13;border-radius:18px;padding:10px;overflow:hidden}.m1-boss-shot img{width:100%;height:100%;min-height:300px;max-height:480px;object-fit:cover;object-position:center;border-radius:12px;display:block}.m1-boss-info{border:1px solid #344151;background:linear-gradient(180deg,#111923,#0d141c);border-radius:18px;padding:20px}.m1-boss-info h2{margin:0 0 8px;color:#f3d778;font-size:28px}.m1-boss-info p{color:#bdcad7;line-height:1.75;margin:8px 0}.m1-phase-line{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.m1-phase-line span{padding:8px 11px;border-radius:999px;border:1px solid #3d4b5c;background:#151f2a;color:#d8e2ed;font-size:13px;font-weight:900}.m1-phase-line span b{color:#f3d778}
+.m1-mechanics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.m1-mechanic{border:1px solid #2d3947;background:#101720;border-radius:18px;padding:18px;min-width:0}.m1-mechanic.wide{grid-column:1/-1}.m1-mechanic h3{margin:0 0 6px;color:#f2d783;font-size:20px}.m1-mechanic .tagline{color:#8fa3b8;font-size:12px;font-weight:800;letter-spacing:.04em;margin-bottom:12px}.m1-mechanic p{margin:7px 0;color:#c7d3de;line-height:1.7}.m1-mechanic ul{margin:8px 0 0;padding-left:20px;color:#c7d3de;line-height:1.75}.m1-mini-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}.m1-mini-table th,.m1-mini-table td{border-bottom:1px solid #2c3947;padding:9px 10px;text-align:left;vertical-align:top}.m1-mini-table th{color:#8fbce8;font-size:12px;background:#0c131b}.m1-mini-table td{color:#d1dbe5}.m1-mini-table tr:last-child td{border-bottom:0}.m1-note{margin-top:18px;border-left:4px solid #d6a73a;background:#121a24;border-radius:0 12px 12px 0;padding:13px 15px;color:#b9c8d6;line-height:1.7}
+@media(max-width:900px){.m1-boss-hero,.m1-mechanics{grid-template-columns:1fr}.m1-mechanic.wide{grid-column:auto}.m1-boss-shot img{min-height:0;max-height:none;object-fit:contain}}
+
 </style>
 </head>
 <body>
@@ -42,7 +48,7 @@
     <article class="guide-card"><h2>IMP1｜幻像之城</h2><p>Lv235・7 BOSS・最低配置 1坦 1補 2輸出。</p><button class="guide-tab" data-jump="imp1">查看攻略</button></article>
     <article class="guide-card"><h2>IMP2｜龍之要塞</h2><p>Lv250・迷宮路線與四龍控制。</p><button class="guide-tab" data-jump="imp2">查看攻略</button></article>
     <article class="guide-card"><h2>IMP3｜懲戒煉獄</h2><p>Lv280・10人團配置、骷髏堆卡位與階段處理。</p><button class="guide-tab" data-jump="imp3">查看攻略</button></article>
-    <article class="guide-card"><h2>M1</h2><p>目前先保留版位，影片與攻略資料待補。</p><button class="guide-tab" data-jump="m1">查看空白頁</button></article>
+    <article class="guide-card"><h2>M1｜受詛咒的天堂</h2><p>終暮 BOSS 多階段技能、召喚與法術減傷機制。</p><button class="guide-tab" data-jump="m1">查看攻略</button></article>
   </div>
 </section>
 
@@ -108,8 +114,86 @@
 </section>
 
 <section class="guide-panel" data-panel="m1">
-  <div class="guide-hero"><div class="guide-kicker">Mythic 1</div><h2 class="guide-title">M1 攻略</h2><div class="guide-meta">目前尚未提供詳細攻略資料。</div><div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>M1｜受詛咒的天堂</small></div><div class="youtube-wrap"><iframe src="https://www.youtube-nocookie.com/embed/u1ywnttmbWM" title="M1｜受詛咒的天堂 攻略影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-credit">影片提供：<strong>il108allen</strong></div></div></div>
-  <div class="m1-empty"><h2>資料待補</h2><p>隊伍配置、BOSS 機制、圖片與攻略來源之後再加入。</p></div>
+  <div class="guide-hero">
+    <div class="guide-kicker">Mythic 1</div>
+    <h2 class="guide-title">Cursed Heaven｜受詛咒的天堂</h2>
+    <div class="guide-meta">Difficulty：Mythic｜神話（M1）　｜　BOSS：終暮　｜　4 階段機制</div>
+    <div class="guide-video-box"><div class="guide-video-title"><span>🎬 攻略影片</span><small>M1｜受詛咒的天堂</small></div><div class="youtube-wrap"><iframe src="https://www.youtube-nocookie.com/embed/u1ywnttmbWM" title="M1｜受詛咒的天堂 攻略影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-credit">影片提供：<strong>il108allen</strong></div></div>
+  </div>
+
+  <div class="m1-boss-hero">
+    <figure class="m1-boss-shot"><img src="../images/guides/m1-enddusk.png" alt="M1 受詛咒的天堂 BOSS 終暮"></figure>
+    <div class="m1-boss-info">
+      <div class="guide-kicker">BOSS GUIDE</div>
+      <h2>終暮</h2>
+      <p>戰鬥依血量逐步解鎖召喚、無敵與方向鍵機制。相同的階段技能已合併整理，下面只列各階段會改變的頻率、方向與減傷。</p>
+      <div class="m1-phase-line"><span><b>80%</b> 召喚／深淵觸手</span><span><b>60%</b> 狂暴無敵／大爆炸</span><span><b>40%</b> 方向鍵處刑／大爆炸</span><span><b>20%</b> 大爆炸／最終階段</span></div>
+    </div>
+  </div>
+
+  <h2 class="guide-section-title">終暮｜核心技能</h2>
+  <div class="m1-mechanics">
+    <article class="m1-mechanic wide">
+      <h3>多方向光束</h3>
+      <div class="tagline">主動｜魔力達 100% 自動施放</div>
+      <p>命中會額外扣除 <b>40% 最大魔力</b>，並造成 <b>緩速 4 秒</b>。階段越後面，光束方向越多、蓄滿頻率越快。</p>
+      <table class="m1-mini-table"><thead><tr><th>HP 條件</th><th>冷卻／頻率</th><th>方向</th></tr></thead><tbody>
+        <tr><td>100%～80%</td><td>技能 CD 5 秒；實際由魔力槽決定</td><td>1 方向</td></tr>
+        <tr><td>60%～40%</td><td>約每 7.05 秒蓄滿一次</td><td>2 方向</td></tr>
+        <tr><td>40%～20%</td><td>約每 6.05 秒蓄滿一次</td><td>3 方向</td></tr>
+        <tr><td>≤20%</td><td>約每 5.00 秒蓄滿一次</td><td>4 方向</td></tr>
+      </tbody></table>
+    </article>
+
+    <article class="m1-mechanic wide">
+      <h3>階段大爆炸</h3>
+      <div class="tagline">主動／階段觸發｜60%・40%・20%</div>
+      <p>每個門檻各觸發一次。終暮會移動到中央並短暫無敵，約 <b>3.3 秒</b>後在中央範圍發動爆炸。</p>
+      <table class="m1-mini-table"><thead><tr><th>觸發血量</th><th>頻率</th><th>前搖</th><th>位置</th></tr></thead><tbody>
+        <tr><td>60%</td><td>一次性</td><td>約 3.3 秒</td><td>中央範圍</td></tr>
+        <tr><td>40%</td><td>一次性</td><td>約 3.3 秒</td><td>中央範圍</td></tr>
+        <tr><td>20%</td><td>一次性</td><td>約 3.3 秒</td><td>中央範圍</td></tr>
+      </tbody></table>
+    </article>
+
+    <article class="m1-mechanic">
+      <h3>永生夢魘召喚</h3>
+      <div class="tagline">主動／階段觸發｜80%</div>
+      <p>BOSS HP 首次降至 <b>80%</b> 時一次性召喚 <b>8 隻</b>永生夢魘。</p>
+    </article>
+
+    <article class="m1-mechanic">
+      <h3>深淵觸手</h3>
+      <div class="tagline">主動｜≤80%</div>
+      <p>80% 後解鎖並週期施放，技能 CD <b>20 秒</b>。在目標位置周圍召喚 <b>8 隻</b>，召喚物存在 <b>30 秒</b>。</p>
+    </article>
+
+    <article class="m1-mechanic">
+      <h3>狂暴無敵</h3>
+      <div class="tagline">主動｜≤60%</div>
+      <p>60% 後取得，冷卻 <b>15 秒</b>；護盾持續 <b>5 秒</b>，同時提高攻速 5 秒。</p>
+    </article>
+
+    <article class="m1-mechanic">
+      <h3>方向鍵處刑</h3>
+      <div class="tagline">主動｜≤40%</div>
+      <p>40% 後取得，冷卻 <b>12 秒</b>。全隊會收到隨機 <b>↑ / ↓ / ← / →</b> 方向指令。</p>
+    </article>
+
+    <article class="m1-mechanic wide">
+      <h3>法術傷害減免</h3>
+      <div class="tagline">被動｜依階段提高</div>
+      <p>終暮的法術傷害減免會隨血量階段逐步提高。</p>
+      <table class="m1-mini-table"><thead><tr><th>階段</th><th>HP 條件</th><th>法術傷害減免</th></tr></thead><tbody>
+        <tr><td>Stage 1</td><td>100%～60%</td><td>約 35%</td></tr>
+        <tr><td>Stage 2</td><td>60%～40%</td><td>約 55%</td></tr>
+        <tr><td>Stage 3</td><td>40%～20%</td><td>約 70%</td></tr>
+        <tr><td>Stage 4</td><td>≤20%</td><td>約 85%</td></tr>
+      </tbody></table>
+    </article>
+  </div>
+
+  <div class="m1-note"></div>
 </section>
 </main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>

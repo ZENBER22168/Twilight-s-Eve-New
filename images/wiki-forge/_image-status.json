@@ -1,0 +1,8 @@
+{
+  "source_map": "Twilight's Eve Evo RPG v7.40c.w3x",
+  "rule": "Late/unpublished wiki-forge equipment icons are now read directly from the original EVO v7.40c map item object icon path (Rawcode/name -> iico -> BLP), then converted losslessly to PNG. EVO New remains the source for equipment stats.",
+  "recovered_count": 43,
+  "expected_count": 43,
+  "errors": [],
+  "mapping_file": "../../data/evo-late-icon-map-v7.40c.json"
+}

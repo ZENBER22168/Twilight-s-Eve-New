@@ -55,6 +55,12 @@
     .discord-link{transition:.18s ease}
     .discord-link:hover{transform:translateY(-2px);border-color:rgba(114,137,218,.55);background:rgba(88,101,242,.14);color:#fff}
     .discord-icon{width:22px;height:22px;display:block;flex:0 0 22px}
+
+    .home-more-title{margin:34px 0 -24px;color:#cbd7e5;font-size:14px;font-weight:900;letter-spacing:.08em}.home-more-title em{color:#f0d690;font-style:normal}
+    .credits-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);gap:22px;align-items:center;margin-top:2px;padding:22px 24px;border:1px solid rgba(240,214,144,.22);border-radius:20px;background:linear-gradient(135deg,rgba(8,17,28,.88),rgba(12,22,34,.72));box-shadow:0 14px 34px rgba(0,0,0,.22);backdrop-filter:blur(8px)}
+    .credits-kicker{color:#f0d690;font-size:13px;font-weight:900;letter-spacing:.16em}.credits-card h2{margin:6px 0 6px;color:#f3e6bd;font-size:24px}.credits-card p{margin:0;color:#9fb0c4;font-size:14px;line-height:1.7}.credits-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.credit-name{padding:11px 13px;border:1px solid rgba(157,177,198,.16);border-radius:12px;background:rgba(4,10,18,.38);color:#e7eef6;font-size:14px;font-weight:800;text-align:center}.credit-name strong{color:#f0d690}
+    @media(max-width:900px){.credits-card{grid-template-columns:1fr}.credits-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.credits-list{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -83,6 +89,7 @@
           </div>
         </div>
 
+        <div class="home-more-title">攻略功能 <em>／</em> 選擇你現在要查的內容</div>
         <div class="home-grid">
           <a class="visual-card top card1" href="pages/鍛造.html" aria-label="鍛造"><img src="./images/homecards/home-card-forge.png" alt="鍛造"></a>
           <a class="visual-card top card2" href="pages/副本材料.html" aria-label="副本材料&裝備"><img src="./images/homecards/home-card-dungeon.png" alt="副本材料&裝備"></a>
@@ -93,6 +100,10 @@
           <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="角色讀取&配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
           <a class="visual-card bottom card8" href="pages/攻略首頁.html" aria-label="副本攻略"><img src="./images/homecards/home-card-guide.png" alt="副本攻略"></a>
           <div class="quote-block"><div class="quote-inner">知識，照亮下一個黎明<span class="en">KNOWLEDGE LIGHTS ANOTHER DAWN</span></div></div>
+          <section class="credits-card" aria-label="資料協力特別感謝">
+            <div><div class="credits-kicker">DATA CONTRIBUTORS</div><h2>資料協力・特別感謝</h2><p>本站部分 Excel 與攻略資料由以下玩家協助提供與整理，感謝各位一起完善《新暮光之晨》攻略。</p></div>
+            <div class="credits-list"><div class="credit-name"><strong>FateNight</strong> (aced9469)</div><div class="credit-name"><strong>a8156175</strong></div><div class="credit-name"><strong>柒柒</strong> (frank8501039833)</div><div class="credit-name"><strong>M.C</strong> (MrLunatic)</div><div class="credit-name"><strong>tlsv6y</strong></div></div>
+          </section>
         </div>
 
         <div class="footline"><div>新暮光之晨　v2.74　｜　地圖作者：a8156175</div><div><a href="https://discord.com/invite/2BJ4BGNyhB" target="_blank" rel="noopener noreferrer" style="color:#9fb5ff;text-decoration:none">Discord</a>　｜　願每一位旅人，都能在這片星海中找到屬於自己的光。</div></div>

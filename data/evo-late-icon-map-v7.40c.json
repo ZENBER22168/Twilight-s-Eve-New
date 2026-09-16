@@ -1,0 +1,475 @@
+[
+  {
+    "name": "Deathgrip",
+    "name_en": "Deathgrip",
+    "rawcode": "I0M8",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNBerserkersGloves.blp",
+    "site_image": "../images/wiki-forge/champ-a-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Demon Hunter Sword",
+    "name_en": "Demon Hunter Sword",
+    "rawcode": "I0LV",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNDHS64.blp",
+    "site_image": "../images/wiki-forge/champ-a-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Escherion's Helm",
+    "name_en": "Escherion's Helm",
+    "rawcode": "I0LT",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNHelmOfAlliance.blp",
+    "site_image": "../images/wiki-forge/champ-a-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Great Dragon Spear",
+    "name_en": "Great Dragon Spear",
+    "rawcode": "I0ME",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNGDS.blp",
+    "site_image": "../images/wiki-forge/champ-a-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Holy Crystal",
+    "name_en": "Holy Crystal",
+    "rawcode": "I0MC",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNHolyCrystal.blp",
+    "site_image": "../images/wiki-forge/champ-a-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "King's Crown of Dictatorship",
+    "name_en": "King's Crown of Dictatorship",
+    "rawcode": "I0LY",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNSoulCrown.BLP",
+    "site_image": "../images/wiki-forge/champ-a-06.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Queen's Crown of Dictatorship",
+    "name_en": "Queen's Crown of Dictatorship",
+    "rawcode": "I0LZ",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNRaven_Crown.blp",
+    "site_image": "../images/wiki-forge/champ-b-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Ruler Crown of Dictatorship",
+    "name_en": "Ruler Crown of Dictatorship",
+    "rawcode": "I0M0",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNMagocracy.blp",
+    "site_image": "../images/wiki-forge/champ-b-02-evo740c.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Staff of Inversion",
+    "name_en": "Staff of Inversion",
+    "rawcode": "I0M4",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNEternityStaff.blp",
+    "site_image": "../images/wiki-forge/champ-b-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Vespermoon",
+    "name_en": "Vespermoon",
+    "rawcode": "I0IO",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNArcaniteNightRing.blp",
+    "site_image": "../images/wiki-forge/champ-b-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Wind of Nature",
+    "name_en": "Wind of Nature",
+    "rawcode": "I0MA",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNWoN2.blp",
+    "site_image": "../images/wiki-forge/champ-b-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Wings of the Divine",
+    "name_en": "Wings of the Divine",
+    "rawcode": "I0M6",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNTyraelT1.blp",
+    "site_image": "../images/wiki-forge/champ-b-06.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Blade Armor",
+    "name_en": "Blade Armor",
+    "rawcode": "I0NK",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNBladeArmorX.blp",
+    "site_image": "../images/wiki-forge/betr-a-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Diamond Breaker",
+    "name_en": "Diamond Breaker",
+    "rawcode": "I0NG",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNEnergySword.blp",
+    "site_image": "../images/wiki-forge/betr-a-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Dominance Ice",
+    "name_en": "Dominance Ice",
+    "rawcode": "I0NI",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNDominanceIceX.blp",
+    "site_image": "../images/wiki-forge/betr-a-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Estes' Scripture",
+    "name_en": "Estes' Scripture",
+    "rawcode": "I0NA",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNSME3.blp",
+    "site_image": "../images/wiki-forge/betr-a-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Heartbound Ring",
+    "name_en": "Heartbound Ring",
+    "rawcode": "I0MY",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNFrostRing.blp",
+    "site_image": "../images/wiki-forge/betr-a-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Mutilator",
+    "name_en": "Mutilator",
+    "rawcode": "I0N4",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNMechanical Dragon Claw.blp",
+    "site_image": "../images/wiki-forge/betr-a-06.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Naval Commander Armor",
+    "name_en": "Naval Commander Armor",
+    "rawcode": "I0NC",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNNavalArmor.blp",
+    "site_image": "../images/wiki-forge/betr-b-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Shadow Bow",
+    "name_en": "Shadow Bow",
+    "rawcode": "I0N6",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNShadowBow.blp",
+    "site_image": "../images/wiki-forge/betr-b-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Sky Piercer",
+    "name_en": "Sky Piercer",
+    "rawcode": "I0N0",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNSkyPiercer.blp",
+    "site_image": "../images/wiki-forge/betr-b-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Arcane Orb",
+    "name_en": "Arcane Orb",
+    "rawcode": "I0OW",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNManaOrb.blp",
+    "site_image": "../images/wiki-forge/obli-a-01-evo740c.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Blood Orb",
+    "name_en": "Blood Orb",
+    "rawcode": "I0OS",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNBloodstone Orb.blp",
+    "site_image": "../images/wiki-forge/obli-a-02-evo740c.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Bloodletter of Nulgath",
+    "name_en": "Bloodletter of Nulgath",
+    "rawcode": "I0P2",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNEnchantedBlade.blp",
+    "site_image": "../images/wiki-forge/obli-a-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Bloodletting Staff of Nulgath",
+    "name_en": "Bloodletting Staff of Nulgath",
+    "rawcode": "I0PF",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNRedWand2.blp",
+    "site_image": "../images/wiki-forge/obli-a-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Crystal Phoenix Blade of Nulgath",
+    "name_en": "Crystal Phoenix Blade of Nulgath",
+    "rawcode": "I0PD",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNMephisto'sBlade.blp",
+    "site_image": "../images/wiki-forge/obli-a-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Fiend of Nulgath",
+    "name_en": "Fiend of Nulgath",
+    "rawcode": "I0OY",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTN_RavenblackArmor.blp",
+    "site_image": "../images/wiki-forge/obli-a-06.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Focus Staff of Nulgath",
+    "name_en": "Focus Staff of Nulgath",
+    "rawcode": "I0OU",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNPowerStaff.blp",
+    "site_image": "../images/wiki-forge/obli-a-07.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Hex Mask of Nulgath",
+    "name_en": "Hex Mask of Nulgath",
+    "rawcode": "I0P0",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTN_cr_DrownerMask.blp",
+    "site_image": "../images/wiki-forge/obli-b-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Shadow Piercer of Nulgath",
+    "name_en": "Shadow Piercer of Nulgath",
+    "rawcode": "I0P4",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNSparkleArrow.blp",
+    "site_image": "../images/wiki-forge/obli-b-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Shadow Spear of Nulgath",
+    "name_en": "Shadow Spear of Nulgath",
+    "rawcode": "I0OQ",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNFurySpear.blp",
+    "site_image": "../images/wiki-forge/obli-b-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Unidentified Item of Nulgath",
+    "name_en": "Unidentified Item of Nulgath",
+    "rawcode": "I0PH",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNHollowScythe.blp",
+    "site_image": "../images/wiki-forge/obli-b-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Warlord Gauntlets of Nulgath",
+    "name_en": "Warlord Gauntlets of Nulgath",
+    "rawcode": "I0PK",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNLegendGuantlets.blp",
+    "site_image": "../images/wiki-forge/obli-b-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Archfiend Cloak of Nulgath",
+    "name_en": "Archfiend Cloak of Nulgath",
+    "rawcode": "I0Q0",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNCloakOfDemonicSummoning.blp",
+    "site_image": "../images/wiki-forge/void-a-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Blood Guard of Nulgath",
+    "name_en": "Blood Guard of Nulgath",
+    "rawcode": "I0PW",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNShieldOfResistance.blp",
+    "site_image": "../images/wiki-forge/void-a-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Champion Blade of Nulgath",
+    "name_en": "Champion Blade of Nulgath",
+    "rawcode": "I0Q4",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNFrostedBlade.blp",
+    "site_image": "../images/wiki-forge/void-a-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Deathwish of Nulgath",
+    "name_en": "Deathwish of Nulgath",
+    "rawcode": "I0PU",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNDeadProphetStaff.blp",
+    "site_image": "../images/wiki-forge/void-a-04.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Eternal Staff of Nulgath",
+    "name_en": "Eternal Staff of Nulgath",
+    "rawcode": "I0Q8",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNArcane StaffX.blp",
+    "site_image": "../images/wiki-forge/void-a-05.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Hex Bow of Nulgath",
+    "name_en": "Hex Bow of Nulgath",
+    "rawcode": "I0PY",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNHexBow.blp",
+    "site_image": "../images/wiki-forge/void-a-06.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Oblivion Blade of Nulgath",
+    "name_en": "Oblivion Blade of Nulgath",
+    "rawcode": "I0Q6",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNEmperorsBlade.blp",
+    "site_image": "../images/wiki-forge/void-b-01.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Talons of Nulgath",
+    "name_en": "Talons of Nulgath",
+    "rawcode": "I0PS",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNClawAttack.blp",
+    "site_image": "../images/wiki-forge/void-b-02.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Unholy Ritual of Nulgath",
+    "name_en": "Unholy Ritual of Nulgath",
+    "rawcode": "I0Q2",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNDreadBook.blp",
+    "site_image": "../images/wiki-forge/void-b-03.png",
+    "size": [
+      64,
+      64
+    ]
+  },
+  {
+    "name": "Warlord Axe of Nulgath",
+    "name_en": "Warlord Axe of Nulgath",
+    "rawcode": "I0PQ",
+    "evo_icon_path": "ReplaceableTextures\\CommandButtons\\BTNChemtechAxe.blp",
+    "site_image": "../images/wiki-forge/void-b-04.png",
+    "size": [
+      64,
+      64
+    ]
+  }
+]

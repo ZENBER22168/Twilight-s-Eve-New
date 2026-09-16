@@ -293,7 +293,7 @@ Promise.resolve(loadDB()).then(d=>{
    }
    root.innerHTML=html||((pick==='dismantle'&&showDismantle)?'':'<div class="empty">找不到符合的商人或材料。</div>');
  }
- q.oninput=render;sel.onchange=render;const _materialRender=render;render=function(){_materialRender();syncMaterialSidebar();};render();
+ q.oninput=render;sel.onchange=render;const _materialRender=render;render=function(){_materialRender();syncMaterialSidebar();};const initialQ=new URLSearchParams(location.search).get('q');if(initialQ)q.value=initialQ;render();
 }).catch(e=>document.getElementById('root').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
 </script><script src="../mobile-nav.js"></script>
 <script data-goatcounter="https://twilighteve.goatcounter.com/count"

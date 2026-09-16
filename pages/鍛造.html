@@ -61,16 +61,23 @@
 .forge-all-btn,.forge-nav-group-btn,.forge-nav-item{width:100%;border:0;text-align:left;cursor:pointer;color:#eaf1f8}
 .forge-all-btn{padding:13px 14px;border-radius:10px;background:#111a24;font-size:16px;font-weight:900;margin-bottom:8px;border:1px solid #293646}
 .forge-all-btn:hover,.forge-all-btn.active{background:linear-gradient(90deg,#c88796,#d99aa7);color:#fff;border-color:#d89eaa}
-.forge-nav-group{border-top:1px solid #25303b}
+.forge-nav-group{border-top:1px solid #25303b;--forge-cat:#78a9d6;--forge-cat-soft:rgba(120,169,214,.13)}
+.forge-nav-group.tone-core{--forge-cat:#78a9d6;--forge-cat-soft:rgba(120,169,214,.14)}
+.forge-nav-group.tone-angel{--forge-cat:#83d6f5;--forge-cat-soft:rgba(131,214,245,.14)}
+.forge-nav-group.tone-demon{--forge-cat:#e56a6a;--forge-cat-soft:rgba(229,106,106,.14)}
+.forge-nav-group.tone-signature{--forge-cat:#e7c45b;--forge-cat-soft:rgba(231,196,91,.15)}
+.forge-nav-group.tone-otherworld{--forge-cat:#c084fc;--forge-cat-soft:rgba(192,132,252,.15)}
+.forge-nav-group .forge-nav-group-btn{color:var(--forge-cat)}
+.forge-nav-group .forge-nav-group-btn:hover{background:var(--forge-cat-soft)}
+.forge-nav-group .forge-nav-item.active{background:var(--forge-cat-soft);box-shadow:inset 3px 0 var(--forge-cat);color:#fff}
+.forge-nav-group .forge-nav-item:hover{background:var(--forge-cat-soft)}
 .forge-nav-group-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 9px;background:transparent;font-size:16px;font-weight:900}
-.forge-nav-group-btn:hover{background:#111a24}
 .forge-nav-arrow{font-size:12px;transition:transform .16s ease;opacity:.8}
 .forge-nav-group.open .forge-nav-arrow{transform:rotate(90deg)}
 .forge-nav-items{display:none;padding:0 0 8px}
 .forge-nav-group.open .forge-nav-items{display:block}
 .forge-nav-item{padding:10px 12px 10px 18px;background:transparent;border-radius:8px;font-size:15px;line-height:1.35}
-.forge-nav-item:hover{background:#152130}
-.forge-nav-item.active{background:#1d3043;color:#fff;font-weight:900;box-shadow:inset 3px 0 #e7b5aa}
+.forge-nav-item.active{font-weight:900}
 .forge-nav-sub{display:block;margin-top:3px;color:#91a5bc;font-size:11px;font-weight:600}
 .forge-hidden-filter{display:none!important}
 .forge-layout.sidebar-collapsed{grid-template-columns:56px minmax(0,1fr)}
@@ -219,9 +226,9 @@ loadDB().then(d=>{
   ['國王的皇冠','皇后的皇冠','帝國皇冠'].forEach(n=>{const x=byName(n);if(x)flameList.push({...x,_unreleased:true});});
   grouped.push({type:'鍛造裝備',name:'焔の悪魔｜焰之惡魔',list:flameList,filterKey:'焰之惡魔',mixedAvailability:true,locationImage:'../images/forge-locations/flame-demon.png'});
 
-  // 洗禮專屬武器排在異我化身上方。
+  // 專屬武器獨立分類；洗禮系列置於 Signature Weapons。
   const exclusive=general.filter(x=>x.row>=178&&x.row<=191);
-  if(exclusive.length) grouped.push({type:'專屬武器',name:'洗禮專屬武器',list:exclusive,filterKey:'洗禮專屬武器'});
+  if(exclusive.length) grouped.push({type:'專屬武器',name:'洗礼｜洗禮｜Signature Weapons',list:exclusive,filterKey:'洗禮專屬武器'});
 
   // 異我化身：保留目前版本已有裝備名稱；其餘 Wiki 項目僅顯示於鍛造頁，不加入配裝。
   const keepAlter=(name)=>{const x=byName(name);return x?{...x,name_color:'#ff3fd8',_unreleased:name!=='月魂珠'}:null};
@@ -239,7 +246,7 @@ loadDB().then(d=>{
     {name:"Titan's Mitt",name_color:'#ff3fd8',name_en:"Titan's Mitt",job:'Melee',effect:'+150 Armor\n+875 Strength\n+25% Attack Speed\nTitan Strike (Passive)',materials:'Strength of the Earth, Diamond, Mantle of Darkness, Fire Stone, Angelic Hope',image:'../images/alter-ego/titans-mitt.png',_unreleased:true},
     {name:'Ungodly Reaper',name_color:'#ff3fd8',name_en:'Ungodly Reaper',job:'Melee',effect:'+10000 Attack Damage\nSoul Harvest (Passive)',materials:'Cruel Blade, Sphere of Doom, Mystery, Mystical, Fire Stone, Angelic Hope',image:'../images/alter-ego/ungodly-reaper.png',_unreleased:true}
   ].filter(Boolean);
-  grouped.push({type:'鍛造裝備',name:'オルター・エゴ｜異我化身 (Alter Ego)',list:alter,filterKey:'異我化身',mixedAvailability:true,routeNote:'迷宮路徑｜M1 第一商店：第一個圓圈 → 下 → 右 → 上 → 接著沿單一路線前進'});
+  grouped.push({type:'鍛造裝備',name:'オルター・エゴ｜異我化身｜Alter Ego',list:alter,filterKey:'異我化身',mixedAvailability:true,routeNote:'迷宮路徑｜M1 第一商店：第一個圓圈 → 下 → 右 → 上 → 接著沿單一路線前進'});
 
   // 亞古尼姆：依目前 Excel「② 鍛造裝備總表」同步。
   // 目前版本尚未推出；只顯示於鍛造頁，不加入配裝。
@@ -257,7 +264,7 @@ loadDB().then(d=>{
     {name:'征服者',name_en:'The Vanquisher',job:'近戰敏捷職業',effect:'增加 1425 點敏捷, 減少 15% 技能冷卻時間\n●被動:使用技能會提升3次普通攻擊傷害160%, 次數消耗完畢前不會重置',materials:'神秘之劍, 神話武器碎片, 龍石, 焚獄之華, 煉獄核, 墮魂之望',image:'../images/agahnim/the-vanquisher.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'天使元素',name_en:'Angel Elements',job:'所有智者',effect:'增加 1625 點智慧, 12.5% 魔法傷害, 減少 15% 技能冷卻時間, 減少 15% 法力效益',materials:'濃縮能量, 藍寶石, 先驅者的精華, 龍石, 煉獄核, 墮魂之望',image:'../images/agahnim/angel-elements.png',name_color:'#ff3fd8',_unreleased:true}
   ];
-  grouped.push({type:'版本尚未出',name:'アガニム｜亞古尼姆 (Agahnim)',list:agahnim,filterKey:'亞古尼姆',unreleased:true,routeNote:'迷宮路徑｜M1 第二商店：第一個圓圈 → 右 → 下 → 上 → 右 → 右 → 左'});
+  grouped.push({type:'版本尚未出',name:'アガニム｜亞古尼姆｜Agahnim',list:agahnim,filterKey:'亞古尼姆',unreleased:true,routeNote:'迷宮路徑｜M1 第二商店：第一個圓圈 → 右 → 下 → 上 → 右 → 右 → 左'});
 
   // Wiki 額外鍛造資料：Excel 尚未收錄，名稱先保留英文；目前版本尚未出，不加入配裝。
   const championOfChaos=[
@@ -268,13 +275,13 @@ loadDB().then(d=>{
     {name:'Holy Crystal',name_en:'Holy Crystal',job:'Intelligence',effect:'+1600 Intelligence\\n+15% Cooldown Speed\\nMagical Glow (Passive)',materials:'Queen\'s Agony, Nature Fragment, Emerald, Mystical, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-a-05.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'King\'s Crown of Dictatorship',name_en:'King\'s Crown of Dictatorship',job:'All',effect:'+25000 Health\\n+20000 Mana\\n+12% Magic Damage Reduction\\nTyrannic Immunity (Active)',materials:'King\'s Royal Crown, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-a-06.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Queen\'s Crown of Dictatorship',name_en:'Queen\'s Crown of Dictatorship',job:'All',effect:'+25000 Health\\n+20000 Mana\\n+15% Cooldown Speed\\nTyrannic Immunity (Active)',materials:'Queen\'s Royal Crown, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-01.png',name_color:'#ff3fd8',_unreleased:true},
-    {name:'Ruler Crown of Dictatorship',name_en:'Ruler Crown of Dictatorship',job:'All',effect:'+25000 Health\\n+20000 Mana\\n+7.5% Damage Dealt\\nTyrannic Immunity (Active)',materials:'Imperial\'s Royal Crown, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-02.png',name_color:'#ff3fd8',_unreleased:true},
+    {name:'Ruler Crown of Dictatorship',name_en:'Ruler Crown of Dictatorship',job:'All',effect:'+25000 Health\\n+20000 Mana\\n+7.5% Damage Dealt\\nTyrannic Immunity (Active)',materials:'Imperial\'s Royal Crown, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-02-evo740c.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Staff of Inversion',name_en:'Staff of Inversion',job:'Intelligence',effect:'+1500 Intelligence\\n+100 Mana Regen\\n+25% Cooldown Speed',materials:'Descend Reaper, Golden Fragment, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-03.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Vespermoon',name_en:'Vespermoon',job:'Intelligence',effect:'+200 Armor\\n+1250 Intelligence\\n+10% Cooldown Speed\\nTranscluence (Active)',materials:'Esper\'s Blood, Ocean Fragment, Sapphire, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-04.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Wind of Nature',name_en:'Wind of Nature',job:'Archer',effect:'+7000 Attack Damage\\n+900 Agility\\nWind Chant (Active)',materials:'Hatred, Nature Fragment, Emerald, Diamond, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-05.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Wings of the Divine',name_en:'Wings of the Divine',job:'All',effect:'+700 All Stats\\n+35% Attack Speed\\n+140 Movement Speed\\nTeleportation (Active)',materials:'Eternal Phoenix, Angel Feather, Prismatic Sigil of Elements',image:'../images/wiki-forge/champ-b-06.png',name_color:'#ff3fd8',_unreleased:true}
   ];
-  grouped.push({type:'版本尚未出',name:'Champion of Chaos',list:championOfChaos,filterKey:'Champion of Chaos',unreleased:true,routeNote:'Maze path to M2 1ST SHOP: 1st circle → right → bottom → top → right → right → right'});
+  grouped.push({type:'版本尚未出',name:'カオスの覇者｜混沌冠軍｜Champion of Chaos',list:championOfChaos,filterKey:'Champion of Chaos',unreleased:true,routeNote:'Maze path to M2 1ST SHOP: 1st circle → right → bottom → top → right → right → right'});
 
   const betrayedChaos=[
     {name:'Blade Armor',name_en:'Blade Armor',job:'Melee',effect:'+575 Armor\\nMirror Reflect (Passive)',materials:'Mirror Shield, Sapphire, Mythical Armor Piece, Fabled Weapon Piece, Fire Stone, Prismatic Sigil of Elements',image:'../images/wiki-forge/betr-a-01.png',name_color:'#ff3fd8',_unreleased:true},
@@ -287,11 +294,11 @@ loadDB().then(d=>{
     {name:'Shadow Bow',name_en:'Shadow Bow',job:'Archer',effect:'+11000 Attack Damage\\nShadow Strafe (Active)',materials:'Remorse, Lavender Fragment, Amethyst, Blessing of Darkness, Mystery, Prismatic Sigil of Elements',image:'../images/wiki-forge/betr-b-02.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Sky Piercer',name_en:'Sky Piercer',job:'Melee',effect:'+11000 Attack Damage\\nVengeance (Passive)',materials:'Demon Blade, Mystical, Nature Fragment, Emerald, Impure Sigil, Prismatic Sigil of Elements',image:'../images/wiki-forge/betr-b-03.png',name_color:'#ff3fd8',_unreleased:true}
   ];
-  grouped.push({type:'版本尚未出',name:'Betrayed Chaos',list:betrayedChaos,filterKey:'Betrayed Chaos',unreleased:true,routeNote:'Maze path to M2 2ND SHOP: 1st circle → right → top'});
+  grouped.push({type:'版本尚未出',name:'裏切りの混沌｜背叛混沌｜Betrayed Chaos',list:betrayedChaos,filterKey:'Betrayed Chaos',unreleased:true,routeNote:'Maze path to M2 2ND SHOP: 1st circle → right → top'});
 
   const oblivion=[
-    {name:'Arcane Orb',name_en:'Arcane Orb',job:'All',effect:'+750 All Stats\\n+30% Cooldown Speed',materials:'Crisis Core, Unidentified 22, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/obli-a-01.png',name_color:'#ff3fd8',_unreleased:true},
-    {name:'Blood Orb',name_en:'Blood Orb',job:'All',effect:'+35000 Health\\n+45% Spell Resist\\nBlood Flow (Passive)',materials:'Moon Pearl, Unidentified 23, Tainted Gem, Totem of Nulgath',image:'../images/wiki-forge/obli-a-02.png',name_color:'#ff3fd8',_unreleased:true},
+    {name:'Arcane Orb',name_en:'Arcane Orb',job:'All',effect:'+750 All Stats\\n+30% Cooldown Speed',materials:'Crisis Core, Unidentified 22, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/obli-a-01-evo740c.png',name_color:'#ff3fd8',_unreleased:true},
+    {name:'Blood Orb',name_en:'Blood Orb',job:'All',effect:'+35000 Health\\n+45% Spell Resist\\nBlood Flow (Passive)',materials:'Moon Pearl, Unidentified 23, Tainted Gem, Totem of Nulgath',image:'../images/wiki-forge/obli-a-02-evo740c.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Bloodletter of Nulgath',name_en:'Bloodletter of Nulgath',job:'Melee Agility',effect:'+40% Attack Speed\\n+2000 Agility\\nBlood Thrust (Passive)',materials:'Sword of Akasha, Tainted Gem, Totem of Nulgath',image:'../images/wiki-forge/obli-a-03.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Bloodletting Staff of Nulgath',name_en:'Bloodletting Staff of Nulgath',job:'Intelligence',effect:'+1500 Intelligence\\n+125 Health Regen\\n+100 Mana Regen\\n+20% Cooldown Speed\\nBlood Recovery (Active)',materials:'Cane of Byrna, Tainted Gem, Totem of Nulgath',image:'../images/wiki-forge/obli-a-04.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Crystal Phoenix Blade of Nulgath',name_en:'Crystal Phoenix Blade of Nulgath',job:'Melee',effect:'+9750 Damage\\n+14250 Health\\nFrost Attack (Passive)\\nCrystallize (Active)',materials:'Sovereign Sword, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/obli-a-05.png',name_color:'#ff3fd8',_unreleased:true},
@@ -303,7 +310,7 @@ loadDB().then(d=>{
     {name:'Unidentified Item of Nulgath',name_en:'Unidentified Item of Nulgath',job:'Melee Agility',effect:'+13000 Damage\\nNulgath\'s Wrath (Passive)',materials:'The Secret 1, Ungodly Reaper, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/obli-b-04.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Warlord Gauntlets of Nulgath',name_en:'Warlord Gauntlets of Nulgath',job:'Melee',effect:'+30% Attack Speed\\n+1100 Strength\\n+200 Armor\\nWarlord\'s Bloodlust (Passive)',materials:'Titan\'s Mitt, Dark Crystal Shard, Totem of Nulgath',image:'../images/wiki-forge/obli-b-05.png',name_color:'#ff3fd8',_unreleased:true}
   ];
-  grouped.push({type:'版本尚未出',name:'Oblivion',list:oblivion,filterKey:'Oblivion',unreleased:true,routeNote:'Maze path to M3 1ST ITEM SHOP [Need at least unidentified 13]: 2nd circle → right → up → left'});
+  grouped.push({type:'版本尚未出',name:'忘却｜遺忘｜Oblivion',list:oblivion,filterKey:'Oblivion',unreleased:true,routeNote:'Maze path to M3 1ST ITEM SHOP [Need at least unidentified 13]: 2nd circle → right → up → left'});
 
   const voidForge=[
     {name:'Archfiend Cloak of Nulgath',name_en:'Archfiend Cloak of Nulgath',job:'Acolyte Caster Fairy',effect:'+1500 Intelligence\\n+180 Mana Regen\\n+20% Cooldown Speed\\nFiendish Blessing (Active)',materials:'Oracle, Dark Crystal Shard, Totem of Nulgath',image:'../images/wiki-forge/void-a-01.png',name_color:'#ff3fd8',_unreleased:true},
@@ -317,7 +324,7 @@ loadDB().then(d=>{
     {name:'Unholy Ritual of Nulgath',name_en:'Unholy Ritual of Nulgath',job:'Acolyte Caster Fairy',effect:'+1500 Intelligence\\n+10000 Mana\\n+20% Cooldown Speed\\nDark Lament (Active)',materials:'Sacred Grimoire, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/void-b-03.png',name_color:'#ff3fd8',_unreleased:true},
     {name:'Warlord Axe of Nulgath',name_en:'Warlord Axe of Nulgath',job:'Defender',effect:'+6000 Attack Damage\\n+350 Armor\\nAbyss Light (Active)',materials:'Ascended Light of Destiny, Diamond of Nulgath, Totem of Nulgath',image:'../images/wiki-forge/void-b-04.png',name_color:'#ff3fd8',_unreleased:true}
   ];
-  grouped.push({type:'版本尚未出',name:'Void',list:voidForge,filterKey:'Void',unreleased:true,routeNote:'Maze path to M3 2ND ITEM SHOP [Need at least unidentified 13]: 2nd circle → right → top left'});
+  grouped.push({type:'版本尚未出',name:'虚無｜虛無｜Void',list:voidForge,filterKey:'Void',unreleased:true,routeNote:'Maze path to M3 2ND ITEM SHOP [Need at least unidentified 13]: 2nd circle → right → top left'});
 
 
   const q=document.getElementById('q'),type=document.getElementById('type'),root=document.getElementById('forge');
@@ -326,25 +333,44 @@ loadDB().then(d=>{
   const forgeAllBtn=document.getElementById('forgeAllBtn');
   const forgeSidebarCollapse=document.getElementById('forgeSidebarCollapse');
   const FORGE_NAV_GROUPS=[
-    {label:'基礎鍛造',keys:['武器大師','鮑伯老師傅','魔幻巫師','遠古靈魂']},
-    {label:'天使系列',keys:['雲天使','太陽天使','自然天使','復仇的天使']},
-    {label:'惡魔系列',keys:['火之惡魔','焰之惡魔']},
-    {label:'特殊鍛造',keys:['洗禮專屬武器','異我化身']},
-    {label:'後期／未公開',keys:['亞古尼姆','Champion of Chaos','Betrayed Chaos','Oblivion','Void']}
+    {label:'基礎鍛造｜Core Forge',tone:'core',keys:['武器大師','鮑伯老師傅','魔幻巫師','遠古靈魂']},
+    {label:'天使系列｜Angelic Series',tone:'angel',keys:['雲天使','太陽天使','自然天使','復仇的天使']},
+    {label:'惡魔系列｜Demonic Series',tone:'demon',keys:['火之惡魔','焰之惡魔']},
+    {label:'專屬武器｜Signature Weapons',tone:'signature',keys:['洗禮專屬武器']},
+    {label:'異界鍛造｜Otherworld Forge',tone:'otherworld',keys:['異我化身','亞古尼姆','Champion of Chaos','Betrayed Chaos','Oblivion','Void']}
   ];
+  const FORGE_NAV_LABELS={
+    '武器大師':'Weapon Master｜武器大師',
+    '鮑伯老師傅':'Bob the Builder｜鮑伯老師傅',
+    '魔幻巫師':'Magic Wizard｜魔幻巫師',
+    '遠古靈魂':'Ancient Soul｜遠古靈魂',
+    '雲天使':'雲の天使｜雲天使',
+    '太陽天使':'太陽の天使｜太陽天使',
+    '自然天使':'自然の天使｜自然天使',
+    '復仇的天使':'復讐の天使｜復仇的天使',
+    '火之惡魔':'炎の悪魔｜火之惡魔',
+    '焰之惡魔':'焔の悪魔｜焰之惡魔',
+    '洗禮專屬武器':'洗礼｜洗禮',
+    '異我化身':'オルター・エゴ｜異我化身',
+    '亞古尼姆':'アガニム｜亞古尼姆',
+    'Champion of Chaos':'カオスの覇者｜混沌冠軍',
+    'Betrayed Chaos':'裏切りの混沌｜背叛混沌',
+    'Oblivion':'忘却｜遺忘',
+    'Void':'虚無｜虛無'
+  };
   const groupByKey=new Map(grouped.map(g=>[g.filterKey,g]));
-  function sidebarLabel(g){
+  function sidebarLabel(g,key){
     if(!g)return '';
-    const parts=String(g.name||'').split('｜');
-    return (parts.length>1?parts[parts.length-1]:parts[0]).replace(/\s*\([^)]*\)\s*$/,'').trim();
+    return FORGE_NAV_LABELS[key] || String(g.name||'').replace(/\s*\([^)]*\)\s*$/,'').trim();
   }
   function buildForgeSidebar(){
     forgeNav.innerHTML=FORGE_NAV_GROUPS.map((cat,idx)=>{
       const items=cat.keys.map(key=>{
         const g=groupByKey.get(key); if(!g)return '';
-        return `<button class="forge-nav-item" type="button" data-forge-key="${esc(key)}">${esc(sidebarLabel(g))}<span class="forge-nav-sub">${esc(g.type)} ・ ${g.list.length} 件</span></button>`;
+        const availability=g.unreleased?'版本尚未出':(g.mixedAvailability?'含未公開':'');
+        return `<button class="forge-nav-item" type="button" data-forge-key="${esc(key)}">${esc(sidebarLabel(g,key))}<span class="forge-nav-sub">${esc(g.type)} ・ ${g.list.length} 件${availability?` ・ ${esc(availability)}`:''}</span></button>`;
       }).join('');
-      return `<div class="forge-nav-group" data-forge-group="${idx}"><button class="forge-nav-group-btn" type="button"><span>${esc(cat.label)}</span><span class="forge-nav-arrow">▶</span></button><div class="forge-nav-items">${items}</div></div>`;
+      return `<div class="forge-nav-group tone-${esc(cat.tone||'core')}" data-forge-group="${idx}"><button class="forge-nav-group-btn" type="button"><span>${esc(cat.label)}</span><span class="forge-nav-arrow">▶</span></button><div class="forge-nav-items">${items}</div></div>`;
     }).join('');
     forgeNav.querySelectorAll('.forge-nav-group-btn').forEach(btn=>btn.addEventListener('click',()=>{
       const group=btn.closest('.forge-nav-group');

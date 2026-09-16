@@ -79,5 +79,12 @@
     "cn": "日輪聖珠",
     "image": "../images/map-items/I05M__日輪聖珠.png",
     "reason": "使用者確認名稱＋v2.74A 地圖圖示已解包並嵌入"
+  },
+  "I0H1": {
+    "index": 329,
+    "cn": "終焉",
+    "en": "Ender",
+    "image": "../images/equipment/Ender__終焉__鍛造裝備.png",
+    "reason": "專武存檔對應修正：I0H1 為已實裝惡魔專武「終焉」，避免與未實裝同英文名 Ender 資料混淆"
   }
 }
