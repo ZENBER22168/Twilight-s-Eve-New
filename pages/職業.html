@@ -1,12 +1,80 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>✨ 職業技能</title><link rel="icon" href="../images/site-icon.png">
 <link rel="stylesheet" href="../style.css"><style>
-.skill-selector{padding:18px 20px;margin-bottom:28px}.skill-selector label{font-size:20px}.skill-selector select{font-size:19px;min-width:340px;padding:14px 18px}
-.skill-character{padding:24px}.skill-character-head{gap:18px;padding-bottom:20px;margin-bottom:20px}.character-portrait{width:118px;height:118px}.skill-character-head h2{font-size:30px}
-.skill-list{grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:18px}.skill-card{grid-template-columns:92px 1fr;gap:18px;padding:18px}.skill-icon{width:80px;height:80px}.skill-title{font-size:23px}.skill-key{min-width:42px;height:42px;font-size:17px}.skill-meta{font-size:16px;gap:10px}.skill-desc{font-size:19px;line-height:1.75}
-@media(max-width:760px){.skill-list{grid-template-columns:1fr}.skill-card{grid-template-columns:74px 1fr}.skill-icon{width:64px;height:64px}.character-portrait{width:96px;height:96px}.skill-selector select{min-width:0;width:100%}}
-</style></head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html" class="active">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header><main class="wrap"><h1>⚔️ 職業技能</h1><div class="skill-selector"><label for="classSelect">想玩職業配裝</label><select id="classSelect"></select></div><div id="skillView"></div></main>
+.skill-selector{padding:18px 20px 20px;margin-bottom:28px;border:1px solid #29394a;border-radius:16px;background:linear-gradient(180deg,#0c151f,#0a1119)}
+.skill-selector-title{font-size:20px;font-weight:900;color:#f5f8fc;margin-bottom:14px}
+.skill-role-groups{display:grid;gap:10px}
+.skill-role-group{display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;align-items:start;padding:10px;border:1px solid #263442;border-radius:12px;background:#0c141d}
+.skill-role-label{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 10px;border-radius:10px;font-size:15px;font-weight:900;white-space:nowrap;border:1px solid currentColor}
+.skill-role-jobs{display:flex;flex-wrap:wrap;gap:8px;min-height:42px;align-items:center}
+.skill-job-btn{appearance:none;border:1px solid #334557;background:#101a25;color:#dce7f2;border-radius:10px;padding:10px 13px;font-size:14px;font-weight:850;cursor:pointer;transition:.16s ease}
+.skill-job-btn:hover{transform:translateY(-1px);border-color:var(--role-color,#76bff0);background:var(--role-soft,rgba(118,191,240,.10))}
+.skill-job-btn.active{color:#fff;border-color:var(--role-color,#76bff0);background:var(--role-soft,rgba(118,191,240,.16));box-shadow:inset 0 0 0 1px var(--role-color,#76bff0)}
+.skill-role-group.role-tank{--role-color:#69b7ff;--role-soft:rgba(105,183,255,.13)} .role-tank .skill-role-label{color:#8ac8ff;background:rgba(105,183,255,.10)}
+.skill-role-group.role-melee{--role-color:#ff8d70;--role-soft:rgba(255,141,112,.13)} .role-melee .skill-role-label{color:#ff9e86;background:rgba(255,141,112,.10)}
+.skill-role-group.role-ranged{--role-color:#7cda9b;--role-soft:rgba(124,218,155,.13)} .role-ranged .skill-role-label{color:#8be5a8;background:rgba(124,218,155,.10)}
+.skill-role-group.role-mage{--role-color:#bc93ff;--role-soft:rgba(188,147,255,.13)} .role-mage .skill-role-label{color:#c7a7ff;background:rgba(188,147,255,.10)}
+.skill-role-group.role-support{--role-color:#69d9d0;--role-soft:rgba(105,217,208,.13)} .role-support .skill-role-label{color:#82e5de;background:rgba(105,217,208,.10)}
+.skill-role-group.role-healer{--role-color:#ff9fc2;--role-soft:rgba(255,159,194,.13)} .role-healer .skill-role-label{color:#ffb2cf;background:rgba(255,159,194,.10)}
+.skill-native-select{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}
+.skill-character{padding:24px}.skill-character-head{gap:18px;padding-bottom:20px;margin-bottom:20px}.character-portrait{width:118px;height:118px}.skill-character-head h2{font-size:30px}.class-route{margin-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:7px;color:#91a5ba;font-size:13px;font-weight:800}.class-route-label{color:#70879e;font-size:12px;letter-spacing:.04em}.class-route-step{display:inline-flex;align-items:center;min-height:28px;padding:5px 9px;border:1px solid #304154;border-radius:8px;background:#0c151f;color:#c7d4e1}.class-route-step.current{border-color:#6f87a5;background:#172231;color:#fff}.class-route-arrow{color:#586d82;font-size:12px}
+.skill-list{grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:18px}.skill-card{grid-template-columns:92px 1fr;gap:18px;padding:18px}.skill-icon{width:80px;height:80px}.skill-title{font-size:23px}.skill-key{min-width:42px;height:42px;font-size:17px}.skill-meta{font-size:16px;gap:10px}.skill-desc{font-size:19px;line-height:1.75}.skill-audit-page{margin:-12px 0 22px;padding:10px 13px;border:1px solid #304255;border-radius:11px;background:#0c151e;color:#90a5ba;font-size:13px;line-height:1.6}.skill-audit-page strong{color:#f0d690}.skill-audit-class{margin-top:8px;display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #3b5268;border-radius:999px;background:#0d1a25;color:#a9c6df;font-size:11px;font-weight:800}
+@media(max-width:900px){.skill-role-group{grid-template-columns:1fr}.skill-role-label{justify-content:flex-start;width:max-content;min-width:108px}.skill-list{grid-template-columns:1fr}}
+@media(max-width:760px){.skill-card{grid-template-columns:74px 1fr}.skill-icon{width:64px;height:64px}.character-portrait{width:96px;height:96px}.skill-selector{padding:14px}.skill-job-btn{padding:9px 11px;font-size:13px}}
+</style></head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html" class="active">✨ 職業技能</a><a href="搜尋.html">📂 讀檔・配裝・傷害護甲</a></nav></header><main class="wrap"><h1>⚔️ 職業技能</h1><div class="skill-audit-page"><strong>v2.74C 校正：</strong>已重新核對地圖實際冷卻表；秘術大師另外依現行技能資料與觸發重整。其他技能敘述未以推測改寫。</div><div class="skill-selector"><div class="skill-selector-title">想玩職業技能</div><div id="skillRoleGroups" class="skill-role-groups"></div><select id="classSelect" class="skill-native-select" aria-label="選擇職業技能"></select></div><div id="skillView"></div></main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　攻略資料庫・資料整合版</div><div>使用左上選單快速切換各頁功能</div></footer>
-<script src="../skill-data.js"></script><script>const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');const fmt=v=>esc(v).replaceAll('\n','<br>');const select=document.getElementById('classSelect'),view=document.getElementById('skillView');select.innerHTML=SKILL_DATA.map((x,i)=>`<option value="${i}">${esc(x.name)}</option>`).join('');function render(i){const c=SKILL_DATA[Number(i)];view.innerHTML=`<section class="skill-character"><div class="skill-character-head">${c.portrait?`<img class="character-portrait" src="${c.portrait}" alt="${esc(c.name)}">`:''}<div><h2>${esc(c.name)}</h2><p class="muted">技能資料</p></div></div><div class="skill-list">${c.skills.map(s=>`<article class="skill-card"><div class="skill-icon-wrap">${(s.images||[]).map(im=>`<img class="skill-icon" src="${im}" loading="lazy" alt="${esc(s.name)}">`).join('')}</div><div class="skill-main"><div class="skill-title"><span class="skill-key">${esc(s.key)}</span><strong>${fmt(s.name)}</strong></div><div class="skill-meta"><span>等級上限：${esc(s.max)}</span><span>冷卻：${esc(s.cd)}</span></div><div class="skill-desc">${fmt(s.desc||'')}</div></div></article>`).join('')}</div></section>`}select.addEventListener('change',e=>render(e.target.value));render(0);</script><script src="../mobile-nav.js"></script>
+<script src="../skill-data.js"></script><script src="../npc-data.js"></script><script>
+const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const fmt=v=>esc(v).replaceAll('\n','<br>');
+const select=document.getElementById('classSelect'),view=document.getElementById('skillView'),roleGroups=document.getElementById('skillRoleGroups');
+select.innerHTML=SKILL_DATA.map((x,i)=>`<option value="${i}">${esc(x.name)}</option>`).join('');
+const ROLE_GROUPS=[
+  {key:'tank',icon:'🛡️',label:'坦克',names:['冠軍','復仇者','符文大師']},
+  {key:'melee',icon:'⚔️',label:'近戰',names:['暗殿武士','上忍','生命主宰','幻影刺客','巫妖','殲滅者','惡魔']},
+  {key:'ranged',icon:'🏹',label:'遠程',names:['怪物獵人','狙擊手']},
+  {key:'mage',icon:'🔮',label:'法師',names:['聖人','聖殿武士','召喚師','白袍法師','秘術大師（活動取得）']},
+  {key:'support',icon:'🧩',label:'輔助',names:['大審判者','教皇']},
+  {key:'healer',icon:'💗',label:'補師',names:['光縛者','先知']}
+];
+const indexByName=new Map(SKILL_DATA.map((x,i)=>[x.name,i]));
+const CLASS_ROUTE_MAP=new Map();
+if(Array.isArray(window.NPC_ROUTES||NPC_ROUTES)){
+  (window.NPC_ROUTES||NPC_ROUTES).forEach(route=>{
+    const s=route.stages||[];
+    if(s.length>=6){
+      CLASS_ROUTE_MAP.set(s[4].name,[s[0].name,s[1].name,s[2].name,s[4].name]);
+      CLASS_ROUTE_MAP.set(s[5].name,[s[0].name,s[1].name,s[3].name,s[5].name]);
+    }else if(s.length===4){
+      CLASS_ROUTE_MAP.set(s[3].name,s.map(x=>x.name));
+    }else if(s.length===1){
+      CLASS_ROUTE_MAP.set(s[0].name,[s[0].name]);
+    }
+  });
+}
+CLASS_ROUTE_MAP.set('秘術大師（活動取得）',['活動取得','秘術大師']);
+function routeHtml(name){
+  const route=CLASS_ROUTE_MAP.get(name)||[];
+  if(!route.length)return '';
+  return `<div class="class-route"><span class="class-route-label">職業路線</span>${route.map((step,idx)=>`${idx?'<span class="class-route-arrow">›</span>':''}<span class="class-route-step ${idx===route.length-1?'current':''}">${esc(step)}</span>`).join('')}</div>`;
+}
+function buildRoleGroups(){
+  const used=new Set();
+  roleGroups.innerHTML=ROLE_GROUPS.map(group=>{
+    const buttons=group.names.map(name=>{
+      const i=indexByName.get(name);if(i==null)return '';
+      used.add(name);return `<button type="button" class="skill-job-btn" data-skill-index="${i}">${esc(name)}</button>`;
+    }).join('');
+    return buttons?`<section class="skill-role-group role-${group.key}"><div class="skill-role-label"><span>${group.icon}</span><span>${group.label}</span></div><div class="skill-role-jobs">${buttons}</div></section>`:'';
+  }).join('');
+  const extra=SKILL_DATA.map((x,i)=>({x,i})).filter(v=>!used.has(v.x.name));
+  if(extra.length){roleGroups.insertAdjacentHTML('beforeend',`<section class="skill-role-group role-support"><div class="skill-role-label"><span>✦</span><span>其他</span></div><div class="skill-role-jobs">${extra.map(v=>`<button type="button" class="skill-job-btn" data-skill-index="${v.i}">${esc(v.x.name)}</button>`).join('')}</div></section>`)}
+  roleGroups.addEventListener('click',e=>{const btn=e.target.closest('.skill-job-btn');if(!btn)return;setClass(btn.dataset.skillIndex,true)});
+}
+function syncActive(i){roleGroups.querySelectorAll('.skill-job-btn').forEach(btn=>btn.classList.toggle('active',Number(btn.dataset.skillIndex)===Number(i)))}
+function render(i){const c=SKILL_DATA[Number(i)];if(!c)return;view.innerHTML=`<section class="skill-character"><div class="skill-character-head">${c.portrait?`<img class="character-portrait" src="${c.portrait}" alt="${esc(c.name)}">`:''}<div><h2>${esc(c.name)}</h2>${routeHtml(c.name)}<p class="muted">技能資料</p>${c.audit_note?`<div class="skill-audit-class">✓ ${esc(c.audit_note)}</div>`:''}</div></div><div class="skill-list">${c.skills.map(s=>`<article class="skill-card"><div class="skill-icon-wrap">${(s.images||[]).map(im=>`<img class="skill-icon" src="${im}" loading="lazy" alt="${esc(s.name)}">`).join('')}</div><div class="skill-main"><div class="skill-title"><span class="skill-key">${esc(s.key)}</span><strong>${fmt(s.name)}</strong></div><div class="skill-meta"><span>等級上限：${esc(s.max)}</span><span>冷卻：${esc(s.cd)}</span></div><div class="skill-desc">${fmt(s.desc||'')}</div></div></article>`).join('')}</div></section>`}
+function setClass(i,scroll){select.value=String(i);render(i);syncActive(i);if(scroll&&view)window.scrollTo({top:Math.max(0,view.offsetTop-78),behavior:'smooth'})}
+select.addEventListener('change',e=>setClass(e.target.value,false));
+buildRoleGroups();setClass(0,false);
+</script><script src="../mobile-nav.js"></script>
 <script data-goatcounter="https://twilighteve.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </body></html>

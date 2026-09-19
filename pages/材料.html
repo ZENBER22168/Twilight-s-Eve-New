@@ -42,7 +42,7 @@
 .material-sidebar-collapse:hover{background:#182434}
 .material-all-btn,.material-nav-group-btn,.material-nav-item{width:100%;border:0;text-align:left;cursor:pointer;color:#eaf1f8}
 .material-all-btn{padding:13px 14px;border-radius:10px;background:#111a24;font-size:16px;font-weight:900;margin-bottom:8px;border:1px solid #293646}
-.material-all-btn:hover,.material-all-btn.active{background:linear-gradient(90deg,#c88796,#d99aa7);color:#fff;border-color:#d89eaa}
+.material-all-btn:hover,.material-all-btn.active{background:linear-gradient(90deg,#26364a,#34354f);color:#f4f7fb;border-color:#52657d;box-shadow:inset 3px 0 #8fa4c1}
 .material-nav-group{border-top:1px solid #25303b}
 .material-nav-group-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 9px;background:transparent;font-size:16px;font-weight:900}
 .material-nav-group-btn:hover{background:#111a24}
@@ -71,6 +71,22 @@
 }
 
 
+
+.material-nav-group{--group-color:#8fa0b5;--group-soft:rgba(120,140,165,.08);--group-line:#718399}
+.material-nav-group.tone-dismantle{--group-color:#a79ab9;--group-soft:rgba(167,154,185,.09);--group-line:#8f80a4}
+.material-nav-group.tone-basic{--group-color:#86a8bd;--group-soft:rgba(134,168,189,.09);--group-line:#6f91a7}
+.material-nav-group.tone-angel{--group-color:#b4a27f;--group-soft:rgba(180,162,127,.085);--group-line:#998764}
+.material-nav-group.tone-late{--group-color:#9096ba;--group-soft:rgba(144,150,186,.09);--group-line:#777fa6}
+.material-nav-group-btn{color:#dce5ee;border-radius:8px;border-left:3px solid transparent;padding-left:10px}
+.material-nav-group-btn:hover{background:rgba(116,137,161,.065)}
+.material-nav-group.open .material-nav-group-btn{background:var(--group-soft);border-left-color:var(--group-line);color:#f4f7fb}
+.material-nav-group-label{display:inline-flex;align-items:center;gap:9px}
+.material-nav-group-label::before{content:'';width:6px;height:6px;border-radius:2px;background:var(--group-color);opacity:.9}
+.material-nav-group .material-nav-arrow{color:#7f90a4;opacity:.72}
+.material-nav-group.open .material-nav-arrow{color:var(--group-color);opacity:.9}
+.material-nav-group .material-nav-item:hover{background:rgba(111,132,155,.07)}
+.material-nav-group .material-nav-item.active{background:var(--group-soft);color:#fff;font-weight:900;box-shadow:inset 3px 0 var(--group-line)}
+
 /* 第149次：鍛造材料&合成商人恢復原本白色文字；分解材料位置保留稀有度配色。 */
 .material-main .data-section:not(.dismantle-section) .item-name strong,
 .material-main .data-section:not(.dismantle-section) .item-name strong *,
@@ -78,7 +94,7 @@
 .material-main .data-section:not(.dismantle-section) .cost *{color:#f3f6fa !important}
 .material-main .data-section:not(.dismantle-section) .item-name>span{color:#9eb1c8 !important}
 </style>
-</head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html" class="active">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header><main class="wrap material-wrap"><h1>🧱 鍛造材料&合成商人</h1>
+</head><body><header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html" class="active">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">📂 讀檔・配裝・傷害護甲</a></nav></header><main class="wrap material-wrap"><h1>🧱 鍛造材料&合成商人</h1>
 <div id="materialLayout" class="material-page-layout">
 <aside class="material-sidebar" aria-label="鍛造材料與合成商人分類">
   <div class="material-sidebar-head"><span class="material-sidebar-title">材料／商人分類</span><button id="materialSidebarCollapse" class="material-sidebar-collapse" type="button" title="收合分類">◀</button></div>
@@ -195,10 +211,10 @@ Promise.resolve(loadDB()).then(d=>{
  dismantleOption.textContent='分解材料位置';
  sel.appendChild(dismantleOption);
  const MATERIAL_NAV_GROUPS=[
-   {label:'基礎材料／商人',values:['0','1']},
-   {label:'天使／惡魔商人',values:['2','3','4','5','6']},
-   {label:'後期材料／合成',values:['7','8','9','10','11']},
-   {label:'分解材料',values:['dismantle']}
+   {label:'分解材料',tone:'dismantle',values:['dismantle']},
+   {label:'基礎材料／商人',tone:'basic',values:['0','1']},
+   {label:'天使／惡魔商人',tone:'angel',values:['2','3','4','5','6']},
+   {label:'後期材料／合成',tone:'late',values:['7','8','9','10','11']}
  ];
  function materialLabel(value){
    if(value==='dismantle')return '分解材料位置';
@@ -208,7 +224,7 @@ Promise.resolve(loadDB()).then(d=>{
  function buildMaterialSidebar(){
    materialNav.innerHTML=MATERIAL_NAV_GROUPS.map((cat,idx)=>{
      const items=cat.values.map(value=>{const label=materialLabel(value);if(!label)return '';return `<button class=\"material-nav-item\" type=\"button\" data-material-value=\"${esc(value)}\">${esc(label)}</button>`}).join('');
-     return `<div class=\"material-nav-group\" data-material-group=\"${idx}\"><button class=\"material-nav-group-btn\" type=\"button\"><span>${esc(cat.label)}</span><span class=\"material-nav-arrow\">▶</span></button><div class=\"material-nav-items\">${items}</div></div>`;
+     return `<div class=\"material-nav-group tone-${esc(cat.tone||'basic')}\" data-material-group=\"${idx}\"><button class=\"material-nav-group-btn\" type=\"button\"><span class=\"material-nav-group-label\">${esc(cat.label)}</span><span class=\"material-nav-arrow\">▶</span></button><div class=\"material-nav-items\">${items}</div></div>`;
    }).join('');
    materialNav.querySelectorAll('.material-nav-group-btn').forEach(btn=>btn.addEventListener('click',()=>{
      const group=btn.closest('.material-nav-group');

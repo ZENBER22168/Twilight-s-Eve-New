@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>角色讀取&配裝｜新暮光之晨</title><link rel="icon" href="../images/site-icon.png"><link rel="stylesheet" href="../style.css"><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>讀檔・配裝・傷害護甲｜新暮光之晨</title><link rel="icon" href="../images/site-icon.png"><link rel="stylesheet" href="../style.css"><style>
 .reader-wrap{max-width:1180px;margin:0 auto}.reader-note{padding:14px 16px;border:1px solid #344356;border-radius:14px;background:#0d141d;color:#cbd7e5;line-height:1.7}.reader-note strong{color:#ffd46a}
 .reader-upload{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 10px}.reader-upload input,.reader-upload select{padding:12px;background:#101821;border:1px solid #344356;border-radius:10px;color:#fff}.reader-btn{padding:12px 18px;border:1px solid #6c5a2b;border-radius:10px;background:#2b2415;color:#ffd979;font-weight:900;cursor:pointer}.reader-btn.primary{background:#392e18;border-color:#a47d2f}.reader-btn.secondary{background:#111a24;border-color:#3a4a5d;color:#d8e3ef}.folder-picker{display:none}.reader-hints{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.reader-hint{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #283646;border-radius:999px;background:#0b121a;color:#9fb0c4;font-size:12px;line-height:1.45}.reader-hint strong{color:#dce7f3}.save-picker-wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 18px;padding:12px 14px;border:1px solid #283646;border-radius:12px;background:#0b121a}.save-picker-wrap label{font-weight:900;color:#d9e5f1}.save-picker-wrap select{min-width:min(520px,100%);max-width:100%;padding:10px 12px;background:#101821;border:1px solid #344356;border-radius:9px;color:#fff}.scan-summary{color:#8fa2b8;font-size:13px}.auto-badge{display:inline-flex;align-items:center;padding:4px 9px;border:1px solid #6d5a2b;border-radius:999px;background:#2a2112;color:#ffd876;font-size:12px;font-weight:900}
 .reader-card{border:1px solid #29323e;border-radius:16px;background:#0e151e;padding:18px;margin:18px 0}.reader-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat{padding:12px;border:1px solid #283646;border-radius:12px;background:#0a1017}.stat b{display:block;color:#8fa2b8;font-size:12px}.stat strong{display:block;margin-top:4px;color:#fff;font-size:20px}
@@ -120,11 +120,79 @@
 .imported-note{margin:0 0 10px!important;padding:8px 10px!important;font-size:11px!important;line-height:1.45!important}.workspace-hidden-btn{display:none!important}.workspace-mode-badge[hidden]{display:none!important}
 @media(max-width:820px){.loadout-simple-row{grid-template-columns:1fr 1fr}.loadout-mini-details{grid-column:1/-1}.loadout-mini-details>summary{justify-content:flex-start}.loadout-mini-panel{left:0;right:auto;width:min(520px,90vw)}.loadout-save-body{grid-template-columns:1fr auto auto}.loadout-save-body .workspace-reader-link{grid-column:1/-1;text-align:left}.loadout-save-body #saveImportAge{grid-column:1/-1}.loadout-save-details>summary{align-items:flex-start;flex-direction:column}.loadout-save-status{text-align:left;white-space:normal}}
 @media(max-width:560px){.loadout-simple-row{grid-template-columns:1fr}.loadout-profession-control{grid-template-columns:minmax(0,1fr) auto}.loadout-refresh-save{padding-inline:10px}.loadout-mini-details{grid-column:auto}.loadout-save-body{grid-template-columns:1fr 1fr}.loadout-save-body select{grid-column:1/-1}.loadout-save-body #importSave{grid-column:1/-1}.loadout-fold>summary{align-items:flex-start;flex-direction:column;gap:3px}.slots{grid-template-columns:1fr}.loadout-mini-panel{width:calc(100vw - 54px)}}
+
+/* v177：整套裝備能力。保留原版深色卡片，只在六格配裝下方加入即時計算。 */
+.gear-total-panel{margin:12px 0 16px;padding:15px 16px;border:1px solid #34495d;border-radius:15px;background:linear-gradient(145deg,#0d151e,#091018);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.gear-total-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}.gear-total-head h3{margin:0;color:#f1e2b7;font-size:18px}.gear-total-head p{margin:4px 0 0;color:#8397aa;font-size:11px;line-height:1.55}.gear-total-badges{display:flex;gap:6px;flex-wrap:wrap}.gear-total-badge{display:inline-flex;align-items:center;padding:5px 8px;border:1px solid #486076;border-radius:999px;background:#10202d;color:#a9d3f2;font-size:10px;font-weight:900}.gear-total-badge.formula{border-color:#6f5c2d;background:#211b10;color:#f0d690}
+.gear-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.gear-stat{min-width:0;padding:10px 11px;border:1px solid #293b4c;border-radius:11px;background:#0a1118}.gear-stat span{display:block;color:#7f93a8;font-size:10px;font-weight:800}.gear-stat strong{display:block;margin-top:3px;color:#eef5fb;font-size:18px;line-height:1.2;word-break:break-word}.gear-stat small{display:block;margin-top:4px;color:#70869b;font-size:9px;line-height:1.45}.gear-stat.haste{border-color:#66552d;background:#17140d}.gear-stat.haste strong{color:#ffe08b}.gear-derived{margin-top:9px;padding:9px 11px;border:1px solid #4b4261;border-radius:10px;background:#15111f;color:#c9b6e8;font-size:11px;line-height:1.55}.gear-derived .warn{display:block;margin-top:5px;color:#ffd38a}.gear-derived .mapok{display:block;margin-top:4px;color:#8fd7b3}.gear-total-empty{padding:13px;border:1px dashed #304152;border-radius:10px;color:#71859a;font-size:12px;text-align:center}
+.gear-special-fold{margin-top:10px;border-top:1px solid #263646;padding-top:9px}.gear-special-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#b9c9d9;font-size:11px;font-weight:900}.gear-special-fold>summary::-webkit-details-marker{display:none}.gear-special-fold>summary small{color:#6f8499;font-size:9px}.gear-special-list{display:grid;gap:7px;margin-top:9px}.gear-special-item{padding:8px 10px;border:1px solid #283847;border-radius:9px;background:#091019}.gear-special-item b{display:block;color:#e8edf2;font-size:11px;margin-bottom:3px}.gear-special-item span{display:block;color:#91a4b7;font-size:10px;line-height:1.5;white-space:pre-line}.gear-total-foot{margin-top:9px;color:#677b90;font-size:9px;line-height:1.5}
+/* v180：角色 Lv.300 裸裝 + 6 格裝備 + 屬性轉換 = 最終面板 */
+.hero-total-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:10px}.hero-total-stat{min-width:0;padding:11px 12px;border:1px solid #405467;border-radius:11px;background:linear-gradient(145deg,#101b25,#0b1219)}.hero-total-stat span{display:block;color:#90a6ba;font-size:10px;font-weight:900}.hero-total-stat strong{display:block;margin-top:3px;color:#fff4c7;font-size:20px;line-height:1.2;word-break:break-word}.hero-total-stat small{display:block;margin-top:5px;color:#7890a5;font-size:9px;line-height:1.5}.hero-total-stat.primary{border-color:#725f2e;background:linear-gradient(145deg,#1c180f,#0d1217)}.hero-total-stat.primary strong{color:#ffe08b}.hero-total-stat.derived{border-color:#3d5265}.hero-total-stat.attack{grid-column:span 2}.hero-total-stat.panel-attack{border-color:#47627a}.panel-attack-breakdown{display:flex;align-items:baseline;gap:5px;flex-wrap:wrap;margin-top:4px;font-variant-numeric:tabular-nums}.panel-attack-breakdown b{font-size:15px;line-height:1.2}.panel-attack-breakdown .attack-white{color:#eef4fa}.panel-attack-breakdown .attack-plus{color:#72889b;font-style:normal;font-size:12px}.panel-attack-breakdown .attack-green{color:#4ee67a}.hero-total-stat.panel-attack .panel-attack-total{margin-top:4px;color:#ffe08b;font-size:16px}.hero-total-grid.compact .hero-total-stat.panel-attack small{display:block;margin-top:3px;color:#71879b;font-size:8px}.hero-conversion{display:none!important;gap:6px;flex-wrap:wrap;margin:0 0 12px;padding:9px 10px;border:1px solid #2d4051;border-radius:10px;background:#091019}.hero-conversion-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;border:1px solid #33495d;background:#101b25;color:#a9bfd2;font-size:9px;font-weight:800}.hero-conversion-chip b{color:#e7f1fa}.hero-conversion-chip.active{border-color:#66552d;background:#1a160d;color:#e9d391}.hero-conversion-chip.active b{color:#ffe08b}.gear-bonus-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:5px 0 8px;padding-top:10px;border-top:1px solid #263646}.gear-bonus-head b{color:#cbd9e6;font-size:12px}.gear-bonus-head span{color:#73889d;font-size:9px}.gear-total-badge.hero{border-color:#725f2e;background:#211b10;color:#ffe08b}.gear-stat.primary-add{border-color:#594d2d;background:#15130d}.gear-stat.primary-add strong{color:#f4d887}
+@media(max-width:900px){.hero-total-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-total-stat.attack{grid-column:span 2}}@media(max-width:520px){.hero-total-grid{grid-template-columns:1fr 1fr}.hero-total-stat{padding:10px}.hero-total-stat strong{font-size:17px}.hero-total-stat.attack{grid-column:1/-1}.hero-conversion{display:grid;grid-template-columns:1fr}.hero-conversion-chip{border-radius:8px}}
+@media(max-width:900px){.gear-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.gear-stat-grid{grid-template-columns:1fr 1fr}.gear-stat strong{font-size:16px}}
+/* 181：總能力精簡 + 技能傷害／CD */
+.hero-total-grid.compact{grid-template-columns:repeat(5,minmax(0,1fr));margin-bottom:12px}.hero-total-grid.compact .hero-total-stat{padding:10px 11px}.hero-total-grid.compact .hero-total-stat strong{font-size:18px}.hero-total-grid.compact .hero-total-stat small{display:none}.skill-combat-panel{margin:10px 0 0;padding:12px;border:1px solid #33495d;border-radius:12px;background:linear-gradient(145deg,#0c151e,#091019)}.skill-combat-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:9px}.skill-combat-head h4{margin:0;color:#e8f1fa;font-size:13px}.skill-combat-head p{margin:3px 0 0;color:#71879c;font-size:9px;line-height:1.5}.skill-combat-badge{white-space:nowrap;padding:5px 8px;border:1px solid #66552d;border-radius:999px;background:#1a160d;color:#ffe08b;font-size:9px;font-weight:900}.skill-damage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.skill-damage-card{padding:9px 10px;border:1px solid #2f4355;border-radius:10px;background:#0b131b}.skill-damage-top{display:flex;align-items:center;gap:7px}.skill-key{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:7px;background:#172431;border:1px solid #3a5369;color:#b8d7ef;font-size:10px;font-weight:1000}.skill-damage-name{min-width:0;flex:1;color:#dfeaf4;font-size:11px;font-weight:900}.skill-level{color:#6f879b;font-size:8px}.skill-damage-main{display:flex;align-items:baseline;gap:6px;margin-top:6px;flex-wrap:wrap}.skill-damage-main strong{font-size:18px;color:#ffe08b}.skill-damage-main span{font-size:9px;color:#8ea5b8}.skill-damage-lines{display:grid;gap:3px;margin-top:5px}.skill-damage-line{font-size:9px;color:#a9bfd2}.skill-damage-line b{color:#eaf4fb}.skill-damage-note{margin-top:5px;color:#7f94a7;font-size:8px;line-height:1.45}.skill-damage-empty{padding:10px;color:#7f94a7;font-size:10px}.combat-detail-fold{margin-top:10px;border-top:1px solid #263646}.combat-detail-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:10px 2px 2px;color:#9fb3c5;font-size:10px;font-weight:900}.combat-detail-fold>summary::-webkit-details-marker{display:none}.combat-detail-fold>summary:after{content:'展開';font-size:8px;color:#667d91}.combat-detail-fold[open]>summary:after{content:'收合'}.combat-detail-body{padding-top:6px}.gear-bonus-head{margin-top:4px}.gear-total-foot.compact-foot{margin-top:9px;padding-top:8px;font-size:8px;line-height:1.5}.skill-source-note{margin-top:7px;color:#6f8599;font-size:8px;line-height:1.5}
+@media(max-width:1000px){.hero-total-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:720px){.hero-total-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.skill-damage-grid{grid-template-columns:1fr}.skill-combat-head{display:block}.skill-combat-badge{display:inline-flex;margin-top:7px}}
+
+.combat-target-breakdown{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.combat-target-breakdown.hidden{display:none!important}.boss-break-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 7px;border:1px solid #2f4355;border-radius:8px;background:#0b141d;color:#9fb1c3;font-size:9px}.boss-break-chip b{color:#e4edf6;font-size:10px}.boss-break-chip.total{border-color:#725e2e;background:#1a160e}.boss-break-chip.total b{color:#ffe08b}.boss-break-source{width:100%;color:#667e94;font-size:8px;line-height:1.5;margin-top:1px}.boss-defense-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;margin-top:2px}.boss-defense-card{padding:8px 9px;border:1px solid #31475a;border-radius:9px;background:#0a141d}.boss-defense-card>span{display:block;color:#7890a5;font-size:8px;font-weight:800}.boss-defense-card>strong{display:block;margin-top:3px;color:#eef5fb;font-size:13px}.boss-defense-card>small{display:block;margin-top:2px;color:#6f8599;font-size:8px}.boss-defense-card.physical{border-color:#66562e;background:#17140d}.boss-defense-card.physical strong{color:#ffe08b}.boss-defense-card.magic{border-color:#355877;background:#0c1822}.boss-defense-card.magic strong{color:#9fd7ff}.boss-defense-card.absolute{border-color:#53456e;background:#14101c}.boss-defense-card.absolute strong{color:#d7bdff}@media(max-width:650px){.boss-defense-summary{grid-template-columns:1fr}.armor-dummy-result{white-space:normal}}
+/* v184：總能力版面收斂 + 2.74C 護甲測試草人 */
+.hero-total-grid.compact{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:7px}
+.hero-total-grid.compact .hero-total-stat{padding:10px 11px}.hero-total-grid.compact .hero-total-stat strong{font-size:18px}
+.hero-combat-strip{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 10px}.hero-combat-strip.empty{display:none}.hero-combat-chip{display:inline-flex;align-items:center;gap:8px;min-width:0;padding:7px 9px;border:1px solid #33495d;border-radius:9px;background:#0c151e}.hero-combat-chip b{color:#dce9f4;font-size:11px;white-space:nowrap}.hero-combat-chip small{color:#71879c;font-size:8px}.hero-combat-chip.damage{border-color:#6b592d;background:#18150e}
+.hero-combat-chip.damage b{color:#ffe08b}.target-basic-attack{display:block;margin:10px 0 0;padding:11px 12px;border:1px solid #5c4e2b;border-radius:10px;background:#17140d}.target-basic-attack.hidden{display:none}.basic-attack-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.basic-attack-head>b{color:#ffe08b;font-size:12px}.basic-attack-head>small{color:#72869a;font-size:8px}.basic-attack-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:8px}.basic-attack-value{padding:8px 9px;border:1px solid #3d3826;border-radius:8px;background:#11120e}.basic-attack-value span{display:block;color:#8f9daa;font-size:8px}.basic-attack-value strong{display:block;margin-top:3px;color:#ffe08b;font-size:16px;font-variant-numeric:tabular-nums}.basic-attack-value small{display:block;margin-top:3px;color:#72869a;font-size:8px}.basic-attack-related{margin-top:8px;border-top:1px solid #332f22;padding-top:7px}.basic-attack-related>summary{cursor:pointer;list-style:none;color:#9e9068;font-size:8px;font-weight:900}.basic-attack-related>summary::-webkit-details-marker{display:none}.basic-attack-related>summary:after{content:' ＋';color:#746b50}.basic-attack-related[open]>summary:after{content:' －'}.basic-attack-related-list{display:grid;gap:4px;margin-top:6px}.basic-attack-related-line{padding:5px 7px;border-radius:7px;background:#111820;color:#8fa4b6;font-size:8px;line-height:1.45}.basic-attack-related-line b{color:#c8d6e2}.combat-target-select{min-width:min(430px,100%)}.combat-target-note strong{color:#f0d690}
+
+.skill-combat-panel{padding:12px 13px}.skill-combat-head{margin-bottom:8px}.skill-combat-head h4{font-size:14px}.skill-combat-head p{max-width:560px}
+.armor-dummy-panel{margin:0 0 10px;padding:9px 10px;border:1px solid #405467;border-radius:10px;background:#0a121a}.armor-dummy-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}.armor-dummy-title>div{display:flex;align-items:baseline;gap:8px;min-width:0}.armor-dummy-title strong{color:#dce9f4;font-size:11px}.armor-dummy-title span{color:#71879c;font-size:8px}.armor-dummy-title small{color:#6f8599;font-size:8px;white-space:nowrap}.armor-dummy-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.armor-preset-row{display:flex;gap:4px}.armor-preset-row button{min-width:42px;padding:6px 8px;border:1px solid #344b60;border-radius:7px;background:#101c27;color:#a9bfd2;font-size:9px;font-weight:900;cursor:pointer}.armor-preset-row button:hover,.armor-preset-row button.active{border-color:#806a32;background:#211b10;color:#ffe08b}.armor-custom-field{display:flex;align-items:center;gap:5px;padding-left:3px;color:#7f94a7;font-size:8px}.armor-custom-field input{width:84px;padding:6px 7px;border:1px solid #344b60;border-radius:7px;background:#081018;color:#f1f6fa;font-size:10px;font-weight:800}.armor-dummy-result{margin-left:auto;padding:5px 8px;border-radius:999px;background:#16202a;color:#b8d7ef;font-size:9px;font-weight:900;white-space:nowrap}
+.skill-damage-grid{gap:8px}.skill-damage-card{padding:10px 11px}.skill-damage-main{margin-top:7px}.skill-damage-main strong{font-size:19px}.skill-dummy-hit{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px;padding:7px 8px;border:1px solid #5a4c2c;border-radius:8px;background:#17140d}.skill-dummy-hit span{color:#998a64;font-size:8px;font-weight:800}.skill-dummy-hit strong{color:#ffe08b;font-size:15px}.skill-meta-row{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}.skill-meta-pill{display:inline-flex;padding:4px 6px;border-radius:999px;background:#101b25;color:#8ea5b8;font-size:8px;font-weight:800}.skill-meta-pill.armor{background:#131a20;color:#8ca8bc}.skill-card-detail{margin-top:6px;border-top:1px solid #22313e;padding-top:5px}.skill-card-detail>summary{cursor:pointer;list-style:none;color:#6f879b;font-size:8px;font-weight:800}.skill-card-detail>summary::-webkit-details-marker{display:none}.skill-card-detail>summary:after{content:' ＋';color:#5f7588}.skill-card-detail[open]>summary:after{content:' －'}.skill-card-detail .skill-damage-lines{margin-top:6px}.skill-damage-line{display:grid;grid-template-columns:minmax(88px,.8fr) minmax(0,1.5fr);gap:5px 8px;align-items:baseline}.skill-damage-line>b{font-size:8px}.skill-damage-line>span{color:#a9bfd2;font-size:8px}.skill-damage-line>small{grid-column:2;color:#6f8599;font-size:7px}.skill-damage-note{font-size:8px}
+.combat-detail-fold{margin-top:9px}.combat-detail-fold>summary{padding-top:9px}.gear-total-foot.compact-foot{opacity:.82}
+@media(max-width:850px){.hero-total-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.armor-dummy-title{align-items:flex-start;flex-direction:column;gap:3px}.armor-dummy-title>div{align-items:flex-start;flex-direction:column;gap:2px}.armor-dummy-result{margin-left:0}}
+@media(max-width:520px){.gear-total-panel{padding:12px}.gear-total-head p{font-size:10px}.hero-total-grid.compact{grid-template-columns:1fr 1fr}.hero-total-grid.compact .hero-total-stat{padding:9px}.hero-total-grid.compact .hero-total-stat strong{font-size:16px}.hero-combat-strip{display:grid;grid-template-columns:1fr}.hero-combat-chip{justify-content:space-between}.armor-dummy-controls{align-items:stretch}.armor-preset-row{display:grid;grid-template-columns:repeat(4,1fr);width:100%}.armor-preset-row button{min-width:0}.armor-custom-field{justify-content:space-between;width:100%;padding-left:0}.armor-custom-field input{width:110px}.armor-dummy-result{align-self:flex-start}.skill-damage-card{padding:9px}.skill-damage-main strong{font-size:17px}.skill-dummy-hit strong{font-size:14px}.skill-damage-line{grid-template-columns:1fr}.skill-damage-line>small{grid-column:1}.skill-combat-badge{margin-top:6px}}
+
+
+/* v185：實戰結果整合／中文短數字／治療與裝備技能 */
+.combat-target-panel{display:grid;gap:7px;margin:0 0 10px}.combat-target-row{padding:9px 10px;border:1px solid #405467;border-radius:10px;background:#0a121a}.combat-target-label{display:flex;align-items:baseline;gap:8px;min-width:0;margin-bottom:7px}.combat-target-label strong{color:#dce9f4;font-size:11px}.combat-target-label span{color:#71879c;font-size:8px}.combat-target-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.combat-target-select{min-width:190px;padding:6px 8px;border:1px solid #344b60;border-radius:7px;background:#081018;color:#dce9f4;font-size:9px;font-weight:800}.combat-target-note{display:block;margin-top:6px;color:#60758a;font-size:7px;line-height:1.45}
+.heal-test-fold{margin-top:7px;border:1px solid #355746;border-radius:8px;background:#08130e;overflow:hidden}.heal-test-fold>summary{cursor:pointer;list-style:none;padding:7px 8px;color:#8fe4b3;font-size:8px;font-weight:900}.heal-test-fold>summary::-webkit-details-marker{display:none}.heal-test-fold>summary:after{content:' ＋';color:#5f9a79}.heal-test-fold[open]>summary:after{content:' －'}.heal-test-body{padding:8px;border-top:1px solid #244536}.heal-test-formula{margin-bottom:6px;color:#6f927f;font-size:7px;line-height:1.45}.heal-test-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.heal-test-controls.one{grid-template-columns:1fr}.heal-test-controls label{display:grid;gap:3px;color:#719283;font-size:7px}.heal-test-controls input{width:100%;box-sizing:border-box;padding:7px 8px;border:1px solid #35604f;border-radius:7px;background:#07120e;color:#e5fff2;font-size:10px;font-weight:800}.heal-test-result{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:7px;padding:7px 8px;border-radius:7px;background:#0d1d17}.heal-test-result span{color:#78a990;font-size:8px}.heal-test-result strong{color:#8fe4b3;font-size:14px}.heal-test-missing{margin-top:5px;color:#6f927f;font-size:7px}.target-dependent-value{font-size:11px!important;color:#8fe4b3!important}
+.skill-result-stack{display:grid;gap:5px;margin-top:7px}.skill-result-row{display:flex;align-items:baseline;justify-content:space-between;gap:9px;padding:7px 8px;border-radius:8px;background:#101822}.skill-result-row span{font-size:8px;color:#8ea5b8}.skill-result-row strong{font-size:16px;color:#ffe08b;text-align:right}.skill-result-row.heal{background:#0d1d17}.skill-result-row.heal span{color:#78a990}.skill-result-row.heal strong{color:#8fe4b3}.skill-result-row.support strong{color:#bcd9ef}.skill-result-row.mana{background:#0d1822}.skill-result-row.mana strong{color:#91caff}
+.equipment-recovery-panel{margin-top:10px;padding-top:9px;border-top:1px solid #263646}.equipment-recovery-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:7px}.equipment-recovery-head>div{display:flex;align-items:baseline;gap:8px}.equipment-recovery-head strong{color:#dce9f4;font-size:11px}.equipment-recovery-head span,.equipment-recovery-head small{color:#71879c;font-size:8px}.equipment-recovery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.equipment-recovery-card{padding:9px 10px;border:1px solid #355746;border-radius:10px;background:#0a1611}.equipment-recovery-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.equipment-recovery-top b{min-width:0;color:#e1f1e8;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.equipment-recovery-top small{color:#6f927f;font-size:7px;white-space:nowrap}.equipment-recovery-main{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:6px}.equipment-recovery-main span{color:#78a990;font-size:8px}.equipment-recovery-main strong{color:#8fe4b3;font-size:16px}.equipment-recovery-card.mana{border-color:#34516b;background:#09141d}.equipment-recovery-card.mana .equipment-recovery-main strong{color:#91caff}.equipment-recovery-card.buff{border-color:#62572f;background:#17140c}.equipment-recovery-card.buff .equipment-recovery-main strong{color:#ffe08b}.equipment-recovery-meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}.equipment-recovery-meta span{padding:3px 6px;border-radius:999px;background:#101b17;color:#749486;font-size:7px}.equipment-recovery-note{margin-top:5px;color:#678071;font-size:7px;line-height:1.45}
+.hero-total-stat strong,.skill-damage-main strong,.skill-result-row strong,.skill-dummy-hit strong,.equipment-recovery-main strong{font-variant-numeric:tabular-nums}
+.hero-total-stat strong[title],.skill-result-row strong[title],.skill-dummy-hit strong[title],.equipment-recovery-main strong[title]{cursor:help}
+@media(max-width:850px){.combat-target-controls{align-items:stretch}.combat-target-select{width:100%}.equipment-recovery-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.combat-target-label{align-items:flex-start;flex-direction:column;gap:2px}.heal-test-controls{grid-template-columns:1fr}.equipment-recovery-head>div{display:grid;gap:2px}}
+
+
+/* v191：移除常駐治療目標，目標生命型治療改卡片內測試；百分比最大 HP 回血自動換算 */
+.role-hub-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;position:sticky;top:72px;z-index:8}
+.role-hub-tab{min-height:48px;font-size:16px}
+.combat-jump-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px;padding:12px 14px;border:1px solid #2c3c4e;border-radius:12px;background:#0d151e;color:#8fa3b8;font-size:13px}
+.combat-jump-btn{border:1px solid #6d5a2b;background:#2a2112;color:#ffd876;border-radius:10px;padding:10px 14px;font-weight:900;cursor:pointer}.combat-jump-btn:hover{border-color:#b88d36}.combat-jump-btn.secondary{border-color:#3b5067;background:#111d2a;color:#cfe5fb}
+.combat-workbench-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:4px 0 14px}.combat-workbench-head h2{margin:0 0 5px;font-size:26px}.combat-workbench-head p{margin:0;color:#8fa3b8;line-height:1.6;max-width:900px}
+.combat-workbench .gear-total-panel{margin-top:0}.combat-workbench .gear-total-head h3{font-size:22px}
+@media(max-width:720px){.role-hub-tabs{grid-template-columns:1fr;position:static}.role-hub-tab{width:100%}.combat-workbench-head{display:grid}.combat-workbench-head .combat-jump-btn{width:100%}}
+
+
+.loadout-ability-panel{margin-top:18px}
+.loadout-skill-cd-panel{margin-top:14px;border:1px solid #294458;border-radius:14px;padding:14px;background:rgba(7,19,29,.72)}
+.loadout-skill-cd-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.loadout-skill-cd-head>div{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.loadout-skill-cd-head b{color:#e8f7ff}
+.loadout-skill-cd-head span,.loadout-skill-cd-head small{color:#83a9be;font-size:12px}
+.loadout-skill-cd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}
+.loadout-skill-cd-card{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #284456;border-radius:12px;padding:10px 12px;background:#091621}
+.loadout-skill-cd-card .skill-id{display:flex;gap:8px;align-items:center;min-width:0}
+.loadout-skill-cd-card .skill-id b{display:inline-grid;place-items:center;min-width:28px;height:28px;border-radius:8px;background:#102839;color:#8ee8ff}
+.loadout-skill-cd-card .skill-id span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#d9edf7}
+.loadout-skill-cd-card .cd-value{text-align:right}
+.loadout-skill-cd-card .cd-value strong{display:block;color:#7ff1c8}
+.loadout-skill-cd-card .cd-value small{display:block;color:#789aae;font-size:11px}
+.combat-damage-only{margin-top:14px}
+.compact-note{font-size:11px;opacity:.8}
+
+.test-status-badge{display:inline-flex;align-items:center;margin-left:7px;padding:2px 8px;border:1px solid #9a6b2d;border-radius:999px;background:#2a1e0f;color:#ffd17a;font-size:11px;font-weight:900;vertical-align:middle;white-space:nowrap}.role-hub-tab .test-status-badge{margin-left:5px;padding:1px 6px;font-size:10px}.combat-workbench-head h2{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
 </style></head><body>
-<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html" class="active">👤 角色讀取&配裝</a></nav></header>
-<main class="wrap"><h1>👤 角色讀取&amp;配裝</h1><p class="muted">同一頁完成存檔讀取、角色切換、配裝與升級素材規劃。</p>
-<div class="role-hub-tabs" role="tablist"><button class="role-hub-tab active" type="button" data-role-tab="reader">📂 角色讀取</button><button class="role-hub-tab" type="button" data-role-tab="loadout">🛡️ 配裝／升級規劃</button></div>
-<section class="role-hub-panel active reader-wrap" data-role-panel="reader"><h2>📂 角色讀取</h2>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html" class="active">📂 讀檔・配裝・傷害護甲</a></nav></header>
+<main class="wrap"><h1>📂 讀檔・配裝・傷害護甲</h1><p class="muted">建議流程：先讀 TXT 看角色與持有裝備 → 帶入配裝調整 6 格與技能 CD → 最後到傷害護甲測 Boss 普攻與技能實傷。</p>
+<div class="role-hub-tabs" role="tablist"><button class="role-hub-tab active" type="button" data-role-tab="reader">📂 讀檔</button><button class="role-hub-tab" type="button" data-role-tab="loadout">⚔️ 配裝</button><button class="role-hub-tab" type="button" data-role-tab="combat">🎯 傷害護甲 <span class="test-status-badge">測試中</span></button></div>
+<section class="role-hub-panel reader-wrap active" data-role-panel="reader"><h2>📂 讀檔</h2>
 <div class="reader-upload"><button id="pickFolder" class="reader-btn primary" type="button">📁 選擇／更換存檔資料夾</button><button id="refreshFolder" class="reader-btn secondary" type="button" disabled>🔄 刷新</button><button id="goLoadout" class="reader-btn secondary" type="button" disabled>🛡️ 帶入配裝／升級規劃</button><input id="folder" class="folder-picker" type="file" accept=".txt,text/plain" webkitdirectory directory multiple><button id="demo" class="reader-btn" type="button">清除結果</button></div>
 <div class="reader-hints" aria-label="存檔讀取提示"><span class="reader-hint">ℹ️ <strong>僅顯示配裝頁已收錄的最終職業角色</strong>，前期轉職角色不列入。</span><span class="reader-hint">🛒 部分前期商店購買裝備可能沒有圖片，屬正常情況。</span></div>
 <div id="savePickerWrap" class="save-picker-wrap hidden"><label for="savePicker">切換最終職業角色：</label><select id="savePicker"></select><span id="scanSummary" class="scan-summary"></span></div>
@@ -138,7 +206,7 @@
     <aside class="reader-card"><h2>🔨 鍛造素材</h2><p class="forge-material-note">數量使用「身上＋所有倉庫」合計；未持有也會顯示 × 0。</p><div id="forgeMaterials" class="forge-material-groups"></div></aside>
   </div>
 </section></section>
-<section class="role-hub-panel" data-role-panel="loadout"><h2>🛡️ 我的角色＆配裝</h2><p class="muted loadout-one-line">選職業；有讀到存檔時會直接列在該職業下方。點 6 格換裝、需要就儲存。</p>
+<section class="role-hub-panel" data-role-panel="loadout"><h2>⚔️ 配裝</h2><p class="muted loadout-one-line">選職業；有讀到存檔時會直接列在該職業下方。點 6 格換裝、需要就儲存。</p>
 <section class="loadout-simplebar">
   <div class="loadout-simple-row">
     <div class="loadout-profession-control"><label class="loadout-simple-field"><span>職業／存檔</span><select id="profession" aria-label="職業或存檔角色"><option value="">— 請選擇職業 —</option></select></label><button id="refreshLoadoutSaveBtn" class="loadout-refresh-save" type="button" title="重新讀取已記住的存檔資料夾">🔄 刷新存檔</button></div>
@@ -151,14 +219,89 @@
 <div id="builderMain" class="builder-main is-locked"><div id="importedNote"></div>
   <div class="loadout-section-head simple"><div><h3>我的 6 格配裝</h3><p>直接點每一格的「更換／升級」即可；不用先選模式。</p></div><button id="clearAll" class="clear-btn loadout-clear-top" type="button">清空目前配裝</button></div>
   <div class="loadout-primary-slots"><div id="slots" class="slots"></div></div>
+  <div class="combat-jump-row"><button id="openCombatTab" type="button" class="combat-jump-btn">🎯 用這套裝備測試傷害／護甲</button><span>目前 6 格配裝會直接帶入傷害護甲，不用重選。</span></div>
   <section id="ownedSwapPanel" class="owned-swap-panel hidden" aria-hidden="true"><div id="ownedSwapGrid"></div></section>
+
+  <section id="gearTotalPanel" class="gear-total-panel loadout-ability-panel">
+    <div class="gear-total-head"><div><h3>📊 配裝後能力</h3><p>只保留配裝時會直接比較的結果：三圍、HP／MP、護甲、攻速；物理職業的攻擊面板會像遊戲一樣分成白字基礎與綠字加成。法師／補師不顯示攻擊面板。技能 CD 直接看下方。</p></div><div class="gear-total-badges"><span id="heroTotalJob" class="gear-total-badge hero">尚未選職業</span><span id="gearEquippedCount" class="gear-total-badge">0 / 6 件</span><span class="gear-total-badge formula">2.74C 公式</span></div></div>
+    <div id="heroTotalGrid" class="hero-total-grid compact"></div>
+    <div id="heroCombatStrip" class="hero-combat-strip"></div>
+    <section class="loadout-skill-cd-panel">
+      <div class="loadout-skill-cd-head"><div><b>⏱️ 技能 CD</b><span>依目前裝備的技能疾速自動換算，方便配裝時直接比較。</span></div><small id="loadoutSkillHasteBadge">技能疾速 0%</small></div>
+      <div id="loadoutSkillCdGrid" class="loadout-skill-cd-grid"></div>
+    </section>
+    <details class="combat-detail-fold loadout-detail-fold"><summary>📋 查看其他裝備效果</summary><div class="combat-detail-body">
+      <div id="heroConversion" class="hero-conversion" hidden></div>
+      <div id="gearBonusBlock">
+        <div class="gear-bonus-head"><b>🧩 其他裝備數值</b><span>只列上方最終面板沒有直接顯示的項目</span></div>
+        <div id="gearStatGrid" class="gear-stat-grid"></div>
+      </div>
+      <div id="gearDerived" class="gear-derived hidden"></div>
+      <section id="equipmentRecoveryPanel" class="equipment-recovery-panel hidden">
+        <div class="equipment-recovery-head"><div><strong>🧪 裝備技能／回血</strong><span>自身 HP／MP 類效果直接用目前最終面板換算；目標生命型治療需要時才展開。</span></div><small id="equipmentRecoveryCount">0 項</small></div>
+        <div id="equipmentRecoveryGrid" class="equipment-recovery-grid"></div>
+      </section>
+      <details id="gearSpecialFold" class="gear-special-fold"><summary><span>特殊效果／不直接加總</span><small id="gearSpecialCount">0 項</small></summary><div id="gearSpecialList" class="gear-special-list"></div></details>
+    </div></details>
+    <div class="gear-total-foot compact-foot">全屬性／全能力已直接拆入三圍；物理職業的面板攻擊力依遊戲顯示拆成「白字基礎 ＋ 綠字加成」。實際普攻與額外觸發傷害到「🎯 傷害護甲」測試。</div>
+  </section>
+
   <div class="loadout-folds">
     <details class="loadout-fold"><summary><span>📦 素材需求</span><small>需要升級時再看</small></summary><div class="loadout-fold-body"><div id="materialOverview" class="material-overview"></div><details id="materialDetailBox" class="material-detail-box"><summary>查看詳細素材計算</summary><div class="material-detail-inner"><div class="summary-tabs"><button class="summary-tab active" data-summary-tab="materials" type="button">📦 素材差額</button><button class="summary-tab" data-summary-tab="recipe" type="button">🧪 合成拆解</button><button class="summary-tab" data-summary-tab="selected" type="button">🗡️ 裝備清單</button></div><section id="summaryMaterials" class="summary-card summary-panel active" data-summary-panel="materials"><h2>📦 升級素材差額</h2><div id="materials"></div><div class="hint">已在身上／倉庫的裝備不重算；未持有的鍛造裝備才會加入規劃素材。</div></section><section id="summaryRecipe" class="summary-card summary-panel" data-summary-panel="recipe"><h2>🧪 合成拆解總計</h2><div id="recipeSummary"></div><div class="hint">將可合成素材繼續拆到基礎素材。此區是進階檢查用。</div></section><section id="summarySelected" class="summary-card summary-panel" data-summary-panel="selected"><h2>🗡️ 目前規劃 <span id="jobBadge" class="job-badge"></span></h2><div id="selected" class="selected-list"></div></section><section id="goldSummary" class="gold-summary" hidden><h2>✨ 金武材料整理</h2><div id="goldSummaryBody"></div></section></div></details></div></details>
   </div>
 </div></section>
+<section class="role-hub-panel combat-workbench" data-role-panel="combat">
+  <div class="combat-workbench-head"><div><h2>🎯 傷害護甲 <span class="test-status-badge">測試中</span></h2><p>純實戰測試：直接使用「配裝」目前的職業與 6 格裝備。所有職業都顯示普攻實傷，再往下測可計算的技能實傷。</p></div><button id="backToLoadout" class="combat-jump-btn secondary" type="button">⚔️ 回配裝調整</button></div>
+  <section class="skill-combat-panel combat-damage-only">
+    <div class="skill-combat-head"><div><h4>⚔️ 傷害測試</h4><p>技能 CD 與角色能力放在配裝頁；這裡固定顯示普攻單下實傷，再測技能打這隻 Boss 最後剩多少傷害。</p></div><span id="skillHasteBadge" class="skill-combat-badge compact-note">依配裝能力計算</span></div>
+    <div id="combatTargetPanel" class="combat-target-panel">
+      <div class="combat-target-row">
+        <div class="combat-target-label"><strong>🛡️ 傷害目標</strong><span>物理傷害依實戰總護甲換算；已核對 Boss 的法術減傷會套入魔法技能；真實／絕對傷害不受兩者影響。</span></div>
+        <div class="combat-target-controls">
+          <select id="armorBossPreset" class="combat-target-select" aria-label="副本尾王目標預設">
+            <option value="">自訂／一般草人</option>
+            <optgroup label="Hell｜地獄">
+              <option value="H1">H1｜恐怖魔王｜實戰護甲 308</option>
+              <option value="H2">H2｜深海領主｜實戰護甲 806</option>
+              <option value="H3">H3｜永恆厄運｜實戰護甲 312</option>
+              <option value="H4">H4｜末日守衛｜實戰護甲 158</option>
+            </optgroup>
+            <optgroup label="Impossible｜不可能">
+              <option value="IMP1">IMP1｜神｜實戰護甲 310</option>
+              <option value="IMP2-100">IMP2｜毀滅之龍｜100–76%｜實戰 362</option>
+              <option value="IMP2-75">IMP2｜毀滅之龍｜≤75%｜實戰 362</option>
+              <option value="IMP2-50">IMP2｜毀滅之龍｜≤50%｜實戰 362</option>
+              <option value="IMP2-25">IMP2｜毀滅之龍｜≤25%｜實戰 362</option>
+              <option value="IMP3-100">IMP3｜別茲卜｜100–76%｜實戰 547.64</option>
+              <option value="IMP3-75">IMP3｜別茲卜｜≤75%｜實戰 647.64</option>
+              <option value="IMP3-50">IMP3｜別茲卜｜≤50%｜實戰 747.64</option>
+              <option value="IMP3-25">IMP3｜別茲卜｜≤25%｜實戰 847.64</option>
+              <option value="IMP3-13">IMP3｜別茲卜｜≤13%｜實戰 847.64</option>
+            </optgroup>
+            <optgroup label="Mythic｜神話">
+              <option value="M1-100">M1｜終暮｜100–61%｜實戰 595</option>
+              <option value="M1-60">M1｜終暮｜≤60%｜實戰 595</option>
+              <option value="M1-40">M1｜終暮｜≤40%｜實戰 595</option>
+              <option value="M1-20">M1｜終暮｜≤20%｜實戰 595</option>
+            </optgroup>
+          </select>
+          <div class="armor-preset-row" role="group" aria-label="草人護甲快速選擇"><button type="button" data-armor-preset="0">0</button><button type="button" data-armor-preset="100">100</button><button type="button" data-armor-preset="300">300</button><button type="button" data-armor-preset="500">500</button></div>
+          <label class="armor-custom-field"><span>自訂</span><input id="armorDummyInput" type="number" min="-1000" max="100000" step="1" value="300" inputmode="numeric"></label>
+          <span id="armorDummyReduction" class="armor-dummy-result">物理減傷 75%</span>
+        </div>
+        <small id="combatTargetNote" class="combat-target-note">切換 Boss 後，下方普攻與所有可計算傷害技能會立即更新實際傷害。</small>
+        <div id="combatTargetBreakdown" class="combat-target-breakdown hidden" aria-live="polite"></div>
+      </div>
+      <div id="targetBasicAttack" class="target-basic-attack hidden"></div>
+    </div>
+    <div id="skillDamageGrid" class="skill-damage-grid"></div>
+    <div id="skillSourceNote" class="skill-source-note"></div>
+  </section>
+</section>
+
 </main>
-<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　角色讀取&amp;配裝</div></footer>
-<script src="../profession-thresholds.js"></script><script src="../loadout-rules.js"></script><script src="../event-dungeon-data.js"></script><script src="../save-reader.js"></script><script src="../app-data.js"></script><script src="../skill-data.js"></script><script src="../npc-data.js"></script>
+<footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　讀檔・配裝・傷害護甲</div></footer>
+<script src="../hero-stats-data.js"></script><script src="../profession-thresholds.js"></script><script src="../loadout-rules.js"></script><script src="../event-dungeon-data.js"></script><script src="../save-reader.js"></script><script src="../app-data.js"></script><script src="../skill-data.js"></script><script src="../skill-damage-data.js"></script><script src="../npc-data.js"></script>
 <script>
 const folder=document.getElementById('folder'),pickFolder=document.getElementById('pickFolder'),refreshFolder=document.getElementById('refreshFolder'),goLoadout=document.getElementById('goLoadout'),savePickerWrap=document.getElementById('savePickerWrap'),savePicker=document.getElementById('savePicker'),scanSummary=document.getElementById('scanSummary'),status=document.getElementById('status'),result=document.getElementById('result'),stats=document.getElementById('stats'),inv=document.getElementById('inventory'),tabs=document.getElementById('tabs'),stash=document.getElementById('stash'),ownedSummary=document.getElementById('ownedSummary'),forgeMaterials=document.getElementById('forgeMaterials');
 let parsed=null,activeStash=0,scannedSaves=[],currentDirectoryHandle=null;
@@ -214,6 +357,7 @@ document.getElementById('demo').onclick=()=>{folder.value='';parsed=null;scanned
 <script>
 loadDB().then(d=>{
  const professionEl=document.getElementById('profession'),builderMain=document.getElementById('builderMain'),slotsEl=document.getElementById('slots'),filter=document.getElementById('filter')||{value:'',oninput:null},materialsEl=document.getElementById('materials'),recipeSummaryEl=document.getElementById('recipeSummary'),selectedEl=document.getElementById('selected'),jobBadge=document.getElementById('jobBadge'),goldSummaryEl=document.getElementById('goldSummary'),goldSummaryBody=document.getElementById('goldSummaryBody'),importSaveBtn=document.getElementById('importSave'),saveImportStatus=document.getElementById('saveImportStatus'),saveImportAge=document.getElementById('saveImportAge'),importedNote=document.getElementById('importedNote'),ownedSwapPanel=document.getElementById('ownedSwapPanel'),ownedSwapGrid=document.getElementById('ownedSwapGrid'),loadoutSavePicker=document.getElementById('loadoutSavePicker'),refreshLoadoutSaves=document.getElementById('refreshLoadoutSaves'),refreshLoadoutSaveBtn=document.getElementById('refreshLoadoutSaveBtn');
+ const heroTotalGrid=document.getElementById('heroTotalGrid'),heroTotalJob=document.getElementById('heroTotalJob'),heroCombatStrip=document.getElementById('heroCombatStrip'),heroConversion=document.getElementById('heroConversion'),gearStatGrid=document.getElementById('gearStatGrid'),gearBonusBlock=document.getElementById('gearBonusBlock'),gearEquippedCount=document.getElementById('gearEquippedCount'),gearDerived=document.getElementById('gearDerived'),gearSpecialFold=document.getElementById('gearSpecialFold'),gearSpecialCount=document.getElementById('gearSpecialCount'),gearSpecialList=document.getElementById('gearSpecialList'),skillDamageGrid=document.getElementById('skillDamageGrid'),skillHasteBadge=document.getElementById('skillHasteBadge'),skillSourceNote=document.getElementById('skillSourceNote'),armorDummyInput=document.getElementById('armorDummyInput'),armorDummyReduction=document.getElementById('armorDummyReduction'),armorBossPreset=document.getElementById('armorBossPreset'),armorPresetButtons=[...document.querySelectorAll('[data-armor-preset]')],combatTargetNote=document.getElementById('combatTargetNote'),combatTargetBreakdown=document.getElementById('combatTargetBreakdown'),targetBasicAttack=document.getElementById('targetBasicAttack'),equipmentRecoveryPanel=document.getElementById('equipmentRecoveryPanel'),equipmentRecoveryGrid=document.getElementById('equipmentRecoveryGrid'),equipmentRecoveryCount=document.getElementById('equipmentRecoveryCount'),loadoutSkillCdGrid=document.getElementById('loadoutSkillCdGrid'),loadoutSkillHasteBadge=document.getElementById('loadoutSkillHasteBadge');
  const materialOverview=document.getElementById('materialOverview'),saveModeCard=document.getElementById('saveModeCard'),planModeCard=document.getElementById('planModeCard'),loadoutIntro=document.querySelector('.loadout-intro'),workspaceModeBadge=document.getElementById('workspaceModeBadge'),thresholdPanel=document.getElementById('thresholdPanel'),savedLoadoutSelect=document.getElementById('savedLoadoutSelect'),loadSavedLoadoutBtn=document.getElementById('loadSavedLoadout'),updateSavedLoadoutBtn=document.getElementById('updateSavedLoadout'),deleteSavedLoadoutBtn=document.getElementById('deleteSavedLoadout'),loadoutPlanName=document.getElementById('loadoutPlanName'),saveNewLoadoutBtn=document.getElementById('saveNewLoadout'),loadoutPlanMsg=document.getElementById('loadoutPlanMsg'),manualRoleFilter=document.getElementById('manualRoleFilter'),manualProfessionFilter=document.getElementById('manualProfessionFilter'),showArchivedGear=document.getElementById('showArchivedGear');
  const forge=(d.items||[]).map((x,i)=>({...x,_id:'i:'+String(x.row??i)+':'+String(x.name||i),_source:'鍛造'}));
  // 只排除純素材提示項，保留可穿戴裝備與專屬武器，讓配裝選單更完整。
@@ -719,8 +863,345 @@ loadDB().then(d=>{
    entries.forEach(([name,need])=>{const have=ownedQty(name);if(have>=need){done++;return;}const short=Math.max(0,need-have),recipe=COMPOSITE_RECIPES[name];if(recipe){const ex=expandRecipe(name,short);const ok=ex.counts.size>0&&[...ex.counts.entries()].every(([n,c])=>ownedQty(n)>=c);if(ok){craft++;return;}}miss++;});
    materialOverview.innerHTML=`<div class="material-overview-card done"><span>✓ 已足夠</span><strong>${done} 種</strong></div><div class="material-overview-card craft"><span>⚒ 可製作</span><strong>${craft} 種</strong></div><div class="material-overview-card miss"><span>✕ 還缺</span><strong>${miss} 種</strong></div><div class="material-overview-note">摘要以目前存檔持有量計算。需要知道每一項數量、合成路線或拆解來源時，再展開「詳細素材計算」。</div>`;
  }
+ const MAP274C_HASTE_BY_RAW={"I08A":10,"I08D":5,"I08F":5,"I08G":5,"I08K":5,"I09W":10,"I0AE":10,"I0AF":10,"I0BP":5,"I0CM":5,"I0BX":10,"I0C6":10,"I0B9":15,"I0BL":10,"I0BN":15,"I0BR":10,"I0BU":10,"I0C4":10,"I0DF":10,"I0CF":10,"I0CB":10,"I0F9":10,"I0FV":20,"I0G6":10,"I0FT":10,"I0G0":20,"I0GT":15,"I0G4":10,"I0E8":10,"I0E6":10,"I0HH":0,"I0GV":0,"I0FH":0,"I0FX":10,"I046":10,"I0F8":10,"I05F":10,"I0FR":10,"I0FS":10,"I08L":10,"I04O":10,"I0FJ":10,"I0FK":10,"I0GR":10,"\u0000\u0000\u0000\u0000":5,"I0HN":10,"I0GK":10,"I0GJ":10,"I0DJ":5,"I0DH":5,"I0DG":10,"I0DD":15,"I0D4":10,"I05H":15,"I04L":5,"I044":5,"I043":5,"I03I":15,"I033":5};
+ const MAP274C_HASTE_BY_EN={"Tremor":10,"Scepter of Mastery":5,"Pandora":5,"Hell Diamond":5,"Summoning Codex":5,"Glow Orb":10,"Mystral Staff":10,"Vagabond":10,"Windtalker":5,"Destruction":5,"Book of Hylia":10,"Concentrated Energy":10,"Legendary Dragon Orb":15,"Legend of Freya":10,"Blasting Rod":15,"Dragon Totem":10,"Winter's Soul":10,"Eclair La Demes":10,"Nightshadow":10,"Flask of the Oasis":10,"Sword of the Occult":10,"Ancient Dragon Book":10,"Heart of the Behemoth":20,"Queen's Agony":10,"Ring of the Hell Lord":10,"Descend Reaper":20,"Rising Ash":15,"Dreaded Totem":10,"Shinigami Yanki":10,"Royal Crown":10,"Queen's Royal Crown":0,"Scarlet Phantom":0,"Esper's Blood":0,"Helm of the Overlord":10,"Fate":10,"Hope":10,"Kiea's Tale":10,"Raising Heart":10,"Reinforce":10,"Rune Sihill":10,"Virtue":10};
+ const MAP274C_HASTE_BY_CN={"震顫":10,"精通權杖":5,"潘朵拉":5,"地獄鑽石":5,"召喚法典":5,"發光球":10,"神秘法杖":10,"流浪者":10,"風語者":5,"毀滅":5,"海利亞之書":10,"濃縮能量":10,"傳說中的龍珠":15,"芙蕾雅傳說":10,"爆破棒":15,"龍圖騰":10,"凜冬之魂":10,"漢娜的咒術精華":10,"夜影":10,"瓶中綠洲":10,"神秘之劍":10,"上古龍書":10,"貝希摩斯之心":20,"女王的折磨":10,"地獄領主之戒":10,"降臨的收割者":20,"焚墟餘燼":15,"恐懼圖騰":10,"緋影修羅":10,"王者冠冕":10,"皇后的皇冠":0,"拜爾納之杖":20,"危機核心":10,"邪惡法杖":0,"遠古徵兆":0,"天界魔杖":10,"聖經":10,"海拉爾智慧之卷":10,"神聖魔法書":0,"天使元素":0,"命運":10,"希望":10,"血影遺鋒":10,"旭日之心":10,"自然之力":10,"烈空符刃":10,"天命":10,"等作者翻譯":10};
+ function textSkillHaste(x){const t=fixedEffectText(x);return sumMatches(t,[/減少\s*(\d+(?:\.\d+)?)\s*%\s*技能冷卻時間/g,/(\d+(?:\.\d+)?)\s*%\s*技能疾速/g,/技能疾速\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);}
+ function map274cSkillHaste(x){
+   const raw=String(x?.rawcode||'').trim(),en=String(x?.name_en||'').trim(),cn=String(x?.name||'').trim();
+   const text=textSkillHaste(x);let value=null,source='';
+   if(raw&&Object.prototype.hasOwnProperty.call(MAP274C_HASTE_BY_RAW,raw)){value=Number(MAP274C_HASTE_BY_RAW[raw]);source='2.74C rawcode';}
+   else if(en&&Object.prototype.hasOwnProperty.call(MAP274C_HASTE_BY_EN,en)){value=Number(MAP274C_HASTE_BY_EN[en]);source='2.74C item identity';}
+   else if(cn&&Object.prototype.hasOwnProperty.call(MAP274C_HASTE_BY_CN,cn)){value=Number(MAP274C_HASTE_BY_CN[cn]);source='2.74C item identity';}
+   if(value===null)return {value:text,verified:false,text,source:text?'資料庫文字暫算':'無疾速'};
+   return {value,verified:true,text,source,mismatch:text>0&&Math.abs(text-value)>0.001};
+ }
+ function sumMatches(text,patterns){let total=0;for(const re of patterns){for(const m of text.matchAll(re))total+=Number(m[1]||0);}return total;}
+ function signedPercent(text,label){let total=0;const escLabel=label.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');for(const m of text.matchAll(new RegExp('(增加|減少)?\\s*(\\d+(?:\\.\\d+)?)\\s*%\\s*'+escLabel,'g')))total+=(m[1]==='減少'?-1:1)*Number(m[2]);return total;}
+ function fixedEffectText(x){return String(x?.effect||'').replaceAll('，',',').replaceAll('＋','+').replaceAll('％','%').split(/\n+/).filter(line=>!/[☐□⏺●]|(?:被動|主動|技能)\s*[:：]/.test(line)).join(' ');}
+ function parseEquipmentStats(x){const t=fixedEffectText(x);const out={attack:0,str:0,agi:0,int:0,all:0,main:0,hp:0,mp:0,armor:0,hpRegen:0,hpRegenPct:0,mpRegen:0,attackSpeed:0,haste:0,magicDamage:0,physicalDamage:0,moveSpeed:0,healing:0,manaEfficiency:0,manaCost:0};
+  out.attack=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:攻擊力|攻擊|傷害)(?!速度)/g,/(?:攻擊力|攻擊)(?!速度)\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.str=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*力量/g,/力量\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.agi=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*敏捷/g,/敏捷\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.int=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*智慧/g,/智力\s*\+\s*(\d+(?:\.\d+)?)/g,/智慧\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.all=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:全屬性|全能力)/g,/(?:全屬性|全能力)\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.main=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:主屬性|主要屬性)/g,/(?:主屬性|主要屬性)\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.hp=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:HP|生命值)/gi,/(?:HP|生命值|生命)\s*\+\s*(\d+(?:\.\d+)?)/gi]);
+  out.mp=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:MP|魔力值)/gi,/(?:MP|魔力值|魔力)\s*\+\s*(\d+(?:\.\d+)?)/gi]);
+  out.armor=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:護甲|防禦力)/g,/(?:護甲|防禦力)\s*\+\s*(\d+(?:\.\d+)?)/g]);
+  out.hpRegen=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:生命回復|生命恢復)/g]);
+  out.hpRegenPct=sumMatches(t,[/(\d+(?:\.\d+)?)\s*%\s*(?:HP|生命(?:值)?)(?:回復|恢復|再生)/gi,/(?:HP|生命(?:值)?)(?:回復|恢復|再生)\s*\+\s*(\d+(?:\.\d+)?)\s*%/gi]);
+  out.mpRegen=sumMatches(t,[/(?:增加\s*)?([+-]?\d+(?:\.\d+)?)\s*點?\s*(?:魔力回復|魔力恢復|魔力再生|法力再生)/g]);
+  out.attackSpeed=sumMatches(t,[/(?:增加\s*)?(\d+(?:\.\d+)?)\s*%\s*攻擊速度/g,/攻擊速度\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);
+  out.haste=map274cSkillHaste(x).value;
+  out.magicDamage=sumMatches(t,[/(?:增加\s*)?(\d+(?:\.\d+)?)\s*%\s*魔法傷害/g,/魔法傷害\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);
+  out.physicalDamage=sumMatches(t,[/(?:增加\s*)?(\d+(?:\.\d+)?)\s*%\s*物理傷害/g,/物理傷害\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);
+  out.moveSpeed=sumMatches(t,[/(?:增加\s*)?(\d+(?:\.\d+)?)\s*%?\s*移動速度/g,/移動速度\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);
+  out.healing=sumMatches(t,[/(?:增加\s*)?(\d+(?:\.\d+)?)\s*%\s*治療能力/g,/治療能力\s*\+\s*(\d+(?:\.\d+)?)\s*%/g]);
+  out.manaEfficiency=signedPercent(t,'法力效益');out.manaCost=signedPercent(t,'法力消耗');return out;}
+ function extractSpecialEffects(x){const raw=String(x?.effect||'').replaceAll('；','\n').replaceAll(';','\n');const parts=raw.split(/\n+/).map(v=>v.trim()).filter(Boolean);return parts.filter(v=>/[☐□⏺●]|(?:被動|主動|技能)\s*[:：]|機率|BOSS|攻擊時|施法|每次|受到.+(?:提高|增加|減少)|低於|高於|額外傷害|真實傷害|絕對傷害|持續\s*\d/.test(v));}
+ function fmtStatNum(v){const n=Number(v||0);return Number.isInteger(n)?n.toLocaleString('zh-Hant'):n.toLocaleString('zh-Hant',{maximumFractionDigits:2});}
+ function fmtCombatNum(v){
+  const raw=Number(v||0),n=Math.round(raw),sign=n<0?'-':'',a=Math.abs(n);
+  if(a<10000)return sign+a.toLocaleString('zh-Hant');
+  const compact=(value,unit)=>{const rounded=Math.round(value*100)/100;return sign+String(rounded).replace(/\.0+$|(?<=\.[0-9])0+$/,'')+unit;};
+  if(a<100000000)return compact(a/10000,'萬');
+  return compact(a/100000000,'億');
+ }
+ function combatValueHtml(v){return `<span title="${esc(fmtStatNum(v))}">${esc(fmtCombatNum(v))}</span>`;}
+ function passiveHealingPctFromItem(x){
+  let total=0;const lines=String(x?.effect||'').replaceAll('％','%').split(/\n+/);
+  lines.forEach(line=>{if(!/(被動|⏺|●)/.test(line)||!/治療/.test(line))return;for(const m of line.matchAll(/(?:增加|提高)\s*(?:法術)?治療(?:效果|能力)?\s*(\d+(?:\.\d+)?)\s*%/g))total+=Number(m[1]||0);});
+  return total;
+ }
+ function currentHeroBase(){const list=Array.isArray(window.HERO_BASE_STATS_274C)?window.HERO_BASE_STATS_274C:[];return list.find(x=>String(x.name||'').trim()===String(profession||'').trim())||null;}
+ function heroPrimaryLabel(hero){return hero?.primary==='str'?'力量':hero?.primary==='agi'?'敏捷':hero?.primary==='int'?'智慧':'主屬性';}
+ function jobShowsAttackPanel(job=profession){const roles=LOADOUT_ROLE_RULES?.[String(job||'').trim()]?.roles||[];return roles.some(role=>['坦克','近戰輸出','近戰輔助','遠程輸出'].includes(role));}
+ function collectEquipmentTotals(items,hero){
+  const keys=['attack','str','agi','int','all','main','hp','mp','armor','hpRegen','hpRegenPct','mpRegen','attackSpeed','haste','magicDamage','physicalDamage','moveSpeed','healing','manaEfficiency','manaCost'],tot=Object.fromEntries(keys.map(k=>[k,0])),hasteInfos=[];
+  items.forEach(x=>{const st=parseEquipmentStats(x),hi=map274cSkillHaste(x);hasteInfos.push({item:x,info:hi});keys.forEach(k=>tot[k]+=Number(st[k]||0));tot.healing+=passiveHealingPctFromItem(x);});
+  const p=hero?.primary||'',main=tot.main,all=tot.all;
+  let eqStr=tot.str+all,eqAgi=tot.agi+all,eqInt=tot.int+all;
+  if(p==='str')eqStr+=main;else if(p==='agi')eqAgi+=main;else if(p==='int')eqInt+=main;
+  const isMystic=String(profession||'').includes('秘術大師');
+  const mysticInt=isMystic?50*Math.floor(Math.max(0,eqAgi)/100):0;
+  return {tot,hasteInfos,eqStr,eqAgi,eqInt,mysticInt,isMystic};
+ }
+ function characterPanelBonus(job){return window.CHARACTER_PANEL_BONUSES_274C?.[String(job||'').trim()]||null;}
+ function buildFinalHeroStats(hero,pack){
+  if(!hero)return null;
+  const f=window.HERO_STAT_FORMULA_274C||{hpPerStr:20,mpPerInt:15,armorPerAgi:.08,attackPerPrimary:1,attackSpeedPerAgi:0};
+  const {tot,eqStr,eqAgi,eqInt,mysticInt}=pack,finalIntAdd=eqInt+mysticInt;
+  const primaryAdd=hero.primary==='str'?eqStr:hero.primary==='agi'?eqAgi:hero.primary==='int'?finalIntAdd:0;
+  const hpFromStr=eqStr*Number(f.hpPerStr||20),mpFromInt=finalIntAdd*Number(f.mpPerInt||15),armorFromAgi=eqAgi*Number(f.armorPerAgi||.08),atkFromPrimary=primaryAdd*Number(f.attackPerPrimary||1);
+  const atkMin=hero.atkMin+tot.attack+atkFromPrimary,atkMax=hero.atkMax+tot.attack+atkFromPrimary,panelBonus=characterPanelBonus(profession),roleAttackPct=Number(panelBonus?.attackPct||0),applyRoleAttack=panelBonus?.applyToPanel!==false,roleAttackMult=applyRoleAttack?1+roleAttackPct/100:1;
+  // Warcraft III 面板：白字維持 Lv.300 裸裝攻擊；裝備固定攻擊、裝備主屬性與常駐攻擊被動顯示為綠字。
+  // 百分比攻擊被動只放大「白字基礎 + 裝備帶來的主屬性攻擊」，不會再次放大裝備直接 +攻擊。
+  // 例：暗殿武士 E +360%，白字中值 5245、裝備敏捷 +4000、固定攻擊 +20500 → 綠字 20500+4000+(5245+4000)*3.6 = 57782。
+  // 暴擊／機率觸發／每 N 次普攻追加傷害都不進面板綠字，僅在傷害護甲頁計算。
+  const whiteMid=(Number(hero.atkMin||0)+Number(hero.atkMax||0))/2,flatGreenAttack=Number(tot.attack||0)+Number(atkFromPrimary||0),roleAttackBase=whiteMid+Number(atkFromPrimary||0),rolePanelAttack=applyRoleAttack?roleAttackBase*roleAttackPct/100:0,panelGreenAttack=Math.round(flatGreenAttack+rolePanelAttack),panelAtkMin=Number(hero.atkMin||0)+panelGreenAttack,panelAtkMax=Number(hero.atkMax||0)+panelGreenAttack;
+  return {str:hero.str+eqStr,agi:hero.agi+eqAgi,int:hero.int+finalIntAdd,hp:hero.hp+tot.hp+hpFromStr,mp:hero.mp+tot.mp+mpFromInt,armor:hero.armor+tot.armor+armorFromAgi,atkMin,atkMax,panelAtkMin,panelAtkMax,panelGreenAttack,roleAttackPct,roleAttackMult,panelBonus,hpFromStr,mpFromInt,armorFromAgi,atkFromPrimary,primaryAdd,tot,eqStr,eqAgi,eqInt,mysticInt};
+ }
+ function skillSetForProfession(){const want=String(profession||'').replace(/（.*?）/g,'').trim();return (typeof SKILL_DATA!=='undefined'?SKILL_DATA:[]).find(x=>String(x?.name||'').replace(/（.*?）/g,'').trim()===want)||null;}
+ function skillDamageTypeLabel(type){return type==='magic'?'魔法':type==='physical'?'物理':type==='absolute'?'絕對':'';}
+ const ARMOR_COEFF_274C=.01,ARMOR_DUMMY_KEY='twilight_armor_dummy_274c',BOSS_TARGET_KEY='twilight_boss_target_274c';
+ const BOSS_TARGET_PRESETS_274C=Object.freeze({
+  'H1':{short:'H1 恐怖魔王',rawcode:'U009',heroBase:'Ucrl',baseArmor:300,baseAgi:100,itemAgi:0,agiArmor:8,spawnArmor:0,phaseArmor:0,armor:308,spellMult:1,note:'基礎護甲 300；英雄型 Boss，100 敏捷×0.08 = 綠字 +8。人數縮放道具只加生命。'},
+  'H2':{short:'H2 深海領主',rawcode:'U00B',heroBase:'Ucrl',baseArmor:800,baseAgi:75,itemAgi:0,agiArmor:6,spawnArmor:0,phaseArmor:0,armor:806,spellMult:1,note:'地圖物件本身直接設定基礎護甲 800；英雄型 Boss，75 敏捷×0.08 = 綠字 +6。H2BOSS 縮放道具只加生命。'},
+  'H3':{short:'H3 永恆厄運',rawcode:'E01A',heroBase:'Edem',baseArmor:300,baseAgi:150,itemAgi:0,agiArmor:12,spawnArmor:0,phaseArmor:0,armor:312,spellMult:1,note:'基礎護甲 300 + 150 敏捷×0.08 = 綠字 +12。'},
+  'H4':{short:'H4 末日守衛',rawcode:'U007',heroBase:'Ucrl',baseArmor:150,baseAgi:100,itemAgi:0,agiArmor:8,spawnArmor:0,phaseArmor:0,armor:158,spellMult:1,note:'基礎護甲 150 + 100 敏捷×0.08 = 綠字 +8。'},
+  'IMP1':{short:'IMP1 神',rawcode:'E00C',heroBase:'Edem',baseArmor:300,baseAgi:125,itemAgi:0,agiArmor:10,spawnArmor:0,phaseArmor:0,armor:310,spellMult:.65,note:'基礎護甲 300 + 125 敏捷×0.08 = 綠字 +10；SPELL ×0.65。'},
+  'IMP2-100':{short:'IMP2 毀滅之龍 100–76%',rawcode:'E00N',heroBase:'Edem',baseArmor:350,baseAgi:150,itemAgi:0,agiArmor:12,spawnArmor:0,phaseArmor:0,armor:362,spellMult:.75,note:'350 基礎 +12 綠字；100–76% HP 時 SPELL ×0.75。'},
+  'IMP2-75':{short:'IMP2 毀滅之龍 ≤75%',rawcode:'E00N',heroBase:'Edem',baseArmor:350,baseAgi:150,itemAgi:0,agiArmor:12,spawnArmor:0,phaseArmor:0,armor:362,spellMult:.60,note:'實戰護甲 362；SPELL ×0.60。'},
+  'IMP2-50':{short:'IMP2 毀滅之龍 ≤50%',rawcode:'E00N',heroBase:'Edem',baseArmor:350,baseAgi:150,itemAgi:0,agiArmor:12,spawnArmor:0,phaseArmor:0,armor:362,spellMult:.45,note:'實戰護甲 362；SPELL ×0.45。'},
+  'IMP2-25':{short:'IMP2 毀滅之龍 ≤25%',rawcode:'E00N',heroBase:'Edem',baseArmor:350,baseAgi:150,itemAgi:0,agiArmor:12,spawnArmor:0,phaseArmor:0,armor:362,spellMult:.30,note:'實戰護甲 362；SPELL ×0.30。'},
+  'IMP3-100':{short:'IMP3 別茲卜 100–76%',rawcode:'E013',heroBase:'Edem',baseArmor:466,baseAgi:333,itemAgi:0,agiArmor:26.64,spawnArmor:55,phaseArmor:0,armor:547.64,spellMult:.70,note:'466 基礎 +26.64 綠字 + 出場腳本 +55；SPELL ×0.70。'},
+  'IMP3-75':{short:'IMP3 別茲卜 ≤75%',rawcode:'E013',heroBase:'Edem',baseArmor:466,baseAgi:333,itemAgi:0,agiArmor:26.64,spawnArmor:55,phaseArmor:100,armor:647.64,spellMult:.55,note:'出場 547.64 + 階段護甲 100；SPELL ×0.55。'},
+  'IMP3-50':{short:'IMP3 別茲卜 ≤50%',rawcode:'E013',heroBase:'Edem',baseArmor:466,baseAgi:333,itemAgi:0,agiArmor:26.64,spawnArmor:55,phaseArmor:200,armor:747.64,spellMult:.40,note:'出場 547.64 + 累計階段護甲 200；SPELL ×0.40。'},
+  'IMP3-25':{short:'IMP3 別茲卜 ≤25%',rawcode:'E013',heroBase:'Edem',baseArmor:466,baseAgi:333,itemAgi:0,agiArmor:26.64,spawnArmor:55,phaseArmor:300,armor:847.64,spellMult:.25,note:'出場 547.64 + 累計階段護甲 300；SPELL ×0.25。'},
+  'IMP3-13':{short:'IMP3 別茲卜 ≤13%',rawcode:'E013',heroBase:'Edem',baseArmor:466,baseAgi:333,itemAgi:0,agiArmor:26.64,spawnArmor:55,phaseArmor:300,armor:847.64,spellMult:.15,note:'護甲維持 847.64；SPELL ×0.15。'},
+  'M1-100':{short:'M1 終暮 100–61%',rawcode:'E01Q',heroBase:'Edem',baseArmor:435,baseAgi:1000,itemAgi:1000,agiArmor:160,spawnArmor:0,phaseArmor:0,armor:595,spellMult:.65,note:'E01Q 基礎敏捷 1000；出生時隱藏裝備「穢咒恩典」全屬性 +1000，所以實戰敏捷 2000 → 綠字 +160；435 +160 = 595。SPELL ×0.65。'},
+  'M1-60':{short:'M1 終暮 ≤60%',rawcode:'E01Q',heroBase:'Edem',baseArmor:435,baseAgi:1000,itemAgi:1000,agiArmor:160,spawnArmor:0,phaseArmor:0,armor:595,spellMult:.45,note:'實戰護甲 595；SPELL ×0.45。'},
+  'M1-40':{short:'M1 終暮 ≤40%',rawcode:'E01Q',heroBase:'Edem',baseArmor:435,baseAgi:1000,itemAgi:1000,agiArmor:160,spawnArmor:0,phaseArmor:0,armor:595,spellMult:.30,note:'實戰護甲 595；SPELL ×0.30。'},
+  'M1-20':{short:'M1 終暮 ≤20%',rawcode:'E01Q',heroBase:'Edem',baseArmor:435,baseAgi:1000,itemAgi:1000,agiArmor:160,spawnArmor:0,phaseArmor:0,armor:595,spellMult:.15,note:'實戰護甲 595；SPELL ×0.15。'}
+ });
+ let lastSkillFinal=null,healTestSeq=0;
+ const healTestRegistry=new Map();
+ function clampArmorDummy(v){const n=Number(v);return Number.isFinite(n)?Math.max(-1000,Math.min(100000,n)):300;}
+ function currentArmorDummy(){return clampArmorDummy(armorDummyInput?.value ?? safeGet(ARMOR_DUMMY_KEY) ?? 300);}
+ function currentBossTarget(){const key=String(armorBossPreset?.value||'');return key&&BOSS_TARGET_PRESETS_274C[key]?{key,...BOSS_TARGET_PRESETS_274C[key]}:null;}
+ function currentCombatTarget(){const preset=currentBossTarget(),armor=currentArmorDummy();return preset?{...preset,armor}:{key:'',short:`自訂 ${fmtCombatNum(armor)} 護甲`,armor,spellMult:1,note:'自訂草人只套用護甲；不額外假設 Boss 法術減傷。'};}
+ function armorDamageMultiplier274C(armor){const a=clampArmorDummy(armor);if(a>=0)return 1/(1+ARMOR_COEFF_274C*a);return 2-Math.pow(1-ARMOR_COEFF_274C,-a);}
+ function armorReductionPct274C(armor){return (1-armorDamageMultiplier274C(armor))*100;}
+ function updateArmorDummyUi(){
+  const target=currentCombatTarget(),armor=target.armor,reduction=armorReductionPct274C(armor);
+  if(armorDummyInput&&Number(armorDummyInput.value)!==armor)armorDummyInput.value=String(armor);
+  if(armorDummyReduction){
+    const physicalMult=armorDamageMultiplier274C(armor),spell=Number(target.spellMult??1);
+    const physicalTaken=physicalMult*100,spellTaken=spell*100;
+    armorDummyReduction.textContent=`物理承傷 ${physicalTaken.toFixed(physicalTaken<20?2:1)}% · 法術承傷 ${spellTaken.toFixed(spellTaken<20?1:0)}%`;
+    armorDummyReduction.title=`物理減傷 ${(100-physicalTaken).toFixed(2)}%／承傷 ${physicalTaken.toFixed(2)}%；法術減傷 ${(100-spellTaken).toFixed(2)}%／承傷 ${spellTaken.toFixed(2)}%`;
+  }
+  if(combatTargetNote)combatTargetNote.innerHTML=`<strong>${esc(target.short)}</strong>｜${esc(target.note)}`;
+  if(combatTargetBreakdown){
+    if(target.key){
+      const effectiveAgi=Number(target.baseAgi||0)+Number(target.itemAgi||0),extra=Number(target.spawnArmor||0)+Number(target.phaseArmor||0);
+      const chips=[
+        `<span class="boss-break-chip"><span>類型</span><b>英雄型</b></span>`,
+        `<span class="boss-break-chip"><span>基礎護甲</span><b>${esc(fmtStatNum(target.baseArmor||0))}</b></span>`,
+        `<span class="boss-break-chip"><span>敏捷</span><b>${esc(fmtStatNum(effectiveAgi))} → +${esc(fmtStatNum(target.agiArmor||0))}</b></span>`
+      ];
+      if(Number(target.itemAgi||0)>0)chips.push(`<span class="boss-break-chip"><span>隱藏裝備</span><b>敏捷 +${esc(fmtStatNum(target.itemAgi))}</b></span>`);
+      if(extra)chips.push(`<span class="boss-break-chip"><span>腳本／階段</span><b>護甲 +${esc(fmtStatNum(extra))}</b></span>`);
+      chips.push(`<span class="boss-break-chip total"><span>實戰總護甲</span><b>${esc(fmtStatNum(target.armor))}</b></span>`);
+      const physicalMult=armorDamageMultiplier274C(target.armor),physicalTaken=physicalMult*100,physicalReduction=(1-physicalMult)*100;
+      const spellMult=Number(target.spellMult??1),spellTaken=spellMult*100,spellReduction=(1-spellMult)*100;
+      const defenseSummary=`<div class="boss-defense-summary">
+        <div class="boss-defense-card physical"><span>物理傷害</span><strong>減傷 ${physicalReduction.toFixed(2)}%</strong><small>實際承傷 ${physicalTaken.toFixed(2)}% · ×${physicalMult.toFixed(4)}</small></div>
+        <div class="boss-defense-card magic"><span>法術傷害</span><strong>減傷 ${spellReduction.toFixed(0)}%</strong><small>實際承傷 ${spellTaken.toFixed(0)}% · ×${spellMult.toFixed(2)}</small></div>
+        <div class="boss-defense-card absolute"><span>絕對／真實傷害</span><strong>減傷 0%</strong><small>實際承傷 100% · 不吃護甲／階段 SPELL 減傷</small></div>
+      </div>`;
+      combatTargetBreakdown.innerHTML=chips.join('')+defenseSummary+`<div class="boss-break-source">${esc(target.rawcode)}｜英雄基底 ${esc(target.heroBase||'')}｜敏捷護甲係數 0.08｜只套用目前已核對的 2.74C 防禦來源</div>`;
+      combatTargetBreakdown.classList.remove('hidden');
+    }else{
+      const physicalMult=armorDamageMultiplier274C(target.armor),physicalTaken=physicalMult*100,physicalReduction=(1-physicalMult)*100;
+      combatTargetBreakdown.innerHTML=`<div class="boss-defense-summary">
+        <div class="boss-defense-card physical"><span>物理傷害</span><strong>減傷 ${physicalReduction.toFixed(2)}%</strong><small>實際承傷 ${physicalTaken.toFixed(2)}% · ×${physicalMult.toFixed(4)}</small></div>
+        <div class="boss-defense-card magic"><span>法術傷害</span><strong>減傷 0%</strong><small>自訂草人未設定額外法術減傷 · 承傷 100%</small></div>
+        <div class="boss-defense-card absolute"><span>絕對／真實傷害</span><strong>減傷 0%</strong><small>實際承傷 100%</small></div>
+      </div>`;
+      combatTargetBreakdown.classList.remove('hidden');
+    }
+  }
+  armorPresetButtons.forEach(b=>b.classList.toggle('active',!target.key&&Number(b.dataset.armorPreset)===armor));
+  return target;
+ }
+ function applyTargetDefense(r,target){
+  if(r?.kind!=='damage')return {min:r.min,max:r.max,totalMin:r.totalMin,totalMax:r.totalMax,mult:1,affected:false};
+  let mult=1,reason='';
+  if(r?.type==='physical'){mult=armorDamageMultiplier274C(target.armor);reason='armor';}
+  else if(r?.type==='magic'&&Number(target.spellMult??1)<1){mult=Number(target.spellMult);reason='spell';}
+  return {min:r.min*mult,max:r.max*mult,totalMin:r.totalMin*mult,totalMax:r.totalMax*mult,mult,affected:Math.abs(mult-1)>.00001,reason};
+ }
+ function renderTargetBasicAttack(final,target){
+  if(!targetBasicAttack)return;
+  if(!final||!profession){targetBasicAttack.classList.add('hidden');targetBasicAttack.innerHTML='';return;}
+  const mult=armorDamageMultiplier274C(target.armor),panelMin=Number(final.panelAtkMin||0),panelMax=Number(final.panelAtkMax||0),min=panelMin*mult,max=panelMax*mult;
+  const reduction=(1-mult)*100;
+  const related=[];
+  const items=picked.map(findItem).filter(Boolean);
+  items.forEach(item=>extractSpecialEffects(item).filter(line=>/(普通攻擊|每\s*\d+\s*次[^。；,，]*攻擊|每次攻擊|攻擊敵人時|攻擊時)/.test(line)).forEach(line=>related.push({src:itemNameOf(item),line})));
+  const skillSet=skillSetForProfession();
+  (Array.isArray(skillSet?.skills)?skillSet.skills:[]).forEach(skill=>{const txt=String(skill?.desc||'').replace(/\n+/g,' ').trim();if(txt&&/(普通攻擊|每\s*\d+\s*次[^。；,，]*攻擊|每次攻擊|攻擊敵人時|攻擊時)/.test(txt))related.push({src:`${skill.key||''} ${skill.name||'職業技能'}`.trim(),line:txt});});
+  const uniq=[];const seen=new Set();related.forEach(x=>{const k=`${x.src}|${x.line}`;if(!seen.has(k)){seen.add(k);uniq.push(x);}});
+  const relatedHtml=uniq.length?`<details class="basic-attack-related"><summary>普攻相關觸發／被動 ${uniq.length} 項</summary><div class="basic-attack-related-list">${uniq.map(x=>`<div class="basic-attack-related-line"><b>${esc(x.src)}</b>｜${esc(x.line)}</div>`).join('')}</div></details>`:'';
+  targetBasicAttack.classList.remove('hidden');
+  targetBasicAttack.innerHTML=`<div class="basic-attack-head"><b>🗡️ 普攻傷害</b><small>${esc(target.short)} · 物理減傷 ${reduction.toFixed(2)}% · 承傷 ${(mult*100).toFixed(2)}%</small></div><div class="basic-attack-values"><div class="basic-attack-value"><span>面板單下普攻</span><strong title="${esc(fmtStatNum(panelMin)+'–'+fmtStatNum(panelMax))}">${esc(fmtSkillValue(panelMin,panelMax))}</strong><small>目前配裝後面板</small></div><div class="basic-attack-value"><span>對 Boss 單下實傷</span><strong title="${esc(fmtStatNum(min)+'–'+fmtStatNum(max))}">${esc(fmtSkillValue(min,max))}</strong><small>套用實戰護甲 ${esc(fmtStatNum(target.armor))} · ×${mult.toFixed(4)}</small></div></div>${relatedHtml}`;
+ }
+ function normalizeHealTestTarget(maxHp,currentHp,needsCurrent=false){
+  const max=Number(maxHp);if(!Number.isFinite(max)||max<=0)return null;
+  const safeMax=Math.max(1,Math.min(999999999,max));
+  if(!needsCurrent)return {maxHp:safeMax,currentHp:safeMax,missingHp:0,missingPct:0};
+  const cur=Number(currentHp);if(!Number.isFinite(cur)||cur<0)return null;
+  const safeCurrent=Math.max(0,Math.min(safeMax,cur));
+  return {maxHp:safeMax,currentHp:safeCurrent,missingHp:Math.max(0,safeMax-safeCurrent),missingPct:safeMax>0?(safeMax-safeCurrent)/safeMax:0};
+ }
+ function healTargetFormulaText(f){
+  const parts=[];if(Number(f?.base||0))parts.push(fmtCombatNum(f.base));if(Number(f?.int||0))parts.push(`${fmtStatNum(Number(f.int)*100)}% 智慧`);if(Number(f?.targetMaxHp||0))parts.push(`${fmtStatNum(Number(f.targetMaxHp)*100)}% 目標最大 HP`);if(Number(f?.targetMissingHp||0))parts.push(`${fmtStatNum(Number(f.targetMissingHp)*100)}% 目標缺失 HP`);return parts.join(' + ')||'依目標生命計算';
+ }
+ function registerHealTest(formula,final,skill=null,extra={}){const key=`healtest-${++healTestSeq}`;healTestRegistry.set(key,{formula,final,skill,...extra});return key;}
+ function healTestHtml(key,formula){
+  const needsCurrent=Number(formula?.targetMissingHp||0)>0,formulaText=healTargetFormulaText(formula);
+  return `<details class="heal-test-fold" data-heal-test-key="${esc(key)}"><summary>💗 治療測試</summary><div class="heal-test-body"><div class="heal-test-formula">公式：${esc(formulaText)}</div><div class="heal-test-controls${needsCurrent?'':' one'}"><label><span>目標最大 HP</span><input class="heal-test-input" data-heal-field="max" type="number" min="1" max="999999999" step="1000" inputmode="numeric" placeholder="例如 100000"></label>${needsCurrent?`<label><span>目標目前 HP</span><input class="heal-test-input" data-heal-field="current" type="number" min="0" max="999999999" step="1000" inputmode="numeric" placeholder="例如 50000"></label>`:''}</div><div class="heal-test-result"><span>實際治療</span><strong data-heal-test-result>輸入後計算</strong></div><div class="heal-test-missing" data-heal-test-missing>${needsCurrent?'需輸入最大 HP 與目前 HP':'只需輸入目標最大 HP'}</div></div></details>`;
+ }
+ function updateHealTestFold(fold){
+  const key=String(fold?.dataset?.healTestKey||''),rec=healTestRegistry.get(key);if(!rec)return;
+  const maxInput=fold.querySelector('[data-heal-field="max"]'),currentInput=fold.querySelector('[data-heal-field="current"]'),resultEl=fold.querySelector('[data-heal-test-result]'),missingEl=fold.querySelector('[data-heal-test-missing]'),needsCurrent=Number(rec.formula?.targetMissingHp||0)>0;
+  const target=normalizeHealTestTarget(maxInput?.value,currentInput?.value,needsCurrent);
+  if(!target){if(resultEl)resultEl.textContent='輸入後計算';if(missingEl)missingEl.textContent=needsCurrent?'需輸入最大 HP 與目前 HP':'只需輸入目標最大 HP';return;}
+  const r=calcSkillFormula(rec.formula,rec.final,rec.skill,target),value=fmtSkillValue(r.totalMin,r.totalMax);
+  if(resultEl){resultEl.textContent=value;resultEl.title=fmtStatNum(r.totalMin)+(Math.abs(r.totalMin-r.totalMax)>.001?'–'+fmtStatNum(r.totalMax):'');}
+  const notes=[];if(needsCurrent)notes.push(`缺失 ${fmtCombatNum(target.missingHp)}（${(target.missingPct*100).toFixed(1)}%）`);if(Number(rec.formula?.nearbyMultiplier||0)>0)notes.push(`附近隊友 ${fmtSkillValue(r.totalMin*Number(rec.formula.nearbyMultiplier),r.totalMax*Number(rec.formula.nearbyMultiplier))}`);if(missingEl)missingEl.textContent=notes.join(' · ')||'已依目標最大 HP 換算';
+ }
+ function calcSkillFormula(formula,final,skill,target={maxHp:0,currentHp:0,missingHp:0,missingPct:0}){
+  const lv=Number(saveSnapshot?.level||300)||300,skillLv=typeof skill?.max==='number'?Number(skill.max):0;
+  const kind=String(formula.kind||'damage');
+  if(kind==='healRange'){
+    const healBonus=Number(final.tot.healing||0),mult=(1+healBonus/100)*Number(formula.multiplier||1);
+    const min=Number(formula.hpMin||0)*final.hp*mult,max=Number(formula.hpMax||0)*final.hp*mult;
+    return {one:min,total:min,min,max,totalMin:min,totalMax:max,repeat:1,bonus:healBonus,type:'',kind,healBonus};
+  }
+  if(kind==='healBuff'||kind==='healPassive'){
+    const pct=Number(formula.pct||0);return {one:pct,total:pct,min:pct,max:pct,totalMin:pct,totalMax:pct,repeat:1,bonus:0,type:'',kind};
+  }
+  let base=Number(formula.base||0)+(Number(formula.str||0)*final.str)+(Number(formula.agi||0)*final.agi)+(Number(formula.int||0)*final.int)+(Number(formula.armor||0)*final.armor)+(Number(formula.hp||0)*final.hp)+(Number(formula.mp||0)*final.mp)+(Number(formula.selfHp||0)*final.hp)+(Number(formula.selfMp||0)*final.mp)+(Number(formula.targetMaxHp||0)*Number(target.maxHp||0))+(Number(formula.targetMissingHp||0)*Number(target.missingHp||0))+(Number(formula.heroLevel||0)*lv)+(Number(formula.perSkillLevel||0)*skillLv);
+  let min=base,max=base;
+  if(Number(formula.attackScale||0)){const scale=Number(formula.attackScale||0);min+=Number((final.panelAtkMin??final.atkMin)||0)*scale;max+=Number((final.panelAtkMax??final.atkMax)||0)*scale;}
+  const type=String(formula.type||''),damageBonus=kind==='damage'?(type==='magic'?Number(final.tot.magicDamage||0):type==='physical'?Number(final.tot.physicalDamage||0):0):0,healBonus=kind==='heal'?Number(final.tot.healing||0):0,bonus=kind==='damage'?damageBonus:healBonus;
+  if(bonus){min*=1+bonus/100;max*=1+bonus/100;}
+  const mult=Number(formula.multiplier||1);min*=mult;max*=mult;
+  const repeat=Math.max(1,Number(formula.repeat||1));
+  let repeatFactor=repeat;
+  if(Number(formula.decayPct||0)>0){const q=1-Number(formula.decayPct);repeatFactor=(1-Math.pow(q,repeat))/(1-q);}
+  const totalMin=min*repeatFactor,totalMax=max*repeatFactor,altMultiplier=Number(formula.altMultiplier||0),altTotalMin=altMultiplier?totalMin*altMultiplier:null,altTotalMax=altMultiplier?totalMax*altMultiplier:null;
+  return {one:min,total:totalMin,min,max,totalMin,totalMax,repeat,repeatFactor,bonus,type,kind,healBonus,altTotalMin,altTotalMax};
+ }
+ function fmtSkillValue(min,max){const a=Number(min||0),b=Number(max??min??0);return Math.abs(a-b)<.001?fmtCombatNum(a):`${fmtCombatNum(a)}–${fmtCombatNum(b)}`;}
+ function skillResultKindLabel(kind,type){if(kind==='attackBuff')return '攻擊力增加';if(kind==='heal')return '回血';if(kind==='healRange')return '回血範圍';if(kind==='shield')return '護盾防禦';if(kind==='manaRestore')return '回魔';return `${skillDamageTypeLabel(type)}傷害`;}
+ function formulaNeedsHealTarget(f){return Number(f?.targetMaxHp||0)>0||Number(f?.targetMissingHp||0)>0;}
+ function equipmentRecoveryFormulaSet(x){
+  const table=window.EQUIPMENT_RECOVERY_FORMULAS_274C||{},keys=[x?.name_en,x?.display_name_en,x?.name,x?.display_name].map(v=>String(v||'').trim()).filter(Boolean);
+  for(const k of keys)if(Array.isArray(table[k]))return table[k];
+  return [];
+ }
+ function renderEquipmentRecovery(final){
+  if(!equipmentRecoveryPanel||!equipmentRecoveryGrid)return {count:0};
+  const items=picked.map(findItem).filter(Boolean),rows=[];
+  items.forEach(item=>equipmentRecoveryFormulaSet(item).forEach(f=>rows.push({item,f,needsTarget:formulaNeedsHealTarget(f),r:formulaNeedsHealTarget(f)?null:calcSkillFormula(f,final,null)})));
+  if(!rows.length){equipmentRecoveryPanel.classList.add('hidden');equipmentRecoveryGrid.innerHTML='';if(equipmentRecoveryCount)equipmentRecoveryCount.textContent='0 項';return {count:0};}
+  const cards=rows.map(({item,f,r,needsTarget})=>{
+    const itemName=itemNameOf(item),cd=Number(f.cd),actualCd=Number.isFinite(cd)?cd:null,trigger=f.trigger?`觸發：${f.trigger}`:'',notes=[trigger,f.note].filter(Boolean),meta=[];
+    if(actualCd!==null)meta.push(`裝備 CD ${actualCd.toFixed(actualCd<10?2:1)}秒`);
+    if(needsTarget){
+      const key=registerHealTest(f,final,null,{source:'equipment'}),test=healTestHtml(key,f),label=f.label||'治療';
+      return `<article class="equipment-recovery-card"><div class="equipment-recovery-top"><b>${esc(itemName)}</b><small>${esc(label)}</small></div><div class="equipment-recovery-main"><span>實際回血</span><strong class="target-dependent-value">依目標生命</strong></div>${meta.length?`<div class="equipment-recovery-meta">${meta.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:''}${notes.length?`<div class="equipment-recovery-note">${notes.map(esc).join(' · ')}</div>`:''}${test}</article>`;
+    }
+    const kind=r.kind;if(r.healBonus)meta.push(`治療 +${fmtStatNum(r.healBonus)}%`);
+    let label=f.label||skillResultKindLabel(kind,r.type),value='',cls='',extra='';
+    if(kind==='heal'){value=fmtSkillValue(r.totalMin,r.totalMax);if(Number(f.nearbyMultiplier||0)>0)extra=`附近隊友 ${fmtSkillValue(r.totalMin*Number(f.nearbyMultiplier),r.totalMax*Number(f.nearbyMultiplier))}`;}
+    else if(kind==='manaRestore'){value=fmtSkillValue(r.totalMin,r.totalMax);cls=' mana';}
+    else if(kind==='healBuff'||kind==='healPassive'){value=`+${fmtStatNum(Number(f.pct||0))}%`;cls=' buff';if(f.duration)extra=`持續 ${fmtStatNum(f.duration)} 秒`;}
+    else value=fmtSkillValue(r.totalMin,r.totalMax);
+    return `<article class="equipment-recovery-card${cls}"><div class="equipment-recovery-top"><b>${esc(itemName)}</b><small>${esc(label)}</small></div><div class="equipment-recovery-main"><span>${kind==='manaRestore'?'回魔':kind==='healBuff'||kind==='healPassive'?'治療效果':'實際回血'}</span><strong title="${esc(kind==='healBuff'||kind==='healPassive'?String(value):fmtStatNum(r.totalMin))}">${esc(value)}</strong></div>${extra?`<div class="equipment-recovery-note">${esc(extra)}</div>`:''}${meta.length?`<div class="equipment-recovery-meta">${meta.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:''}${notes.length?`<div class="equipment-recovery-note">${notes.map(esc).join(' · ')}</div>`:''}</article>`;
+  });
+  equipmentRecoveryPanel.classList.remove('hidden');equipmentRecoveryGrid.innerHTML=cards.join('');if(equipmentRecoveryCount)equipmentRecoveryCount.textContent=`${rows.length} 項`;
+  return {count:rows.length};
+ }
+ function renderSkillCdOverview(final){
+  if(!loadoutSkillCdGrid)return;
+  if(!final){loadoutSkillCdGrid.innerHTML='<div class="gear-total-empty" style="grid-column:1/-1">選擇職業後會顯示目前配裝下的實際技能 CD。</div>';if(loadoutSkillHasteBadge)loadoutSkillHasteBadge.textContent='技能疾速 0%';return;}
+  const set=skillSetForProfession(),formulaJob=window.SKILL_DAMAGE_FORMULAS_274C?.[profession]||{},haste=Number(final.tot.haste||0),cdMult=1/(1+haste/100),cards=[];
+  if(loadoutSkillHasteBadge)loadoutSkillHasteBadge.textContent=`技能疾速 ${fmtStatNum(haste)}% · CD ×${cdMult.toFixed(3)}`;
+  (set?.skills||[]).forEach(skill=>{
+    const rawCd=Number(skill.cd);if(!Number.isFinite(rawCd))return;
+    const formulas=Array.isArray(formulaJob?.[skill.key])?formulaJob[skill.key]:[];
+    const ignore=formulas.some(f=>f.ignoreHaste)||(/不受技能疾速|不受.*冷卻減免/.test(String(skill.desc||'')));
+    const actual=rawCd*(ignore?1:cdMult),changed=Math.abs(actual-rawCd)>.001;
+    cards.push(`<div class="loadout-skill-cd-card"><div class="skill-id"><b>${esc(skill.key)}</b><span title="${esc(String(skill.name||'').replace(/\n/g,' '))}">${esc(String(skill.name||'').replace(/\n/g,' '))}</span></div><div class="cd-value"><strong>${actual.toFixed(actual<10?2:1)} 秒</strong><small>${ignore?'不吃疾速':changed?`原 ${rawCd.toFixed(rawCd<10?2:1)} 秒`:'原始 CD'}</small></div></div>`);
+  });
+  loadoutSkillCdGrid.innerHTML=cards.length?cards.join(''):'<div class="gear-total-empty" style="grid-column:1/-1">這個職業目前沒有可讀取的技能 CD。</div>';
+ }
+ function renderSkillDamage(final){
+  if(!skillDamageGrid)return;
+  healTestRegistry.clear();healTestSeq=0;lastSkillFinal=final||null;const combatTarget=updateArmorDummyUi();
+  renderTargetBasicAttack(final,combatTarget);
+  if(!final){skillDamageGrid.innerHTML='<div class="skill-damage-empty">選擇職業後會顯示可計算的普攻與技能實戰傷害。</div>';if(skillHasteBadge)skillHasteBadge.textContent='技能疾速 0%';if(skillSourceNote)skillSourceNote.textContent='';if(equipmentRecoveryPanel)equipmentRecoveryPanel.classList.add('hidden');return;}
+  const set=skillSetForProfession(),formulaJob=window.SKILL_DAMAGE_FORMULAS_274C?.[profession]||{},haste=Number(final.tot.haste||0),cdMult=1/(1+haste/100);
+  if(skillHasteBadge)skillHasteBadge.textContent=`依配裝：技能疾速 ${fmtStatNum(haste)}%`;
+  const cards=[];
+  (set?.skills||[]).forEach(skill=>{
+    const formulas=formulaJob?.[skill.key];if(!Array.isArray(formulas)||!formulas.length)return;
+    const rows=formulas.map(f=>{const needsTarget=formulaNeedsHealTarget(f);if(needsTarget)return {f,needsTarget,r:null,dummy:null};const r=calcSkillFormula(f,final,skill);return {f,needsTarget:false,r,dummy:applyTargetDefense(r,combatTarget)}}),calcRows=rows.filter(x=>!x.needsTarget),targetRows=rows.filter(x=>x.needsTarget),damageRows=calcRows.filter(x=>x.r.kind==='damage'),healRows=calcRows.filter(x=>x.r.kind==='heal'||x.r.kind==='healRange'),supportRows=calcRows.filter(x=>!['damage','heal','healRange'].includes(x.r.kind));
+    const rawCd=Number(skill.cd),ignore=calcRows.some(x=>x.f.ignoreHaste)||targetRows.some(x=>x.f.ignoreHaste)||(/不受技能疾速|不受.*冷卻減免/.test(String(skill.desc||''))),actualCd=Number.isFinite(rawCd)?rawCd*(ignore?1:cdMult):null,levelText=typeof skill.max==='number'?`Lv.${fmtStatNum(skill.max)}`:String(skill.max||'');
+    const resultRows=[];
+    if(damageRows.length){
+      const min=damageRows.reduce((a,x)=>a+x.r.totalMin,0),max=damageRows.reduce((a,x)=>a+x.r.totalMax,0),dmin=damageRows.reduce((a,x)=>a+x.dummy.totalMin,0),dmax=damageRows.reduce((a,x)=>a+x.dummy.totalMax,0);
+      resultRows.push(`<div class="skill-result-row damage"><span>${damageRows.length>1?'完整命中傷害':'技能傷害'}</span><strong title="${esc(fmtStatNum(min)+(Math.abs(min-max)>.001?'–'+fmtStatNum(max):''))}">${esc(fmtSkillValue(min,max))}</strong></div>`);
+      const damageTypes=[...new Set(damageRows.map(x=>String(x.r.type||'')))];let targetHint='已依目標防禦換算';
+      if(damageTypes.length===1&&damageTypes[0]==='physical'){const m=armorDamageMultiplier274C(combatTarget.armor);targetHint=`物理承傷 ${(m*100).toFixed(2)}%`;}
+      else if(damageTypes.length===1&&damageTypes[0]==='magic'){targetHint=`法術承傷 ${(Number(combatTarget.spellMult??1)*100).toFixed(0)}%`;}
+      else if(damageTypes.length===1&&damageTypes[0]==='absolute')targetHint='絕對／真實傷害 · 承傷 100%';
+      resultRows.push(`<div class="skill-dummy-hit"><span>對 ${esc(combatTarget.short)} 實傷 · ${esc(targetHint)}</span><strong title="${esc(fmtStatNum(dmin)+(Math.abs(dmin-dmax)>.001?'–'+fmtStatNum(dmax):''))}">${esc(fmtSkillValue(dmin,dmax))}</strong></div>`);
+    }
+    const lines=damageRows.map(({f,r,dummy})=>{const one=fmtSkillValue(r.min,r.max),total=fmtSkillValue(r.totalMin,r.totalMax),rep=r.repeat>1?` × ${r.repeat}${Number(f.decayPct||0)>0?'（遞減）':''} = ${total}`:'',mod=r.bonus?`${r.kind==='damage'?`含裝備${skillDamageTypeLabel(r.type)}傷`:'含治療效果'} +${fmtStatNum(r.bonus)}%`:'';let after='';if(r.kind==='damage'){const label=r.type==='physical'?'物理減傷後':r.type==='magic'?'法術減傷後':r.type==='absolute'?'絕對傷害實傷':'目標實傷';after=` → ${label} ${fmtSkillValue(dummy.totalMin,dummy.totalMax)}`;}return `<div class="skill-damage-line"><b>${esc(f.label||skillResultKindLabel(r.kind,r.type))}</b><span>${one}${rep}${after}</span>${mod?`<small>${esc(mod)}</small>`:''}</div>`;}).join('');
+    const targetTests='',notes=[...new Set(rows.map(x=>x.f.note).filter(Boolean))].join('；'),detail=(lines||notes)?`<details class="skill-card-detail"><summary>公式／條件</summary><div class="skill-damage-lines">${lines}</div>${notes?`<div class="skill-damage-note">${esc(notes)}</div>`:''}</details>`:'';
+    if(resultRows.length)cards.push(`<article class="skill-damage-card"><div class="skill-damage-top"><span class="skill-key">${esc(skill.key)}</span><span class="skill-damage-name">${esc(String(skill.name||'').replace(/\n/g,' '))}</span><span class="skill-level">${esc(levelText)}</span></div><div class="skill-result-stack">${resultRows.join('')}</div>${detail}</article>`);
+  });
+  skillDamageGrid.innerHTML=cards.length?cards.join(''):'<div class="skill-damage-empty">這個職業目前沒有可直接換算的傷害技能；控制、治療、機率與純條件效果請回配裝能力或職業技能頁查看。</div>';
+  renderEquipmentRecovery(final);
+  if(skillSourceNote){const isSave=!!saveSnapshot,bonus=final.panelBonus,bonusText=bonus?.attackPct?` 角色面板另套用 ${bonus.source} 的攻擊力 +${fmtStatNum(bonus.attackPct)}%${bonus.conditional?`（${bonus.conditional}）`:''}。`:'';skillSourceNote.textContent=(isSave?`已連結存檔角色 Lv.${Number(saveSnapshot.level||0)}；技能傷害採 v2.74C 已核對的最高等級技能資料。`:'未帶入存檔時，以 Lv.300 與 v2.74C 最高等級技能公式預覽。')+bonusText;}
+ }
+ function renderHeroTotal(hero,pack){
+  if(!heroTotalGrid||!heroConversion)return;
+  if(!hero){if(heroTotalJob)heroTotalJob.textContent='尚未選職業';heroTotalGrid.innerHTML='<div class="gear-total-empty" style="grid-column:1/-1">選擇職業後，這裡會顯示目前配裝的角色能力。</div>';if(heroCombatStrip)heroCombatStrip.innerHTML='';heroConversion.innerHTML='';renderSkillCdOverview(null);renderSkillDamage(null);return;}
+  const final=buildFinalHeroStats(hero,pack),{eqStr,eqAgi,eqInt,mysticInt}=pack;
+  if(heroTotalJob)heroTotalJob.textContent=`${profession} Lv.${Number(saveSnapshot?.level||300)}`;
+  const card=(label,value,cls='',suffix='')=>`<div class="hero-total-stat ${cls}"><span>${esc(label)}</span><strong title="${esc(fmtStatNum(value))}${esc(suffix)}">${esc(fmtCombatNum(value))}${esc(suffix)}</strong></div>`;
+  const rangeCard=(label,min,max,cls='derived')=>`<div class="hero-total-stat ${cls}"><span>${esc(label)}</span><strong title="${esc(fmtStatNum(min))}–${esc(fmtStatNum(max))}">${esc(fmtSkillValue(min,max))}</strong></div>`;
+  const panelAttackCard=(hero,final)=>{
+    const whiteMin=Number(hero?.atkMin||0),whiteMax=Number(hero?.atkMax||0),green=Math.round(Number(final?.panelGreenAttack??(Number(final?.panelAtkMin||0)-whiteMin)));
+    const greenText=`+${fmtStatNum(green)}`;
+    const totalTitle=`${fmtStatNum(final.panelAtkMin)}–${fmtStatNum(final.panelAtkMax)}`;
+    return `<div class="hero-total-stat derived panel-attack"><span>面板攻擊力</span><div class="panel-attack-breakdown"><b class="attack-white" title="遊戲白字基礎攻擊">${esc(fmtStatNum(whiteMin))}～${esc(fmtStatNum(whiteMax))}</b><em class="attack-plus">＋</em><b class="attack-green" title="裝備攻擊、裝備主屬性與會直接顯示在面板的常駐職業被動">${esc(greenText)}</b></div><small>白字基礎 ＋ 綠字加成</small><strong class="panel-attack-total" title="${esc(totalTitle)}">最終 ${esc(fmtSkillValue(final.panelAtkMin,final.panelAtkMax))}</strong></div>`;
+  };
+  const panelBonus=final.panelBonus,showAttack=jobShowsAttackPanel();
+  const totalCards=[
+    card('力量',final.str,hero.primary==='str'?'primary':''),
+    card('敏捷',final.agi,hero.primary==='agi'?'primary':''),
+    card('智慧',final.int,hero.primary==='int'?'primary':'')
+  ];
+  if(showAttack)totalCards.push(panelAttackCard(hero,final));
+  totalCards.push(card('HP',final.hp,'derived'),card('MP',final.mp,'derived'),card('護甲',final.armor,'derived'),card('攻速加成',Number(final.tot.attackSpeed||0),'derived','%'));
+  heroTotalGrid.innerHTML=totalCards.join('');
+  if(heroCombatStrip){const chips=[];if(showAttack&&panelBonus?.attackPct&&(panelBonus.applyToPanel===false||panelBonus.conditional))chips.push(`<span class="hero-combat-chip damage"><b>條件攻擊 +${fmtStatNum(panelBonus.attackPct)}%</b><small>${esc(panelBonus.source||'角色技能')}${panelBonus.conditional?` · ${esc(panelBonus.conditional)}`:''}</small></span>`);heroCombatStrip.innerHTML=chips.join('');heroCombatStrip.classList.toggle('empty',!chips.length);}
+  heroConversion.innerHTML='';
+  renderSkillCdOverview(final);
+  renderSkillDamage(final);
+ }
+ function renderEquipmentStats(){if(!gearStatGrid)return;const hero=currentHeroBase(),items=picked.map(findItem).filter(Boolean),pack=collectEquipmentTotals(items,hero);if(gearEquippedCount)gearEquippedCount.textContent=`${items.length} / 6 件`;renderHeroTotal(hero,pack);
+  const {tot,hasteInfos,eqStr,eqAgi,eqInt,mysticInt,isMystic}=pack,final=buildFinalHeroStats(hero,pack);
+  if(!items.length){gearStatGrid.innerHTML='';if(gearBonusBlock)gearBonusBlock.classList.add('hidden');gearDerived?.classList.add('hidden');if(gearSpecialCount)gearSpecialCount.textContent='0 項';if(gearSpecialList)gearSpecialList.innerHTML='<div class="gear-total-empty">目前沒有特殊效果。</div>';return;}
+  const cards=[];const add=(label,value,unit='',sub='',cls='')=>{if(!value)return;cards.push(`<div class="gear-stat ${cls}"><span>${esc(label)}</span><strong>${value>0?'+':''}${fmtStatNum(value)}${unit}</strong>${sub?`<small>${esc(sub)}</small>`:''}</div>`)};
+  // 全屬性／全能力與固定攻擊已併入上方面板；三圍、HP／MP、護甲、攻速、回血與技能疾速也不在這裡重複顯示。
+  add('魔力恢復',tot.mpRegen);add('魔法傷害',tot.magicDamage,'%');add('物理傷害',tot.physicalDamage,'%');add('治療效果',tot.healing,'%');add('法力效益',tot.manaEfficiency,'%');add('法力消耗',tot.manaCost,'%');add('移動速度',tot.moveSpeed,'');
+  if(gearBonusBlock)gearBonusBlock.classList.toggle('hidden',!cards.length);
+  gearStatGrid.innerHTML=cards.join('');
+  if(gearDerived){const notes=[];const mismatches=hasteInfos.filter(x=>x.info.mismatch),fallbacks=hasteInfos.filter(x=>!x.info.verified&&x.info.text>0);mismatches.forEach(x=>notes.push(`<span class="warn">⚠ ${esc(itemNameOf(x.item))}：資料庫文字 ${fmtStatNum(x.info.text)}%，2.74C 地圖實際標記 ${fmtStatNum(x.info.value)}%，計算採地圖值。</span>`));fallbacks.forEach(x=>notes.push(`<span class="warn">△ ${esc(itemNameOf(x.item))}：尚未對到 2.74C 原始物件標記，暫依資料庫文字 ${fmtStatNum(x.info.text)}% 計算。</span>`));if(notes.length){gearDerived.classList.remove('hidden');gearDerived.innerHTML=notes.join('');}else gearDerived.classList.add('hidden');}
+  const special=[];items.forEach(x=>{const lines=extractSpecialEffects(x);if(lines.length)special.push({name:itemNameOf(x),lines});});if(gearSpecialCount)gearSpecialCount.textContent=`${special.reduce((a,x)=>a+x.lines.length,0)} 項`;if(gearSpecialList)gearSpecialList.innerHTML=special.length?special.map(x=>`<div class="gear-special-item"><b>${esc(x.name)}</b><span>${x.lines.map(esc).join('\n')}</span></div>`).join(''):'<div class="gear-total-empty">這套裝備沒有辨識到需要另外列出的特殊／條件效果。</div>';
+ }
  function renderSummary(){
    const allChosen=picked.map(findItem).filter(Boolean);
+   renderEquipmentStats();
    const chosen=picked.map((id,i)=>{const x=findItem(id),b=baselineGear[i];if(!x||selectionMode[i]==='held')return null;return x&&(!b||!sameGear(x,b))?x:null;}).filter(Boolean);
    const counts=new Map();
    const skippedGear=new Map();
@@ -740,19 +1221,29 @@ loadDB().then(d=>{
  }
  function renderAll(){builderMain.classList.toggle('is-locked',!profession);if(ownedSwapPanel)ownedSwapPanel.classList.add('hidden');if(loadoutIntro)loadoutIntro.classList.toggle('compact',!!profession);renderCustomLoadouts();renderThreshold();renderSlots();renderSummary();}
  professionEl.onchange=async()=>{const selected=String(professionEl.value||'');const saveIndex=saveIndexFromProfessionValue(selected);if(saveIndex>=0){activeCustomLoadoutId='';filter.value='';await switchLoadoutCharacter(saveIndex);renderProfessionOptions(selected);return;}profession=selected;activeCustomLoadoutId='';filter.value='';baselineGear=Array(6).fill(null);selectionMode=Array(6).fill('plan');saveOnlyItems=[];saveSnapshot=null;importedNote.innerHTML='';if(profession){load(profession);safeSet(LAST_KEY,profession);markLoadoutMode('plan')}else{picked=Array(6).fill('');markLoadoutMode('plan')}renderAll();}; filter.oninput=renderSlots;if(showArchivedGear)showArchivedGear.onchange=()=>{safeSet(ARCHIVE_TOGGLE_KEY,showArchivedGear.checked?'1':'0');renderSlots();};document.getElementById('clearAll').onclick=()=>{if(!profession)return;picked=Array(6).fill('');baselineGear=Array(6).fill(null);selectionMode=Array(6).fill('plan');importedNote.innerHTML='';activeCustomLoadoutId='';save();renderAll();};
+ if(armorDummyInput){const savedArmor=safeGet(ARMOR_DUMMY_KEY);if(savedArmor!==null)armorDummyInput.value=String(clampArmorDummy(savedArmor));armorDummyInput.addEventListener('input',()=>{if(armorBossPreset)armorBossPreset.value='';safeSet(BOSS_TARGET_KEY,'');const v=clampArmorDummy(armorDummyInput.value);safeSet(ARMOR_DUMMY_KEY,String(v));updateArmorDummyUi();if(lastSkillFinal)renderSkillDamage(lastSkillFinal);});}
+ if(armorBossPreset){const savedBoss=safeGet(BOSS_TARGET_KEY);if(savedBoss&&BOSS_TARGET_PRESETS_274C[savedBoss]){armorBossPreset.value=savedBoss;const preset=BOSS_TARGET_PRESETS_274C[savedBoss];if(armorDummyInput)armorDummyInput.value=String(preset.armor);}}
+ armorPresetButtons.forEach(btn=>btn.addEventListener('click',()=>{if(armorBossPreset)armorBossPreset.value='';safeSet(BOSS_TARGET_KEY,'');const v=clampArmorDummy(btn.dataset.armorPreset);if(armorDummyInput)armorDummyInput.value=String(v);safeSet(ARMOR_DUMMY_KEY,String(v));updateArmorDummyUi();if(lastSkillFinal)renderSkillDamage(lastSkillFinal);}));
+ if(armorBossPreset)armorBossPreset.addEventListener('change',()=>{const key=String(armorBossPreset.value||'');safeSet(BOSS_TARGET_KEY,key);const preset=BOSS_TARGET_PRESETS_274C[key];if(preset){const v=clampArmorDummy(preset.armor);if(armorDummyInput)armorDummyInput.value=String(v);safeSet(ARMOR_DUMMY_KEY,String(v));}updateArmorDummyUi();if(lastSkillFinal)renderSkillDamage(lastSkillFinal);});
+ updateArmorDummyUi();
+ document.addEventListener('input',e=>{const input=e.target.closest?.('.heal-test-input');if(!input)return;const fold=input.closest('.heal-test-fold');if(fold)updateHealTestFold(fold);});
  window.importLoadoutFromSave=importFromSave;importSaveBtn.onclick=importFromSave;if(savedLoadoutSelect)savedLoadoutSelect.onchange=()=>{activeCustomLoadoutId=savedLoadoutSelect.value;showLoadoutPlanMsg('');if(activeCustomLoadoutId)loadCustomLoadout(activeCustomLoadoutId);else renderCustomLoadouts();};if(loadSavedLoadoutBtn)loadSavedLoadoutBtn.onclick=()=>loadCustomLoadout(savedLoadoutSelect.value);if(saveNewLoadoutBtn)saveNewLoadoutBtn.onclick=saveNewCustomLoadout;if(updateSavedLoadoutBtn)updateSavedLoadoutBtn.onclick=updateCustomLoadout;if(deleteSavedLoadoutBtn)deleteSavedLoadoutBtn.onclick=deleteCustomLoadout;if(loadoutPlanName)loadoutPlanName.addEventListener('keydown',e=>{if(e.key==='Enter')saveNewCustomLoadout()});document.querySelectorAll('[data-summary-tab]').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('[data-summary-tab]').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('[data-summary-panel]').forEach(p=>p.classList.toggle('active',p.dataset.summaryPanel===btn.dataset.summaryTab));});refreshImportStatus();const last=safeGet(LAST_KEY);if(last&&professions.includes(last)){profession=last;professionEl.value=last;load(last);markLoadoutMode('plan')}if(new URLSearchParams(location.search).get('fromSave')==='1'&&readSaveSnapshot())importFromSave();else renderAll();
 }).catch(e=>document.getElementById('slots').innerHTML='<div class="notice">資料載入失敗：'+esc(e.message)+'</div>');
 </script>
 <script>
 function activateRoleHub(name,updateHash=true){
- const tab=name==='loadout'?'loadout':'reader';
+ const tab=['loadout','reader','combat'].includes(name)?name:'reader';
  document.querySelectorAll('[data-role-tab]').forEach(b=>b.classList.toggle('active',b.dataset.roleTab===tab));
  document.querySelectorAll('[data-role-panel]').forEach(p=>p.classList.toggle('active',p.dataset.rolePanel===tab));
- if(updateHash) history.replaceState(null,'',tab==='loadout'?'#loadout':'#reader');
+ if(updateHash) history.replaceState(null,'','#'+tab);
  window.scrollTo({top:0,behavior:'auto'});
 }
 document.querySelectorAll('[data-role-tab]').forEach(b=>b.onclick=()=>activateRoleHub(b.dataset.roleTab));
-const params=new URLSearchParams(location.search);activateRoleHub(params.get('fromSave')==='1'||params.get('tab')==='loadout'||location.hash==='#loadout'?'loadout':'reader',false);
+const openCombatTab=document.getElementById('openCombatTab'),backToLoadout=document.getElementById('backToLoadout');
+if(openCombatTab)openCombatTab.onclick=()=>activateRoleHub('combat');
+if(backToLoadout)backToLoadout.onclick=()=>activateRoleHub('loadout');
+const params=new URLSearchParams(location.search),requested=params.get('tab')||location.hash.replace('#','');
+activateRoleHub(params.get('fromSave')==='1'?'loadout':(['loadout','reader','combat'].includes(requested)?requested:'reader'),false);
 </script><script src="../mobile-nav.js"></script><script data-goatcounter="https://twilighteve.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </body></html>

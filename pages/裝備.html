@@ -1,7 +1,7 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>資料庫｜新暮光之晨</title><link rel="icon" href="../images/site-icon.png"><link rel="stylesheet" href="../style.css"><style>
-.eq-toolbar{display:grid;grid-template-columns:minmax(300px,1fr) minmax(260px,360px) 190px;gap:12px;margin:18px 0 18px;position:sticky;top:76px;z-index:5;background:rgba(11,15,20,.95);padding:12px 0;backdrop-filter:blur(8px)}.eq-toolbar .search{margin:0}.eq-toolbar select{padding:14px 15px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff;font-size:16px}.eq-count{margin:-2px 0 18px;color:#8e99a8;font-size:15px}.equipment-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:16px}.equipment-card{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;background:#121821;border:1px solid #252e3a;border-radius:16px;padding:18px;min-height:210px}.equipment-card.is-unreleased{border-color:#633b43;background:linear-gradient(180deg,#161821,#121820)}.eq-img{width:108px;height:108px;object-fit:contain;object-position:center;background:#080b0f;border:1px solid #2c3541;border-radius:12px;padding:3px;box-sizing:border-box}.eq-main h2{font-size:23px;margin:2px 0 3px}.eq-en{font-size:15px;color:#9eb1c8;margin-bottom:8px}.eq-job{font-size:15px;color:#c1cad5}.eq-section{margin-top:12px}.eq-label{font-size:14px;font-weight:900;color:#f0d690;margin-bottom:3px}.eq-text{font-size:16px;line-height:1.65;color:#d4dce6;white-space:pre-wrap}.eq-materials{color:#b8c4d2}.eq-tag{display:inline-block;padding:4px 9px;border-radius:999px;background:#26313e;font-size:13px;color:#e3e9f0;margin:0 5px 5px 0}.eq-source-forge{color:#e6b85f;border:1px solid #6f5932;background:#211c13}.eq-source-dungeon{color:#8fd0ff;border:1px solid #35596f;background:#0f1d29}.eq-source-gold{color:#f1d06b;border:1px solid #77652e;background:#241f10}.eq-unreleased{color:#ffb8b8;border:1px solid #8b4a4a;background:#4c2929;font-weight:900}.eq-empty{grid-column:1/-1;padding:32px;text-align:center;color:#8e99a8;background:#121821;border:1px solid #252e3a;border-radius:14px}
-.eq-note{font-size:14px;line-height:1.6;color:#91a0b3;margin-bottom:6px}.eq-note b{color:#d7e0eb}
-@media(max-width:900px){.eq-toolbar{grid-template-columns:1fr 1fr}.eq-toolbar .search{grid-column:1/-1}.equipment-list{grid-template-columns:1fr}}@media(max-width:720px){.eq-toolbar{grid-template-columns:1fr;top:64px}.eq-toolbar .search{grid-column:auto}.equipment-card{grid-template-columns:84px 1fr;gap:12px;padding:14px}.eq-img{width:80px;height:80px}.eq-main h2{font-size:20px}}
+.eq-layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:20px;align-items:start;margin-top:16px}.eq-main-wrap{min-width:0}.eq-sidebar{position:sticky;top:78px;align-self:start;background:#0d141d;border:1px solid #2b3542;border-radius:14px;padding:10px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}.eq-sidebar-head{padding:8px 9px 11px;border-bottom:1px solid #27313d;margin-bottom:8px}.eq-sidebar-title{font-size:17px;font-weight:900;color:#f4f7fb}.eq-all-btn,.eq-nav-group-btn,.eq-nav-item{width:100%;border:0;text-align:left;cursor:pointer;color:#eaf1f8}.eq-all-btn{padding:13px 14px;border-radius:10px;background:#111a24;font-size:16px;font-weight:900;margin-bottom:8px;border:1px solid #293646}.eq-all-btn:hover,.eq-all-btn.active{background:#253142;border-color:#516783;color:#fff}.eq-nav-group{border-top:1px solid #25303b}.eq-nav-group-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 9px;background:transparent;font-size:16px;font-weight:900}.eq-nav-group[data-kind="forge"] .eq-nav-group-btn{color:#e6b85f}.eq-nav-group[data-kind="dungeon"] .eq-nav-group-btn{color:#8fd0ff}.eq-nav-group[data-kind="event"] .eq-nav-group-btn{color:#d9a2ff}.eq-nav-arrow{font-size:12px;transition:transform .16s ease;opacity:.8}.eq-nav-group.open .eq-nav-arrow{transform:rotate(90deg)}.eq-nav-items{display:none;padding:0 0 8px}.eq-nav-group.open .eq-nav-items{display:block}.eq-nav-item{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:9px 10px 9px 16px;background:transparent;border-radius:8px;font-size:14px;line-height:1.35}.eq-nav-item:hover{background:#16202b}.eq-nav-item.active{font-weight:900;background:#1a2532;box-shadow:inset 3px 0 #7189a5}.eq-nav-group[data-kind="forge"] .eq-nav-item.active{box-shadow:inset 3px 0 #e6b85f;background:rgba(230,184,95,.09)}.eq-nav-group[data-kind="dungeon"] .eq-nav-item.active{box-shadow:inset 3px 0 #8fd0ff;background:rgba(143,208,255,.09)}.eq-nav-group[data-kind="event"] .eq-nav-item.active{box-shadow:inset 3px 0 #d9a2ff;background:rgba(217,162,255,.09)}.eq-nav-count{flex:0 0 auto;min-width:24px;padding:1px 6px;border-radius:999px;background:#202b37;color:#9fb0c3;text-align:center;font-size:11px}.eq-toolbar{display:grid;grid-template-columns:minmax(300px,1fr) 190px;gap:12px;margin:0 0 14px;position:sticky;top:76px;z-index:5;background:rgba(11,15,20,.95);padding:12px 0;backdrop-filter:blur(8px)}.eq-toolbar .search{margin:0}.eq-toolbar select{padding:14px 15px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff;font-size:16px}.eq-current{display:flex;align-items:center;gap:8px;min-height:28px;margin:-1px 0 8px;color:#c8d2df;font-size:14px}.eq-current strong{color:#f3f6fa}.eq-count{margin:0 0 18px;color:#8e99a8;font-size:14px}.equipment-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:16px}.equipment-card{display:grid;grid-template-columns:104px minmax(0,1fr);gap:17px;background:#121821;border:1px solid #252e3a;border-radius:16px;padding:17px;min-height:190px}.equipment-card.is-unreleased{border-color:#633b43;background:linear-gradient(180deg,#161821,#121820)}.equipment-card.is-event{border-color:#4d3763;background:linear-gradient(180deg,#151621,#121820)}.eq-img{width:100px;height:100px;object-fit:contain;object-position:center;background:#080b0f;border:1px solid #2c3541;border-radius:12px;padding:3px;box-sizing:border-box}.eq-main h2{font-size:22px;margin:2px 0 3px}.eq-en{font-size:14px;color:#9eb1c8;margin-bottom:7px}.eq-job{font-size:15px;color:#c1cad5;line-height:1.5}.eq-section{margin-top:11px}.eq-label{font-size:13px;font-weight:900;color:#f0d690;margin-bottom:3px}.eq-text{font-size:15px;line-height:1.62;color:#d4dce6;white-space:pre-wrap}.eq-materials{color:#b8c4d2}.eq-tag{display:inline-block;padding:4px 9px;border-radius:999px;background:#26313e;font-size:12px;color:#e3e9f0;margin:0 5px 5px 0}.eq-source-forge{color:#e6b85f;border:1px solid #6f5932;background:#211c13}.eq-source-dungeon{color:#8fd0ff;border:1px solid #35596f;background:#0f1d29}.eq-source-event{color:#e1b4ff;border:1px solid #694a7d;background:#211629}.eq-source-gold{color:#f1d06b;border:1px solid #77652e;background:#241f10}.eq-unreleased{color:#ffb8b8;border:1px solid #8b4a4a;background:#4c2929;font-weight:900}.eq-provisional{color:#e5c4ef;border:1px solid #6c5277;background:#2c2032;font-weight:800}.eq-empty{grid-column:1/-1;padding:32px;text-align:center;color:#8e99a8;background:#121821;border:1px solid #252e3a;border-radius:14px}.eq-note{font-size:14px;line-height:1.6;color:#91a0b3;margin-bottom:6px}.eq-note b{color:#d7e0eb}
+@media(max-width:1080px){.eq-layout{grid-template-columns:1fr}.eq-sidebar{position:relative;top:auto;max-height:none}.eq-nav-items{display:flex!important;flex-wrap:wrap;gap:6px;padding:0 0 10px}.eq-nav-group-btn{cursor:default}.eq-nav-arrow{display:none}.eq-nav-item{width:auto;flex:0 0 auto;padding:8px 11px;border:1px solid #2c3846}.equipment-list{grid-template-columns:1fr}}
+@media(max-width:720px){.eq-toolbar{grid-template-columns:1fr;top:64px}.equipment-card{grid-template-columns:76px 1fr;gap:11px;padding:13px}.eq-img{width:74px;height:74px}.eq-main h2{font-size:19px}.eq-job,.eq-section{grid-column:1/-1}.eq-sidebar{padding:8px}.eq-nav-item{font-size:13px}}
 
 
 .drop-wrap{max-width:1200px;margin:0 auto}
@@ -54,11 +54,20 @@
 @media(max-width:720px){.db-hub-tabs{top:62px}.db-hub-tab{flex:1 1 150px}}
 
 .mine-item-row .mine-verify-note{display:block;margin-top:3px;color:#f6b84a;font-size:11px;font-weight:700;line-height:1.35}
+
+/* Lv.300 角色裸裝基礎素質 */
+.hero-stats-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start;padding:18px 20px;border:1px solid #344356;border-radius:16px;background:linear-gradient(135deg,#0e1722,#101923);margin:0 0 16px}
+.hero-stats-intro h3{margin:0 0 7px;color:#f3e6bd;font-size:22px}.hero-stats-intro p{margin:0;color:#9fb0c3;line-height:1.75;font-size:14px}.hero-stats-source{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end;max-width:360px}.hero-stat-pill{display:inline-flex;align-items:center;padding:6px 10px;border:1px solid #3c4c60;border-radius:999px;background:#0a1119;color:#b9c7d7;font-size:12px;font-weight:800;white-space:nowrap}.hero-stat-pill strong{color:#ffd873;margin-left:4px}
+.hero-stats-toolbar{display:grid;grid-template-columns:minmax(260px,1fr) 230px;gap:12px;margin:0 0 14px}.hero-stats-toolbar input,.hero-stats-toolbar select{width:100%;box-sizing:border-box;padding:13px 14px;background:#10151c;border:1px solid #303947;border-radius:10px;color:#fff;font-size:15px}.hero-stats-count{margin:0 0 10px;color:#8e99a8;font-size:13px}
+.hero-stats-table-wrap{overflow:auto;border:1px solid #2b3745;border-radius:16px;background:#0e151e}.hero-stats-table{width:100%;min-width:980px;border-collapse:collapse}.hero-stats-table th,.hero-stats-table td{padding:12px 13px;border-bottom:1px solid #25313e;text-align:right;white-space:nowrap}.hero-stats-table th{position:sticky;top:0;background:#121b26;color:#8fa0b4;font-size:12px;letter-spacing:.03em;z-index:1}.hero-stats-table th:first-child,.hero-stats-table td:first-child{text-align:left}.hero-stats-table tbody tr:hover{background:#151f2b}.hero-stats-table tbody tr:last-child td{border-bottom:0}.hero-name{font-weight:900;color:#f0f4f8;font-size:15px}.hero-main-stat{display:inline-flex;margin-left:7px;padding:2px 7px;border-radius:999px;border:1px solid #45566b;background:#192331;color:#b8c7d9;font-size:10px;font-weight:900;vertical-align:middle}.hero-val-strong{color:#f3d77b;font-weight:900}.hero-atk{color:#dce9f7;font-weight:800}
+.hero-stats-cards{display:none}.hero-stat-card{border:1px solid #2b3745;border-radius:14px;background:#0e151e;padding:14px}.hero-stat-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #26313e}.hero-stat-card-head strong{font-size:18px;color:#f3f6fa}.hero-stat-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero-stat-kv{padding:9px 10px;border-radius:10px;background:#111a24}.hero-stat-kv span{display:block;color:#8393a6;font-size:11px;margin-bottom:3px}.hero-stat-kv b{display:block;color:#dfe8f2;font-size:15px}.hero-stat-card-grid .wide{grid-column:1/-1}.hero-stats-footnote{margin:14px 2px 0;color:#8393a6;font-size:12px;line-height:1.7}.hero-stats-empty{padding:28px;text-align:center;color:#8e99a8;border:1px solid #2b3745;border-radius:14px;background:#0e151e}
+@media(max-width:800px){.hero-stats-intro{grid-template-columns:1fr}.hero-stats-source{justify-content:flex-start;max-width:none}.hero-stats-toolbar{grid-template-columns:1fr}.hero-stats-table-wrap{display:none}.hero-stats-cards{display:grid;grid-template-columns:1fr;gap:10px}}
+
 </style></head><body>
-<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html" class="active">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">👤 角色讀取&配裝</a></nav></header>
-<main class="wrap"><h1>📚 資料庫</h1><p class="muted">裝備資料與掉落率集中在同一頁，使用下方分頁切換。</p>
-<div class="db-hub-tabs" role="tablist"><button class="db-hub-tab active" type="button" data-db-tab="equipment">🗡️ 裝備資料庫</button><button class="db-hub-tab" type="button" data-db-tab="drop">🎲 掉落率</button></div>
-<section class="db-hub-panel active" data-db-panel="equipment"><h2>🗡️ 裝備資料庫</h2><div class="eq-note">整合 <b>鍛造 + 副本材料&裝備 + 尚未推出的 Wiki 鍛造資料</b>；相同裝備只保留一筆，未推出項目會顯示「版本尚未推出」。</div><div class="eq-toolbar"><input id="q" class="search" placeholder="搜尋裝備、職業、效果、材料…"><select id="source"><option value="">全部出處</option></select><select id="status"><option value="">全部版本</option><option value="released">已推出</option><option value="unreleased">版本尚未推出</option></select></div><div id="count" class="eq-count"></div><div id="items" class="equipment-list"></div></section>
+<header class="top"><nav class="nav"><a class="brand" href="../index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="../images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="../index.html">🏠 首頁</a><a href="鍛造.html">🔨 鍛造</a><a href="副本材料.html">🏰 副本材料&裝備</a><a href="攻略首頁.html">🎬 副本攻略</a><a href="材料.html">🧱 鍛造材料&合成商人</a><a href="裝備.html" class="active">📚 資料庫</a><a href="NPC.html">📍 NPC位置</a><a href="職業.html">✨ 職業技能</a><a href="搜尋.html">📂 讀檔・配裝・傷害護甲</a></nav></header>
+<main class="wrap"><h1>📚 資料庫</h1><p class="muted">裝備資料、掉落率與角色滿級裸裝基礎素質集中在同一頁，使用下方分頁切換。</p>
+<div class="db-hub-tabs" role="tablist"><button class="db-hub-tab active" type="button" data-db-tab="equipment">🗡️ 裝備資料庫</button><button class="db-hub-tab" type="button" data-db-tab="drop">🎲 掉落率</button><button class="db-hub-tab" type="button" data-db-tab="stats">🧬 角色基礎素質</button></div>
+<section class="db-hub-panel active" data-db-panel="equipment"><h2>🗡️ 裝備資料庫</h2><div class="eq-note">依原本的 <b>鍛造分類／副本分類</b> 整理裝備，並納入活動副本裝備。左側直接選來源，不再使用又長又重複的出處下拉選單。</div><div class="eq-layout"><aside class="eq-sidebar" aria-label="裝備來源分類"><div class="eq-sidebar-head"><span class="eq-sidebar-title">裝備分類</span></div><button id="eqAllBtn" class="eq-all-btn active" type="button">全部裝備</button><div id="eqNav"></div></aside><section class="eq-main-wrap"><div class="eq-toolbar"><input id="q" class="search" placeholder="搜尋裝備、職業、效果、材料…"><select id="status"><option value="">全部版本</option><option value="released">已推出</option><option value="unreleased">版本尚未推出</option></select></div><div id="eqCurrent" class="eq-current"><strong>全部裝備</strong></div><div id="count" class="eq-count"></div><div id="items" class="equipment-list"></div></section></div></section>
 <section class="db-hub-panel" data-db-panel="drop"><h2>🎲 掉落率 <span class="pending-tag">待確認</span></h2>
 <div class="drop-note"><strong>計算方式：</strong>目前依 v2.74 地圖內 ItemPool 權重整理，實際遊戲觸發次數與特殊條件仍在確認中，因此本頁所有百分比先標示為「待確認」。</div>
 
@@ -79,12 +88,52 @@
 <div id="mineGrid" class="pool-grid"></div>
 </section>
 </section>
+<section class="db-hub-panel" data-db-panel="stats">
+  <h2>🧬 Lv.300 角色裸裝基礎素質</h2>
+  <div class="hero-stats-intro">
+    <div>
+      <h3>滿級、完全未穿裝備的角色面板</h3>
+      <p>不包含裝備、Buff 與技能被動加成。數值依 <strong>Twilight's Eve New v2.74C</strong> 地圖英雄物件資料計算至 Lv.300；HP、MP、護甲與普攻已換算英雄屬性對面板的影響。</p>
+    </div>
+    <div class="hero-stats-source" aria-label="資料條件">
+      <span class="hero-stat-pill">等級 <strong>Lv.300</strong></span>
+      <span class="hero-stat-pill">狀態 <strong>裸裝</strong></span>
+      <span class="hero-stat-pill">版本 <strong>2.74C</strong></span>
+      <span class="hero-stat-pill">職業 <strong id="heroStatsTotal">21</strong></span>
+    </div>
+  </div>
+  <div class="hero-stats-toolbar">
+    <input id="heroStatsSearch" type="search" placeholder="搜尋職業…" aria-label="搜尋角色基礎素質">
+    <select id="heroStatsSort" aria-label="角色基礎素質排序">
+      <option value="default">依職業順序</option>
+      <option value="str">力量：高 → 低</option>
+      <option value="agi">敏捷：高 → 低</option>
+      <option value="int">智力：高 → 低</option>
+      <option value="hp">HP：高 → 低</option>
+      <option value="mp">MP：高 → 低</option>
+      <option value="armor">護甲：高 → 低</option>
+      <option value="atkMax">普攻上限：高 → 低</option>
+    </select>
+  </div>
+  <div id="heroStatsCount" class="hero-stats-count"></div>
+  <div class="hero-stats-table-wrap">
+    <table class="hero-stats-table">
+      <thead><tr><th>職業</th><th>力量</th><th>敏捷</th><th>智力</th><th>HP</th><th>MP</th><th>護甲</th><th>普攻</th></tr></thead>
+      <tbody id="heroStatsBody"></tbody>
+    </table>
+  </div>
+  <div id="heroStatsCards" class="hero-stats-cards"></div>
+  <p class="hero-stats-footnote">計算基準：Lv.300 = 初始屬性 + 299 次等級成長；地圖設定力量每點增加 20 HP、敏捷每點增加 0.08 護甲。先知與召喚師採用 2.74C 讀檔後實際對應的角色物件資料。</p>
+</section>
+
 </main>
 <footer class="site-footer"><div><strong>新暮光之晨</strong>　v2.74　｜　資料庫</div></footer>
-<script src="../app-data.js"></script><script src="../loadout-rules.js"></script><script src="../extra-equipment-data.js"></script><script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data.js"></script>
+<script src="../hero-stats-data.js"></script><script src="../app-data.js"></script><script src="../loadout-rules.js"></script><script src="../extra-equipment-data.js"></script><script src="../event-dungeon-data.js"></script><script src="../drop-rate-groups.js"></script><script src="../dungeon-special-rates.js"></script><script src="../mining-drop-data.js"></script>
 <script>
 loadDB().then(d=>{
- const q=document.getElementById('q'),source=document.getElementById('source'),status=document.getElementById('status'),items=document.getElementById('items'),count=document.getElementById('count');
+ const q=document.getElementById('q'),status=document.getElementById('status'),items=document.getElementById('items'),count=document.getElementById('count'),nav=document.getElementById('eqNav'),allBtn=document.getElementById('eqAllBtn'),current=document.getElementById('eqCurrent');
+ let selectedSource='';
+ const openGroups=new Set(['forge']);
  const materialZh=new Map();
  [...(d.items||[]),...(d.loot||[])].forEach(it=>{const en=String(it.name_en||'').trim(),zh=String(it.display_name||it.name||'').trim();if(en&&zh&&!materialZh.has(en.toLowerCase()))materialZh.set(en.toLowerCase(),zh);});
  Object.entries({'Golden Fragment':'黃金碎片','Lavender Fragment':'薰衣草碎片','Blood Fragment':'血腥碎片','Nature Fragment':'自然碎片','Ocean Fragment':'海洋碎片','Quicksilver Fragment':'水銀碎片','Ruby':'紅寶石','Sapphire':'藍寶石','Emerald':'翡翠寶石','Amethyst':'紫水晶','Diamond':'鑽石','Silver':'白銀','Mythical Armor Piece':'神話盔甲碎片','Mythical Weapon Piece':'神話武器碎片','Mythical Handle Piece':'神話配件碎片','Fabled Weapon Piece':'傳說武器碎片','Tainted Gem':'污染寶石','Dark Crystal Shard':'暗黑水晶碎片','Diamond of Nulgath':'努爾加斯鑽石','Totem of Nulgath':'努爾加斯圖騰','Prismatic Sigil of Elements':'稜彩元素印記','Mystery':'謎','Mystical':'秘'}).forEach(([en,zh])=>materialZh.set(en.toLowerCase(),zh));
@@ -95,16 +144,33 @@ loadDB().then(d=>{
  function ruleFor(x){return ruleByName.get(norm(x.name))||ruleByEn.get(norm(x.name_en))||null}
  function isUnreleased(x){const r=ruleFor(x);return !!x._unreleased || (r&&r.status==='現版本尚未出') || /版本尚未出|版本尚未推出/.test(String(x.dungeon||''))}
  function forgeGroupFromRow(x){const r=Number(x.row||0),n=String(x.name||'');if(r>=4&&r<=14)return'Weapon Master｜武器大師';if(r>=17&&r<=20)return'Bob the Builder｜鮑伯老師傅';if(r>=23&&r<=25)return'Magic Wizard｜魔幻巫師';if(r>=28&&r<=34)return'Ancient Soul｜遠古靈魂';if(r>=76&&r<=79)return'復讐の天使｜復仇的天使';if(r>=82&&r<=92)return'炎の悪魔｜火之惡魔';if(r>=95&&r<=103)return'焔の悪魔｜焰之惡魔';if(r>=178&&r<=191)return'洗禮專屬武器';const cloud=['腐化水晶','暗鑄甲','異能者之戒','發光球','海柏利昂','神秘法杖','流浪者','風語者','冷凍細胞','毀滅','惡毒'];const sun=['絕望之刃','命運的致盲之光','海利亞之書','濃縮能量','殘酷之刃','詛咒之刃','龍磷盔甲','傳說中的龍珠','芙蕾雅傳說','靈魂射擊','星光水晶'];const nature=['兄弟之血','爆破棒','龍圖騰','午夜之爪','凜冬之魂','龍弓','漢娜的咒術精華','夜影','大地的力量','最終翡翠之刃','瓶中綠洲'];if(cloud.includes(n))return'雲の天使｜雲天使';if(sun.includes(n))return'太陽の天使｜太陽天使';if(nature.includes(n))return'自然の天使｜自然天使';return x.type==='神祇鍛造'?'神祇鍛造':'其他鍛造'}
- function categoryFor(x){if(x._db_group)return'forge::'+x._db_group;const r=ruleFor(x);if(x._origin==='loot')return'dungeon::'+String(x.dungeon||'其他副本').replace(/\s*（?版本尚未出[）)]?/g,'').trim();if(r&&r.sourceType==='鍛造裝備')return'forge::'+(r.sourceGroup||forgeGroupFromRow(x));if(r&&r.sourceType==='副本裝備')return'dungeon::'+(r.sourceGroup||x.dungeon||'其他副本');return'forge::'+forgeGroupFromRow(x)}
- function sourceLabel(cat){const [kind,...rest]=cat.split('::');const name=rest.join('::');return(kind==='dungeon'?'副本掉落｜':'鍛造｜')+name}
- function sourceClass(cat){if(/M1|洗禮專屬武器/.test(cat))return'eq-source-gold';return cat.startsWith('dungeon::')?'eq-source-dungeon':'eq-source-forge'}
- const raw=[...(d.items||[]).map(x=>({...x,_origin:'forge'})),...(d.loot||[]).map(x=>({...x,_origin:'loot'})),...(typeof EXTRA_EQUIPMENT_DB!=='undefined'?EXTRA_EQUIPMENT_DB:[]).map(x=>({...x,_origin:'forge-extra'}))];
- const dedup=new Map();raw.forEach(x=>{const key=norm(x.name)||norm(x.name_en);if(!key)return;const prev=dedup.get(key);if(!prev||x._origin==='forge-extra'||(!prev.effect&&x.effect))dedup.set(key,x)});
- const all=[...dedup.values()].map(x=>({...x,_category:categoryFor(x),_unreleasedFinal:isUnreleased(x)}));
- const cats=[...new Set(all.map(x=>x._category))];const forgeCats=cats.filter(x=>x.startsWith('forge::')).sort((a,b)=>sourceLabel(a).localeCompare(sourceLabel(b),'zh-Hant'));const dungeonCats=cats.filter(x=>x.startsWith('dungeon::')).sort((a,b)=>sourceLabel(a).localeCompare(sourceLabel(b),'zh-Hant'));
- source.innerHTML='<option value="">全部出處</option>'+(forgeCats.length?'<optgroup label="鍛造">'+forgeCats.map(c=>`<option value="${esc(c)}">${esc(sourceLabel(c))}</option>`).join('')+'</optgroup>':'')+(dungeonCats.length?'<optgroup label="副本掉落">'+dungeonCats.map(c=>`<option value="${esc(c)}">${esc(sourceLabel(c))}</option>`).join('')+'</optgroup>':'');
- function render(){const qq=q.value.trim().toLowerCase(),cat=source.value,st=status.value;const list=all.filter(x=>(!cat||x._category===cat)&&(!st||(st==='unreleased')===x._unreleasedFinal)&&(!qq||((x.display_name||x.name)+' '+(x.display_name_en||x.name_en)+' '+(x.job||'')+' '+(x.effect||'')+' '+(x.materials||'')+' '+sourceLabel(x._category)).toLowerCase().includes(qq)));count.textContent=`顯示 ${list.length} / ${all.length} 筆（已自動移除重複）`;items.innerHTML=list.map(x=>{const nm=x.display_name||x.name,en=x.display_name_en||x.name_en,src=sourceLabel(x._category),color=x.name_color||'#f3f6fa';return`<article class="equipment-card${x._unreleasedFinal?' is-unreleased':''}"><div>${x.image?`<img class="eq-img" src="${esc(resolveImage(x))}" loading="lazy" alt="${esc(nm)}">`:''}</div><div class="eq-main"><span class="eq-tag ${sourceClass(x._category)}">${esc(src)}</span>${x._unreleasedFinal?'<span class="eq-tag eq-unreleased">版本尚未推出</span>':''}<h2 style="color:${esc(color)}">${esc(nm)}</h2>${en&&norm(en)!==norm(nm)?`<div class="eq-en">${esc(en)}</div>`:''}${x.job?`<div class="eq-job">適用職業：${formatText(x.job)}</div>`:''}<div class="eq-section"><div class="eq-label">效果</div><div class="eq-text">${formatText(x.effect||'—')}</div></div><div class="eq-section"><div class="eq-label">需求素材</div><div class="eq-text eq-materials">${formatRarityText(zhMaterialText(x.materials||'—'))}</div></div></div></article>`}).join('')||'<div class="eq-empty">找不到符合條件的裝備。</div>'}
- q.oninput=render;source.onchange=render;status.onchange=render;const initialQ=new URLSearchParams(location.search).get('q');if(initialQ)q.value=initialQ;render();
+ function categoryFor(x){if(x._origin==='event')return'event::'+(x._eventTitle||'活動副本');if(x._db_group)return'forge::'+x._db_group;const r=ruleFor(x);if(x._origin==='loot')return'dungeon::'+String(x.dungeon||'其他副本').replace(/\s*（?版本尚未出[）)]?/g,'').trim();if(r&&r.sourceType==='鍛造裝備')return'forge::'+(r.sourceGroup||forgeGroupFromRow(x));if(r&&r.sourceType==='副本裝備')return'dungeon::'+(r.sourceGroup||x.dungeon||'其他副本');return'forge::'+forgeGroupFromRow(x)}
+ function cleanForgeSource(name){const parts=String(name||'').split('｜').map(x=>x.trim()).filter(Boolean);let out=(parts.length>1?parts[parts.length-1]:parts[0]||'其他鍛造');out=out.replace(/\s*\([A-Za-z][^)]*\)\s*$/,'').trim();return out||'其他鍛造'}
+ function cleanDungeonSource(name){const raw=String(name||'').trim();const codeMatch=raw.match(/\((H\d+|IMP\d+|Imp\d+|M\d+)\)/i)||raw.match(/\b(H\d+|IMP\d+|Imp\d+|M\d+)\b/i);const code=codeMatch?String(codeMatch[1]).toUpperCase():'';let compact=raw.replace(/\s*Difficulty[：:]?[\s\S]*$/i,'').replace(/\s*限制[：:]?[\s\S]*$/,'').trim();const parts=compact.split('｜').map(x=>x.trim()).filter(Boolean);let out=(parts.length>1?parts[1]:parts[0]||'其他副本').trim();out=out.replace(/\s*\((H\d+|IMP\d+|Imp\d+|M\d+)\)\s*/ig,' ').replace(/\s+/g,' ').trim();return code?(code+'｜'+out):out}
+ function cleanEventSource(name){let s=String(name||'活動副本').replace(/^event\s*｜\s*/i,'').trim();s=s.replace(/\s*Difficulty[：:]?[\s\S]*$/i,'').trim();return s||'活動副本'}
+ function sourceShortName(cat){const [kind,...rest]=cat.split('::');const name=rest.join('::');return kind==='dungeon'?cleanDungeonSource(name):kind==='event'?cleanEventSource(name):cleanForgeSource(name)}
+ function sourceKey(cat){const [kind]=cat.split('::');return kind+'::'+sourceShortName(cat)}
+ function sourceNameFromKey(key){return String(key||'').split('::').slice(1).join('::')}
+ function sourceLabel(cat){const [kind]=cat.split('::');return(kind==='dungeon'?'副本｜':kind==='event'?'活動副本｜':'鍛造｜')+sourceShortName(cat)}
+ function sourceClass(cat){if(cat.startsWith('event::'))return'eq-source-event';if(/M1|洗禮專屬武器/.test(cat))return'eq-source-gold';return cat.startsWith('dungeon::')?'eq-source-dungeon':'eq-source-forge'}
+ function dungeonOrder(key){const s=sourceNameFromKey(key).toUpperCase();const m=s.match(/^(H|IMP|M)(\d+)/);if(!m)return 999;const n=Number(m[2]);return m[1]==='H'?n:m[1]==='IMP'?100+n:200+n}
+ const eventEquip=[];
+ if(typeof EVENT_DUNGEONS_ENABLED!=='undefined'&&EVENT_DUNGEONS_ENABLED&&typeof EVENT_DUNGEONS!=='undefined')EVENT_DUNGEONS.forEach(ev=>(ev.drops||[]).filter(x=>x.kind==='equipment').forEach(x=>eventEquip.push({...x,_origin:'event',_eventTitle:ev.shortTitle||ev.title,_eventKey:ev.key})));
+ const raw=[...(d.items||[]).map(x=>({...x,_origin:'forge'})),...(d.loot||[]).map(x=>({...x,_origin:'loot'})),...(typeof EXTRA_EQUIPMENT_DB!=='undefined'?EXTRA_EQUIPMENT_DB:[]).map(x=>({...x,_origin:'forge-extra'})),...eventEquip];
+ const dedup=new Map();raw.forEach(x=>{const key=(x._origin==='event'?'event:':'')+(norm(x.name)||norm(x.name_en));if(!key)return;const prev=dedup.get(key);if(!prev||x._origin==='forge-extra'||x._origin==='event'||(!prev.effect&&x.effect))dedup.set(key,x)});
+ const all=[...dedup.values()].map(x=>{const category=categoryFor(x);return({...x,_category:category,_sourceKey:sourceKey(category),_unreleasedFinal:isUnreleased(x)})});
+ const keys=[...new Set(all.map(x=>x._sourceKey))];
+ const forgeCats=keys.filter(x=>x.startsWith('forge::')).sort((a,b)=>sourceNameFromKey(a).localeCompare(sourceNameFromKey(b),'zh-Hant'));
+ const dungeonCats=keys.filter(x=>x.startsWith('dungeon::')).sort((a,b)=>dungeonOrder(a)-dungeonOrder(b)||sourceNameFromKey(a).localeCompare(sourceNameFromKey(b),'zh-Hant'));
+ const eventCats=keys.filter(x=>x.startsWith('event::')).sort((a,b)=>sourceNameFromKey(a).localeCompare(sourceNameFromKey(b),'zh-Hant'));
+ const countBySource=new Map();all.forEach(x=>countBySource.set(x._sourceKey,(countBySource.get(x._sourceKey)||0)+1));
+ function groupHtml(kind,label,cats){if(!cats.length)return'';return`<section class="eq-nav-group${openGroups.has(kind)?' open':''}" data-kind="${kind}"><button class="eq-nav-group-btn" type="button" data-eq-toggle="${kind}"><span>${label}</span><span class="eq-nav-arrow">▶</span></button><div class="eq-nav-items">${cats.map(c=>`<button class="eq-nav-item${selectedSource===c?' active':''}" type="button" data-source="${esc(c)}"><span>${esc(sourceNameFromKey(c))}</span><span class="eq-nav-count">${countBySource.get(c)||0}</span></button>`).join('')}</div></section>`}
+ function buildNav(){nav.innerHTML=groupHtml('forge','🔨 鍛造裝備',forgeCats)+groupHtml('dungeon','🏰 副本裝備',dungeonCats)+groupHtml('event','🎉 活動副本',eventCats);allBtn.classList.toggle('active',!selectedSource)}
+ nav.addEventListener('click',e=>{const t=e.target.closest('[data-eq-toggle]');if(t){const k=t.dataset.eqToggle;if(openGroups.has(k))openGroups.delete(k);else openGroups.add(k);buildNav();return}const b=e.target.closest('[data-source]');if(!b)return;selectedSource=b.dataset.source||'';const kind=selectedSource.split('::')[0];openGroups.add(kind);buildNav();render();window.scrollTo({top:Math.max(0,document.querySelector('.eq-layout').offsetTop-84),behavior:'smooth'})});
+ allBtn.onclick=()=>{selectedSource='';buildNav();render()};
+ buildNav();
+ function render(){const qq=q.value.trim().toLowerCase(),st=status.value;const list=all.filter(x=>(!selectedSource||x._sourceKey===selectedSource)&&(!st||(st==='unreleased')===x._unreleasedFinal)&&(!qq||((x.display_name||x.name)+' '+(x.display_name_en||x.name_en)+' '+(x.job||'')+' '+(x.effect||'')+' '+(x.materials||'')+' '+sourceLabel(x._category)).toLowerCase().includes(qq)));current.innerHTML=selectedSource?`目前分類：<strong>${esc(sourceNameFromKey(selectedSource))}</strong>`:'<strong>全部裝備</strong>';count.textContent=`顯示 ${list.length} / ${all.length} 筆`;items.innerHTML=list.map(x=>{const nm=x.display_name||x.name,en=x.display_name_en||x.name_en,src=sourceLabel(x._category),color=x.name_color||'#f3f6fa',isEvent=x._category.startsWith('event::');const mat=x.materials?`<div class="eq-section"><div class="eq-label">需求素材</div><div class="eq-text eq-materials">${formatRarityText(zhMaterialText(x.materials))}</div></div>`:'';return`<article class="equipment-card${x._unreleasedFinal?' is-unreleased':''}${isEvent?' is-event':''}"><div>${x.image?`<img class="eq-img" src="${esc(resolveImage(x))}" loading="lazy" alt="${esc(nm)}">`:''}</div><div class="eq-main"><span class="eq-tag ${sourceClass(x._category)}">${esc(src)}</span>${x.provisional?'<span class="eq-tag eq-provisional">能力暫定</span>':''}${x._unreleasedFinal?'<span class="eq-tag eq-unreleased">版本尚未推出</span>':''}<h2 style="color:${esc(color)}">${esc(nm)}</h2>${en&&norm(en)!==norm(nm)?`<div class="eq-en">${esc(en)}</div>`:''}${x.job?`<div class="eq-job">適用職業：${formatText(x.job)}</div>`:''}<div class="eq-section"><div class="eq-label">效果</div><div class="eq-text">${formatText(x.effect||'—')}</div></div>${mat}</div></article>`}).join('')||'<div class="eq-empty">找不到符合條件的裝備。</div>'}
+ q.oninput=render;status.onchange=render;const initialQ=new URLSearchParams(location.search).get('q');if(initialQ)q.value=initialQ;render();
 }).catch(e=>document.getElementById('items').innerHTML='<div class="eq-empty">資料載入失敗：'+esc(e.message)+'</div>');
 </script>
 <script>(()=>{
@@ -144,15 +210,40 @@ document.querySelectorAll('.tab-btn').forEach(btn=>btn.onclick=()=>{
 });
 })();</script>
 <script>
+(()=>{
+ const rows=Array.isArray(window.HERO_BASE_STATS_274C)?window.HERO_BASE_STATS_274C:[];
+ const search=document.getElementById('heroStatsSearch'),sort=document.getElementById('heroStatsSort'),body=document.getElementById('heroStatsBody'),cards=document.getElementById('heroStatsCards'),count=document.getElementById('heroStatsCount'),total=document.getElementById('heroStatsTotal');
+ if(!search||!sort||!body||!cards||!count)return;
+ const fmt=n=>Number(n).toLocaleString('zh-TW',{maximumFractionDigits:2});
+ const esc2=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+ const primaryLabel=x=>x.primary==='str'?'力量':x.primary==='agi'?'敏捷':x.primary==='int'?'智力':'全屬性';
+ function filtered(){
+   const q=search.value.trim().toLowerCase();
+   let list=rows.filter(x=>!q||String(x.name).toLowerCase().includes(q));
+   const key=sort.value;
+   if(key!=='default')list=[...list].sort((a,b)=>(Number(b[key])||0)-(Number(a[key])||0)||a.order-b.order);
+   else list=[...list].sort((a,b)=>a.order-b.order);
+   return list;
+ }
+ function render(){
+   const list=filtered(); total.textContent=rows.length; count.textContent=`顯示 ${list.length} / ${rows.length} 個職業`;
+   body.innerHTML=list.map(x=>`<tr><td><span class="hero-name">${esc2(x.name)}</span><span class="hero-main-stat">${primaryLabel(x)}</span></td><td>${fmt(x.str)}</td><td>${fmt(x.agi)}</td><td>${fmt(x.int)}</td><td class="hero-val-strong">${fmt(x.hp)}</td><td>${fmt(x.mp)}</td><td>${fmt(x.armor)}</td><td class="hero-atk">${fmt(x.atkMin)}–${fmt(x.atkMax)}</td></tr>`).join('');
+   cards.innerHTML=list.map(x=>`<article class="hero-stat-card"><div class="hero-stat-card-head"><strong>${esc2(x.name)}</strong><span class="hero-main-stat">${primaryLabel(x)}</span></div><div class="hero-stat-card-grid"><div class="hero-stat-kv"><span>力量</span><b>${fmt(x.str)}</b></div><div class="hero-stat-kv"><span>敏捷</span><b>${fmt(x.agi)}</b></div><div class="hero-stat-kv"><span>智力</span><b>${fmt(x.int)}</b></div><div class="hero-stat-kv"><span>護甲</span><b>${fmt(x.armor)}</b></div><div class="hero-stat-kv"><span>HP</span><b>${fmt(x.hp)}</b></div><div class="hero-stat-kv"><span>MP</span><b>${fmt(x.mp)}</b></div><div class="hero-stat-kv wide"><span>普攻</span><b>${fmt(x.atkMin)}–${fmt(x.atkMax)}</b></div></div></article>`).join('')||'<div class="hero-stats-empty">找不到符合條件的職業。</div>';
+ }
+ search.addEventListener('input',render); sort.addEventListener('change',render); render();
+})();
+</script>
+<script>
 function activateDatabaseTab(name,updateHash=true){
-  const tab=name==='drop'?'drop':'equipment';
+  const tab=['equipment','drop','stats'].includes(name)?name:'equipment';
   document.querySelectorAll('[data-db-tab]').forEach(b=>b.classList.toggle('active',b.dataset.dbTab===tab));
   document.querySelectorAll('[data-db-panel]').forEach(p=>p.classList.toggle('active',p.dataset.dbPanel===tab));
-  if(updateHash) history.replaceState(null,'',tab==='drop'?'#drop':'#equipment');
+  if(updateHash) history.replaceState(null,'','#'+tab);
   window.scrollTo({top:0,behavior:'auto'});
 }
 document.querySelectorAll('[data-db-tab]').forEach(b=>b.onclick=()=>activateDatabaseTab(b.dataset.dbTab));
-activateDatabaseTab(location.hash==='#drop'?'drop':'equipment',false);
+const initialDbTab=location.hash==='#drop'?'drop':location.hash==='#stats'?'stats':'equipment';
+activateDatabaseTab(initialDbTab,false);
 </script><script src="../mobile-nav.js"></script><script data-goatcounter="https://twilighteve.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </body></html>

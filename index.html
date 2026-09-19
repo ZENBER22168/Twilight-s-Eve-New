@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="./style.css">
   <style>
     .home-wrap{max-width:100%;padding:0}
-    .showcase{position:relative;overflow:hidden;min-height:calc(100vh - 76px);background:#06111c}
-    .showcase::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,22,.16),rgba(7,13,22,.38) 40%,rgba(7,13,22,.64) 100%), url('./images/site-home-bg.png') center/cover no-repeat}
-    .showcase::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,20,.90) 0%, rgba(7,12,20,.78) 24%, rgba(7,12,20,.28) 56%, rgba(7,12,20,.45) 100%)}
-    .showcase-inner{position:relative;z-index:1;max-width:1672px;margin:0 auto;padding:44px 54px 18px;min-height:calc(100vh - 76px);display:flex;flex-direction:column}
+    .showcase{position:relative;overflow:hidden;min-height:calc(100vh - 76px);background:#06111c url('./images/site-home-bg.png') center/cover no-repeat}
+    .showcase-video{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center center;pointer-events:none;background:transparent}
+    .showcase::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,13,22,.16),rgba(7,13,22,.38) 40%,rgba(7,13,22,.64) 100%);pointer-events:none}
+    .showcase::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(7,12,20,.90) 0%, rgba(7,12,20,.78) 24%, rgba(7,12,20,.28) 56%, rgba(7,12,20,.45) 100%);pointer-events:none}
+    .showcase-inner{position:relative;z-index:3;max-width:1672px;margin:0 auto;padding:44px 54px 18px;min-height:calc(100vh - 76px);display:flex;flex-direction:column}
+    @media (prefers-reduced-motion: reduce){.showcase-video{display:none}}
     .hero{display:grid;grid-template-columns:minmax(500px,1fr) 320px;gap:28px;align-items:start}
     .eyebrow{font-size:18px;color:#c5d3e2;margin-bottom:18px}
     .title-row{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
@@ -64,10 +66,13 @@
   </style>
 </head>
 <body>
-  <header class="top"><nav class="nav"><a class="brand" href="index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="./images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="index.html" class="active">🏠 首頁</a><a href="pages/鍛造.html">🔨 鍛造</a><a href="pages/副本材料.html">🏰 副本材料&裝備</a><a href="pages/攻略首頁.html">🎬 副本攻略</a><a href="pages/材料.html">🧱 鍛造材料&合成商人</a><a href="pages/裝備.html">📚 資料庫</a><a href="pages/NPC.html">📍 NPC位置</a><a href="pages/職業.html">✨ 職業技能</a><a href="pages/搜尋.html">👤 角色讀取&配裝</a><div class="nav-spacer"></div><form class="nav-search" id="quickSearchForm"><button type="submit" aria-label="搜尋">🔎</button><input id="quickSearchInput" type="search" placeholder="搜尋攻略、NPC、裝備..."></form></nav></header>
+  <header class="top"><nav class="nav"><a class="brand" href="index.html" aria-label="新暮光之晨 首頁"><img class="brand-logo" src="./images/site-icon.png" alt="新暮光之晨 icon"><span class="brand-title"><span class="brand-name">新暮光之晨</span><span class="brand-version">v2.74</span></span></a><a href="index.html" class="active">🏠 首頁</a><a href="pages/鍛造.html">🔨 鍛造</a><a href="pages/副本材料.html">🏰 副本材料&裝備</a><a href="pages/攻略首頁.html">🎬 副本攻略</a><a href="pages/材料.html">🧱 鍛造材料&合成商人</a><a href="pages/裝備.html">📚 資料庫</a><a href="pages/NPC.html">📍 NPC位置</a><a href="pages/職業.html">✨ 職業技能</a><a href="pages/搜尋.html">📂 讀檔・配裝・傷害護甲</a><div class="nav-spacer"></div><form class="nav-search" id="quickSearchForm"><button type="submit" aria-label="搜尋">🔎</button><input id="quickSearchInput" type="search" placeholder="搜尋攻略、NPC、裝備..."></form></nav></header>
 
   <main class="wrap home-wrap">
-    <section class="showcase">
+    <section class="showcase" id="homeShowcase">
+      <video class="showcase-video" id="homeBgVideo" muted loop playsinline preload="metadata" poster="./images/site-home-bg.png" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+        <source data-src="./media/homepage-bg-1080p-24s.mp4" type="video/mp4">
+      </video>
       <div class="showcase-inner">
         <div class="hero">
           <div>
@@ -97,7 +102,7 @@
           <a class="visual-card top card4" href="pages/裝備.html" aria-label="資料庫"><img src="./images/homecards/home-card-database.png" alt="裝備資料庫"></a>
           <a class="visual-card top card5" href="pages/NPC.html" aria-label="NPC位置"><img src="./images/homecards/home-card-npc.png" alt="NPC位置"></a>
           <a class="visual-card bottom card6" href="pages/職業.html" aria-label="職業技能"><img src="./images/homecards/home-card-skill.png" alt="職業技能"></a>
-          <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="角色讀取&配裝"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
+          <a class="visual-card bottom card7" href="pages/搜尋.html" aria-label="讀檔・配裝・傷害護甲"><img src="./images/homecards/home-card-build.png" alt="配裝"></a>
           <a class="visual-card bottom card8" href="pages/攻略首頁.html" aria-label="副本攻略"><img src="./images/homecards/home-card-guide.png" alt="副本攻略"></a>
           <div class="quote-block"><div class="quote-inner">知識，照亮下一個黎明<span class="en">KNOWLEDGE LIGHTS ANOTHER DAWN</span></div></div>
           <section class="credits-card" aria-label="資料協力特別感謝">
@@ -116,10 +121,11 @@
       {keys:['鍛造','forge','npc','武器','裝備製作'], url:'pages/鍛造.html'},
       {keys:['副本','材料','掉落','dungeon'], url:'pages/副本材料.html'},
       {keys:['商人','合成','素材','材料商'], url:'pages/材料.html'},
+      {keys:['角色素質','基礎素質','裸裝','滿級素質'], url:'pages/裝備.html#stats'},
       {keys:['裝備','屬性','database','資料庫','掉落率','掉落'], url:'pages/裝備.html'},
       {keys:['npc','位置','轉職'], url:'pages/NPC.html'},
       {keys:['技能','職業'], url:'pages/職業.html'},
-      {keys:['配裝','build','存檔','角色讀取','角色'], url:'pages/搜尋.html'}
+      {keys:['配裝','build','存檔','讀檔','角色讀取','角色','傷害','護甲','boss','實傷'], url:'pages/搜尋.html'}
     ];
     document.getElementById('quickSearchForm').addEventListener('submit', function(e){
       e.preventDefault();
@@ -128,6 +134,55 @@
       const found = quickMap.find(item => item.keys.some(k => q.includes(String(k).toLowerCase())));
       window.location.href = found ? found.url : 'pages/裝備.html';
     });
+
+
+    // 首頁背景影片：只在實際可見、分頁在前景且視窗有焦點時播放。
+    // 切回遊戲 / Alt+Tab / 滾出首頁時會自動暫停，降低背景解碼負擔。
+    (function(){
+      const video = document.getElementById('homeBgVideo');
+      const showcase = document.getElementById('homeShowcase');
+      if(!video || !showcase) return;
+
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const saveData = navigator.connection && navigator.connection.saveData;
+      if(reduceMotion || saveData) return;
+
+      const source = video.querySelector('source[data-src]');
+      if(source && !source.src){
+        source.src = source.dataset.src;
+        video.load();
+      }
+
+      let inView = true;
+      let focused = document.hasFocus();
+
+      function updatePlayback(){
+        const canPlay = !document.hidden && focused && inView;
+        if(canPlay){
+          const playPromise = video.play();
+          if(playPromise && typeof playPromise.catch === 'function') playPromise.catch(function(){});
+        }else{
+          video.pause();
+        }
+      }
+
+      document.addEventListener('visibilitychange', updatePlayback, {passive:true});
+      window.addEventListener('focus', function(){ focused = true; updatePlayback(); }, {passive:true});
+      window.addEventListener('blur', function(){ focused = false; updatePlayback(); }, {passive:true});
+      window.addEventListener('pagehide', function(){ video.pause(); }, {passive:true});
+      window.addEventListener('pageshow', updatePlayback, {passive:true});
+
+      if('IntersectionObserver' in window){
+        const observer = new IntersectionObserver(function(entries){
+          inView = !!(entries[0] && entries[0].isIntersecting && entries[0].intersectionRatio > 0.05);
+          updatePlayback();
+        }, {threshold:[0,0.05,0.25]});
+        observer.observe(showcase);
+      }
+
+      video.addEventListener('canplay', updatePlayback, {once:true});
+      updatePlayback();
+    })();
   </script>
 <script src="./mobile-nav.js"></script>
 <script data-goatcounter="https://twilighteve.goatcounter.com/count"
